@@ -1,7 +1,60 @@
 @use "global" as *;
 
-.c-btn {
-  padding: rem(10) rem(40);
-  background-color: black;
-  color: yellow;
+.c-btn{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding-top: rem(14);
+  padding-bottom: rem(14);
+  padding-left: rem(40);
+  padding-right: rem(87);
+  background-color: $green;
+  border: 1px solid $green;
+  position: relative;
+  font-size: rem(14);
+  line-height: calc(40/22);
+  font-family: 'Gotu', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.c-btn::before{
+  position: absolute;
+  content: "";
+  display: inline-block;
+  border: 1px solid $green;
+  background-color: transparent;
+  width: rem(202);
+  height: rem(54);
+  top: rem(4);
+  left: rem(4);
+z-index: -1;
+}
+
+
+.c-btn:hover{
+background-color: $white;
+color: $green;
+opacity: 1;
+}
+
+.c-btn:hover::before{
+position: absolute;
+}
+
+.c-btn::after{
+position: absolute;
+content: "";
+mask-image: url(../../../assets/images/common/arrow.svg);
+mask-repeat: no-repeat;
+mask-position: center;
+mask-size: contain;
+background-color: $white;
+width: rem(39);
+height: rem(7);
+top: 44%;
+right: rem(40);
+}
+
+.c-btn:hover::after{
+background-color: $green;
 }
