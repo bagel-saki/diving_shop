@@ -1,0 +1,24 @@
+@use "global" as *;
+
+.c-page-top-btn{
+width: rem(48);
+height: rem(48);
+border: 1px solid $green;
+border-radius: 50%;
+position: relative;
+}
+.c-page-top-btn::after{
+	position: absolute;
+	content: "";
+	mask-image: url(../../../assets/images/common/arrow.svg);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
+	background-color: $green;
+	width: rem(28);
+	height: rem(6);
+	top: 50%;
+	left: 46%;
+	transform: translate(-50% , -50%) rotate(270deg);
+}
+
