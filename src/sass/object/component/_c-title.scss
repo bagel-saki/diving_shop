@@ -20,6 +20,7 @@
 
 .c-title h2{
   color: $font-color; 
+  display: inline-block;
 }
 
 .c-title--white h2{
@@ -28,21 +29,18 @@
   }
 }
 
+.c-title h2:first-letter{
+  color:$green;
+  text-transform: uppercase;
+}
+
 .c-title--large h2{
   @include mq('md'){
     font-size: rem(80);
   }
 }
 
-.c-title span{
-  display: inline-block;
-}
-
-.c-title span:first-letter{
-  color:$green;
-}
-
-.c-title--white span:first-letter{
+.c-title--white h2:first-letter{
   @include mq('md'){
     color: #DDF0F1;
   }
