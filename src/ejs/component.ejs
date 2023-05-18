@@ -32,13 +32,23 @@
       <h2 class="h2">.c-title</h2>
       <p class="p">セクションタイトル</p>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/tutorial/component/_c-title' ,{color:'blue', title:'ここ変えてみる'}) %>
+      <%- include(ejsPath + '/component/_c-title',{title__main:'Campaign', title__sub:'キャンペーン', color:'', size:''})%> 
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/tutorial/component/_c-title' ,{color:'pink', title:'カードブロック'}) %>
+      <%- include(ejsPath + '/component/_c-title',{title__main:'About us', title__sub:'私たちについて', color:'', size:''})%> 
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/tutorial/component/_c-title' ,{color:'black', title:'カードブロック'}) %>
+      <%- include(ejsPath + '/component/_c-title',{title__main:'Information', title__sub:'ダイビング情報', color:'', size:''})%> 
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/tutorial/component/_c-title' ,{color:'white', title:'カードブロック'}) %>
+      <%- include(ejsPath + '/component/_c-title',{title__main:'Blog', title__sub:'ブログ', color:'white', size:''})%> 
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-title',{title__main:'Voice', title__sub:'お客様の声', color:'', size:''} )%> 
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-title',{title__main:'Price', title__sub:'料金一覧',color:'', size:''})%> 
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-title',{title__main:'Contact', title__sub:'お問い合わせ', color:'', size:'large'})%> 
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-title',{title__main:'Gallery', title__sub:'フォト', color:'', size:''})%> 
+      
+      
       <h2 class="h2">.c-btn</h2>
       <p class="p">ボタン</p>
       <%- include(ejsPath + '/component/_c-btn',{link:"",text:"View more"} ) %>
