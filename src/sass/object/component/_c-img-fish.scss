@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.c-img-fish{
+mask-image: url(../../../assets/images/common/goldfish.svg);
+mask-repeat: no-repeat;
+mask-position: center;
+mask-size: contain;
+background-color: $green;
+width: rem(120);
+height: rem(55);
+@include mq(md){
+	width: rem(308);
+	height: rem(138);
+}
+}
+
+.c-img-fish--reverse{
+	transform: scaleX(-1);
+}
+
+.c-img-fish--white{
+	background-color: $white;
+}
