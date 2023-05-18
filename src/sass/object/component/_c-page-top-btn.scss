@@ -5,8 +5,19 @@ width: rem(48);
 height: rem(48);
 border: 1px solid $green;
 border-radius: 50%;
-position: relative;
+position: fixed;
+right: rem(15);
+bottom: rem(16);
+background-color: transparent;
+transition: background-color 0.3s;
+@include mq(md){
+	right: rem(20);
+	bottom: rem(20);
+	width: rem(80);
+	height: rem(80);
 }
+}
+
 .c-page-top-btn::after{
 	position: absolute;
 	content: "";
@@ -20,5 +31,18 @@ position: relative;
 	top: 50%;
 	left: 46%;
 	transform: translate(-50% , -50%) rotate(270deg);
+	transition:  background-color 0.3s;
+	@include mq(md){
+		width: rem(42);
+		height: rem(7);
+	}
 }
 
+.c-page-top-btn:hover{
+	cursor: pointer;
+	background-color: $green;
+}
+
+.c-page-top-btn:hover::after{
+	background-color: $white;
+}
