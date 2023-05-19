@@ -24,8 +24,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   //キャンペーンカテゴリーのactive付与
   $('.js-campaign-category').on('click', function() {
-    $('.js-campaign-category').removeClass('c-campaign-category__link--active');
-    $(this).addClass('c-campaign-category__link--active');
+    $('.js-campaign-category').removeClass('c-campaign-category--active');
+    $(this).addClass('c-campaign-category--active');
   });
 
   

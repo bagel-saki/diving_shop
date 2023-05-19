@@ -1,10 +1,10 @@
 @use "global" as *;
 
-.c-campaign-category__link{
+.c-campaign-category{
+    display: flex;
     max-width: rem(164);
     width: 100%;
     height: rem(32);
-    display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid $green;
@@ -13,15 +13,15 @@
     text-transform: uppercase;
 }
 
-.c-campaign-category__link:hover{
+.c-campaign-category:hover{
     background:$green;
     color: $white;
     transition : all 0.3s ease 0s;
+    opacity: 1;
 }
 
-.c-campaign-category__link--active{
+.c-campaign-category--active{
     background:$green;
     color: $white;
     transition : all 0.3s ease 0s; 
 }
-
