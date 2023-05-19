@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.sidebar-title{
+    font-size: rem(24);
+    font-weight: 400;
+    border-left: rem(8) solid $green;
+    padding: rem(0) rem(74);
+    height: rem(50);
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    @include mq('md'){
+        padding: rem(0) rem(82);
+    }
+}
+
+.sidebar-title::before {
+    position: absolute;
+    content: "";
+    mask-image: url(../../../assets/images/common/icon-whale.svg);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    background-color: $font-color;
+    width: rem(50);
+    height: inherit;
+    top:50%;
+    left: rem(16);
+    transform: translateY(-50%);
+  }
