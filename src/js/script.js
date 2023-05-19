@@ -21,4 +21,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }, 300, 'swing');
     return false;
   });
+
+  //キャンペーンカテゴリーのactive付与
+  $('.js-campaign-category').on('click', function() {
+    $('.js-campaign-category').removeClass('c-campaign-category__link--active');
+    $(this).addClass('c-campaign-category__link--active');
+  });
+
+  
 });
