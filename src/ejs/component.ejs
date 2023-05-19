@@ -32,14 +32,22 @@
       <h2 class="h2">.c-title</h2>
       <p class="p">セクションタイトル</p>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/tutorial/component/_c-title' ,{color:'blue', title:'ここ変えてみる'}) %>
+      <%- include(ejsPath + '/component/_c-title',{title__main:'Campaign', title__sub:'キャンペーン', color:'', size:''})%> 
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/tutorial/component/_c-title' ,{color:'pink', title:'カードブロック'}) %>
+      <%- include(ejsPath + '/component/_c-title',{title__main:'About us', title__sub:'私たちについて', color:'', size:''})%> 
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/tutorial/component/_c-title' ,{color:'black', title:'カードブロック'}) %>
+      <%- include(ejsPath + '/component/_c-title',{title__main:'Information', title__sub:'ダイビング情報', color:'', size:''})%> 
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/tutorial/component/_c-title' ,{color:'white', title:'カードブロック'}) %>
+      <%- include(ejsPath + '/component/_c-title',{title__main:'Blog', title__sub:'ブログ', color:'white', size:''})%> 
       <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-title',{title__main:'Voice', title__sub:'お客様の声', color:'', size:''} )%> 
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-title',{title__main:'Price', title__sub:'料金一覧',color:'', size:''})%> 
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-title',{title__main:'Contact', title__sub:'お問い合わせ', color:'', size:'large'})%> 
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-title',{title__main:'Gallery', title__sub:'フォト', color:'', size:''})%> 
+      <!-- よりきれいな無視 -->
       <h2 class="h2">.c-btn</h2>
       <p class="p">ボタン</p>
       <%- include(ejsPath + '/component/_c-btn',{link:"",text:"View more"} ) %>
@@ -57,6 +65,8 @@
       <%- include(ejsPath + '/component/_c-img-fish' ,{ style: '' }) %>
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-img-fish' ,{ style: 'white' }) %>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-img-fish' ,{ style: 'large' }) %>
       <h2 class="h2">.c-breadcrumb</h2>
       <p class="p">パンくずリスト</p>
       <%- include(ejsPath + '/component/_c-breadcrumb', {
@@ -163,7 +173,7 @@
       <p class="p">ページネーション</p>
       <!-- <%- include(ejsPath + '/component/_c-pagination' ) %> -->
       <!-- prettier-ignore -->
-       <h2 class="h2">.footer</h2>
+      <h2 class="h2">.footer</h2>
       <p class="p">フッター</p>
       <%- include(ejsPath + '/common/_footer' ) %>
 
