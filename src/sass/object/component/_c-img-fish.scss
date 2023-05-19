@@ -8,6 +8,7 @@ mask-size: contain;
 background-color: $green;
 width: rem(120);
 height: rem(55);
+
 @include mq(md){
 	width: rem(308);
 	height: rem(138);
@@ -19,5 +20,22 @@ height: rem(55);
 }
 
 .c-img-fish--white{
-	background-color: $white;
+	display: none;
+
+	@include mq(md){
+	display: block;
+    background-color: #DDF0F1;
+	width: rem(437);
+	height: rem(201);
+	}
+}
+
+.c-img-fish--large{
+	display: none;
+
+	@include mq(md){
+	display: block;
+    width: rem(437);
+	height: rem(201);
+	}
 }

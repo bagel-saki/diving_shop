@@ -1,8 +1,75 @@
 @use "global" as *;
 
 .c-title {
-  font-size: 10px;
+  text-align: center;
+  display: inline-block;
+  padding: 0 rem(10);
+  font-weight: 400;
+}
+
+
+.c-title__main{
+  font-family: $english-font-family;
+  font-size: rem(32);
+  line-height: rem(1.25);
   @include mq(md) {
-    font-size: 20px;
+    font-size: rem(40);
+    line-height: 1rem(1);
+  }
+}
+
+.c-title h2{
+  color: $font-color; 
+  display: inline-block;
+}
+
+.c-title--white h2{
+  @include mq('md'){
+    color: $white;
+  }
+}
+
+.c-title h2:first-letter{
+  color:$green;
+  text-transform: uppercase;
+}
+
+.c-title--large h2{
+  @include mq('md'){
+    font-size: rem(80);
+  }
+}
+
+.c-title--white h2:first-letter{
+  @include mq('md'){
+    color: #DDF0F1;
+  }
+} 
+
+.c-title__sub{
+  font-family: $base-font-family;
+  font-size: rem(12);
+  margin-top: rem(30);
+  line-height: rem(1.5);
+
+  @include mq('md'){
+   margin-top: rem(38);
+  } 
+}
+
+.c-title p{
+  color: $green;
+}
+
+
+.c-title--white p{
+  @include mq('md'){
+    color: $white;
+  }
+}
+
+.c-title--large p{
+  @include mq('md'){
+    margin-top: rem(40);
   }
 }
