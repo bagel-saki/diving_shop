@@ -60,7 +60,9 @@
       <!-- prettier-ignore -->
       <h2 class="h2">.c-pagination</h2>
       <p class="p">ページネーション</p>
-      <%- include(ejsPath + '/component/_c-pagination' ) %>
+      <%- include(ejsPath + '/component/_c-pagination' ,{totalPages: 4 }) %>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-pagination' ,{totalPages: 6 }) %>
       <!-- prettier-ignore -->
        <h2 class="h2">.footer</h2>
       <p class="p">フッター</p>

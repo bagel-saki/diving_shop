@@ -1,10 +1,16 @@
-<div class="c-paginatuion wp-pagenavi">
-    <a href="#" class="wp-pagenavi__prev"></a>
-    <a href="#" class="wp-pagenavi__page is-change-color">1</a>
-    <a href="#" class="wp-pagenavi__page">2</a>
-    <a href="#" class="wp-pagenavi__page">3</a>
-    <a href="#" class="wp-pagenavi__page">4</a>
-    <a href="#" class="wp-pagenavi__page">5</a>
-    <a href="#" class="wp-pagenavi__page">6</a>
-    <a href="#" class="wp-pagenavi__next"></a>
-  </div>
+
+<div class="c-pagination pagination">
+  <nav class="navigation">
+    <div class="nav-links">
+      <a class="prev page-numbers" href="#"><span></span></a>
+      <% for (let i = 1; i <= totalPages; i++) { %>
+        <% if (i === 1) { %>
+          <span class="page-numbers current"><%= i %></span>
+        <% } else { %>
+          <a class="page-numbers" href="#"><%= i %></a>
+        <% } %>
+      <% } %>
+      <a class="next page-numbers" href="#"><span></span></a>
+    </div>
+  </nav>
+</div>
