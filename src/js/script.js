@@ -21,5 +21,4 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     }, 300, 'swing');
     return false;
   });
-  
 });
