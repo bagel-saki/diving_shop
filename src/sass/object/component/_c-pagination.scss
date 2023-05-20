@@ -1,57 +1,65 @@
 @use "global" as *;
 
-.wp-pagenavi {
-	margin-top: rem(78);
-	line-height: 1;
-	letter-spacing: rem(2);
+
+.c-pagination {
+	text-align: center;
+    }
+
+.nav-links {
 	display: flex;
 	justify-content: center;
-	gap: rem(18);
-  
-	@include mq(md) {
-	  margin-top: rem(104);
-	}
-  }
-  
-  .wp-pagenavi__pages {
+    }
+
+.page-numbers {
 	display: flex;
-	gap: rem(16);
-  }
-  
-  .wp-pagenavi a {
-	border: 1px solid $white;
-	display: inline-block;
-	transition: color 0.3s, background-color 0.3s, border 0.3s;
-  }
-  
-  .wp-pagenavi a:hover {
+	align-items: center;
+    justify-content: center;
+	font-family: $english-second-font-family;
+	width: rem(38);
+	height: rem(38);
+	text-align: center;
+	cursor: pointer;
+	margin: 0 rem(6);
+	border: 1px solid $green;
+	text-decoration: none;
+	color: $green;
+	transition: 0.3s background-color, 0.3s color;
+    }
+
+.page-numbers.current {
+	background-color: $green;
+	color: $white;
+    }
+
+.page-numbers:hover {
+	background-color: $green;
+	color: $white;
+    }
+
+.prev.page-numbers,
+.next.page-numbers {
+	margin: 0 rem(34);
+}
+
+.prev.page-numbers span,
+.next.page-numbers span{
+mask-repeat: no-repeat;
+mask-position: center;
+mask-size: contain;
+background-color: $green;
+width: rem(8);
+height: rem(16);
+    }
+
+.next.page-numbers span{
+	mask-image: url(../../../assets/images/common/next.svg);
+}
+
+.prev.page-numbers span{
+	mask-image: url(../../../assets/images/common/prev.svg);
+}
+
+.prev.page-numbers:hover span,
+.next.page-numbers:hover span{
 	background-color: $white;
-	color: gray;
-	border: 1px solid $white;
-  }
-  
-  .wp-pagenavi__prev,
-  .wp-pagenavi__next {
-	padding: rem(3.2) rem(11.2);
-	text-transform: uppercase;
-  }
-  
-  .wp-pagenavi__page {
-	padding: rem(3.2) rem(6);
-  }
-  
-  .wp-pagenavi__page.is-change-color {
-	color: $black;
-	background-color: $white;
-  
-	@include mq(md) {
-	  background-color: yellow;
-	  border: 1px solid yellow;
-	}
-  }
-  
-  .wp-pagenavi__page.wp-pagenavi__page--white.is-change-white {
-	color: $black;
-	background-color: $white;
-	border: 1px solid $white;
-  }
+}
