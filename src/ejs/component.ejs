@@ -28,6 +28,15 @@
       <h2 class="h2">header</h2>
       <p class="p">ヘッダー</p>
       <%- include(ejsPath + '/common/_header' ) %>
+      <!-- prettier-ignore -->
+      <h2 class="h2">.c-logo</h2>
+      <p class="p">CodeUpsロゴ</p>
+      <%- include(ejsPath + '/component/_c-logo' , { logo: 'large' })%>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-logo' , { logo: 'green' })%>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-logo' , { logo: '' })%>
+      <!-- prettier-ignore -->
 
       <h2 class="h2">.c-title</h2>
       <p class="p">セクションタイトル</p>
