@@ -29,6 +29,7 @@ mask-repeat: no-repeat;
 mask-position: center;
 mask-size: contain;
 background-color: $white;
+transition: background-color 0.3s;
 width: rem(39);
 height: rem(7);
 }
@@ -37,11 +38,11 @@ height: rem(7);
 background-color: $green;
 }
 
-.c-btn__link--send{
+.c-btn__link.c-btn__link--send{
   gap: rem(16);
 }
 
-.c-btn__link--white{
+.c-btn__link.c-btn__link--white{
   background-color: $white;
   border: $white;
   color: $green;
@@ -61,7 +62,7 @@ background-color: $green;
   z-index: map-get($layer, default);
 }
 
-.c-btn__overlay--white{
+.c-btn__overlay.c-btn__overlay--white{
   border: 1px solid $white;
 }
 
@@ -72,7 +73,7 @@ border: 1px solid $green;
 opacity: 1;
 }
 
-.c-btn__link--white:hover{
+.c-btn__link.c-btn__link--white:hover{
   background-color: $green;
   border: 1px solid $white;
   color: $white;
@@ -83,6 +84,6 @@ opacity: 1;
   background-color: $green;
 }
 
-.c-btn__link--white:hover span{
+.c-btn__link.c-btn__link--white:hover span{
   background-color: $white;
 }
