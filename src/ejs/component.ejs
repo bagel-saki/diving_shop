@@ -8,10 +8,12 @@
       max-width: 1000px;
       width: 100%;
       margin: auto;
+      background-color: pink;
     }
-    div {
+
+    /* div {
       margin: 40px 0;
-    }
+    } */
     .h2 {
       margin-top: 75px;
       background-color: yellow;
@@ -41,9 +43,13 @@
       <%- include(ejsPath + '/tutorial/component/_c-title' ,{color:'white', title:'カードブロック'}) %>
       <h2 class="h2">.c-btn</h2>
       <p class="p">ボタン</p>
-      <%- include(ejsPath + '/component/_c-btn',{link:"",text:"View more"} ) %>
+      <%- include(ejsPath + '/component/_c-btn',{link:"",text:"View more", btn:"", overlay:""} ) %>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-btn',{link:"",text:"contact us"} ) %>
+      <%- include(ejsPath + '/component/_c-btn',{link:"",text:"Contact us", btn:"", overlay:""} ) %>
+       <!-- prettier-ignore -->
+       <%- include(ejsPath + '/component/_c-btn',{link:"",text:"Send", btn:"send" ,overlay:""} ) %>
+       <!-- prettier-ignore -->
+       <%- include(ejsPath + '/component/_c-btn',{link:"",text:"Page TOP", btn:"white" ,overlay:"white"} ) %>
       <h2 class="h2">.footer</h2>
       <p class="p">フッター</p>
       <%- include(ejsPath + '/common/_footer' ) %>

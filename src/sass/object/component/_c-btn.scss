@@ -1,13 +1,18 @@
 @use "global" as *;
 
 .c-btn{
-  display: inline-block;
+  position: relative;
+}
+
+.c-btn__link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   text-decoration: none;
-  padding-top: rem(14);
-  padding-bottom: rem(14);
-  padding-left: rem(40);
-  padding-right: rem(87);
+  width: rem(202);
+  height: rem(54);
+  gap:rem(7);
   background-color: $green;
   border: 1px solid $green;
   position: relative;
@@ -15,9 +20,35 @@
   line-height: calc(40/22);
   font-family: 'Gotu', sans-serif;
   transition: background-color 0.3s, color 0.3s;
+  z-index: map-get($layer, floating);
 }
 
-.c-btn::before{
+.c-btn span{
+  mask-image: url(../../../assets/images/common/arrow.svg);
+mask-repeat: no-repeat;
+mask-position: center;
+mask-size: contain;
+background-color: $white;
+width: rem(39);
+height: rem(7);
+}
+
+.c-btn__link.c-btn__link--white span{
+background-color: $green;
+}
+
+.c-btn__link--send{
+  gap: rem(16);
+}
+
+.c-btn__link--white{
+  background-color: $white;
+  border: $white;
+  color: $green;
+  gap: rem(17);
+}
+
+.c-btn__overlay{
   position: absolute;
   content: "";
   display: inline-block;
@@ -27,34 +58,31 @@
   height: rem(54);
   top: rem(4);
   left: rem(4);
-z-index: -1;
+  z-index: map-get($layer, default);
 }
 
+.c-btn__overlay--white{
+  border: 1px solid $white;
+}
 
-.c-btn:hover{
+.c-btn__link:hover{
 background-color: $white;
 color: $green;
+border: 1px solid $green;
 opacity: 1;
 }
 
-.c-btn:hover::before{
-position: absolute;
+.c-btn__link--white:hover{
+  background-color: $green;
+  border: 1px solid $white;
+  color: $white;
+  opacity: 1;
+  }
+
+.c-btn__link:hover span{
+  background-color: $green;
 }
 
-.c-btn::after{
-position: absolute;
-content: "";
-mask-image: url(../../../assets/images/common/arrow.svg);
-mask-repeat: no-repeat;
-mask-position: center;
-mask-size: contain;
-background-color: $white;
-width: rem(39);
-height: rem(7);
-top: 44%;
-right: rem(40);
-}
-
-.c-btn:hover::after{
-background-color: $green;
+.c-btn__link--white:hover span{
+  background-color: $white;
 }
