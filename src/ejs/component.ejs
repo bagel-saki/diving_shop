@@ -8,10 +8,12 @@
       max-width: 1000px;
       width: 100%;
       margin: auto;
+      background-color: pink;
     }
-    div {
+
+    /* div {
       margin: 40px 0;
-    }
+    } */
     .h2 {
       margin-top: 75px;
       background-color: yellow;
@@ -50,8 +52,13 @@
       <!-- よりきれいな無視 -->
       <h2 class="h2">.c-btn</h2>
       <p class="p">ボタン</p>
-      <%- include(ejsPath + '/component/_c-btn',{link:"",text:"View more"} ) %>
+      <%- include(ejsPath + '/component/_c-btn',{link:"",text:"View more", btn:"", overlay:""} ) %>
       <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-btn',{link:"",text:"Contact us", btn:"", overlay:""} ) %>
+       <!-- prettier-ignore -->
+       <%- include(ejsPath + '/component/_c-btn',{link:"",text:"Send", btn:"send" ,overlay:""} ) %>
+       <!-- prettier-ignore -->
+       <%- include(ejsPath + '/component/_c-btn',{link:"",text:"Page TOP", btn:"white" ,overlay:"white"} ) %>
       <%- include(ejsPath + '/component/_c-btn',{link:"",text:"contact us"} ) %>
       <!-- prettier-ignore -->
       <h2 class="h2">.c-page-top-btn</h2>
