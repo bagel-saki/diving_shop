@@ -1,0 +1,6 @@
+<!-- 有効なスタイルリストを定義 -->
+<% const imageStyle = ['reverse', 'white', 'large']; %>
+
+<!-- 有効なスタイルが指定された場合、そのスタイルに応じたクラス名を生成。そうでなければ、空文字列を代入 -->
+<% const styleClass = imageStyle.includes(style) ? ` c-img-fish--${style}` : ''; %>
+<div class="c-img-fish<%= styleClass %>"></div>
