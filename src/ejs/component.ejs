@@ -24,7 +24,7 @@
     }
   </style>
   <body>
-    <div class="wrapper">
+    <div class="wrapper" id="component">
       <h2 class="h2">header</h2>
       <p class="p">ヘッダー</p>
       <%- include(ejsPath + '/common/_header' ) %>
@@ -37,7 +37,6 @@
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-logo' , { logo: '' })%>
       <!-- prettier-ignore -->
-
       <h2 class="h2">.c-title</h2>
       <p class="p">セクションタイトル</p>
       <!-- prettier-ignore -->

@@ -2,4 +2,8 @@
 
 <!-- 有効なスタイルが指定された場合、そのスタイルに応じたクラス名を生成。そうでなければ、空文字列を代入 -->
 <% const logoClass = logoStyle.includes(logo) ? ` c-logo--${logo}` : ''; %>
-<div class="c-logo<%= logoClass %>"></div>
+<% if(pageId === 'top') { %>
+<h1 class="c-logo<%= logoClass %>"></h1>
+<% } else { %>
+    <div class="c-logo<%= logoClass %>"></div>
+  <% } %>
