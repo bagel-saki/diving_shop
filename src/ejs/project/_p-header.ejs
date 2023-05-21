@@ -1,0 +1,42 @@
+<%
+project = '.';
+component ='.';
+
+let titleContent = [
+  {main: 'CodeUpsのチーム開発', sub: 'EJSを学習しています'},
+]
+%>
+
+<div class="p-header">
+    <div class="p-header__inner">
+        <div class="p-header__container">
+            <a class="p-header__link" href="">
+                <h1 class="p-header__logo">
+                    <%- include(component + './_c-logo', {
+                        logo: ''
+                        }) %>
+                </h1>
+            </a>
+            <nav class="p-header__pc-nav p-pc-nav">
+                <ul class="p-pc-nav__items">
+                    <% titleContent.forEach(function(title) { %>
+                    <li class="p-pc-nav__item">
+                        <a href="p-pc-nav__title">
+                            <%- include(project + '/_p-pc-navTitle', {
+                                main: title.main,
+                                sub: title.sub
+                                 }) %>
+                        </a>
+                    </li>
+                    <% }); %>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+<div class="p-pc-navTitle">
+    <div class="p-pc-navTitle__main"></div>
+    <div class="p-pc-navTitle__sub"></div>
+</div>
