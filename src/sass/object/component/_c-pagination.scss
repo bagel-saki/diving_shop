@@ -1,0 +1,65 @@
+@use "global" as *;
+
+
+.c-pagination {
+	text-align: center;
+    }
+
+.nav-links {
+	display: flex;
+	justify-content: center;
+    }
+
+.page-numbers {
+	display: flex;
+	align-items: center;
+    justify-content: center;
+	font-family: $english-second-font-family;
+	width: rem(38);
+	height: rem(38);
+	text-align: center;
+	cursor: pointer;
+	margin: 0 rem(6);
+	border: 1px solid $green;
+	text-decoration: none;
+	color: $green;
+	transition: 0.3s background-color, 0.3s color;
+    }
+
+.page-numbers.current {
+	background-color: $green;
+	color: $white;
+    }
+
+.page-numbers:hover {
+	background-color: $green;
+	color: $white;
+    }
+
+.prev.page-numbers,
+.next.page-numbers {
+	margin: 0 rem(34);
+}
+
+.prev.page-numbers span,
+.next.page-numbers span{
+mask-repeat: no-repeat;
+mask-position: center;
+mask-size: contain;
+background-color: $green;
+width: rem(8);
+height: rem(16);
+    }
+
+.next.page-numbers span{
+	mask-image: url(../../../assets/images/common/next.svg);
+}
+
+.prev.page-numbers span{
+	mask-image: url(../../../assets/images/common/prev.svg);
+}
+
+.prev.page-numbers:hover span,
+.next.page-numbers:hover span{
+	background-color: $white;
+}

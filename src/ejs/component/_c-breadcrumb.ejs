@@ -1,0 +1,12 @@
+<nav class="breadcrumb">
+  <ul class="breadcrumb-list">
+    <li class="breadcrumb-item"><a href="#">top</a><span>&gt;</span></li>
+    <% for (let i = 0; i < breadcrumbs.length; i++) { %>
+      <% if (i === breadcrumbs.length - 1) { %>
+        <li class="breadcrumb-item active"><%= breadcrumbs[i].title %></li>
+      <% } else { %>
+        <li class="breadcrumb-item"><a href="<%= breadcrumbs[i].url %>"><%= breadcrumbs[i].title %></a><span>&gt;</span></li>
+      <% } %>
+    <% } %>
+  </ul>
+</nav>

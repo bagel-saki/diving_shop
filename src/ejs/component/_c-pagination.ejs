@@ -1,0 +1,16 @@
+
+<div class="c-pagination pagination">
+  <nav class="navigation">
+    <div class="nav-links">
+      <a class="prev page-numbers" href="#"><span></span></a>
+      <% for (let i = 1; i <= totalPages; i++) { %>
+        <% if (i === 1) { %>
+          <span class="page-numbers current"><%= i %></span>
+        <% } else { %>
+          <a class="page-numbers" href="#"><%= i %></a>
+        <% } %>
+      <% } %>
+      <a class="next page-numbers" href="#"><span></span></a>
+    </div>
+  </nav>
+</div>

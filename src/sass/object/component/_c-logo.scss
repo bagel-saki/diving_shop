@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.c-logo img{
+  width: rem(102);
+  height: auto;
+
+  @include mq(md){
+    width: rem(131);
+    height: auto;
+  }
+}
+
+.c-logo{
+  mask-image: url(../../../assets/images/common/CodeUps.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  background-color: $white;
+  width: rem(102);
+  height: rem(38);
+  @include mq(md){
+    width: rem(131);
+    height: rem(50);
+  }
+}
+
+.c-logo.c-logo--large{
+  width: rem(120);
+  height: rem(45);
+
+  @include mq(md){
+    width: rem(200);
+    height: rem(75);
+  }
+}
+
+.c-logo.c-logo--green{
+  background-color: $green;
+  width: rem(174);
+  height: rem(65);
+
+  @include mq(md){
+    width: rem(200);
+    height: rem(75);
+  }
+}

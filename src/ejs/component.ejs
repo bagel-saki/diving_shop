@@ -8,10 +8,12 @@
       max-width: 1000px;
       width: 100%;
       margin: auto;
+      background-color: pink;
     }
-    div {
+
+    /* div {
       margin: 40px 0;
-    }
+    } */
     .h2 {
       margin-top: 75px;
       background-color: yellow;
@@ -47,12 +49,16 @@
       <%- include(ejsPath + '/component/_c-title',{title__main:'Contact', title__sub:'お問い合わせ', color:'', size:'large'})%> 
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-title',{title__main:'Gallery', title__sub:'フォト', color:'', size:''})%> 
-      <!-- よりきれいな無視 -->
+      <!-- prettier-ignore -->
       <h2 class="h2">.c-btn</h2>
       <p class="p">ボタン</p>
-      <%- include(ejsPath + '/component/_c-btn',{link:"",text:"View more"} ) %>
+      <%- include(ejsPath + '/component/_c-btn',{link:"",text:"View more", btn:"", overlay:""} ) %>
       <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-btn',{link:"",text:"contact us"} ) %>
+      <%- include(ejsPath + '/component/_c-btn',{link:"",text:"Contact us", btn:"", overlay:""} ) %>
+       <!-- prettier-ignore -->
+       <%- include(ejsPath + '/component/_c-btn',{link:"",text:"Send", btn:"send" ,overlay:""} ) %>
+       <!-- prettier-ignore -->
+       <%- include(ejsPath + '/component/_c-btn',{link:"",text:"Page TOP", btn:"white" ,overlay:"white"} ) %>
       <!-- prettier-ignore -->
       <h2 class="h2">.c-page-top-btn</h2>
       <p class="p">ページトップボタン</p>
@@ -67,6 +73,31 @@
       <%- include(ejsPath + '/component/_c-img-fish' ,{ style: 'white' }) %>
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-img-fish' ,{ style: 'large' }) %>
+      <h2 class="h2">.c-breadcrumb</h2>
+      <p class="p">パンくずリスト</p>
+      <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+          { title: "キャンペーン", url: "" }
+        ]
+      }); %>
+       <!-- prettier-ignore -->
+       <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+          { title: "私たちについて", url: "" }
+        ]
+      }); %>
+       <!-- prettier-ignore -->
+       <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+          { title: "ダイビング情報", url: "" }
+        ]
+      }); %>
+       <!-- prettier-ignore -->
+       <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+          { title: "ブログ一覧", url: "" }
+        ]
+      }); %>
       <!-- prettier-ignore -->
 
       <h2 class="h2">.c-sidebar-title</h2>
@@ -85,6 +116,109 @@
 
 
 
+      <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+          { title: "ブログ詳細", url: "" }
+        ]
+      }); %>
+       <!-- prettier-ignore -->
+       <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+          { title: "お客様の声", url: "" }
+        ]
+      }); %>
+       <!-- prettier-ignore -->
+       <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+          { title: "料金一覧", url: "" }
+        ]
+      }); %>
+       <!-- prettier-ignore -->
+       <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+          { title: "よくある質問", url: "" }
+        ]
+      }); %>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+          { title: "サイトマップ", url: "" }
+        ]
+      }); %>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+          { title: "プライバシーポリシー", url: "" }
+        ]
+      }); %>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+          { title: "利用規約", url: "" }
+        ]
+      }); %>
+       <!-- prettier-ignore -->
+       <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+          { title: "お問い合わせ", url: "" }
+        ]
+      }); %>
+       <!-- prettier-ignore -->
+       <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+          { title: "404", url: "" }
+        ]
+      }); %>
+       <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+        { title: "ブログ一覧", url: "" },
+        { title: "ブログ詳細", url: "" }
+        ]
+      }); %>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+        { title: "お問い合わせ", url: "" },
+        { title: "お問い合わせエラー", url: "" }
+        ]
+      }); %>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+        { title: "お問い合わせ", url: "" },
+        { title: "送信完了", url: "" }
+        ]
+      }); %>
+      
+       <!-- prettier-ignore -->
+      <h2 class="h2">.c-pagination</h2>
+      <p class="p">ページネーション</p>
+      <%- include(ejsPath + '/component/_c-pagination' ,{totalPages: 4 }) %>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-pagination' ,{totalPages: 6 }) %>
+
+      <!-- prettier-ignore -->
+      <h2 class="h2">.c-campaign-category</h2>
+      <p class="p">キャンペーンカテゴリー</p> 
+      <%- include(ejsPath + '/component/_c-campaign-category',{text:"all"})%>
+      <br>
+      <%- include(ejsPath + '/component/_c-campaign-category',{text:"ライセンス講習"})%> 
+      <br>
+      <%- include(ejsPath + '/component/_c-campaign-category',{text:"ファンダイビング"})%>
+      <br>
+      <%- include(ejsPath + '/component/_c-campaign-category',{text:"体験ダイビング"})%>
+
+      <!-- prettier-ignore -->
+      <h2 class="h2">.c-logo</h2>
+      <p class="p">CodeUpsロゴ</p>
+      <%- include(ejsPath + '/component/_c-logo' , { logo: 'large' })%>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-logo' , { logo: 'green' })%>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-logo' , { logo: '' })%>
+      <!-- prettier-ignore -->
+      
       <h2 class="h2">.footer</h2>
       <p class="p">フッター</p>
       <%- include(ejsPath + '/common/_footer' ) %>
