@@ -99,23 +99,6 @@
         ]
       }); %>
       <!-- prettier-ignore -->
-
-      <h2 class="h2">.c-sidebar-title</h2>
-      <p class="p">サイドバータイトル</p>
-      <%- include(ejsPath + '/component/_c-sidebar-title',{text:"人気記事"})%>
-      <br>
-      <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-sidebar-title',{text:"口コミ"})%>
-      <br>
-      <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-sidebar-title',{text:"キャンペーン"})%>
-      <br>
-      <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-sidebar-title',{text:"アーカイブ"})%>
-      <!-- prettier-ignore -->
-
-
-
       <%- include(ejsPath + '/component/_c-breadcrumb', {
         breadcrumbs: [
           { title: "ブログ詳細", url: "" }
@@ -218,11 +201,24 @@
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-logo' , { logo: '' })%>
       <!-- prettier-ignore -->
+     
+      <h2 class="h2">.c-sidebar-title</h2>
+      <p class="p">サイドバータイトル</p>
+      <%- include(ejsPath + '/component/_c-sidebar-title',{text:"人気記事"})%>
+      <br>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-sidebar-title',{text:"口コミ"})%>
+      <br>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-sidebar-title',{text:"キャンペーン"})%>
+      <br>
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-sidebar-title',{text:"アーカイブ"})%>
       
       <h2 class="h2">.footer</h2>
       <p class="p">フッター</p>
       <%- include(ejsPath + '/common/_footer' ) %>
-
+      
     </div>
   </body>
 </html>
