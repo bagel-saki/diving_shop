@@ -28,5 +28,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(this).addClass('c-campaign-category--active');
   });
 
+
+  //ダイビング情報タブのactive付与
+  $('.js-information-tab').on('click', function () {
+    $('.js-information-tab').removeClass('c-information-tab--active');
+    $(this).addClass('c-information-tab--active');
+  });
+
   
 });

@@ -215,6 +215,16 @@
       <!-- prettier-ignore -->
       <%- include(ejsPath + '/component/_c-sidebar-title',{text:"アーカイブ"})%>
       
+      <h2 class="h2">.c-information-tab</h2>
+      <p class="p">インフォメーションタブ</p> 
+      <%- include(ejsPath + '/component/_c-information-tab' ,{text:'ライセンス講習', image: 'whale' }) %> 
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-information-tab' ,{text:'ファンダイビング', image: 'shark' }) %> 
+      <!-- prettier-ignore -->
+      <%- include(ejsPath + '/component/_c-information-tab' ,{text:'体験ダイビング', image: 'fish' }) %> 
+
+
+
       <h2 class="h2">.footer</h2>
       <p class="p">フッター</p>
       <%- include(ejsPath + '/common/_footer' ) %>
