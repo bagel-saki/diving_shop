@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.p-drawer {
+	position: fixed;
+	z-index: map-get($layer, drawer);
+    top: rem(80);
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $green;
+    overflow-y: auto;
+    display: none;
+}
+
+html.is-fixed {
+    overflow: hidden;
+}
+
+.p-drawer__container {
+	width: 100%;
+    height: inherit;
+	display: flex;
+	gap: rem(7);
+	padding: rem(24) rem(17) 0;
+}
+
+.p-drawer__leftItems,
+.p-drawer__rightItems {
+    min-height: 100vh;
+	width: 50%;
+}
+
+.p-drawer__leftItems {
+
+}
+.p-drawer__rightItems {
+
+}
+.p-drawer__item {
+
+}
+
+.p-drawer__title {
+	
+}
+
+.p-drawer__rightItems {
+
+}

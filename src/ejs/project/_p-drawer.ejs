@@ -4,11 +4,10 @@ project = '.';
 let leftContent = [
     {main: 'キャンペーン', first: 'ライセンス取得', second: '貸切体験ダイビング', third: 'ナイトダイビング'},
     {main: '私たちについて', first: '', second: '', third: ''},
-    {main: 'ダイビング情報', first: 'ライセンス講習', second: '', third: ''},
-    {main: '私たちについて', first: '', second: '体験ダイビング', third: 'ファンダイビング'},
+    {main: 'ダイビング情報', first: 'ライセンス講習', second: '体験ダイビング', third: 'ファンダイビング'},
     {main: 'ブログ', first: '', second: '', third: ''},
-
 ]
+
 let rightContent = [
     {main: 'お客様の声', first: '', second: '', third: ''},
     {main: '料金一覧', first: 'ライセンス講習', second: '体験ダイビング', third: 'ファンダイビング'},
@@ -16,36 +15,33 @@ let rightContent = [
     {main: 'プライバシーポリシー', first: '', second: '', third: ''},
     {main: '利用規約', first: '', second: '', third: ''},
     {main: 'お問い合わせ', first: '', second: '', third: ''},
-
 ]
 
 %>
 
-            <nav class="p-header__drawer p-drawer js-drawer">
+            <nav class="p-drawer js-drawer">
                 <div class="p-drawer__container">
-                  <div class="p-drawer__leftItems"> <% leftContent.forEach(function(title) { %>
+                    <ul class="p-drawer__leftItems"> <% leftContent.forEach(function(title) { %>
                     <li class="p-drawer__item">
-                        <a class="p-drawer__title" href="">
                             <%- include(project + '/_p-drawerTitle', {
                                 main: title.main,
                                 first: title.first,
                                 second: title.second,
                                 third: title.third
                                 }) %>
-                        </a>
                     </li>
-                    <% }); %></div>
-                  <div class="p-drawer__rightItems"> <% rightContent.forEach(function(title) { %>
+                    <% }); %>
+                    </ul>
+                    <ul class="p-drawer__rightItems"> <% rightContent.forEach(function(title) { %>
                     <li class="p-drawer__item">
-                        <a class="p-drawer__title" href="">
                             <%- include(project + '/_p-drawerTitle', {
                                 main: title.main,
                                 first: title.first,
                                 second: title.second,
                                 third: title.third
                                 }) %>
-                        </a>
                     </li>
-                    <% }); %></div>
-                </ul>
+                    <% }); %>
+                    </ul>
+                </div>
             </nav>

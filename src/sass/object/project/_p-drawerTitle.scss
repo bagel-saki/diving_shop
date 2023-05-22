@@ -1,0 +1,43 @@
+
+@use "global" as *;
+
+.p-drawerTitle {
+	line-height: calc(18/16);
+	color: $white;
+	display: block;
+    width: 100%;
+	padding-left: rem(17);
+    letter-spacing: rem(2);
+    transition: opacity 0.3s;
+	position: relative;
+	letter-spacing: 0;
+}
+
+.p-drawerTitle__main {
+	padding: rem(20) 0;
+	font-weight: $bold;
+	display: block;
+}
+
+.p-drawerTitle__main::before{
+	position: absolute;
+	content: "";
+	background: url(../../../assets/images/common/starfish.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: rem(18);
+	height: rem(18);
+	top: rem(20);
+	left: rem(-4);
+}
+
+.p-drawerTitle__lists {
+
+}
+
+.p-drawerTitle__list {
+	padding: rem(12) 0;
+	display: block;
+}
+
+

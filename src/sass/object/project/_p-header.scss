@@ -3,15 +3,20 @@
 
 .p-header {
     background-color: rgba($color: $green, $alpha: 0.68);
-    height: rem(90);
+    height: rem(80);
     position: fixed;
-    z-index: 5000;
+    z-index: map-get($layer, header);
     width: 100%;
     top: 0;
     left: 0;
     right: 0;
     transition: background-color 0.3s;
-
+    @include mq(md){
+        height: rem(90);
+    }
+}
+.p-header.is-background-color{
+    background-color: $green;
 }
 
 .p-header__inner {
