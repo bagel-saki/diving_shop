@@ -1,0 +1,24 @@
+
+@use "global" as *;
+
+.p-pc-navTitle {
+    color: $white;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: rem(4);
+}
+
+.p-pc-navTitle__main {
+    font-family:$english-font-family;
+    font-size: rem(18);
+    line-height: 1;
+}
+
+.p-pc-navTitle__sub {
+    font-size: rem(10);
+    line-height: 1.5;
+}
+

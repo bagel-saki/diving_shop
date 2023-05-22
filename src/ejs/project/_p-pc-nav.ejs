@@ -1,0 +1,29 @@
+<%
+project = '.';
+
+let titleContent = [
+    {main: 'Campaign', sub: 'キャンペーン'},
+    {main: 'About us', sub: '私たちについて'},
+    {main: 'Information', sub: 'ダイビング情報'},
+    {main: 'Blog', sub: 'ブログ'},
+    {main: 'Voice', sub: 'お客様の声'},
+    {main: 'Price', sub: '料金一覧'},
+    {main: 'FAQ', sub: 'よくある質問'},
+    {main: 'Contact', sub: 'お問合せ'},
+]
+%>
+
+            <nav class="p-header__pc-nav p-pc-nav  u-desktop">
+                <ul class="p-pc-nav__items">
+                    <% titleContent.forEach(function(title) { %>
+                    <li class="p-pc-nav__item">
+                        <a class="p-pc-nav__title" href="">
+                            <%- include(project + '/_p-pc-navTitle', {
+                                main: title.main,
+                                sub: title.sub
+                                }) %>
+                        </a>
+                    </li>
+                    <% }); %>
+                </ul>
+            </nav>

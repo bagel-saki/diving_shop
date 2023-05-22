@@ -1,0 +1,19 @@
+
+@use "global" as *;
+
+.p-pc-nav__items {
+    display: flex;
+    height: inherit;
+}
+
+.p-pc-nav__item {
+    height: inherit;
+}
+
+.p-pc-nav__item:not(:first-child) {
+    margin-left: rem(30);
+}
+
+.p-pc-nav__title{
+    height: inherit;
+}
