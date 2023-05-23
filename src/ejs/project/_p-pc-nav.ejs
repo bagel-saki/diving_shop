@@ -2,14 +2,14 @@
 project = '.';
 
 let titleContent = [
-    {main: 'Campaign', sub: 'キャンペーン'},
-    {main: 'About us', sub: '私たちについて'},
-    {main: 'Information', sub: 'ダイビング情報'},
-    {main: 'Blog', sub: 'ブログ'},
-    {main: 'Voice', sub: 'お客様の声'},
-    {main: 'Price', sub: '料金一覧'},
-    {main: 'FAQ', sub: 'よくある質問'},
-    {main: 'Contact', sub: 'お問合せ'},
+    {en: 'Campaign', ja: 'キャンペーン'},
+    {en: 'About us', ja: '私たちについて'},
+    {en: 'Information', ja: 'ダイビング情報'},
+    {en: 'Blog', ja: 'ブログ'},
+    {en: 'Voice', ja: 'お客様の声'},
+    {en: 'Price', ja: '料金一覧'},
+    {en: 'FAQ', ja: 'よくある質問'},
+    {en: 'Contact', ja: 'お問合せ'},
 ]
 %>
 
@@ -18,10 +18,8 @@ let titleContent = [
                     <% titleContent.forEach(function(title) { %>
                     <li class="p-pc-nav__item">
                         <a class="p-pc-nav__title" href="">
-                            <%- include(project + '/_p-pc-navTitle', {
-                                main: title.main,
-                                sub: title.sub
-                                }) %>
+                            <p class="p-pc-nav__en-title"><%= title.en %></p>
+                            <p class="p-pc-navTitle__p-pc-nav__ja-title"><%= title.ja %></p>
                         </a>
                     </li>
                     <% }); %>

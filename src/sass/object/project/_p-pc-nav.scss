@@ -20,4 +20,22 @@
 
 .p-pc-nav__title{
     height: inherit;
+    color: $white;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: rem(4);
+}
+
+.p-pc-nav__en-title {
+    font-family:$english-font-family;
+    font-size: rem(18);
+    line-height: 1;
+}
+
+.p-pc-navTitle__p-pc-nav__ja-title {
+    font-size: rem(10);
+    line-height: 1.5;
 }

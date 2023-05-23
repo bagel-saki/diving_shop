@@ -5,7 +5,7 @@
     background-color: rgba($color: $green, $alpha: 0.68);
     height: rem(80);
     position: fixed;
-    z-index: map-get($layer, header);
+    z-index: 9999;
     width: 100%;
     top: 0;
     left: 0;

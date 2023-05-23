@@ -2,7 +2,7 @@
 
 .p-drawer {
 	position: fixed;
-	z-index: map-get($layer, drawer);
+	z-index: 5000;
     top: rem(80);
     left: 0;
     width: 100%;
@@ -30,20 +30,40 @@ html.is-fixed {
 	width: 50%;
 }
 
-.p-drawer__leftItems {
-
-}
-.p-drawer__rightItems {
-
-}
 .p-drawer__item {
+    line-height: calc(18/16);
+	color: $white;
+	display: block;
+    width: 100%;
+	padding-left: rem(17);
+    letter-spacing: rem(2);
+    transition: opacity 0.3s;
+	position: relative;
+	letter-spacing: 0;
 
 }
 
 .p-drawer__title {
-	
+    padding: rem(20) 0;
+	font-weight: $bold;
+	display: block;
+	cursor: pointer;
 }
 
-.p-drawer__rightItems {
+.p-drawer__title::before{
+	position: absolute;
+	content: "";
+	background: url(../../../assets/images/common/starfish.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: rem(18);
+	height: rem(18);
+	top: rem(20);
+	left: rem(-4);
+}
+
+.p-drawer__list {
+    padding: rem(12) 0;
+	display: block;
 
 }
