@@ -24,7 +24,7 @@
     padding-left: rem(15);
 
     @include mq(md) {
-        padding:0 rem(40);
+        padding:0 rem(25);
     }
 }
 
@@ -43,6 +43,7 @@
     margin-right: auto;
     display: flex;
     align-items: center;
+    padding: 0 rem(15);
 
 }
 
