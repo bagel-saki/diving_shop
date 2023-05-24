@@ -28,6 +28,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(this).addClass('c-campaign-category--active');
   });
 
+    // ハンバーガーメニュー
+   //ドロワーメニュー
+  $(".js-hamburger,.js-drawer").click(function () {
+    $(".js-hamburger").toggleClass("is-active");
+    $(".js-header").toggleClass("is-background-color");
+    $(".js-drawer").fadeToggle();
+    $("html").toggleClass("is-fixed");
+  });
 
   //ダイビング情報タブのactive付与
   $('.js-information-tab').on('click', function () {

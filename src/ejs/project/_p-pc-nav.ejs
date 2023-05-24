@@ -1,0 +1,27 @@
+<%
+project = '.';
+
+let titleContent = [
+    {en: 'Campaign', ja: 'キャンペーン'},
+    {en: 'About us', ja: '私たちについて'},
+    {en: 'Information', ja: 'ダイビング情報'},
+    {en: 'Blog', ja: 'ブログ'},
+    {en: 'Voice', ja: 'お客様の声'},
+    {en: 'Price', ja: '料金一覧'},
+    {en: 'FAQ', ja: 'よくある質問'},
+    {en: 'Contact', ja: 'お問合せ'},
+]
+%>
+
+            <nav class="p-pc-nav  u-desktop">
+                <ul class="p-pc-nav__items">
+                    <% titleContent.forEach(function(title) { %>
+                    <li class="p-pc-nav__item">
+                        <a class="p-pc-nav__title" href="">
+                            <p class="p-pc-nav__en-title"><%= title.en %></p>
+                            <p class="p-pc-navTitle__p-pc-nav__ja-title"><%= title.ja %></p>
+                        </a>
+                    </li>
+                    <% }); %>
+                </ul>
+            </nav>
