@@ -8,7 +8,7 @@
 }
 
 
-.c-title__main{
+.c-title__en{
   font-family: $english-font-family;
   font-size: rem(32);
   line-height: rem(1.25);
@@ -46,14 +46,14 @@
   }
 } 
 
-.c-title__sub{
+.c-title__ja{
   font-family: $base-font-family;
   font-size: rem(12);
   margin-top: rem(30);
   line-height: rem(1.5);
 
   @include mq('md'){
-   margin-top: rem(38);
+   margin-top: rem(20);
   } 
 }
 
@@ -70,6 +70,6 @@
 
 .c-title--large p{
   @include mq('md'){
-    margin-top: rem(40);
+    margin-top: rem(20);
   }
 }
