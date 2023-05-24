@@ -1,0 +1,89 @@
+@use "global" as *;
+
+table {
+	border-collapse: collapse;
+  }
+
+  table tr, table td {
+	border: solid 1px $green;
+	background-clip: padding-box;
+  }
+
+.p-chargeList-table {
+	text-align: center;
+}
+
+.p-chargeList-table__line {
+	background-color: $green;
+	color: $white;
+    text-align: center;
+}
+
+.p-chargeList-table__title{
+    padding-top: rem(8);
+    padding-bottom: rem(8);
+    padding-right: rem(8);
+	padding-left: rem(32);
+	position: relative;
+	display: inline-block;
+}
+
+.p-chargeList-table__title span{
+	position: absolute;
+	content: "";
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	display: inline-block;
+	mask-image: url(../../../assets/images/common/icon-whale.svg);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
+	background-color: $white;
+	transition: background-color 0.3s;
+	width: rem(24);
+	height: rem(24);
+	@include mq(md){
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		padding-left: 0;
+		width: rem(64);
+	height: rem(64);
+	}
+}
+
+.p-chargeList-table__list {
+	display: flex;
+	align-items: center;
+	height: rem(60);
+	background-color: $white;
+}
+
+.p-chargeList-table__listLeft{
+	width: 69.5%;
+	height: inherit;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-chargeList-table__listRight{
+	width: 31.5%;
+	padding-right: rem(11);
+	height: inherit;
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.p-chargeList-table.p-chargeList-table--pc{
+	display: flex;
+}
+
+.p-chargeList-table__row{
+	background-color: $green;
+	color: $white;
+    text-align: center;
+
+}

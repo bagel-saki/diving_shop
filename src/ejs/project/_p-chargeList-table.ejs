@@ -1,0 +1,80 @@
+<%
+project = '.';
+let cardTitle = 'ライセンス講習'
+let cardContent = [
+  {course: 'オープンウォーターダイバーコース', price: '¥50,000'},
+  {course: 'アドバンスドオープンウォーターコース', price: '¥60,000'},
+  {course: 'レスキュー＋EFRコース', price: '¥70,000'},
+]
+%>
+
+<table class="p-chargeList-table u-mobile">
+    <tr class="p-chargeList-table__line">
+        <th class="p-chargeList-table__title" colspan="2">
+            <span></span>
+            <%= cardTitle %>
+        </th>
+    </tr>
+    <% cardContent.forEach(function(card) { %>
+    <tr class="p-chargeList-table__list">
+        <td class="p-chargeList-table__listLeft"><%= card.course %></td>
+        <td class="p-chargeList-table__listRight"><%= card.price %></td>
+    </tr>
+    <% }); %>
+</table>
+
+<div class="p-chargeList-table p-chargeList-table--pc u-desktop">
+    <div class="p-chargeList-table__row">
+        <div class="p-chargeList-table__title">
+            <span></span>
+            <%= cardTitle %>
+        </div>
+    </div>
+    <div class="p-chargeList-table__content">
+        <% cardContent.forEach(function(card) { %>
+
+        <div class="p-chargeList-table__list">
+            <div class="p-chargeList-table__listLeft"><%= card.course %></div>
+            <div class="p-chargeList-table__listRight"><%= card.price %></div>
+
+    </div>
+    <% }); %>
+        
+    </div>
+     
+</div>
+
+<table class="p-chargeList-table p-chargeList-table--pc u-desktop">
+    <tr class="p-chargeList-table__row">
+        <th class="p-chargeList-table__title">
+            <span></span>
+            <%= cardTitle %>
+        </th>
+    </tr>
+        <% cardContent.forEach(function(card) { %>
+    <!-- <tr class="p-chargeList-table__content"> -->
+    <tr class="p-chargeList-table__list">
+        <td class="p-chargeList-table__listLeft"><%= card.course %></td>
+        <td class="p-chargeList-table__listRight"><%= card.price %></td>
+    </tr>
+    <!-- </tr> -->
+    <% }); %>
+</table>
+
+
+<!-- <table class="p-chargeList-table u-desktop">
+    <% cardContent.forEach(function(card) { %>
+    <tr class="p-chargeList-table__line">
+        <th class="p-chargeList-table__title" rowspan="4">
+            <span></span>
+            <%= card.title %>
+        </th>
+        <td class="p-chargeList-table__listLeft"><%= card.course %></td>
+        <td class="p-chargeList-table__listRight"><%= card.price %></td>
+    </tr>
+    <tr class="p-chargeList-table__list">
+        <td class="p-chargeList-table__listLeft"><%= card.course %></td>
+        <td class="p-chargeList-table__listRight"><%= card.price %></td>
+    </tr>
+    <% }); %>
+</table> -->
