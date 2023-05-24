@@ -18,8 +18,9 @@ let titleContent = [
                     <% titleContent.forEach(function(title) { %>
                     <li class="p-pc-nav__item">
                         <a class="p-pc-nav__title" href="">
-                            <p class="p-pc-nav__en-title"><%= title.en %></p>
-                            <p class="p-pc-navTitle__p-pc-nav__ja-title"><%= title.ja %></p>
+                            <p class="p-pc-nav__en-title"><%- title.en %></p>
+                            <p class="p-pc-nav__ja-title"><%- title.ja %></p>
+                            <span></span>
                         </a>
                     </li>
                     <% }); %>

@@ -12,7 +12,7 @@ let rightContent = [
     {main: 'お客様の声', first: '', second: '', third: ''},
     {main: '料金一覧', first: 'ライセンス講習', second: '体験ダイビング', third: 'ファンダイビング'},
     {main: 'よくある質問', first: '', second: '', third: ''},
-    {main: 'プライバシーポリシー', first: '', second: '', third: ''},
+    {main: 'プライバシー<br>ポリシー', first: '', second: '', third: ''},
     {main: '利用規約', first: '', second: '', third: ''},
     {main: 'お問い合わせ', first: '', second: '', third: ''},
 ]
@@ -23,12 +23,12 @@ let rightContent = [
                 <div class="p-drawer__container">
                     <ul class="p-drawer__leftItems"> <% leftContent.forEach(function(title) { %>
                     <li class="p-drawer__item">
-                        <a class="p-drawer__title"><%= title.main %></a>
+                        <a class="p-drawer__title"><%- title.main %></a>
                             <% if (title.first || title.second || title.third) { %>
                         <div class="p-drawer__lists">
-                            <a class="p-drawer__list" href=""><%= title.first %></a>
-                            <a class="p-drawer__list" href=""><%= title.second %></a>
-                            <a class="p-drawer__list" href=""><%= title.third %></a>
+                            <a class="p-drawer__list" href=""><%- title.first %></a>
+                            <a class="p-drawer__list" href=""><%- title.second %></a>
+                            <a class="p-drawer__list" href=""><%- title.third %></a>
                         </div>
                         <% } %>
                     </li>
@@ -36,12 +36,12 @@ let rightContent = [
                     </ul>
                     <ul class="p-drawer__rightItems"> <% rightContent.forEach(function(title) { %>
                         <li class="p-drawer__item">
-                            <a class="p-drawer__title"><%= title.main %></a>
+                            <a class="p-drawer__title"><%- title.main %></a>
                             <% if (title.first || title.second || title.third) { %>
                             <div class="p-drawer__lists">
-                                <a class="p-drawer__list" href=""><%= title.first %></a>
-                                <a class="p-drawer__list" href=""><%= title.second %></a>
-                                <a class="p-drawer__list" href=""><%= title.third %></a>
+                                <a class="p-drawer__list" href=""><%- title.first %></a>
+                                <a class="p-drawer__list" href=""><%- title.second %></a>
+                                <a class="p-drawer__list" href=""><%- title.third %></a>
                             </div>
                             <% } %>
                         </li>
