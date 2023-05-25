@@ -1,0 +1,55 @@
+<% baseUrlPath='.' ; ejsPath='.' ; pageData="top" %>
+<!DOCTYPE html>
+<html lang="ja">
+    <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
+        json[pageData] }) %>
+  <style>
+    .wrapper {
+      max-width: 1000px;
+      width: 100%;
+      margin: auto;
+    }
+    /* div {
+      margin: 40px 0;
+    } */
+    .h2 {
+      margin-top: 75px;
+      background-color: yellow;
+      color: black;
+    }
+    .p {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <!-- prettier-ignore -->
+      <h2 class="h2">.p-header</h2>
+      <p class="p">ヘッダーとドロワー</p>
+      <%- include(ejsPath + '/project/_p-header' )%>
+
+      <h2 class="h2">.footer</h2>
+      <p class="p">フッター</p>
+
+      <%- include(ejsPath + '/common/_footer' ) %>
+    </div>
+
+    <h2 class="h2">.p-lower-top</h2>
+    <p class="p">下層ページトップ</p>
+    <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'campaign', first: 'campaign', middle:'', last:'',}) %> 
+    <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'aboutus', first: 'about us', middle:'', last:'', }) %> 
+    <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'information', first: 'information', middle:'', last:'', }) %> 
+    <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'blog', first: 'blog', middle:'', last:'', }) %>
+    <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'voice', first: 'voice', middle:'', last:'', }) %> 
+    <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'price', first: 'price', middle:'', last:'', }) %> 
+    <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'faq', first: 'faq',  middle:'', last:'',}) %> 
+    <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'contact', first: 'contact', middle:'', last:'', }) %> 
+    <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'privacy', first: 'privacy policy', middle:'', last:'', }) %> 
+    <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'sitemap', first: 'site', middle:' map', last:'', }) %> 
+    <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'terms', first: 'terms', middle:' of', last:' service', }) %> 
+  </body>
+
+
+</html>

@@ -1,0 +1,129 @@
+@use "global" as *;
+
+.p-lower-top{
+	position: relative;
+	width: 100%;
+	filter: grayscale(30%);
+	aspect-ratio : 375 / 460;
+	object-fit: cover;
+
+	@include mq('md'){
+	aspect-ratio: 1440 / 548;
+	}
+}
+
+
+
+.p-lower-top--campaign{
+	background: url(../../../assets/images/common/lower-top_campaignSP.jpg)no-repeat center center / cover;
+
+	@include mq('md'){
+	background: url(../../../assets/images/common/lower-top_campaign.jpg)no-repeat center center / cover;
+	}
+}
+
+
+.p-lower-top--aboutus{
+	background: url(../../../assets/images/common/lower-top_aboutusSP.jpg)no-repeat center center / cover;
+
+	@include mq('md'){
+	background: url(../../../assets/images/common/lower-top_aboutus.jpg)no-repeat center center / cover;
+	}
+}
+
+
+
+.p-lower-top--information{
+	background: url(../../../assets/images/common/lower-top_informationSP.jpg)no-repeat center center / cover;
+	@include mq('md'){
+		background: url(../../../assets/images/common/lower-top_information.jpg)no-repeat center center / cover;
+	}
+}
+
+.p-lower-top--blog{
+	background: url(../../../assets/images/common/lower-top_blogSP.jpg)no-repeat center center / cover;
+	@include mq('md'){
+		background: url(../../../assets/images/common/lower-top_blog.jpg)no-repeat center center / cover;
+	}
+}
+
+.p-lower-top--voice{
+	background: url(../../../assets/images/common/lower-top_voiceSP.jpg)no-repeat center center / cover;
+	@include mq('md'){
+		background: url(../../../assets/images/common/lower-top_voice.jpg)no-repeat center center / cover;
+	}
+}
+
+.p-lower-top--price{
+	background: url(../../../assets/images/common/lower-top_priceSP.jpg)no-repeat center center / cover;
+	@include mq('md'){
+		background: url(../../../assets/images/common/lower-top_price.jpg)no-repeat center center / cover;
+	}
+}
+
+.p-lower-top--faq{
+	background: url(../../../assets/images/common/lower-top_faqSP.jpg)no-repeat center center / cover;
+	@include mq('md'){
+		background: url(../../../assets/images/common/lower-top_faq.jpg)no-repeat center center / cover;
+	}
+}
+
+
+.p-lower-top--contact{
+	background: url(../../../assets/images/common/lower-top_contactSP.jpg)no-repeat center center / cover;
+	@include mq('md'){
+		background: url(../../../assets/images/common/lower-top_contact.jpg)no-repeat center center / cover;
+	}
+}
+
+.p-lower-top--privacy,
+.p-lower-top--sitemap,
+.p-lower-top--terms{
+	background: url(../../../assets/images/common/lower-top_otherSP.jpg)no-repeat center center / cover;
+	@include mq('md'){
+	background: url(../../../assets/images/common/lower-top_other.jpg)no-repeat center center / cover;
+	}
+}
+
+
+
+
+.p-lower-top_title{
+	position: absolute;
+    content:"";
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: $white;
+	text-transform: capitalize;
+	font-size: rem(40);
+	font-family: $english-second-font-family;
+	font-weight: $normal;
+    letter-spacing: rem(2);
+	white-space: nowrap;
+	
+	@include mq('md'){
+		font-size: rem(80);
+		top: 60.7%; //333/548
+	}
+}
+
+.p-lower-top--aboutus h1{
+	text-transform	:none;
+}
+
+.p-lower-top--aboutus h1:first-letter{
+	text-transform: uppercase;
+}
+.p-lower-top--faq h1{
+	text-transform: uppercase;
+}
+.p-lower-top--sitemap h1 span{
+	text-transform:uppercase;
+}
+
+.p-lower-top--terms h1 span{
+	text-transform:	none;
+}
