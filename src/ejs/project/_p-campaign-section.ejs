@@ -1,7 +1,6 @@
 <%
 project = '.';
 
-// 連想配列を作ることで、変更箇所をまとめることもできます
 let priceCardContent = [
   {image:'1', tag:'ライセンス講習', title:'ライセンス取得', text:'全部コミコミ(お一人様)' , originalPrice:'￥56,000', newPrice:'￥46,000'},
   {image:'2', tag:'体験ダイビング', title:'貸切体験ダイビング', text:'全部コミコミ(お一人様)' , originalPrice:'￥24,000', newPrice:'￥18,000'},
@@ -9,7 +8,7 @@ let priceCardContent = [
   {image:'4', tag:'ファンダイビング', title:'貸切ファンダイビング', text:'全部コミコミ(お一人様)' , originalPrice:'￥20,000', newPrice:'￥16,000'}
 ]
 %>
-<!-- 1配列の出力方法は複数あります -->
+
 <ul class="p-campaign-section">
   <% priceCardContent.forEach(function(one) { %>
     <li class="p-campaign-section__item">
