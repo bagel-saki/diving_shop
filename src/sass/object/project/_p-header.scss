@@ -1,0 +1,53 @@
+
+@use "global" as *;
+
+.p-header {
+    background-color: rgba($color: $green, $alpha: 0.68);
+    height: rem(80);
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: background-color 0.3s;
+    @include mq(md){
+        height: rem(90);
+    }
+}
+.p-header.is-background-color{
+    background-color: $green;
+}
+
+.p-header__inner {
+    height: inherit;
+    padding-left: rem(15);
+
+    @include mq(md) {
+        padding:0 rem(25);
+    }
+}
+
+.p-header__container {
+    display: flex;
+    height: inherit;
+
+}
+
+.p-header__link {
+    height: inherit;
+}
+
+.p-header__logo {
+    height: inherit;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 rem(15);
+
+}
+
+.p-header__pc-nav {
+    height: inherit;
+    margin-left: auto;
+}

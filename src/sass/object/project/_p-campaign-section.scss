@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.p-campaign-section {
+	display: grid;
+
+	gap: rem(24);
+    grid-template-columns: repeat(4,1fr);
+    justify-content: center;
+    align-items: center;
+
+    @include mq(md) {
+        gap: rem(40);
+    }
+}

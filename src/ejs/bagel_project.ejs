@@ -1,0 +1,63 @@
+<% baseUrlPath='.' ; ejsPath='.' ; pageData="top" %>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
+    json[pageData] }) %>
+  <style>
+    .wrapper {
+      width: 100%;
+      margin: auto;
+      background-color: pink;
+      padding: 0 20px;
+      max-width: 1120px;
+    }
+
+    .h2 {
+      margin-top: 75px;
+      background-color: yellow;
+      color: black;
+    }
+    .p {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <h2 class="h2">header</h2>
+      <p class="p">ヘッダー</p>
+      <%- include(ejsPath + '/common/_header' ) %>
+      <!-- prettier-ignore -->
+      <h2 class="h2">.p-header</h2>
+      <p class="p">ヘッダーとドロワー</p>
+      <%- include(ejsPath + '/project/_p-header' )%>
+      <!-- prettier-ignore -->
+      <h2 class="h2">.p-campaign-card</h2>
+      <p class="p">キャンペーンカード</p>
+      <%- include(project + '/project/_p-campaign-card',
+      {image:'1', tag:'ライセンス講習', title:'ライセンス取得', text:'全部コミコミ(お一人様)' , originalPrice:'￥56,000', newPrice:'￥46,000'}
+      ) %>
+      <h2 class="h2">.p-campaign-section</h2>
+      <p class="p">キャンペーンカードセクション</p>
+      <%- include(ejsPath + '/project/_p-campaign-section' )%>
+      <!-- prettier-ignore -->
+      <h2 class="h2">.p-lower-campaign-card</h2>
+      <p class="p">キャンペーンカード(キャンペーンページ)</p>
+      <%- include(project + '/project/_p-lower-campaign-card',
+      {image:'1', tag:'ライセンス講習', title:'ライセンス取得', text:'全部コミコミ(お一人様)' , originalPrice:'￥56,000', newPrice:'￥46,000',
+      details:'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト',
+      contactDate:'2023/6/1-9/30'}
+      ) %>
+      <!-- prettier-ignore -->
+      <h2 class="h2">.p-lower-campaign-section</h2>
+      <p class="p">キャンペーンカードセクション(キャンペーンページ)</p>
+      <%- include(ejsPath + '/project/_p-lower-campaign-section' )%>
+
+      <!-- prettier-ignore -->
+      <h2 class="h2">.footer</h2>
+      <p class="p">フッター</p>
+      <%- include(ejsPath + '/common/_footer' ) %>
+    </div>
+  </body>
+</html>

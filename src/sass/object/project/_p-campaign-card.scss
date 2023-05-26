@@ -1,0 +1,122 @@
+@use "global" as *;
+
+.p-campaign-card{
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: rem(4) rem(4) rem(10) rgba($color: #000000, $alpha: 0.25);
+    width: rem(280);
+    max-width: 100%;
+    @include mq(md){
+        width: rem(333);
+    }
+}
+
+.p-campaign-card__img {
+    aspect-ratio: 280/188;
+    overflow: hidden;
+    @include mq(md){
+        aspect-ratio: 333/223;
+    }
+}
+
+.p-campaign-card__head {
+    padding-top: rem(14);
+    margin-right: rem(14);
+    margin-left: rem(14);
+    padding-bottom: rem(8);
+    position: relative;
+    @include mq(md){
+    padding-top: rem(24);
+    margin-right: rem(16);
+    margin-left: rem(16);
+    }
+}
+
+.p-campaign-card__tag {
+    display: inline-block;
+    color: $green;
+    border: 1px solid $green;
+    font-size: rem(12);
+    padding: rem(9) rem(12);
+    line-height: 1;
+}
+
+.p-campaign-card__title {
+    line-height: calc(24/16);
+    font-weight: $medium;
+    margin-top: rem(4);
+}
+
+.p-campaign-card__border{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background-color: $green;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.p-campaign-card__body{
+    padding-top: rem(16);
+    padding-right: rem(16);
+    padding-left: rem(16);
+    padding-bottom: rem(24);
+    text-align: center;
+    @include mq(md){
+        margin-top: rem(24);
+    }
+}
+
+.p-campaign-card__text {
+    font-size: rem(14);
+    @include mq(md){
+        font-size: rem(16);
+    }
+
+}
+
+.p-campaign-card__price {
+    display: flex;
+    gap: rem(16);
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    margin-top: rem(8);
+    flex-grow: 1;
+    font-family: $english-second-font-family;
+    font-weight: $bold;
+    @include mq(md){
+        gap: rem(24);
+    }
+}
+
+.p-campaign-card__originalPrice {
+    font-size: rem(20);
+    position: relative;
+    @include mq(md){
+        font-size: rem(24);
+    }
+}
+
+.p-campaign-card__originalPrice::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color:$red ;
+    top: 50%;
+    left: 0;
+    right: 0;
+}
+
+.p-campaign-card__newPrice {
+    font-size: rem(32);
+    color: $green;
+    @include mq(md){
+        font-size: rem(40);
+    }
+}
