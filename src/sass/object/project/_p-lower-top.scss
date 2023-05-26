@@ -13,12 +13,12 @@
 }
 
 
-
 .p-lower-top--campaign{
 	background: url(../../../assets/images/common/lower-top_campaignSP.jpg)no-repeat center center / cover;
 
 	@include mq('md'){
 	background: url(../../../assets/images/common/lower-top_campaign.jpg)no-repeat center center / cover;
+
 	}
 }
 
@@ -84,8 +84,6 @@
 	background: url(../../../assets/images/common/lower-top_other.jpg)no-repeat center center / cover;
 	}
 }
-
-
 
 
 .p-lower-top_title{

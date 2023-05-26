@@ -9,9 +9,7 @@
       width: 100%;
       margin: auto;
     }
-    /* div {
-      margin: 40px 0;
-    } */
+
     .h2 {
       margin-top: 75px;
       background-color: yellow;
@@ -25,6 +23,10 @@
   </style>
   <body>
     <div class="wrapper">
+      <h2 class="h2">header</h2>
+      <p class="p">ヘッダー</p>
+      <%- include(ejsPath + '/common/_header' ) %>    
+      
       <!-- prettier-ignore -->
       <h2 class="h2">.p-header</h2>
       <p class="p">ヘッダーとドロワー</p>
