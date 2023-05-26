@@ -5,15 +5,13 @@
     json[pageData] }) %>
   <style>
     .wrapper {
-      max-width: 1000px;
       width: 100%;
       margin: auto;
       background-color: pink;
+      padding: 0 20px;
+      max-width: 1120px;
     }
 
-    /* div {
-      margin: 40px 0;
-    } */
     .h2 {
       margin-top: 75px;
       background-color: yellow;
@@ -44,11 +42,22 @@
       <p class="p">キャンペーンカードセクション</p>
       <%- include(ejsPath + '/project/_p-campaign-section' )%>
       <!-- prettier-ignore -->
+      <h2 class="h2">.p-lower-campaign-card</h2>
+      <p class="p">キャンペーンカード(キャンペーンページ)</p>
+      <%- include(project + '/project/_p-lower-campaign-card',
+      {image:'1', tag:'ライセンス講習', title:'ライセンス取得', text:'全部コミコミ(お一人様)' , originalPrice:'￥56,000', newPrice:'￥46,000',
+      details:'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト',
+      contactDate:'2023/6/1-9/30'}
+      ) %>
+      <!-- prettier-ignore -->
+      <h2 class="h2">.p-lower-campaign-section</h2>
+      <p class="p">キャンペーンカードセクション(キャンペーンページ)</p>
+      <%- include(ejsPath + '/project/_p-lower-campaign-section' )%>
 
+      <!-- prettier-ignore -->
       <h2 class="h2">.footer</h2>
       <p class="p">フッター</p>
       <%- include(ejsPath + '/common/_footer' ) %>
-
     </div>
   </body>
 </html>
