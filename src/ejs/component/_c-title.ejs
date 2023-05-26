@@ -1,20 +1,13 @@
 <!-- 有効な色のリストを定義 -->
-<% const validColors = ['white']; %>
-<!-- 有効なサイズリストを定義 -->
-<% const validSizes = ['large']; %>
+<% const validStyle = ['white','large']; %>
+<% const titleClass = validStyle.includes(style) ? ` c-title--${style}` : ''; %><!-- 有効なサイズリストを定義 -->
 
-<div class="c-title<%- getColorClass(color) %> c-title<%- getSizeClass(size) %>">
-    <h2 class="c-title__en"><%= title__en %></h2>
-    <p class="c-title__ja"><%= title__ja %></p>
+<div class="c-title<%- titleClass %>">
+  <h2 class="c-title__en"><%= title__en %></h2>
+  <p class="c-title__ja"><%= title__ja %></p>
 </div>
 
-<% function getColorClass(color) { %>
-  <% return validColors.includes(color) ? ` c-title--${color}` : ''; %>
-<% } %>
 
-<% function getSizeClass(size) { %>
-  <% return validSizes.includes(size) ? ` c-title--${size}` : ''; %>
-<% } %>
 
 
 
