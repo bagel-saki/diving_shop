@@ -16,9 +16,9 @@ let priceCardContent = [
    contactDate:'2023/6/1-9/30'}
 ]
 %>
-<ul class="p-lower-campaign-section">
-    <% priceCardContent.forEach(function(one) { %>
-    <li class="p-lower-campaign-section__item">
+<ul class="p-lower-campaign-cards">
+<% priceCardContent.forEach(function(one) { %>
+    <li class="p-lower-campaign-cards__item">
     <%- include(project + './project/_p-lower-campaign-card', {
         image: one.image,
         tag: one.tag,
