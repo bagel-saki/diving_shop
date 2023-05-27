@@ -13,7 +13,6 @@ let cardContent = [
   <% cardContent.slice(0, 3).forEach(function(blogCard) { %>
     <li class="p-blog-cards__item">
       <%- include(ejsPath +  '/_p-blog-card', { 
-        type: 'top', 
         i: blogCard.i, 
         dt: blogCard.dt, 
         d: blogCard.d, 
