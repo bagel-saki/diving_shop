@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.p-lower-campaign-section {
+.p-lower-campaign-cards {
 	display: grid;
 	gap: rem(24);
     grid-template-columns: repeat(1,1fr);
@@ -13,6 +13,6 @@
     }
 }
 
-.p-lower-campaign-section__item{
+.p-lower-campaign-cards__item{
     height: 100%;
 }
