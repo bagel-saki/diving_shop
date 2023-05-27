@@ -17,7 +17,7 @@ let priceCardContent = [
 ]
 %>
 <ul class="p-lower-campaign-section">
-<% priceCardContent.forEach(function(one) { %>
+    <% priceCardContent.forEach(function(one) { %>
     <li class="p-lower-campaign-section__item">
     <%- include(project + './project/_p-lower-campaign-card', {
         image: one.image,
