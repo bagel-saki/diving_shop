@@ -32,6 +32,16 @@
       <p class="p">ヘッダーとドロワー</p>
       <%- include(ejsPath + '/project/_p-header' )%>
 
+      <h2 class="h2">.p-blog-cards</h2>
+      <p class="p">ブログカード（トップページ）</p> 
+
+      <%- include(ejsPath + '/project/_p-blog-cards' ) %>
+      
+      <h2 class="h2">.p-lower-blog-section</h2>
+      <p class="p">ブログカード（下層ページ）</p> 
+      <%- include(ejsPath + '/project/_p-lower-blog-section') %>
+
+
       <h2 class="h2">.footer</h2>
       <p class="p">フッター</p>
 
@@ -51,6 +61,10 @@
     <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'privacy', first: 'privacy policy', middle:'', last:'', }) %> 
     <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'sitemap', first: 'site', middle:' map', last:'', }) %> 
     <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'terms', first: 'terms', middle:' of', last:' service', }) %> 
+  
+    <h2 class="h2">.p-blog-section</h2>
+    <p class="p">ブログセクション</p>
+    <%- include(ejsPath + '/project/_p-blog-section' ) %> 
   </body>
 
 
