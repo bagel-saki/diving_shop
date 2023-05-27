@@ -1,4 +1,9 @@
 <% const logoStyle = ['green', 'large']; %>
 
 <% const logoClass = logoStyle.includes(logo) ? ` c-logo--${logo}` : ''; %>
+
+<% if (type === 'top') { %>
+    <h1 class="c-logo<%= logoClass %>"></h1>
+<% } else { %>
     <div class="c-logo<%= logoClass %>"></div>
+<% } %>

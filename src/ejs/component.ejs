@@ -197,13 +197,17 @@
       <!-- prettier-ignore -->
       <h2 class="h2">.c-logo</h2>
       <p class="p">CodeUpsロゴ</p>
-      <%- include(ejsPath + '/component/_c-logo' , { logo: 'large' })%>
-      <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-logo' , { logo: 'green' })%>
-      <!-- prettier-ignore -->
-      <%- include(ejsPath + '/component/_c-logo' , { logo: '' })%>
-      <!-- prettier-ignore -->
-      
+      <%- include(ejsPath + '/component/_c-logo', { type: '', logo: 'large' }) %>
+<!-- prettier-ignore -->
+<%- include(ejsPath + '/component/_c-logo', { type: '', logo: 'green' }) %>
+<!-- prettier-ignore -->
+<%- include(ejsPath + '/component/_c-logo', { type: 'top', logo: '' }) %>
+<!-- prettier-ignore -->
+<%- include(ejsPath + '/component/_c-logo', { type: '', logo: '' }) %>
+<!-- prettier-ignore -->
+
+
+
       <h2 class="h2">.c-sidebar-title</h2>
       <p class="p">サイドバータイトル</p>
       <%- include(ejsPath + '/component/_c-sidebar-title',{text:"人気記事"})%>
