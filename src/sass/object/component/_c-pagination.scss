@@ -3,12 +3,12 @@
 
 .c-pagination {
 	text-align: center;
-    }
+}
 
 .nav-links {
 	display: flex;
 	justify-content: center;
-    }
+}
 
 .page-numbers {
 	display: flex;
@@ -24,7 +24,7 @@
 	text-decoration: none;
 	color: $green;
 	transition: 0.3s background-color, 0.3s color;
-    }
+}
 
 .page-numbers.current {
 	background-color: $green;
@@ -34,7 +34,8 @@
 .page-numbers:hover {
 	background-color: $green;
 	color: $white;
-    }
+	opacity: 1;
+	}
 
 .prev.page-numbers,
 .next.page-numbers {
@@ -43,13 +44,13 @@
 
 .prev.page-numbers span,
 .next.page-numbers span{
-mask-repeat: no-repeat;
-mask-position: center;
-mask-size: contain;
-background-color: $green;
-width: rem(8);
-height: rem(16);
-    }
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    background-color: $green;
+    width: rem(8);
+    height: rem(16);
+}
 
 .next.page-numbers span{
 	mask-image: url(../../../assets/images/common/next.svg);
