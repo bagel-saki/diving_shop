@@ -43,5 +43,26 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(this).addClass('c-information-tab--active');
   });
 
-  
+  //アコーディオン
+  $(".js-accordion__item:first-child .js-accordion__content").css("display","block");
+  $(".js-accordion__item:first-child .js-accordion__question").addClass("is-open");
+  $(".js-accordion__question").on("click", function() {
+    $(this).toggleClass("is-open");
+    $(this).next().slideToggle(300);
+  });
+});
+
+
+$(function () {
+  $(".js-accordion__item:first-child .js-accordion__content").css(
+    "display",
+    "block"
+  );
+  $(".js-accordion__item:first-child .js-accordion__title").addClass(
+    "is-open"
+  );
+  $(".js-accordion__title").on("click", function () {
+    $(this).toggleClass("is-open");
+    $(this).next().slideToggle(300);
+  });
 });
