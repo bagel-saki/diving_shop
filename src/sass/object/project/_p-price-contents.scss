@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.p-price-contents {
+
+}
+
+.p-price-content {
+    margin-top: rem(40);
+}
+
+@include mq(md){
+    .p-price-content:not(:first-child) {
+        margin-top: rem(40);
+    }
+}
+
+.p-price-content__title {
+    font-weight: $bold;
+    line-height: calc(24/16);
+}
+
+.p-price-content__lists {
+    border-top: 1px solid $green;
+}
+
+.p-price-content__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: calc(24/14);
+    font-size: rem(14);
+    margin-top: rem(8);
+}
+
+.p-price-content__text {
+
+}
+
+.p-price-content__price {
+
+}

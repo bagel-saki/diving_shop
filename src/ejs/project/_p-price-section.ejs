@@ -1,0 +1,22 @@
+<section class="p-price-section">
+    <div class="p-price-section__inner l-inner">
+        <div class="p-price-section__title">
+        <%- include(ejsPath + './component/_c-title',{title__en:'price', title__ja:'料金一覧',style:''})%>
+        </div>
+        <div class="p-price-section__container">
+            <div class="p-price-section__contents">
+                    <%- include(ejsPath + './project/_p-price-contents' ) %>
+            </div>
+            <div class="p-price-section__img">
+                <img class="u-desktop" src="../../assets/images/common/price-section.jpg" alt="">
+                <img class="u-mobile" src="../../assets/images/common/price-sectionSP.jpg" alt="">
+            </div>
+        </div>
+        <div class="p-price-section__btn">
+            <%- include(ejsPath + './component/_c-btn',{link:"",text:"View more", btn:"", overlay:""} ) %>
+        </div>
+    </div>
+    <div class="p-price-section__fish">
+        <%- include(ejsPath + './component/_c-img-fish' ,{ style: 'large' }) %>
+    </div>
+</section>

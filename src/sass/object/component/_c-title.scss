@@ -41,7 +41,7 @@
 
 .c-title--white h2:first-letter{
   @include mq('md'){
-    color: #DDF0F1;
+    color: $light-green;
   }
 } 
 

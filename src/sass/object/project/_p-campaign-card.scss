@@ -21,6 +21,11 @@
     }
 }
 
+.p-campaign-card__img img{
+    height: 100%;
+    object-fit: cover;
+}
+
 .p-campaign-card__head {
     padding-top: rem(14);
     margin-right: rem(14);
