@@ -8,6 +8,7 @@
       max-width: 1000px;
       width: 100%;
       margin: auto;
+      background: pink;
     }
 
     .h2 {
@@ -31,6 +32,12 @@
       <h2 class="h2">.p-header</h2>
       <p class="p">ヘッダーとドロワー</p>
       <%- include(ejsPath + '/project/_p-header' )%>
+
+      <h2 class="h2">.c-starfish</h2>
+      <p class="p">ヒトデ</p> 
+      <%- include(ejsPath + '/component/_c-starfish' ,{ color: 'black' }) %>
+      <%- include(ejsPath + '/component/_c-starfish' ,{ color: 'white' }) %>
+      <%- include(ejsPath + '/component/_c-starfish' ,{ color: 'green' }) %>
 
       <h2 class="h2">.p-blog-cards</h2>
       <p class="p">ブログカード（トップページ）</p> 
@@ -65,6 +72,10 @@
     <h2 class="h2">.p-blog-section</h2>
     <p class="p">ブログセクション</p>
     <%- include(ejsPath + '/project/_p-blog-section' ) %> 
+
+    <h2 class="h2">.p-detailPage-head</h2>
+    <p class="p">ブログ詳細ページのブログセクション</p>
+    <%- include(ejsPath + '/project/_p-detailPage-head' ) %>     
   </body>
 
 
