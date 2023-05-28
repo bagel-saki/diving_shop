@@ -18,7 +18,7 @@
 }
 
 .p-blog-card__body{
-	margin-top: rem(24);
+	margin-top: rem(18);
 	margin-bottom: 0;
 	position: relative;
 }
@@ -26,7 +26,7 @@
 .p-blog-card__date{
 	font-family: $english-font-family;
 	font-size: rem(12);
-	line-height: 18 / 12;
+	line-height: calc(18 / 12);
 }
 
 .p-blog-card__titleBox{
@@ -38,11 +38,13 @@
 
 
 .p-blog-card__title{
+	font-size: rem(16);
 	font-weight: 500;
-	line-height: 16 / 24;
+	line-height: calc(24 / 16);
 }
 
 .p-blog-card__text{
 	margin-top: rem(16);
+	line-height: calc(24 / 16);
 }
 

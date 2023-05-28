@@ -16,11 +16,10 @@ let cardContent = [
 ]
 %>
 
-<div class="p-lower-blog-section">
+<ul class="p-lower-blog-section">
   <% cardContent.slice(0, 10).forEach(function(blogCard) { %>
     <li class="p-blog-cards__item">
       <%- include(ejsPath +  '/_p-blog-card', { 
-        type: '', 
         i: blogCard.i, 
         dt: blogCard.dt, 
         d: blogCard.d, 
@@ -29,4 +28,5 @@ let cardContent = [
         }) %>
     </li>
   <% }); %>
+
 </div>
