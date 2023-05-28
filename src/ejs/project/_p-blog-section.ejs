@@ -4,14 +4,14 @@
             <div class="p-blog__title">
                 <%- include(ejsPath + './component/_c-title',{title__en:'blog', title__ja:'ブログ', style:'white'})%> 
             </div>
-           <div class="l-inner">
+        <div class="l-inner">
                 <div class="p-blog-section__wrap">
                     <%- include(ejsPath + './project/_p-blog-cards' ) %>
                     <div class="p-blog-section__btn">
                         <%- include(ejsPath + './component/_c-btn',{link:"",text:"View more", btn:"", overlay:""} ) %>
                     </div>
                 </div>
-           </div>
+        </div>
         </div>
         <div class="p-blog-section__fish">
             <%- include(ejsPath + './component/_c-img-fish' ,{ style: 'white' }) %>

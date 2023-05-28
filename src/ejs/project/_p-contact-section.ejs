@@ -1,0 +1,42 @@
+<%
+let addressText = [
+  {text:'沖縄県那覇市1-1'},
+  {text:'TEL:0120-000-0000'},
+  {text:'営業時間:8:30-19:00'},
+  {text:'定休日:毎週火曜日'},
+]
+%>
+
+<section class="p-contact-section">
+    <div class="p-contact-section__inner l-inner">
+        <div class="p-contact-section__container">
+            <div class="p-contact-section__head">
+                <div class="p-contact-section__logo">
+                    <%- include(project + './component/_c-logo' , { type: '', logo: 'green' })%>
+                </div>
+                <div class="p-contact-section__access">
+                    <div class="p-contact-section__address">
+                        <% addressText.forEach(function(add) { %>
+                            <p class="p-contact-section__addressText"><%- add.text %></p>
+                        <% }); %>
+                    </div>
+                    <div class="p-contact-section__map">
+                        <div class="p-contact-section__map-demo"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-contact-section__body">
+                <div class="p-contact-section__title">
+                <%- include(ejsPath + './component/_c-title',{title__en:'contact', title__ja:'お問い合わせ', style:'large'})%> 
+                </div>
+                <p class="p-contact-section__contactText">ご予約・お問い合わせはコチラ</p>
+                <div class="p-contact-section__btn">
+            <%- include(ejsPath + './component/_c-btn',{link:"",text:"Contact us", btn:"", overlay:""} ) %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p-contact-section__fish">
+        <%- include(ejsPath + './component/_c-img-fish' ,{ style: '' }) %>
+    </div>
+</section>
