@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.c-starfish {
+    mask-image: url(../../../assets/images/common/starfish.png);
+	mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    background-color:$white;
+	width: rem(18);
+	height: rem(18);
+	top: rem(12);
+	left: rem(-24);
+}
+
+.c-starfish--black{
+    background-color:$black; 
+}
+
+.c-starfish--white{
+    background-color:$white; 
+}
+
+.c-starfish--green{
+    background-color:$green; 
+}
