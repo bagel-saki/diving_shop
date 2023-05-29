@@ -8,7 +8,7 @@
       max-width: 1000px;
       width: 100%;
       margin: auto;
-      background: pink;
+      
     }
 
     .h2 {
@@ -19,7 +19,7 @@
     .p {
       margin-top: 10px;
       margin-bottom: 20px;
-      color: white;
+      color: red;
     }
   </style>
   <body>
@@ -44,9 +44,13 @@
 
       <%- include(ejsPath + '/project/_p-blog-cards' ) %>
       
-      <h2 class="h2">.p-lower-blog-section</h2>
+      <h2 class="h2">.p-lower-blogCards</h2>
       <p class="p">ブログカード（下層ページ）</p> 
-      <%- include(ejsPath + '/project/_p-lower-blog-section') %>
+      <%- include(ejsPath + '/project/_p-lower-blogCards') %>
+      
+      <h2 class="h2">.p-lower-singleBlog</h2>
+      <p class="p">ブログ詳細ページのブログセクション</p>
+      <%- include(ejsPath + '/project/_p-lower-singleBlog' ) %>
 
       <h2 class="h2">.p-information-section</h2>
       <p class="p">トップページのダイビング情報セクション</p>
@@ -77,9 +81,6 @@
     <p class="p">ブログセクション</p>
     <%- include(ejsPath + '/project/_p-blog-section' ) %> 
 
-    <h2 class="h2">.p-detailPage-head</h2>
-    <p class="p">ブログ詳細ページのブログセクション</p>
-    <%- include(ejsPath + '/project/_p-detailPage-head' ) %>     
   </body>
 
 
