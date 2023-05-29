@@ -1,14 +1,15 @@
 @use "global" as *;
-.detailPage-head{
+.p-lower-singleBlog{
     position: relative;
 }
 
-.detailPage-head__date{
+
+.p-lower-singleBlog__date{
     font-family: $english-font-family;
     font-size: rem(14);
 }
 
-.detailPage-head__title{
+.p-lower-singleBlog__title{
     font-size: rem(24);
     font-weight: 500;
     border-bottom: 1px solid $green;
@@ -18,7 +19,7 @@
     }
 }
 
-.blogDetail-body__img{
+.p-lower-singleBlog__img{
     aspect-ratio: 345 / 231;
     width: 100%;
     object-fit: cover;
@@ -28,9 +29,9 @@
     }
 }
 
-.blogDetail-body__img,
-.blogDetail-body__text,
-.blogDetail-body__lists {
+.p-lower-singleBlog__img,
+.p-lower-singleBlog__text,
+.p-lower-singleBlog__lists {
     margin-top: rem(24);
 
     @include mq('md'){
@@ -38,24 +39,12 @@
     }
 }
 
-.blogDetail-body__list{
+.p-lower-singleBlog__list{
     display: flex;
     gap: rem(9);
     margin-top: rem(4);
 }
 
-.p-detailPage__fish{
-    position: absolute;
-    top: rem(-22);
-    left: rem(16);
-    max-width: rem(120);
-    width: 100%;
-    z-index: -1;
-    @include mq('md'){
-        top: rem(-68); 
-        left: 0;
-    }
-}
 
 
 
