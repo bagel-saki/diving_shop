@@ -1,0 +1,33 @@
+
+<table class="p-lower-price-table u-mobile">
+    <tr class="p-lower-price-table__line">
+        <th class="p-lower-price-table__title" colspan="2">
+            <%= courseTitle %>
+            <span></span>
+        </th>
+    </tr>
+    <% courseContent.forEach(function(list) { %>
+        <tr class="p-lower-price-table__list">
+            <td class="p-lower-price-table__listLeft"><%- list.course %></td>
+            <td class="p-lower-price-table__listRight"><%- list.price %></td>
+        </tr>
+    <% }); %>
+</table>
+
+<div class="p-lower-price-table p-lower-price-table--pc">
+    <div class="p-lower-price-table__row">
+        <div class="p-lower-price-table__title">
+            <%- courseTitle %>
+        </div>
+        <div class="p-lower-price-table__icon"></div>
+    </div>
+    <div class="p-lower-price-table__content">
+        <% courseContent.forEach(function(list) { %>
+            <div class="p-lower-price-table__list">
+                <div class="p-lower-price-table__listLeft"><%- list.course %></div>
+                <div class="p-lower-price-table__listRight"><%- list.price %></div>
+            </div>
+        <% }); %>
+    </div>
+</div>
+
