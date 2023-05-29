@@ -6,13 +6,14 @@
 
 .p-price-content {
     margin-top: rem(40);
-}
 
-@include mq(md){
-    .p-price-content:not(:first-child) {
-        margin-top: rem(40);
+    @include mq(md) {
+        &:first-child{
+            margin-top: 0;
+        }
     }
 }
+
 
 .p-price-content__title {
     font-weight: $bold;
