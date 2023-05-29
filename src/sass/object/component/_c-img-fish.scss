@@ -24,7 +24,7 @@ height: rem(55);
 
 	@include mq(md){
 	display: block;
-    background-color: #DDF0F1;
+    background-color: $light-green;
 	width: rem(437);
 	height: rem(201);
 	}
