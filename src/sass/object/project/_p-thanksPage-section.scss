@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.p-thanksPage-section {
+    position: relative;
+}
+
+.p-thanksPage-section__head {
+    text-align: center;
+}
+
+.p-thanksPage-section__content {
+    text-align: center;
+    margin-top: rem(40);
+}
+
+.p-thanksPage-section__fish {
+    position: absolute;
+    z-index: -1;
+    left: rem(15);
+    top: rem(-24);
+    @include mq(md){
+        left: rem(100);
+        top:rem(-50);
+    }
+}
