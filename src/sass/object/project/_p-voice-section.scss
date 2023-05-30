@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.p-voice-section {
+    background-color: $white;
+    position: relative;
+}
+
+.p-voice-section__title {
+    text-align: center;
+}
+
+.p-voice-section__cards {
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+    margin-top: rem(40);
+    margin-right: auto;
+    margin-left: auto;
+    @include mq(md){
+        flex-direction: row;
+    }
+}
+
+.p-voice-section__btn {
+    margin-top: rem(40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mq(md){
+        margin-top: rem(80);
+    }
+}
+
+.p-voice-section__fish {
+    position: absolute;
+    left:rem(100);
+    top: rem(-120);
+}
+
+.p-voice-section__seahorse {
+    position: absolute;
+    right: rem(180);
+    bottom: rem(-67);
+}

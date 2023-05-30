@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.p-price-contents {
-
-}
-
 .p-price-content {
     margin-top: rem(40);
 
@@ -31,12 +27,4 @@
     line-height: calc(24/14);
     font-size: rem(14);
     margin-top: rem(8);
-}
-
-.p-price-content__text {
-
-}
-
-.p-price-content__price {
-
 }
