@@ -1,0 +1,20 @@
+<section class="p-404-section">
+    <div class="p-404-section__inner l-inner">
+        <div class="p-404-section__breadcrumb">
+            <%- include(ejsPath + './component/_c-breadcrumb', {
+                breadcrumbs: [
+                  { title: "404", url: "" }
+                ]
+              }); %>
+        </div>
+        <h1 class="p-404-section__title">4&ensp;0&ensp;4</h1>
+        <div class="p-404-section__text">
+            申し訳ありません。<br>
+            お探しのページが見つかりません。
+        </div>
+        <div class="p-404-section__btn">
+            <%- include(ejsPath + './component/_c-btn',{link:"",text:"Page&nbsp;Top", btn:"white" ,overlay:"white"} ) %>
+
+        </div>
+    </div>
+</section>
