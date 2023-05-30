@@ -1,0 +1,49 @@
+@use "global" as *;
+
+.p-privacyPolicy-section {
+    position: relative;
+}
+
+.p-privacyPolicy-section__inner{
+    max-width: rem(800);
+    margin: auto;
+    padding-right: $padding-sp;
+	padding-left: $padding-sp;
+	@include mq(md) {
+		padding-right: $padding-pc;
+		padding-left: $padding-pc;
+	}
+}
+
+.p-privacyPolicy-section__title {
+    font-size: rem(24);
+    font-weight: $medium;
+    @include mq(md){
+        font-size: rem(32);
+    }
+}
+
+.p-privacyPolicy-section__content {
+    margin-top: rem(40);
+    line-height: 2;
+}
+
+.p-privacyPolicy-section__content:first-of-type {
+    margin-bottom: rem(40); /* 最初の要素に追加の margin-bottom を設定 */
+}
+.p-privacyPolicy-section__content.p-privacyPolicy-section__content--indent{
+    padding-left:1em;
+	text-indent:-1em;
+    margin-top: 0;
+}
+
+.p-privacyPolicy-section__fish {
+    position: absolute;
+    z-index: -1;
+    left: rem(15);
+    top: rem(-24);
+    @include mq(md){
+        left: rem(100);
+        top:rem(-70);
+    }
+}
