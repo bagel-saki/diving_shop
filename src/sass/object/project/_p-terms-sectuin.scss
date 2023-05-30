@@ -1,0 +1,48 @@
+@use "global" as *;
+
+.p-terms-section {
+    position: relative;
+}
+
+.p-terms-section__inner{
+    max-width: rem(850);
+    margin: auto;
+    padding-right: $padding-sp;
+	padding-left: $padding-sp;
+	@include mq(md) {
+		padding-right: $padding-pc;
+		padding-left: $padding-pc;
+	}
+}
+
+.p-terms-section__title {
+    font-size: rem(24);
+    font-weight: $medium;
+    @include mq(md){
+        font-size: rem(32);
+    }
+}
+
+.p-terms-section__group {
+    margin-top: rem(40);
+}
+
+.p-terms-section__content {
+    line-height: 2;
+}
+
+.p-terms-section__content.p-terms-section__content--indent{
+    padding-left:1em;
+	text-indent:-1em;
+}
+
+.p-terms-section__fish {
+    position: absolute;
+    z-index: -1;
+    left: rem(15);
+    top: rem(-24);
+    @include mq(md){
+        left: rem(100);
+        top:rem(-70);
+    }
+}
