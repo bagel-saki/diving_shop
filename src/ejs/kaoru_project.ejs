@@ -4,11 +4,14 @@
     <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
         json[pageData] }) %>
   <style>
+    body{
+      background: pink; 
+    }
     .wrapper {
-      max-width: 1000px;
+      max-width: 1080px;
       width: 100%;
       margin: auto;
-      
+      background: pink;
     }
 
     .h2 {
@@ -60,11 +63,6 @@
       <p class="p">トップページのダイビング情報セクション</p>
       <%- include(ejsPath + '/project/_p-information-section' ) %>   
 
-
-      <h2 class="h2">.footer</h2>
-      <p class="p">フッター</p>
-
-      <%- include(ejsPath + '/common/_footer' ) %>
     </div>
 
     <h2 class="h2">.p-lower-top</h2>
@@ -84,6 +82,20 @@
     <h2 class="h2">.p-blog-section</h2>
     <p class="p">ブログセクション</p>
     <%- include(ejsPath + '/project/_p-blog-section' ) %> 
+
+    <h2 class="h2">.p-contents</h2>
+    <p class="p">コンテンツ（フッター・サイトマップ）</p>
+    <%- include(ejsPath + '/project/_p-contents', { section: 'footer', color: 'white' }) %>
+    <%- include(ejsPath + '/project/_p-contents', { section: 'sitemap', color: 'black' }) %>
+
+    <h2 class="h2">.p-sitemap.ejs</h2>
+    <p class="p">サイトマップ</p>
+    <%- include(ejsPath + '/project/_p-sitemap' ) %>
+
+
+    <h2 class="h2">.footer</h2>
+    <p class="p">フッター</p>
+    <%- include(ejsPath + '/common/_footer' ) %>
 
   </body>
 

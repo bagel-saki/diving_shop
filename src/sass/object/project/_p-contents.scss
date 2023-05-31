@@ -1,0 +1,128 @@
+@use "global" as *;
+
+.p-contents--footer{
+	background-color: $green;
+	color: $white;
+}
+
+.p-contents__container{
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap:4.4%;
+	grid-row-gap:0;
+	grid-auto-flow: column;
+	padding-left: rem(22);
+	place-items: center;
+
+	@include mq('md'){
+		display: flex;
+		gap:0;
+		justify-content: space-between;
+	}
+}
+
+.p-contents__container {
+	width: 100%;
+    height: inherit;
+	align-items: flex-start;
+	@include mq('md'){
+		display: flex;
+		height: auto;
+		padding-left: rem(20);
+	}
+}
+
+.p-contents__item {
+    line-height: calc(18/16);
+	display: block;
+    width: 100%;
+    transition: opacity 0.3s;
+	margin-top: rem(16);
+	position: relative;
+}
+
+.p-contents__lists{
+	margin-bottom: rem(20) ;
+}
+
+.p-contents__list {
+	padding: rem(12) 0;
+	display: block;
+	line-height: calc(18 / 16);	
+}
+
+.p-contents__title {
+	font-weight: $bold;
+	cursor: pointer;
+}
+
+.p-contents__title p{
+	display: inline-block;
+	padding: rem(12) 0;
+
+}
+
+.p-contents__title--white::before,
+.p-contents__title--black::before{
+	position: absolute;
+	content: "";
+	mask-image: url(../../../assets/images/common/starfish.png);
+	mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+	width: rem(18);
+	height: rem(18);
+	top: rem(10);
+	left: rem(-24);
+} 
+
+.p-contents__title--white::before{
+	background-color: $white;
+}
+
+.p-contents__title--black::before{
+	background-color: $font-color;
+}
+
+
+
+// .p-contents__icon span {
+// 	position: absolute;	
+// 	width: rem(18);
+// 	height: rem(18);
+// 	top: rem(10);
+// 	left: rem(-24);
+// }
+
+
+// .p-contents__title span {
+// 	position: absolute;	
+// 	width: rem(18);
+// 	height: rem(18);
+// 	top: rem(10);
+// 	left: rem(-24);
+// }
+
+// .p-contents__title--white span{
+// 	background-color: $white;
+// }
+
+// .p-contents__title--black span{
+// 	background-color: $font-color;	
+// }
+
+
+// .p-contents__icon--white span{
+// 	background-color: $white;
+// }
+
+// .p-contents__icon--black span{
+// 	background-color: $font-color;	
+// }
+
+
+
+
