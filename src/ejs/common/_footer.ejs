@@ -1,3 +1,23 @@
 <div class="l-footer p-footer">
-  これはフッターです
+  <div class="p-footer__inner l-inner">
+    <div class="p-footer__head">
+      <div class="p-footer__logo">
+        <%- include(ejsPath + './component/_c-logo', { type: '', logo: 'large'
+        }) %>
+      </div>
+      <div class="p-footer__sns">
+        <img src="./assets/images/common/icon-facebook.png" alt="" />
+        <img src="./assets/images/common/icon-instaglam.png" alt="" />
+      </div>
+    </div>
+    <div class="p-footer__contents">
+      <%- include(ejsPath + './project/_p-contents', { section: 'footer',
+      color:'white' }) %>
+    </div>
+    <div class="p-footer__copy">
+      <small class="p-footer__copyright"
+        >&copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small
+      >
+    </div>
+  </div>
 </div>
