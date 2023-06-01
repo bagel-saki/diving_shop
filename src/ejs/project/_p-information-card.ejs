@@ -1,0 +1,21 @@
+<% const validStyle = ['is-active']; %>
+<% const activeClass =  validStyle.includes(state) ? ` ${state}` : ''; %>
+
+<div class="p-information-card <%= activeClass %> js-information-card">
+  <div class="p-information-card__box">
+    <div class="p-information-card__body">
+      <h3 class="p-information-card__subTitle"><%= title %></h3>
+      <p class="p-information-card__text">
+        <%= text %>
+      </p>
+    </div>
+    <div class="p-information-card__img">
+      <img src="../../assets/images/common/<%= i %>.jpg" alt="" />
+    </div>
+  </div>
+</div>
+
+
+
+
+
