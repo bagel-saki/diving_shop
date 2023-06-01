@@ -72,23 +72,24 @@ $(function () {
     $(this).next().slideToggle(300);
   });
 
-    var swiper = new Swiper(".p-campaign-section__swiper", {
-      loopedSlides: 8,
-      slidesPerView: "auto",
-      spaceBetween: 40,
-      speed:3000,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        768: {
-          spaceBetween: 40,
-      },
+  var swiper = new Swiper(".p-campaign-section__swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    loop: true,
+    speed: 2000,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-    });
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: {
+        spaceBetween: 40,
+    },
+  },
+  });
+
 });
