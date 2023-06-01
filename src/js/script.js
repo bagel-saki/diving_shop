@@ -65,4 +65,24 @@ $(function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });
+
+    var swiper = new Swiper(".p-campaign-section__swiper", {
+      loopedSlides: 8,
+      slidesPerView: "auto",
+      spaceBetween: 40,
+      speed:3000,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        768: {
+          spaceBetween: 40,
+      },
+    },
+    });
 });
