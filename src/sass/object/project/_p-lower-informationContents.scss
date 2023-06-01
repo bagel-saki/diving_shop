@@ -1,0 +1,11 @@
+@use "global" as *;
+.p-lower-informationContents{
+	width: 100%;
+}
+
+.p-lower-informationContents__tab{
+	display: flex;
+	justify-content: center;
+	gap: 5.78%;
+}
+

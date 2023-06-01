@@ -1,11 +1,11 @@
-   <!-- 有効なリストを定義 -->
 <% const validImages = ['whale', 'shark', 'fish']; %>
-<!-- 有効なスタイルが指定された場合、そのスタイルに応じたクラス名を生成。そうでなければ、空文字列を代入 -->
-
 <% const styleClass =  validImages.includes(image) ? ` c-information-tab--${image}` : ''; %>  
 
-<a href="#" class="c-information-tab<%= styleClass %> js-information-tab">
-    <span></span><%= text %>
+ <% const validStyle = ['is-active']; %>
+ <% const activeClass =  validStyle.includes(style) ? ` ${style}` : ''; %>    
+
+<a href="" class="c-information-tab<%= styleClass %> js-information-tab <%= activeClass %>">
+ <span class="u-desktop"></span><%- text %>
 </a>
 
 
