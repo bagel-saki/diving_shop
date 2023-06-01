@@ -64,11 +64,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   var modal = $(".js-modal");
-
   // モーダル
   // クリックしたらモーダルを表示する
-  
-
   $(".js-modal-open").on("click", function () {
     var imagePath = $(this).find("img").attr("src");
     var modalImagePath = imagePath.replace("/common/gallery_", "/common/gallery_");
@@ -86,4 +83,23 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $("html").removeClass("is-fixed");
   });
 
+    var swiper = new Swiper(".p-campaign-section__swiper", {
+      loopedSlides: 8,
+      slidesPerView: "auto",
+      spaceBetween: 40,
+      speed:3000,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        768: {
+          spaceBetween: 40,
+      },
+    },
+    });
 });
