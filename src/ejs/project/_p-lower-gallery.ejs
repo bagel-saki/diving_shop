@@ -1,0 +1,20 @@
+<div class="p-lower-gallery">
+  <ul class="p-lower-gallery__top">
+    <% for (let i = 1; i <= 3; i++) { %>
+    <li class="p-lower-gallery__topItem js-modal-open">
+      <img src="../../assets/images/common/gallery_<%= i %>.jpg" alt="" />
+    </li>
+    <% } %>
+  </ul>
+  <ul class="p-lower-gallery__bottoms">
+    <% for (let i = 4; i <= 6; i++) { %>
+    <li class="p-lower-gallery__bottomItem js-modal-open">
+      <img src="../../assets/images/common/gallery_<%= i %>.jpg" alt="" />
+    </li>
+    <% } %>
+  </ul>
+</div>
+
+<% for (let i = 1; i <= 6; i++) { %>
+    <%- include(project + './project/_p-gallery-modal', { i: i }) %>
+<% } %>
