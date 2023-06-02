@@ -24,14 +24,14 @@
 }
 
 .p-information-card__box{
-	margin-top: rem(24);
+	margin-top: rem(16);
 	border: 1px solid $green;
 	padding: rem(24);
 
 	@include mq('md'){
+		margin-top: rem(24);
 		display: flex;
 		gap: 4.44%;
-		margin-top: rem(40);
 	}
 }
 
