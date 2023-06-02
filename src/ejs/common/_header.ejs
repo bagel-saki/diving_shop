@@ -1,3 +1,20 @@
-<header class="l-header p-header">
-  これはヘッダーです
+<header class="l-header p-header js-header">
+  <div class="p-header__inner">
+    <div class="p-header__container">
+        <a class="p-header__link" href="">
+            <div class="p-header__logo">
+                <%- include(ejsPath + './component/_c-logo' , { type: 'top', logo: '' })%>
+            </div>
+        </a>
+        <div class="p-header__pc-nav">
+        <%- include(ejsPath + './project/_p-pc-nav') %>
+        </div>
+        <div class="p-header__hamburger">
+        <%- include(ejsPath + './project/_p-hamburger') %>
+        </div>
+        <div class="p-header__drawer">
+        <%- include(ejsPath + './project/_p-drawer') %>
+        </div>
+    </div>
+</div>
 </header>

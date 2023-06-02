@@ -56,10 +56,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });
-});
 
-
-$(function () {
   $(".js-accordion__item:first-child .js-accordion__content").css(
     "display",
     "block"
@@ -71,7 +68,8 @@ $(function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });
-
+  
+  //キャンペーンカードスワイパー
   var swiper = new Swiper(".p-campaign-section__swiper", {
     slidesPerView: "auto",
     spaceBetween: 20,
@@ -80,7 +78,7 @@ $(function () {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
-    },
+      },
     autoplay: {
       delay: 2000,
       disableOnInteraction: false,
@@ -90,6 +88,26 @@ $(function () {
         spaceBetween: 40,
     },
   },
+  });
+
+  var modal = $(".js-modal");
+  // モーダル
+  // クリックしたらモーダルを表示する
+  $(".js-modal-open").on("click", function () {
+    var imagePath = $(this).find("img").attr("src");
+    var modalImagePath = imagePath.replace("/common/gallery_", "/common/gallery_");
+    $(".p-gallery-modal__content img").attr("src", modalImagePath);
+    $(".p-gallery-modal").addClass("is-open");
+    $("html").toggleClass("is-fixed");
+    setTimeout(function () {
+        $(this).find(".p-lower-gallery__topItem, .p-lower-gallery__bottomItem").addClass("is-open"); // フェードインのクラスを追加
+    }, 300);
+  });
+
+  // 閉じるボタンをクリックしたらモーダルを閉じる
+  $(".js-modal").on("click", function () {
+    modal.removeClass("is-open");
+    $("html").removeClass("is-fixed");
   });
 
 });
