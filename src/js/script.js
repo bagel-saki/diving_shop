@@ -68,6 +68,27 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });
+  
+  //キャンペーンカードスワイパー
+  var swiper = new Swiper(".p-campaign-section__swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    loop: true,
+    speed: 2000,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+      },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      768: {
+        spaceBetween: 40,
+    },
+  },
+  });
 
   var modal = $(".js-modal");
   // モーダル
@@ -89,23 +110,4 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     $("html").removeClass("is-fixed");
   });
 
-    var swiper = new Swiper(".p-campaign-section__swiper", {
-      loopedSlides: 8,
-      slidesPerView: "auto",
-      spaceBetween: 40,
-      speed:3000,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      breakpoints: {
-        768: {
-          spaceBetween: 40,
-      },
-    },
-    });
 });
