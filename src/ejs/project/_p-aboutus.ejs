@@ -1,0 +1,32 @@
+<% const pageStyle = ['lower'];%> 
+<% const pageClass = pageStyle.includes(page) ? `p-aboutus--${page}` : ''; %>
+
+<div class="p-aboutus <%= pageClass %>">
+  <div class="p-aboutus__images">
+    <img
+      src="../../../assets/images/common/aboutus1.jpg"
+      alt=""
+      class="p-aboutus__image01"/>
+    <img
+      src="../../../assets/images/common/aboutus2.jpg"
+      alt=""
+      class="p-aboutus__image02 "/>
+  </div>
+  <div class="p-aboutus__cont">
+    <div class="p-aboutus__left">
+      dive&nbsp;<span>into&nbsp;<br/>the&nbsp;</span>ocean
+    </div>
+    <div class="p-aboutus__right">
+      <p class="p-aboutus__text">
+        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+      </p>
+      <% if (type === 'top') { %>
+      <div class="p-aboutus__btn">
+        <%- include(ejsPath + './component/_c-btn',{link:"",text:"View more",
+        btn:"", overlay:""} ) %>
+      </div>
+      <% } else { %> <% } %>
+    </div>
+  </div>
+</div>

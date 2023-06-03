@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.p-aboutus-section{
+	position: relative;
+}
+
+.p-aboutus-section::after{
+	@include mq('md'){
+		content: "";
+		background: url(../../../assets/images/common/coral.svg)no-repeat center center / cover;
+		width: rem(194);
+		height: rem(181);
+		position: absolute;
+		bottom: rem(-90);
+		right: rem(-90);
+	}
+}
+
+.p-aboutus-section__title{
+	text-align: center;
+}
+.p-aboutus-section__main {
+	margin-top: rem(48);
+	@include mq(md) {
+		margin-top: rem(120);
+	}
+}
+
+
+

@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.p-lower-aboutusIntro{
+	position: relative;
+	@include mq('md'){
+	}
+}
+
+.p-lower-aboutusIntro__fish{
+	position: absolute;
+	top:rem(-24);
+	width: rem(120);
+	z-index: map-get($layer, "default") + 1;
+
+	@include mq('md'){
+		top: rem(-150);
+		left: rem(-80);
+		width: rem(301);
+		z-index: map-get($layer, "default")-1 ;
+	
+	}
+
+}

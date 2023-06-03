@@ -4,6 +4,7 @@
     <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
         json[pageData] }) %>
   <style>
+
     body{
       background: pink; 
     }
@@ -13,63 +14,66 @@
       margin: auto;
       background: pink;
     }
-
+    
     .h2 {
       margin-top: 75px;
       background-color: yellow;
       color: black;
     }
+
     .p {
       margin-top: 10px;
-      margin-bottom: 20px;
-      color: red;
+      margin-bottom: 60px;
+      color: white;
     }
-  </style>
+    
+    
+    
+    
+    </style>
   <body>
     <div class="wrapper">
-      <h2 class="h2">header</h2>
-      <p class="p">ヘッダー</p>
-      <%- include(ejsPath + '/common/_header' ) %>    
-      
       <!-- prettier-ignore -->
       <h2 class="h2">.p-header</h2>
       <p class="p">ヘッダーとドロワー</p>
       <%- include(ejsPath + '/project/_p-header' )%>
 
-      <h2 class="h2">.p-lower-informationContents</h2>
-      <p class="p">ダイビング情報ページのコンテンツ群</p>
-      <%- include(ejsPath + '/project/_p-lower-informationContents' ) %>
-
-
+    <h2 class="h2">.p-lower-informationContents</h2>
+    <p class="p">ダイビング情報ページのコンテンツ群</p>
+    <%- include(ejsPath + '/project/_p-lower-informationContents' ) %>  
+      
       <h2 class="h2">.c-starfish</h2>
       <p class="p">ヒトデ</p> 
       <%- include(ejsPath + '/component/_c-starfish' ,{ color: 'black' }) %>
       <%- include(ejsPath + '/component/_c-starfish' ,{ color: 'white' }) %>
       <%- include(ejsPath + '/component/_c-starfish' ,{ color: 'green' }) %>
-
+      
       <h2 class="h2">.p-blog-cards</h2>
       <p class="p">ブログカード（トップページ）</p> 
-
       <%- include(ejsPath + '/project/_p-blog-cards' ) %>
       
       <h2 class="h2">.p-lower-blogCards</h2>
       <p class="p">ブログカード（下層ページ）</p> 
       <%- include(ejsPath + '/project/_p-lower-blogCards') %>
       
-      <h2 class="h2">.p-lower-singleBlog</h2>
-      <p class="p">ブログ詳細ページのブログセクション</p>
-      <%- include(ejsPath + '/project/_p-lower-singleBlog' ) %>
+      <h2 class="h2">.p-aboutus</h2>
+      <p class="p">私たちについて共通パーツ（トップ）</p>
+      <%- include(ejsPath + '/project/_p-aboutus',{type:'top', page:''} ) %>   
+      
 
-      <h2 class="h2">.p-information-section</h2>
-      <p class="p">トップページのダイビング情報セクション</p>
-      <%- include(ejsPath + '/project/_p-information-section' ) %>   
-
-      <h2 class="h2">.p-information-section</h2>
-      <p class="p">トップページのダイビング情報セクション</p>
-      <%- include(ejsPath + '/project/_p-information-section' ) %>   
-
+      <h2 class="h2">.p-aboutus</h2>
+      <p class="p">私たちについて共通パーツ（下層）</p>
+      <%- include(ejsPath + '/project/_p-aboutus',{type:'', page:'lower'} ) %>   
+      
+      <h2 class="h2">.p-aboutus-section</h2>
+      <p class="p">私たちについてトップセクション</p>
+      <%- include(ejsPath + '/project/_p-aboutus-section') %>    
+      
+      <h2 class="h2">.p-lower-aboutusIntro</h2>
+      <p class="p">私たちについて下層ページイントロダクション</p>
+      <%- include(ejsPath + '/project/_p-lower-aboutusIntro') %>  
+      
     </div>
-
     <h2 class="h2">.p-lower-top</h2>
     <p class="p">下層ページトップ</p>
     <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'campaign', first: 'campaign', middle:'', last:'',}) %> 
@@ -83,10 +87,29 @@
     <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'privacy', first: 'privacy policy', middle:'', last:'', }) %> 
     <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'sitemap', first: 'site', middle:' map', last:'', }) %> 
     <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'terms', first: 'terms', middle:' of', last:' service', }) %> 
-  
+
+    
+
+    
     <h2 class="h2">.p-blog-section</h2>
     <p class="p">ブログセクション</p>
     <%- include(ejsPath + '/project/_p-blog-section' ) %> 
+    
+    <h2 class="h2">.p-lower-singleBlog</h2>
+    <p class="p">ブログ詳細ページのブログ</p>
+    <%- include(ejsPath + '/project/_p-lower-singleBlog' ) %>  
+    
+    <h2 class="h2">.p-information-section</h2>
+    <p class="p">トップページのダイビング情報セクション</p>
+    <%- include(ejsPath + '/project/_p-information-section' ) %>   
+
+    <h2 class="h2">.p-information-card</h2>
+    <p class="p">ダイビング情報カード</p> 
+ 
+
+
+
+
 
     <h2 class="h2">.p-contents</h2>
     <p class="p">コンテンツ（フッター・サイトマップ）</p>
@@ -101,8 +124,7 @@
     <h2 class="h2">.footer</h2>
     <p class="p">フッター</p>
     <%- include(ejsPath + '/common/_footer' ) %>
-
   </body>
-
-
 </html>
+
+
