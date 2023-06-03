@@ -1,8 +1,7 @@
+jQuery(function ($) {
+  // この中であればWordpressでも「$」が使用可能になる
 
-jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
-
-
-    var topBtn = $('.js-page-top');
+  var topBtn = $(".js-page-top");
   topBtn.hide();
 
   // ボタンの表示設定
@@ -16,20 +15,24 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   // ボタンをクリックしたらスクロールして上に戻る
   topBtn.click(function () {
-    $('body,html').animate({
-      scrollTop: 0
-    }, 300, 'swing');
+    $("body,html").animate(
+      {
+        scrollTop: 0,
+      },
+      300,
+      "swing"
+    );
     return false;
   });
 
   //キャンペーンカテゴリーのactive付与
-  $('.js-campaign-category').on('click', function() {
-    $('.js-campaign-category').removeClass('c-campaign-category--active');
-    $(this).addClass('c-campaign-category--active');
+  $(".js-campaign-category").on("click", function () {
+    $(".js-campaign-category").removeClass("c-campaign-category--active");
+    $(this).addClass("c-campaign-category--active");
   });
 
-    // ハンバーガーメニュー
-   //ドロワーメニュー
+  // ハンバーガーメニュー
+  //ドロワーメニュー
   $(".js-hamburger,.js-drawer").click(function () {
     $(".js-hamburger").toggleClass("is-active");
     $(".js-header").toggleClass("is-background-color");
@@ -38,21 +41,26 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
   //ダイビング情報コンテンツ切り替え
-   $('.js-information-tab').on('click', function() {
-    event.preventDefault(); 
-    var index = $('.js-information-tab').index(this);
-  
-    $('.js-information-tab').removeClass('is-active');
-    $(this).addClass('is-active');
-  
-    $('.js-information-card').removeClass('is-active');
-    $('.js-information-card').eq(index).addClass('is-active');
+  $(".js-information-tab").on("click", function () {
+    event.preventDefault();
+    var index = $(".js-information-tab").index(this);
+
+    $(".js-information-tab").removeClass("is-active");
+    $(this).addClass("is-active");
+
+    $(".js-information-card").removeClass("is-active");
+    $(".js-information-card").eq(index).addClass("is-active");
   });
 
   //アコーディオン
-  $(".js-accordion__item:first-child .js-accordion__content").css("display","block");
-  $(".js-accordion__item:first-child .js-accordion__question").addClass("is-open");
-  $(".js-accordion__question").on("click", function() {
+  $(".js-accordion__item:first-child .js-accordion__content").css(
+    "display",
+    "block"
+  );
+  $(".js-accordion__item:first-child .js-accordion__question").addClass(
+    "is-open"
+  );
+  $(".js-accordion__question").on("click", function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });
@@ -61,14 +69,12 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     "display",
     "block"
   );
-  $(".js-accordion__item:first-child .js-accordion__title").addClass(
-    "is-open"
-  );
+  $(".js-accordion__item:first-child .js-accordion__title").addClass("is-open");
   $(".js-accordion__title").on("click", function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });
-  
+
   //キャンペーンカードスワイパー
   var swiper = new Swiper(".p-campaign-section__swiper", {
     slidesPerView: "auto",
@@ -78,7 +84,7 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
-      },
+    },
     autoplay: {
       delay: 2000,
       disableOnInteraction: false,
@@ -86,8 +92,8 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     breakpoints: {
       768: {
         spaceBetween: 40,
+      },
     },
-  },
   });
 
   var modal = $(".js-modal");
@@ -95,12 +101,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   // クリックしたらモーダルを表示する
   $(".js-modal-open").on("click", function () {
     var imagePath = $(this).find("img").attr("src");
-    var modalImagePath = imagePath.replace("/common/gallery_", "/common/gallery_");
+    var modalImagePath = imagePath.replace(
+      "/common/gallery_",
+      "/common/gallery_"
+    );
     $(".p-gallery-modal__content img").attr("src", modalImagePath);
     $(".p-gallery-modal").addClass("is-open");
     $("html").toggleClass("is-fixed");
     setTimeout(function () {
-        $(this).find(".p-lower-gallery__topItem, .p-lower-gallery__bottomItem").addClass("is-open"); // フェードインのクラスを追加
+      $(this)
+        .find(".p-lower-gallery__topItem, .p-lower-gallery__bottomItem")
+        .addClass("is-open"); // フェードインのクラスを追加
     }, 300);
   });
 
@@ -108,6 +119,28 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   $(".js-modal").on("click", function () {
     modal.removeClass("is-open");
     $("html").removeClass("is-fixed");
+  });
+
+  //swiper メインビュー
+  var swiper1 = new Swiper(".p-main-view__slider", {
+    loop: true,
+    effect: "fade",
+    speed: 3000,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 3000,
+    },
+  });
+
+  //ファーストビュー
+  $(window).on('load', function() {
+    $("#loading-title").delay(3000).fadeOut('slow');
+  
+    $("#loading").delay(3000).fadeOut('slow', function() {
+      $('body').addClass('appear');
+    });
+  
+  $('.p-firstView').fadeIn('slow'); // p-firstViewをフェードインして表示
   });
 
 });

@@ -1,0 +1,31 @@
+@use "global" as *;
+
+
+.c-view-title {
+    text-align: center;
+    color: $white;
+  }
+  
+  .c-view-title.c-view-title--green {
+    color: $green;
+  }
+  
+  .c-view-title__main {
+    text-transform: uppercase;
+    font-size: rem(40);
+    line-height: calc(48 / 40);
+    font-family: $english-second-font-family;
+    font-weight: $normal;
+    letter-spacing: 0.54em;
+    @include mq(md) {
+      font-size: rem(80);
+      line-height: 1.25;
+    }
+  }
+  
+  .c-view-title__sub {
+    font-size: rem(20);
+    line-height: calc(30 / 20);
+    font-family: $english-font-family;
+  }
+  

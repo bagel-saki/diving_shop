@@ -1,0 +1,54 @@
+<div class="p-loading" id="loading">
+  <div class="p-loading__title">
+    <%- include(project + './component/_c-view-title',{ view: 'green' }) %>
+  </div>
+</div>
+<!--/p-loading-->
+
+<div class="p-loading__splash">
+  <div class="p-loading__leftImage"></div>
+  <div class="p-loading__rightImage"></div>
+</div>
+<!--/画面変移-->
+
+<div class="p-firstView">
+  <div class="p-firstView__container">
+    <div class="p-firstView__title">
+      <%- include(project + './component/_c-view-title',{ view: '' }) %>
+    </div>
+    <div class="p-firstView__btn">
+      <%- include(ejsPath + './component/_c-btn',{link:"",text:"View more",
+      btn:"", overlay:""} ) %>
+    </div>
+  </div>
+</div>
+<!--/p-firstView-->
+
+<div class="p-main-view">
+  <div class="p-main-view__inner">
+    <div class="p-main-view__slider swiper">
+      <div class="swiper-wrapper">
+        <% for (let i = 1; i <= 4; i++) { %>
+        <div class="swiper-slide">
+          <div class="slide-img">
+            <picture>
+              <source
+                srcset="../../assets/images/common/main-view_<%- i %>.jpg"
+                media="(min-width:1024px)"
+                alt=""
+              />
+              <img
+                src="../../assets/images/common/main-viewSP_<%- i %>.jpg"
+                alt=""
+              />
+            </picture>
+          </div>
+        </div>
+        <% } %>
+      </div>
+      <div class="p-main-view__title">
+        <%- include(project + './component/_c-view-title',{ view: '' }) %>
+      </div>
+    </div>
+  </div>
+</div>
