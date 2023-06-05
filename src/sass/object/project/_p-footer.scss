@@ -60,3 +60,12 @@
 	}
 }
 
+.p-footer__copyright{
+	text-transform:  capitalize;
+	font-family: $english-font-family;
+}
+
+
+.p-footer__copyright span{
+   text-transform: uppercase;
+}

@@ -67,18 +67,12 @@ body{
       <p class="p">私たちについて共通パーツ（下層）</p>
       <%- include(ejsPath + '/project/_p-aboutus',{type:'', page:'lower'} ) %>   
       
-      <h2 class="h2">.p-aboutus-section</h2>
-      <p class="p">私たちについてトップセクション</p>
-      <%- include(ejsPath + '/project/_p-aboutus-section') %>    
       
-      <h2 class="h2">.p-lower-aboutusIntro</h2>
-      <p class="p">私たちについて下層ページイントロダクション</p>
-      <%- include(ejsPath + '/project/_p-lower-aboutusIntro') %>  
-
       <h2 class="h2">.p-contact-form</h2>
       <p class="p">コンタクトフォーム</p>
       <%- include(ejsPath + '/project/_p-contact-form') %> 
 
+      
       
     </div>
     <h2 class="h2">.p-lower-top</h2>
@@ -94,9 +88,12 @@ body{
     <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'privacy', first: 'privacy policy', middle:'', last:'', }) %> 
     <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'sitemap', first: 'site', middle:' map', last:'', }) %> 
     <%- include(ejsPath + '/project/_p-lower-top' ,{lower:'terms', first: 'terms', middle:' of', last:' service', }) %> 
-
+    
     
 
+
+    
+    
     
     <h2 class="h2">.p-blog-section</h2>
     <p class="p">ブログセクション</p>
@@ -109,12 +106,19 @@ body{
     <h2 class="h2">.p-information-section</h2>
     <p class="p">トップページのダイビング情報セクション</p>
     <%- include(ejsPath + '/project/_p-information-section' ) %>   
-
+    
     <h2 class="h2">.p-information-card</h2>
     <p class="p">ダイビング情報カード</p> 
- 
-
-
+    
+    
+    <h2 class="h2">.p-aboutus-section</h2>
+    <p class="p">私たちについてトップセクション</p>
+    <%- include(ejsPath + '/project/_p-aboutus-section') %>    
+    
+    <h2 class="h2">.p-lower-aboutusIntro</h2>
+    <p class="p">私たちについて下層ページイントロダクション</p>
+    <%- include(ejsPath + '/project/_p-lower-aboutusIntro') %>  
+    
 
 
 
