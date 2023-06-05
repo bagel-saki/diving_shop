@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.c-img-caral{
+    display: none;
+
+    @include mq('md'){
+        mask-image: url(../../../assets/images/common/coral.svg);
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        background-color: $green;
+        width: rem(194);
+		height: rem(181);
+        display: block;
+    }
+	
+}
+
