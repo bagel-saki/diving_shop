@@ -1,86 +1,41 @@
-<%
-project = '.';
-
-const priceContents = [
-  {
-    courseTitle: 'ライセンス講習',
-    courseContent: [
-      { course: 'オープンウォーターダイバーコース', price: '¥50,000' },
-      { course: 'アドバンスドオープンウォーターコース', price: '¥60,000' },
-      { course: 'レスキュー＋EFRコース', price: '¥70,000' }
-    ]
-  },
-  {
-    courseTitle: '体験ダイビング',
-    courseContent: [
-      { course: 'ビーチ体験ダイビング(半日)', price: '¥7,000' },
-      { course: 'ビーチ体験ダイビング(1日)', price: '¥14,000' },
-      { course: 'ボート体験ダイビング(半日)', price: '¥10,000' },
-      { course: 'ボート体験ダイビング(半日)', price: '¥10,000' }
-    ]
-  },
-  {
-    courseTitle: 'ファンダイビング',
-    courseContent: [
-      { course: 'ビーチダイビング(2ダイブ)', price: '¥14,000' },
-      { course: 'ボートダイビング(2ダイブ)', price: '¥18,000' },
-      { course: 'スペシャルダイビング(2ダイブ)', price: '¥24,000' },
-      { course: 'ナイトダイビング(1ダイブ)', price: '¥10,000' },
-    ]
-  },
-  {
-    courseTitle: 'スペシャルダイビング',
-    courseContent: [
-      { course: '貸切ダイビング(2ダイブ)', price: '¥24,000' },
-      { course: '1日ダイビング(3ダイブ)', price: '¥32,000' },
-      { course: 'ナイトダイビング(2ダイブ)', price: '¥14,000' },
-    ]
-  },
-];
-%>
-
-
-<div class="p-lower-price  u-mobile">
-    <% priceContents.forEach(function(priceContent) {
-        const { courseTitle, courseContent } = priceContent;
-    %>
-    <table class="p-lower-price__item">
-    <tr class="p-lower-price__line">
-        <th class="p-lower-price__title" colspan="2">
-            <%= courseTitle %>
-            <span></span>
-        </th>
-    </tr>
-    <% courseContent.forEach(function(list) { %>
-    <tr class="p-lower-price__list">
-        <td class="p-lower-price__listLeft"><%- list.course %></td>
-        <td class="p-lower-price__listRight"><%- list.price %></td>
-    </tr>
-    <% }); %>
-</table>
-
-<%});%>
-</div>
+<% project = '.'; const priceContents = [ { courseTitle: 'ライセンス講習',
+courseContent: [ { course: 'オープンウォーターダイバーコース', price: '¥50,000'
+}, { course: 'アドバンスドオープンウォーターコース', price: '¥60,000' }, {
+course: 'レスキュー＋EFRコース', price: '¥70,000' } ] }, { courseTitle:
+'体験ダイビング', courseContent: [ { course: 'ビーチ体験ダイビング(半日)',
+price: '¥7,000' }, { course: 'ビーチ体験ダイビング(1日)', price: '¥14,000' }, {
+course: 'ボート体験ダイビング(半日)', price: '¥10,000' }, { course:
+'ボート体験ダイビング(半日)', price: '¥10,000' } ] }, { courseTitle:
+'ファンダイビング', courseContent: [ { course: 'ビーチダイビング(2ダイブ)',
+price: '¥14,000' }, { course: 'ボートダイビング(2ダイブ)', price: '¥18,000' }, {
+course: 'スペシャルダイビング(2ダイブ)', price: '¥24,000' }, { course:
+'ナイトダイビング(1ダイブ)', price: '¥10,000' }, ] }, { courseTitle:
+'スペシャルダイビング', courseContent: [ { course: '貸切ダイビング(2ダイブ)',
+price: '¥24,000' }, { course: '1日ダイビング(3ダイブ)', price: '¥32,000' }, {
+course: 'ナイトダイビング(2ダイブ)', price: '¥14,000' }, ] }, ]; %>
 
 <div class="p-lower-price">
-<% priceContents.forEach(function(priceContent) {
-    const { courseTitle, courseContent } = priceContent;
-%>
-<div class="p-lower-price__item u-desktop-flex">
-    <div class="p-lower-price__row">
-        <div class="p-lower-price__title">
-            <%- courseTitle %>
-        </div>
-        <div class="p-lower-price__icon"></div>
+  <% priceContents.forEach(function(priceContent) { const { courseTitle,
+  courseContent } = priceContent; %>
+  <div class="p-lower-price__item">
+    <div class="p-lower-price__line u-mobile">
+      <div class="p-lower-price__title">
+        <%= courseTitle %>
+        <span></span>
+      </div>
+    </div>
+    <div class="p-lower-price__row u-desktop-flex">
+      <div class="p-lower-price__title"><%- courseTitle %></div>
+      <div class="p-lower-price__icon"></div>
     </div>
     <div class="p-lower-price__content">
-        <% courseContent.forEach(function(list) { %>
-        <div class="p-lower-price__list">
-            <div class="p-lower-price__listLeft"><%- list.course %></div>
-            <div class="p-lower-price__listRight"><%- list.price %></div>
+      <% courseContent.forEach(function(list) { %>
+      <dl class="p-lower-price__list">
+        <dt class="p-lower-price__listLeft"><%- list.course %></dt>
+        <dd class="p-lower-price__listRight"><%- list.price %></dd>
+      </dl>
+      <% }); %>
     </div>
-    <% }); %>
-    </div>
-</div>
-<%});%>
+  </div>
+  <%});%>
 </div>
