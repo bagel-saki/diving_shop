@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.p-loading {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: $white;
+  z-index: 99999;
+  text-align: center;
+}
+body.fadeout .p-loading{
+  display: none;
+}
+
+.p-loading__title {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  @include mq(md) {
+    top: 41.276%;
+    transform: translateX(-50%);
+  }
+}
+
+/*========= 画面遷移のためのCSS ===============*/
+/* 画面遷移アニメーション */
+.p-loading__splash {
+  display: none;
+}
+
+/* bodyにappearクラスがついたら出現 */
+body.appear .p-loading__splash {
+  display: block;
+  content: "";
+  position: fixed;
+  z-index: 999999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.p-loading__leftImage,
+.p-loading__rightImage {
+  position: absolute;
+  bottom: -100vh;
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.p-loading__leftImage {
+  left: 0;
+  background-image: url(../../../assets/images/common/firstView-left.jpg);
+  animation-name: imageAnimation;
+  background-position: right;
+  animation-delay: 0.3s;
+}
+
+
+.p-loading__rightImage {
+  right: 0;
+  background-image: url(../../../assets/images/common/firstView-right.jpg);
+  animation-name: imageAnimation;
+  background-position: left;
+  animation-delay: 2s;
+}
+
+@keyframes imageAnimation {
+  0% {
+    bottom:-100vh;
+  }
+  100% {
+    bottom:0;
+  }
+}
