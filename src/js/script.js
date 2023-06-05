@@ -65,16 +65,6 @@ jQuery(function ($) {
     $(this).next().slideToggle(300);
   });
 
-  $(".js-accordion__item:first-child .js-accordion__content").css(
-    "display",
-    "block"
-  );
-  $(".js-accordion__item:first-child .js-accordion__title").addClass("is-open");
-  $(".js-accordion__title").on("click", function () {
-    $(this).toggleClass("is-open");
-    $(this).next().slideToggle(300);
-  });
-
   //キャンペーンカードスワイパー
   var swiper = new Swiper(".p-campaign-section__swiper", {
     slidesPerView: "auto",
@@ -133,14 +123,22 @@ jQuery(function ($) {
   });
 
   //ファーストビュー
-  $(window).on('load', function() {
-    $("#loading-title").delay(3000).fadeOut('slow');
+  // $(window).on('load', function() {
+  //   $("#loading-title").delay(3000).fadeOut('slow');
   
-    $("#loading").delay(3000).fadeOut('slow', function() {
-      $('body').addClass('appear');
-    });
+  //   $("#loading").delay(3000).fadeOut('slow', function() {
+  //     $('body').addClass('appear');
+  //   });
   
-  $('.p-firstView').fadeIn('slow'); // p-firstViewをフェードインして表示
+  // $('.p-firstView').fadeIn('slow'); // p-firstViewをフェードインして表示
+  // });
+
+  //サイドバーアーカイブ
+  $(".js-archive-lists:first").css("display", "block");
+  $(".js-archive:first").addClass("is-open");
+  $(".js-archive").on("click", function () {
+    $(this).toggleClass("is-open");
+    $(this).next().slideToggle(300);
   });
 
 });
