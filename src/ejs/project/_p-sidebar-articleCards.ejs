@@ -1,0 +1,20 @@
+<%
+let popularArticle = [
+{image:'4' , datetime:'2023-11-17' , date:'2023/11/17' , title: 'ライセンス取得' },
+{image:'3' , datetime:'2023-11-17' , date:'2023/11/17' , title: 'ウミガメと泳ぐ' },
+{image:'2' , datetime:'2023-11-17' , date:'2023/11/17' , title: 'カクレクマノミ' }
+]
+%>
+
+<ul class="p-sidebar-articleCards">
+<% popularArticle.forEach(function(popular) { %>
+    <li class="p-sidebar-articleCards__item">
+        <%- include(project +  '/_p-sidebar-articleCard', {
+            image: popular.image,
+            datetime: popular.datetime,
+            date: popular.date,
+            title: popular.title,
+        }) %>
+    </li>
+<% }) %>
+</ul>
