@@ -1,0 +1,332 @@
+@use "global" as *;
+.p-contact-form{
+	position: relative;
+}
+
+.p-contact-form__form{
+	@include mq('md'){
+	max-width: rem(700);
+	margin: 0 auto;
+	}
+}
+
+.contact-form___item{
+	border-bottom: rem(1) dashed $green;
+	padding-top: rem(24);
+	padding-bottom: rem(24);
+	@include mq('md'){
+		display: flex;
+		padding-top: rem(40);
+		padding-bottom: rem(40);
+	}
+}
+
+.contact-form___itemTtl{
+	font-weight: $bold;
+	@include mq('md'){
+		width: rem(220);
+	}
+}
+
+.contact-form___itemTtl.is-required{
+	display: inline-block;
+	margin-right: rem(8);	
+}
+
+
+.contact-form___itemTtl.is-required span{
+	font-size: rem(12);
+	font-weight: $normal;
+	color: $white;
+	background: $red;
+	text-align: center;
+	padding: rem(2) rem(16);
+	line-height: 1;
+	margin-left: rem(8);
+	
+	@include mq('md'){
+		top: 50%;
+		transform: translateY(-50%);
+		left: calc(100% + rem(6));
+		width: rem(44);	
+	}
+}
+
+
+.p-contact-form__input{
+	margin-top: rem(16);
+	max-width: rem(480);
+	width: 100%;
+	@include mq('md'){
+		max-width: calc(100% - rem(220));
+		margin-top: 0;
+	}
+}
+
+[type="text"],
+[type="email"],
+[type="tel"] {
+	padding: rem(12) rem(16);	
+	width: 100%;
+	line-height: cac(24 /16);
+	border: 1px solid $green;
+}
+
+select{
+	font-size: rem(12);
+	padding: rem(8) rem(16);
+	border: rem(1) solid $green;
+	max-width: rem(480);
+	width: 100%;
+	background-color:transparent;
+	background-image: url(../../../assets/images/common/Polygon3.png);
+	background-position: top rem(12) right 0 ;
+	background-size: rem(24);
+	background-repeat: no-repeat;
+}
+
+textarea {
+	height: rem(200);
+	resize: none; //右下のサイズ変更できるボタンを消す場合
+	box-shadow: none;
+	padding: rem(12) rem(16);
+	border: 1px solid $green;
+	appearance: none; 
+	font-size: rem(14);
+	width: 100%;
+}
+
+
+::placeholder {
+	color: $light-green;
+}	
+
+.p-contact-form__input--radio,
+.p-contact-form__input--select{
+	border:none;
+	padding: 0;
+}	
+
+.p-contact-form__input input,
+.p-contact-form__input textarea {
+  background-color: transparent;  
+}  
+
+
+
+
+/*-----------------------ラジオボタン*/
+
+input[type="radio"] {
+	display: none;
+    vertical-align: text-top;
+}
+
+.contact-radio{
+	display: block;
+}
+
+.contact-radioLabel {
+	padding-left: rem(22);
+	position: relative;
+}
+
+.contact-radioLabel::before{
+	
+	border: solid 1px $green;
+	content: '';
+	display: block;
+	width: rem(14);
+	height: rem(14);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 0.2s;
+	@include mq('md'){
+		border-radius: 50%;
+	
+	}
+}
+
+.contact-radioLabel::after{
+	content: '';
+	position: absolute;
+	opacity: 0;
+	transform: translateY(-50%) rotate(-45deg);
+	width: rem(10);
+	height: rem(5);
+	margin-top: -0.1em;
+	margin-left: 0.1em;
+	border-left: rem(2) solid $red;
+	border-bottom: rem(2) solid $red;
+	left: rem(1);
+	top: rem(8);
+
+	@include mq('md'){
+		transform:none;
+		border-left:none;
+		border-bottom: none;
+		background: $green;
+		border-radius: 50%;
+		display: block;
+		width: rem(8);
+		height: rem(8);
+		transition: 0.2s;
+		left: rem(1.5);
+		top:rem(4.5);
+	}
+}
+
+input[type="radio"]:checked + .contact-radioLabel:after {
+	opacity: 1;
+  }
+  
+  /*----------------------チェックボックス*/
+  .p-contact-form__privacy{
+	  margin-top: rem(40);
+	  display: flex;
+	  align-items: center;
+	  font-size: rem(14);
+	  justify-content: center;
+	  padding-left: rem(30);
+	  line-height: calc(22 / 14);
+  
+	  
+  }
+
+
+  .p-contact-form__checkBox{
+	content: "";	
+	border: rem(1) solid $green;
+	width: rem(22);
+	height: rem(22);	
+  }
+
+  .p-contact-form__check + span {  
+	  display: block;
+	position: relative;
+	padding: 0 0 0 calc(rem(25));
+	line-height: calc(22 / 14);
+	transition: 0.3s ease;
+}
+
+.p-contact-form__check +span::before {
+	position: absolute;
+	content: "";
+	top: rem(12);
+	left: rem(-8);
+	transform: translateY(-50%);
+	border: rem(1) solid $green;
+	width: rem(22);
+	height: rem(22);
+	
+	display: block;
+
+
+	@include mq('md'){
+		left: rem(-16);
+	}
+}
+
+.p-contact-form__check +span::after{
+	opacity: 0;
+	transition: 0.3s ease;
+}
+
+
+.p-contact-form__check:checked+ span::after{
+	content: "";
+	position: absolute;
+	top: rem(12);
+
+	left: rem(-6);
+	display: block;
+	opacity: 1;
+	transform: translateY(-50%) rotate(-45deg);
+	width: rem(16);
+	height: rem(8);
+	margin-top: -0.1em;
+	margin-left: 0.1em;
+	border-left: rem(2) solid $red;
+	border-bottom: rem(2) solid $red;
+	@include mq('md'){
+		left: rem(-14);
+	}
+}
+
+
+/*----------------------ボタン*/
+.p-contact-form__btn{
+	margin-top: rem(24);
+	text-align: center;
+}
+
+.btn--send{ //適当に当ててるだけ
+	width: 160px;
+	height: 50px;
+	background-color: black;
+	color: white;
+	border: 1px solid #333;
+	border-radius: 8px;
+	margin: 20px;
+	cursor: pointer;
+}
+/*----------------------魚*/
+.p-contact-form__fish{
+	position: absolute;
+	top: rem(-40);
+	left:rem(-80);
+	z-index: -1;
+
+}
+
+/*------------入力エラー------*/
+
+// .p-contact-form__input.error{
+// 	background: rgba(201, 72, 0, 0.2);
+// 	border: rem(1) solid $red;
+
+// }
+
+input.error,
+textarea.error,
+select.error
+{
+	background: rgba(201, 72, 0, 0.2);
+	border: rem(1) solid $red;
+
+}
+
+.required.error::placeholder{
+	color: $white;
+}
+
+
+
+p.error{
+    margin:0;
+    color:$red;
+    font-weight:$normal;
+	font-size: rem(14);
+    margin-bottom:1em;
+}
+
+.error-message-container {
+	text-align: center;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
