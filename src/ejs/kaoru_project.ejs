@@ -5,14 +5,16 @@
         json[pageData] }) %>
   <style>
 
-    body{
-      background: pink; 
+body{
+      /* background: pink;  */
     }
     .wrapper {
       max-width: 1080px;
       width: 100%;
       margin: auto;
-      background: pink;
+      /* background: pink; */
+
+
     }
     
     .h2 {
@@ -72,6 +74,11 @@
       <h2 class="h2">.p-lower-aboutusIntro</h2>
       <p class="p">私たちについて下層ページイントロダクション</p>
       <%- include(ejsPath + '/project/_p-lower-aboutusIntro') %>  
+
+      <h2 class="h2">.p-contact-form</h2>
+      <p class="p">コンタクトフォーム</p>
+      <%- include(ejsPath + '/project/_p-contact-form') %> 
+
       
     </div>
     <h2 class="h2">.p-lower-top</h2>
@@ -126,5 +133,4 @@
     <%- include(ejsPath + '/common/_footer' ) %>
   </body>
 </html>
-
 
