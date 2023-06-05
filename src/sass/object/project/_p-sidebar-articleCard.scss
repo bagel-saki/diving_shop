@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.p-sidebar-articleCard {
+    padding: rem(16);
+    background-color: $white;
+    box-shadow: rem(4) rem(4) rem(10) rgba($color: #000000, $alpha: 0.25);
+}
+
+.p-sidebar-articleCard__inner {
+    display: flex;
+    gap:rem(16);
+}
+
+.p-sidebar-articleCard__img {
+    aspect-ratio: 121/90;
+    overflow: hidden;
+    width: 41.156%;
+}
+
+.p-sidebar-articleCard__img img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.p-sidebar-articleCard__body {
+    width: 42.517%;
+}
+
+.p-sidebar-articleCard__date {
+    font-family: $english-second-font-family;
+    font-size: rem(12);
+    line-height: calc(18/12);
+}
+
+.p-sidebar-articleCard__title {
+    font-weight: $medium;
+    margin-top: rem(4);
+    line-height: calc(23/16);
+}
+

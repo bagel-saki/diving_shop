@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.p-sidebar-campaign__cards {
+    margin-top: rem(24);
+    display: flex;
+    flex-direction: column;
+    gap:rem(40);
+
+}
+
+.p-sidebar-campaign__btn {
+    margin-top: rem(40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
