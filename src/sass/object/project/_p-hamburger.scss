@@ -21,7 +21,7 @@
 	left: 0;
 	display: inline-block;
 	background-color: $white;
-	transition: transform 0.3s;
+	transition: transform 0.5s;
 	border-radius: rem(2);
 	}
 
@@ -31,7 +31,7 @@
 
 	.p-hamburger span:nth-child(2) {
 	top: rem(12);
-	transition: opacity 0.3s;
+	transition: opacity 0.5s;
 	}
 
 	.p-hamburger span:nth-child(3) {

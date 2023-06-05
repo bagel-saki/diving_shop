@@ -2,7 +2,8 @@
 
 .p-lower-gallery__top,
 .p-lower-gallery__bottoms{
-    display: grid;
+    // display: grid;
+    display: none;
     gap: rem(8);
     height: 100%;
 }
