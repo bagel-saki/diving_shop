@@ -78,10 +78,9 @@
 			</dd>
 		    <div class="p-contact-form__btn">
 				<p><input type="submit" value="送信" class="btn--send" /></p>
-		    </div>
-			
+				<%- include(ejsPath + './component/_c-btn',{type:"contact", link:"",text:"Send", btn:"send" ,overlay:""} ) %>
+			</div>
 		</form>
-		<%- include(ejsPath + './component/_c-btn',{link:"",text:"Send", btn:"send" ,overlay:""} ) %>
 	</div>
 	<div class="p-contact-form__fish">
 		<%- include(ejsPath + './component/_c-img-fish' ,{ style: 'reverse' }) %>
