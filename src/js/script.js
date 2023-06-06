@@ -64,6 +64,9 @@ jQuery(function ($) {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });
+  $(".js-accordion-content").on("click", function () {
+    $(this).slideToggle(300);
+  });
 
   //キャンペーンカードスワイパー
   var swiper = new Swiper(".js-campaign-swiper", {

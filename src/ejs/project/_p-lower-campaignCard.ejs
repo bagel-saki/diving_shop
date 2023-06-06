@@ -1,0 +1,27 @@
+<div class="p-lower-campaignCard">
+    <a class="p-lower-campaignCard__link" href="#">
+    <div class="p-lower-campaignCard__img">
+        <img src="../../assets/images/common/campaignCard_<%- image %>.jpg" alt="">
+    </div>
+    <div class="p-lower-campaignCard__head">
+        <p class="p-lower-campaignCard__tag"><%- tag %></p>
+        <p class="p-lower-campaignCard__title"><%- title %></p>
+        <span class="p-lower-campaignCard__border"></span>
+    </div>
+    <div class="p-lower-campaignCard__body">
+        <p class="p-lower-campaignCard__text"><%- text %></p>
+        <div class="p-lower-campaignCard__price">
+            <p class="p-lower-campaignCard__originalPrice"><%- originalPrice %></p>
+            <p class="p-lower-campaignCard__newPrice"><%- newPrice %></p>
+        </div>
+        <p class="p-lower-campaignCard__details u-desktop"><%- details %></p>
+    </div>
+    <div class="p-lower-campaignCard__bottom u-desktop">
+        <p class="p-lower-campaignCard__contactDate"><%- contactDate %></p>
+        <p class="p-lower-campaignCard__contactText">ご予約・お問い合わせはコチラ</p>
+        <div class="p-lower-campaignCard__btn">
+            <%- include(ejsPath + './component/_c-btn',{link:"",text:"Contact us", btn:"", overlay:""} ) %>
+        </div>
+    </div>
+</a>
+</div>
