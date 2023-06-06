@@ -1,11 +1,10 @@
 @use "global" as *;
 
-.p-terms-section {
-    position: relative;
-}
 
 .p-terms-section__inner{
+    position: relative;
     max-width: rem(850);
+    width: 100%;
     margin: auto;
     padding-right: $padding-sp;
 	padding-left: $padding-sp;
@@ -42,7 +41,7 @@
     left: rem(15);
     top: rem(-24);
     @include mq(md){
-        left: rem(100);
+        left: rem(-195);
         top:rem(-70);
     }
 }

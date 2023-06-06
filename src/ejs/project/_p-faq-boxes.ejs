@@ -15,7 +15,7 @@ let faqText = [
 <div class="p-faq-boxes">
     <ul class="p-faq-boxes__items">
             <% faqText.forEach(function(text) { %>
-                <li class="p-faq-boxes__item js-accordion__item">
+                <li class="p-faq-boxes__item js-accordion-item">
                     <%- include(ejsPath + './project/_p-faq-box' ,{
                         textQ: text.textQ,
                         textA: text.textA,
