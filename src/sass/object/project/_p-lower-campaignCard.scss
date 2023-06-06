@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.p-lower-campaign-card{
+.p-lower-campaignCard{
     background-color: $white;
     display: flex;
     flex-direction: column;
@@ -8,7 +8,7 @@
     box-shadow: rem(4) rem(4) rem(10) rgba($color: #000000, $alpha: 0.25);
 }
 
-.p-lower-campaign-card__img {
+.p-lower-campaignCard__img {
     aspect-ratio: 280/188;
     overflow: hidden;
     @include mq(md){
@@ -16,12 +16,12 @@
     }
 }
 
-.p-lower-campaign-card__img img{
+.p-lower-campaignCard__img img{
     height: 100%;
     object-fit: cover;
 }
 
-.p-lower-campaign-card__head {
+.p-lower-campaignCard__head {
     padding-top: rem(16);
     padding-bottom: rem(8);
     margin: 0 rem(16);
@@ -33,7 +33,7 @@
     }
 }
 
-.p-lower-campaign-card__tag {
+.p-lower-campaignCard__tag {
     display: inline-block;
     color: $green;
     border: 1px solid $green;
@@ -42,7 +42,7 @@
     line-height: 1;
 }
 
-.p-lower-campaign-card__title {
+.p-lower-campaignCard__title {
     line-height: calc(24/16);
     font-weight: $medium;
     margin-top: rem(4);
@@ -52,7 +52,7 @@
     }
 }
 
-.p-lower-campaign-card__border{
+.p-lower-campaignCard__border{
     position: absolute;
     display: inline-block;
     width: 100%;
@@ -63,7 +63,7 @@
     left: 0;
 }
 
-.p-lower-campaign-card__body{
+.p-lower-campaignCard__body{
     padding-top: rem(8);
     padding-right: rem(16);
     padding-left: rem(16);
@@ -74,7 +74,7 @@
     }
 }
 
-.p-lower-campaign-card__text {
+.p-lower-campaignCard__text {
     font-size: rem(14);
     text-align: center;
     line-height: calc(24/14);
@@ -83,7 +83,7 @@
     }
 }
 
-.p-lower-campaign-card__price {
+.p-lower-campaignCard__price {
     text-align: center;
     display: flex;
     gap: rem(16);
@@ -99,7 +99,7 @@
     }
 }
 
-.p-lower-campaign-card__originalPrice {
+.p-lower-campaignCard__originalPrice {
     font-size: rem(20);
     position: relative;
     @include mq(md){
@@ -107,7 +107,7 @@
     }
 }
 
-.p-lower-campaign-card__originalPrice::after{
+.p-lower-campaignCard__originalPrice::after{
     position: absolute;
     content: "";
     width: 100%;
@@ -118,26 +118,26 @@
     right: 0;
 }
 
-.p-lower-campaign-card__newPrice {
+.p-lower-campaignCard__newPrice {
     font-size: rem(32);
     color: $green;
     @include mq(md){
         font-size: rem(40);
     }
 }
-.p-lower-campaign-card__bottom {
+.p-lower-campaignCard__bottom {
     padding-right: 24px;
     padding-left: 24px;
     padding-bottom: 40px;
     margin-top: auto;
 }
 
-.p-campaign-card__details {
+.p-lower-campaignCard__details {
     line-height: calc(24/16);
     margin-top: rem(24);
 }
 
-.p-campaign-card__contactDate {
+.p-lower-campaignCard__contactDate {
     color: $green;
     font-family: $english-second-font-family;
     font-weight: $bold;
@@ -146,7 +146,7 @@
     text-align: center;
 }
 
-.p-campaign-card__contactText {
+.p-lower-campaignCard__contactText {
     font-size: rem(14);
     line-height: calc(18/14);
     margin-top: rem(7);
@@ -154,7 +154,7 @@
     text-align: center;
 }
 
-.p-campaign-card__btn {
+.p-lower-campaignCard__btn {
     margin-top: rem(16);
     display: flex;
     justify-content: center;

@@ -16,10 +16,10 @@ let priceCardContent = [
    contactDate:'2023/6/1-9/30'}
 ]
 %>
-<ul class="p-lower-campaign-cards">
+<ul class="p-lower-campaignCards">
 <% priceCardContent.forEach(function(one) { %>
-    <li class="p-lower-campaign-cards__item">
-    <%- include(project + './project/_p-lower-campaign-card', {
+    <li class="p-lower-campaignCards__item">
+    <%- include(project + './project/_p-lower-campaignCard', {
         image: one.image,
         tag: one.tag,
         title: one.title,
