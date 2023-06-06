@@ -2,6 +2,9 @@
 
 .p-voice-section {
     background-color: $white;
+}
+
+.p-voice-section__inner{
     position: relative;
 }
 
@@ -33,12 +36,12 @@
 
 .p-voice-section__fish {
     position: absolute;
-    left:rem(100);
+    left:rem(-80);
     top: rem(-120);
 }
 
 .p-voice-section__seahorse {
     position: absolute;
-    right: rem(180);
+    right: rem(25);
     bottom: rem(-67);
 }

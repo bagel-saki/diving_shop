@@ -53,20 +53,20 @@ jQuery(function ($) {
   });
 
   //アコーディオン
-  $(".js-accordion__item:first-child .js-accordion__content").css(
+  $(".js-accordion-item:first-child .js-accordion-content").css(
     "display",
     "block"
   );
-  $(".js-accordion__item:first-child .js-accordion__question").addClass(
+  $(".js-accordion-item:first-child .js-accordion-question").addClass(
     "is-open"
   );
-  $(".js-accordion__question").on("click", function () {
+  $(".js-accordion-question").on("click", function () {
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });
 
   //キャンペーンカードスワイパー
-  var swiper = new Swiper(".p-campaign-section__swiper", {
+  var swiper = new Swiper(".js-campaign-swiper", {
     slidesPerView: "auto",
     spaceBetween: 20,
     loop: true,
@@ -112,7 +112,7 @@ jQuery(function ($) {
   });
 
   //swiper メインビュー
-  var swiper1 = new Swiper(".p-main-view__slider", {
+  var swiper1 = new Swiper(".js-main-swiper", {
     loop: true,
     effect: "fade",
     speed: 3000,

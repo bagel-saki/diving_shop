@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .p-price-section {
-    position: relative;
     background-color:$light-green;
     padding-top: rem(80);
     padding-bottom: rem(80);
@@ -9,6 +8,11 @@
         padding-top: rem(100);
         padding-bottom: rem(100);
     }
+}
+
+.p-price-section__inner {
+    position: relative;
+
 }
 
 .p-price-section__title {
@@ -56,6 +60,6 @@
 
 .p-price-section__fish {
     position: absolute;
-    left: rem(100);
-    bottom: rem(60);
+    left: rem(-81);
+    bottom: rem(-40);
 }

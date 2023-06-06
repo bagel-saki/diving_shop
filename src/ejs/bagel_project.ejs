@@ -26,11 +26,7 @@
     <div class="wrapper">
       <h2 class="h2">header</h2>
       <p class="p">ヘッダー</p>
-      <%- include(ejsPath + '/common/_header' ) %>
-      <!-- prettier-ignore -->
-      <!-- <h2 class="h2">.p-header</h2>
-      <p class="p">ヘッダーとドロワー</p>
-      <!-- <%- include(ejsPath + '/project/_p-header' )%> --> -->
+      <div class="l-header"><%- include(ejsPath + '/common/_header' ) %></div>
       <h2 class="h2">.p-campaign-card</h2>
       <p class="p">キャンペーンカード</p>
       <%- include(project + '/project/_p-campaign-card',
