@@ -2,10 +2,18 @@
 <% const btnClass = validBtn.includes(btn) ? ` c-btn__link--${btn}` : ''; %>
 <% const overlayClass = validBtn.includes(overlay) ? ` c-btn__overlay--${overlay}` : ''; %>
 
-<div class="c-btn">
-<a href="<%= link %>" class="c-btn__link<%- btnClass %>">
-    <%- text %>
-    <span></span>
-</a>
-<div class="c-btn__overlay<%- overlayClass %>"></div>
-</div>
+<% if (type === 'contact') { %>
+    <div class="c-btn">
+        <button type='submit' class="c-btn__link<%- btnClass %>">
+            <%- text %><span></span></button>
+        <div class="c-btn__overlay<%- overlayClass %>"></div>
+        </div>
+    <% } else { %>
+    <div class="c-btn">
+    <a href="<%= link %>" class="c-btn__link<%- btnClass %>">
+            <%- text %>
+            <span></span>
+    </a>
+     <div class="c-btn__overlay<%- overlayClass %>"></div>
+    </div>
+<% } %>
