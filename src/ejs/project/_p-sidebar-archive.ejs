@@ -1,14 +1,25 @@
+<%
+let archiveList = [
+{year:'2023' , month_1:'3月', month_2: '2月' , month_3: '1月'},
+{year:'2022' , month_1:'12月', month_2: '11月' , month_3: '10月'},
+]
+%>
+
+
+
 <div class="p-sidebar-archive">
   <div class="p-sidebar-archive__title">
     <%- include(project + './component/_c-sidebar-title',{text:"アーカイブ"})%>
   </div>
-  <div class="p-sidebar-archive__lists">
-    <p class="p-sidebar-archive__yearList js-archive">2023</p>
-    <div class="p-sidebar-archive__monthLists js-archive-lists">
-      <a href="" class="p-sidebar-archive__monthList">3月</a>
-      <a href="" class="p-sidebar-archive__monthList">2月</a>
-      <a href="" class="p-sidebar-archive__monthList">1月</a>
-    </div>
-    <p class="p-sidebar-archive__yearList js-archive">2022</p>
-  </div>
-</div>
+  <ul class="p-sidebar-archive__lists">
+    <% archiveList.forEach(function(list) { %>
+      <li class="p-sidebar-archive__lists__item">
+              <%- include(project +  '/_p-sidebar-archiveList', {
+                  year: list.year,
+                  month_1: list.month_1,
+                  month_2: list.month_2,
+                  month_3: list.month_3
+              }) %>
+      </li>
+  <% }) %>
+    </ul>
