@@ -7,6 +7,16 @@
 
 .p-contact-section__inner{
 	position: relative;
+	margin: 0 auto;
+	max-width: rem(540);
+	height: inherit;
+	padding-right: $padding-sp;
+	padding-left: $padding-sp;
+	@include mq(md) {
+		max-width: rem(1210);
+		padding-right: $padding-pc;
+		padding-left: $padding-pc;
+	}
 }
 
 .p-contact-section__container {
@@ -116,4 +126,9 @@
 	right: rem(-130);
     top: rem(-40);
 	}
+	@media (max-width: 1210px) {
+		right: 0;
+		top: rem(-40);
+	}
 }
+

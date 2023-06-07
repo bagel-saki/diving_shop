@@ -127,6 +127,7 @@ jQuery(function ($) {
 
   //ファーストビュー
   $(window).on("load", function () {
+    $("html").toggleClass("is-fixed");
     $(".p-loading")
       .delay(2000)
       .queue(function (next) {
@@ -140,16 +141,17 @@ jQuery(function ($) {
       $(".p-loading__leftImage").delay(2000).fadeOut();
       $(".p-loading__rightImage").delay(2000).fadeOut();
       $("body").addClass("fadeout");
-      $(".p-first-view").fadeIn();
-      $(".p-header").addClass("p-header--bgc");
+      // $(".p-first-view").fadeIn();
+      // $(".p-header").addClass("p-header--bgc");
       setTimeout(function () {
-        $(".p-loading__splash").delay(2000).fadeOut();
-      }, 2000);
+        $(".p-loading__splash").delay(3000).fadeOut();
+      }, 3000);
+    $("html").removeClass("is-fixed");
     });
-    $(".p-first-view").click(function () {
-      $(this).toggle();
-      $(".p-header").removeClass("p-header--bgc");
-    });
+    // $(".p-first-view").click(function () {
+    //   $(this).toggle();
+    //   $(".p-header").removeClass("p-header--bgc");
+    // });
 
   //サイドバーアーカイブ
   $(".js-archive-lists:first").css("display", "block");

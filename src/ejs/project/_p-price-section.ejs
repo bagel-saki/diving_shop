@@ -8,8 +8,11 @@
                     <%- include(ejsPath + './project/_p-price-contents' ) %>
             </div>
             <div class="p-price-section__img">
-                <img class="u-desktop" src="../../assets/images/common/price-section.jpg" alt="">
-                <img class="u-mobile" src="../../assets/images/common/price-sectionSP.jpg" alt="">
+                <picture>
+                    <source srcset="../../assets/images/common/price-section.jpg"
+                      media="(min-width:768px)" alt=""/>
+                    <img src="../../assets/images/common/price-sectionSP.jpg" alt="" />
+                </picture>
             </div>
         </div>
         <div class="p-price-section__btn">
@@ -20,3 +23,4 @@
         </div>
     </div>
 </section>
+
