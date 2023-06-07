@@ -26,14 +26,28 @@
     line-height: 2;
 }
 
-.p-privacyPolicy-section__content:first-of-type {
-    margin-bottom: rem(40); /* 最初の要素に追加の margin-bottom を設定 */
+.p-privacyPolicy-section__content li{
+    display: block;
 }
-.p-privacyPolicy-section__content.p-privacyPolicy-section__content--indent{
-    padding-left:1em;
-	text-indent:-1em;
-    margin-top: 0;
+
+//ol,ulリスト
+.p-privacyPolicy-section__content ul li{
+    list-style-type: circle;
 }
+
+.p-privacyPolicy-section__content ol li{
+    list-style-type: decimal;
+}
+
+// .p-privacyPolicy-section__content:first-of-type {
+//     margin-bottom: rem(40); /* 最初の要素に追加の margin-bottom を設定 */
+// }
+
+// .p-privacyPolicy-section__content.p-privacyPolicy-section__content--indent{
+//     padding-left:1em;
+// 	text-indent:-1em;
+//     margin-top: 0;
+// }
 
 .p-privacyPolicy-section__fish {
     position: absolute;
