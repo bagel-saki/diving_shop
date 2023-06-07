@@ -1,0 +1,20 @@
+<div class="p-lower-priceTable">
+    <div class="p-lower-priceTable__line u-mobile">
+      <h2 class="p-lower-priceTable__title">
+        <%= title %>
+        <span></span>
+      </h2>
+    </div>
+    <div class="p-lower-priceTable__row u-desktop-flex">
+      <div class="p-lower-priceTable__title"><%- title %></div>
+      <div class="p-lower-priceTable__icon"></div>
+    </div>
+    <div class="p-lower-priceTable__content">
+      <% courseContent.forEach(function(list) { %>
+      <dl class="p-lower-priceTable__list">
+        <dt class="p-lower-priceTable__listLeft"><%- list.course %></dt>
+        <dd class="p-lower-priceTable__listRight"><%- list.price %></dd>
+      </dl>
+      <% }); %>
+    </div>
+  </div>

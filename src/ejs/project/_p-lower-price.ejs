@@ -1,4 +1,4 @@
-<% project = '.'; const priceContents = [ { courseTitle: 'ライセンス講習',
+<% project = '.'; let priceContents = [ { courseTitle: 'ライセンス講習',
 courseContent: [ { course: 'オープンウォーターダイバーコース', price: '¥50,000'
 }, { course: 'アドバンスドオープンウォーターコース', price: '¥60,000' }, {
 course: 'レスキュー＋EFRコース', price: '¥70,000' } ] }, { courseTitle:
@@ -14,28 +14,12 @@ course: 'スペシャルダイビング(2ダイブ)', price: '¥24,000' }, { cou
 price: '¥24,000' }, { course: '1日ダイビング(3ダイブ)', price: '¥32,000' }, {
 course: 'ナイトダイビング(2ダイブ)', price: '¥14,000' }, ] }, ]; %>
 
+<!-- p-lower-price.ejs -->
 <div class="p-lower-price">
   <% priceContents.forEach(function(priceContent) { const { courseTitle,
   courseContent } = priceContent; %>
-  <div class="p-lower-price__item">
-    <div class="p-lower-price__line u-mobile">
-      <div class="p-lower-price__title">
-        <%= courseTitle %>
-        <span></span>
-      </div>
-    </div>
-    <div class="p-lower-price__row u-desktop-flex">
-      <div class="p-lower-price__title"><%- courseTitle %></div>
-      <div class="p-lower-price__icon"></div>
-    </div>
-    <div class="p-lower-price__content">
-      <% courseContent.forEach(function(list) { %>
-      <dl class="p-lower-price__list">
-        <dt class="p-lower-price__listLeft"><%- list.course %></dt>
-        <dd class="p-lower-price__listRight"><%- list.price %></dd>
-      </dl>
-      <% }); %>
-    </div>
-  </div>
-  <%});%>
+  <ul class="p-lower-price__item">
+    <%- include('_p-lower-priceTable', { title: courseTitle, courseContent:
+    courseContent }) %> <% }); %>
+  </ul>
 </div>

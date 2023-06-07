@@ -127,7 +127,9 @@ jQuery(function ($) {
 
   //ファーストビュー
   $(window).on("load", function () {
+    if ($(".p-main-view").length > 0) {
     $("html").toggleClass("is-fixed");
+  } else {}
     $(".p-loading")
       .delay(2000)
       .queue(function (next) {

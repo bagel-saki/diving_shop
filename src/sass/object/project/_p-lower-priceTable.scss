@@ -1,0 +1,121 @@
+@use "global" as *;
+
+.p-lower-priceTable {
+	text-align: center;
+	width: 100%;
+	 margin-top: rem(40);
+    @include mq(md){
+        margin-top: rem(80);
+		display: flex;
+    }
+}
+
+.p-lower-priceTable__line {
+	background-color: $green;
+	color: $white;
+    text-align: center;
+}
+
+.p-lower-priceTable__title{
+	position: relative;
+	display: inline-block;
+	padding-top: rem(7);
+    padding-bottom: rem(7);
+    padding-right: rem(8);
+	padding-left: rem(32);
+}
+
+.p-lower-priceTable__title span{
+	position: absolute;
+	content: "";
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	display: inline-block;
+	mask-image: url(../../../assets/images/common/icon-whale.svg);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
+	background-color: $white;
+	transition: background-color 0.3s;
+	width: rem(24);
+	height: rem(24);
+	@include mq(md){
+		top: rem(36);
+		left: 50%;
+		transform: translateX(-50%);
+		width: rem(64);
+		height: rem(64);
+	}
+}
+
+.p-lower-priceTable__icon{
+	mask-image: url(../../../assets/images/common/icon-whale.svg);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
+	background-color: $white;
+	transition: background-color 0.3s;
+	width: rem(64);
+	height: rem(64);
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.p-lower-priceTable__row{
+	background-color: $green;
+	color: $white;
+	width: 28.572%;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.p-lower-priceTable__content{
+	@include mq(md){
+		width: 71.428%;
+	}
+}
+
+.p-lower-priceTable__list {
+	display: flex;
+	align-items: center;
+	height: rem(60);
+	background-color: $white;
+}
+
+.p-lower-priceTable__listLeft,
+.p-lower-priceTable__listRight{
+	border: solid 1px $green;
+	background-clip: padding-box;
+}
+
+.p-lower-priceTable__listLeft{
+	width: 69.5%;
+	height: inherit;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	@include mq(md){
+		width: 68%;
+	}
+}
+
+.p-lower-priceTable__listRight{
+	width: 31.5%;
+	padding-right: rem(11);
+	height: inherit;
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;
+	@include mq(md){
+		width: 32%;
+	}
+}
+
+.u-desktop-flex{
+	display: none;
+	@include mq(md){
+		display: flex;
+	}
+}
