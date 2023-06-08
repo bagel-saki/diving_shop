@@ -3,14 +3,22 @@
 
 <div class="p-aboutus <%= pageClass %>">
   <div class="p-aboutus__images">
-    <img
-      src="../../../assets/images/common/aboutus1.jpg"
-      alt=""
-      class="p-aboutus__image01"/>
-    <img
-      src="../../../assets/images/common/aboutus2.jpg"
-      alt=""
-      class="p-aboutus__image02 "/>
+    <% if (type === 'top') { %>
+      <img src="../../../assets/images/common/aboutus-all.jpg" alt="">
+    
+    <% } else { %> 
+      <picture>
+        <source
+          srcset="../../assets/images/common/aboutus-all.jpg"
+          media="(min-width:768px)"
+          alt=""
+        />
+        <img
+          src="../../assets/images/common/aboutus2.jpg"
+          alt=""
+        />
+      </picture>
+    <% } %>
   </div>
   <div class="p-aboutus__cont">
     <div class="p-aboutus__left">
@@ -18,7 +26,7 @@
     </div>
     <div class="p-aboutus__right">
       <p class="p-aboutus__text">
-        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+        ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br/>
         ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
       </p>
       <% if (type === 'top') { %>
@@ -30,3 +38,4 @@
     </div>
   </div>
 </div>
+

@@ -1,0 +1,53 @@
+<% baseUrlPath='.' ; ejsPath='.' ; pageData="top" %>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
+    json[pageData] }) %>
+  <style>
+    .wrapper {
+      max-width: 1080px;
+      width: 100%;
+      margin: auto;
+      background-color: pink;
+    }
+
+    /* div {
+      margin: 40px 0;
+    } */
+    .h2 {
+      margin-top: 75px;
+      background-color: yellow;
+      color: black;
+    }
+    .p {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <h2 class="h2">header</h2>
+      <p class="p">ヘッダー</p>
+      <%- include(ejsPath + '/common/_header' ) %>
+
+      <h2 class="h2">.p-aboutus</h2>
+      <p class="p">私たちについて共通パーツ（トップ）</p>
+      <%- include(ejsPath + '/project/_p-aboutus',{type:'top', page:''} ) %>   
+      
+      
+      <h2 class="h2">.p-aboutus</h2>
+      <p class="p">私たちについて共通パーツ（下層）</p>
+      <%- include(ejsPath + '/project/_p-aboutus',{type:'', page:'lower'} ) %>   
+      
+    </div>
+
+    <h2 class="h2">.p-aboutus-section</h2>
+    <p class="p">私たちについてトップセクション</p>
+    <%- include(ejsPath + '/project/_p-aboutus-section') %>    
+    
+    <h2 class="h2">.p-lower-aboutusIntro</h2>
+    <p class="p">私たちについて下層ページイントロダクション</p>
+    <%- include(ejsPath + '/project/_p-lower-aboutusIntro') %>  
+  </body>
+</html>
