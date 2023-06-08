@@ -1,8 +1,23 @@
 @use "global" as *;
 
 .p-lower-aboutusIntro{
-	position: relative;
+	
 	@include mq('md'){
+	}
+}
+
+
+.p-lower-aboutusIntro__inner{
+	position: relative;
+	margin: 0 auto;
+	max-width: rem(540);
+	height: inherit;
+	padding-right: $padding-sp;
+	padding-left: $padding-sp;
+	@include mq(md) {
+		max-width: rem(1210);
+		padding-right: $padding-pc;
+		padding-left: $padding-pc;
 	}
 }
 
@@ -13,7 +28,7 @@
 	z-index: map-get($layer, "default") + 1;
 
 	@include mq('md'){
-		top: rem(-150);
+		top: rem(-70);
 		left: rem(-80);
 		width: rem(301);
 		z-index: map-get($layer, "default")-1 ;
