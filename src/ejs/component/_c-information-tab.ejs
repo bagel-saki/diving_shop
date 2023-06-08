@@ -1,11 +1,11 @@
 <% const validImages = ['whale', 'shark', 'fish']; %>
-<% const styleClass =  validImages.includes(image) ? ` c-information-tab--${image}` : ''; %>  
+<% const styleClass =  validImages.includes(image) ? ` c-information-tab--${image}` : ''; %>
 
- <% const validStyle = ['is-active']; %>
- <% const activeClass =  validStyle.includes(style) ? ` ${style}` : ''; %>    
+<% const validStyle = ['is-active']; %>
+<% const activeClass =  validStyle.includes(style) ? ` ${style}` : ''; %>
 
 <a href="" class="c-information-tab<%= styleClass %> js-information-tab <%= activeClass %>">
- <span class="u-desktop"></span><%- text %>
+<span class="u-desktop"></span><%- text %>
 </a>
 
 

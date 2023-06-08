@@ -1,6 +1,4 @@
 <%
-project = '.';
-
 let priceCardContent = [
   {image:'1', alt:'赤、青、黄等の小さな魚が海の中を泳いでいる', tag:'ライセンス講習', title:'ライセンス取得', text:'全部コミコミ(お一人様)' , originalPrice:'￥56,000', newPrice:'￥46,000'},
   {image:'2', alt:'海岸を出発し島に向かう二艘の船',  tag:'体験ダイビング', title:'貸切体験ダイビング', text:'全部コミコミ(お一人様)' , originalPrice:'￥24,000', newPrice:'￥18,000'},
@@ -16,7 +14,7 @@ let priceCardContent = [
 <section class="p-campaign-section">
   <div class="p-campaign-section__inner">
     <div class="p-campaign-section__title">
-      <%- include(project + './component/_c-title',{title__en:'campaign', title__ja:'キャンペーン', style:''})%>
+      <%- include(ejsPath + './component/_c-title',{title__en:'campaign', title__ja:'キャンペーン', style:''})%>
     </div>
 
     <div class="p-campaign-section__wrapper">

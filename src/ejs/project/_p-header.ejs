@@ -1,23 +1,19 @@
-<%
-project = '.';
-%>
-
 <div class="p-header js-header">
     <div class="p-header__inner">
         <div class="p-header__container">
             <a class="p-header__link" href="">
                 <div class="p-header__logo">
-                    <%- include(project + './component/_c-logo' , { type: 'top', logo: '' })%>
+                    <%- include(ejsPath + './component/_c-logo' , { type: 'top', logo: '' })%>
                 </div>
             </a>
             <div class="p-header__pc-nav">
-            <%- include(project + '/_p-pc-nav') %>
+            <%- include(ejsPath + '/_p-pc-nav') %>
             </div>
             <div class="p-header__hamburger">
-            <%- include(project + '/_p-hamburger') %>
+            <%- include(ejsPath + '/_p-hamburger') %>
             </div>
             <div class="p-header__drawer">
-            <%- include(project + '/_p-drawer') %>
+            <%- include(ejsPath + '/_p-drawer') %>
             </div>
         </div>
     </div>
