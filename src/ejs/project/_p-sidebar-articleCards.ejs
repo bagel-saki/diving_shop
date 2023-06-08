@@ -1,8 +1,8 @@
 <%
 let popularArticle = [
-{image:'4' , datetime:'2023-11-17' , date:'2023/11/17' , title: 'ライセンス取得' },
-{image:'3' , datetime:'2023-11-17' , date:'2023/11/17' , title: 'ウミガメと泳ぐ' },
-{image:'2' , datetime:'2023-11-17' , date:'2023/11/17' , title: 'カクレクマノミ' }
+{image:'4' , alt:'海の中を泳ぐ黄色い魚', datetime:'2023-11-17' , date:'2023/11/17' , title: 'ライセンス取得' },
+{image:'3' , alt:'海の中を泳ぐ亀', datetime:'2023-11-17' , date:'2023/11/17' , title: 'ウミガメと泳ぐ' },
+{image:'2' , alt:'イソギンチャクから顔を出すクマノミ', datetime:'2023-11-17' , date:'2023/11/17' , title: 'カクレクマノミ' }
 ]
 %>
 
@@ -11,10 +11,12 @@ let popularArticle = [
     <li class="p-sidebar-articleCards__item">
         <%- include(project +  '/_p-sidebar-articleCard', {
             image: popular.image,
+            alt: popular.alt,
             datetime: popular.datetime,
             date: popular.date,
             title: popular.title,
         }) %>
     </li>
 <% }) %>
+
 </ul>

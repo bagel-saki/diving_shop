@@ -4,18 +4,18 @@
 <div class="p-aboutus <%= pageClass %>">
   <div class="p-aboutus__images">
     <% if (type === 'top') { %>
-      <img src="../../../assets/images/common/aboutus-all.jpg" alt="">
+      <img src="../../../assets/images/common/aboutus-all.jpg" alt="左側に青空の下のシーサーの写真、その画像に少し重なり、青い海を泳ぐ２匹の黄色い魚の写真が並ぶ">
     
     <% } else { %> 
       <picture>
         <source
           srcset="../../assets/images/common/aboutus-all.jpg"
           media="(min-width:768px)"
-          alt=""
+          alt="青空の下、赤い屋根の上に佇むシーサー像の写真"
         />
         <img
           src="../../assets/images/common/aboutus2.jpg"
-          alt=""
+          alt="青い海の中を泳ぐ２匹の黄色い魚の写真"
         />
       </picture>
     <% } %>
