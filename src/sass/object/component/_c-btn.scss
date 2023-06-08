@@ -21,6 +21,11 @@
   font-family: 'Gotu', sans-serif;
   transition: background-color 0.3s, color 0.3s;
   z-index: map-get($layer, floating);
+  text-transform: capitalize;
+}
+
+.c-btn__link.c-btn__link--white .c-btn__uppercare{
+  text-transform: uppercase;
 }
 
 .c-btn span{
