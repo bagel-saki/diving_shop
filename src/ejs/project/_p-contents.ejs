@@ -24,6 +24,8 @@ let fourthContents = [
 ]
 %>
 
+<% const contents = [firstContents, secondContents, thirdContents, fourthContents]; %>
+
 <% const validSection = ['footer','sitemap']; %>
 <% const sectionClass = validSection.includes(section) ? ` p-contents--${section}` : ''; %>
 <% const validColor = ['white','black']; %>
@@ -31,84 +33,33 @@ let fourthContents = [
 
 
 
-
-
 <div class="p-contents<%- sectionClass %>">
-    
-        <nav class="p-contents__container">
-            
-                <ul class="p-contents__firstItems"><% firstContents.forEach(function(title) { %> 
-                    <li class="p-contents__item">
-                        <a href="" class="p-contents__title<%- colorClass %>">
-                            <!-- <div class="p-contents__icon<%- colorClass %>">
-                               <%#- include(ejsPath + './component/_c-starfish' ,{ color: '' }) %>
-                           </div>  -->
-                           <p><%- title.main %></p>
-                       </a> 
-                        <% if (title.first || title.second || title.third) { %>
-                            <div class="p-contents__lists">
-                                <a href="" class="p-contents__list"><%- title.first %></a>
-                                <a href="" class="p-contents__list"><%- title.second %></a>
-                                <a href="" class="p-contents__list"><%- title.third %></a>
-                            </div>
-                        <% } %>
-                    </li>
-                    <% }); %>
-                </ul>
-                <ul class="p-contents__secondItems"><% secondContents.forEach(function(title) { %> 
-                    <li class="p-contents__item">
-                        <a href="" class="p-contents__title<%- colorClass %>">
-                            <!-- <div class="p-contents__icon<%- colorClass %>">
-                               <%#- include(ejsPath + './component/_c-starfish' ,{ color: '' }) %>
-                           </div>  -->
-                           <p><%- title.main %></p>
-                       </a> 
-                        <% if (title.first || title.second || title.third) { %>
-                            <div class="p-contents__lists">
-                                <a href="" class="p-contents__list"><%- title.first %></a>
-                                <a href="" class="p-contents__list"><%- title.second %></a>
-                                <a href="" class="p-contents__list"><%- title.third %></a>
-                            </div>
-                        <% } %>
-                    </li>
-                    <% }); %>
-                </ul>
-            
-                <ul class="p-contents__thirdItems"><% thirdContents.forEach(function(title) { %> 
-                    <li class="p-contents__item">
-                        <a href="" class="p-contents__title<%- colorClass %>">
-                            <!-- <div class="p-contents__icon<%- colorClass %>">
-                               <%#- include(ejsPath + './component/_c-starfish' ,{ color: '' }) %>
-                           </div>  -->
-                           <p><%- title.main %></p>
-                       </a> 
-                        <% if (title.first || title.second || title.third) { %>
-                            <div class="p-contents__lists">
-                                <a href="" class="p-contents__list"><%- title.first %></a>
-                                <a href="" class="p-contents__list"><%- title.second %></a>
-                                <a href="" class="p-contents__list"><%- title.third %></a>
-                            </div>
-                        <% } %>
-                    </li>
-                    <% }); %>
-                </ul>
-                <ul class="p-contents__fourthItems"><% fourthContents.forEach(function(title) { %> 
-                    <li class="p-contents__item">
-                        <a href="" class="p-contents__title<%- colorClass %>">
-                            <!-- <div class="p-contents__icon<%- colorClass %>">
-                               <%#- include(ejsPath + './component/_c-starfish' ,{ color: '' }) %>
-                           </div>  -->
-                           <p><%- title.main %></p>
-                       </a>  
-                        <% if (title.first || title.second || title.third) { %>
-                            <div class="p-contents__lists">
-                                <a href="" class="p-contents__list"><%- title.first %></a>
-                                <a href="" class="p-contents__list"><%- title.second %></a>
-                                <a href="" class="p-contents__list"><%- title.third %></a>
-                            </div>
-                        <% } %>
-                    </li>
-                    <% }); %>
-                </ul>
-        </nav>
-</div>
+    <nav class="p-contents__container">
+      <% contents.forEach(function(contentGroup) { %>
+        <ul class="p-contents__items">
+          <% contentGroup.forEach(function(title) { %>
+            <% if (title.main) { %>
+              <li class="p-contents__item">
+                <a href="" class="p-contents__title<%- colorClass %>">
+                  <p><%- title.main %></p>
+                </a>
+                <% if (title.first || title.second || title.third) { %>
+                  <div class="p-contents__lists">
+                    <% if (title.first) { %>
+                      <a href="" class="p-contents__list"><%- title.first %></a>
+                    <% } %>
+                    <% if (title.second) { %>
+                      <a href="" class="p-contents__list"><%- title.second %></a>
+                    <% } %>
+                    <% if (title.third) { %>
+                      <a href="" class="p-contents__list"><%- title.third %></a>
+                    <% } %>
+                  </div>
+                <% } %>
+              </li>
+            <% } %>
+          <% }); %>
+        </ul>
+      <% }); %>
+    </nav>
+  </div>
