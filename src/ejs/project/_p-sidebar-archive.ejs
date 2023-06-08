@@ -9,12 +9,12 @@ let archiveList = [
 
 <div class="p-sidebar-archive">
   <div class="p-sidebar-archive__title">
-    <%- include(project + './component/_c-sidebar-title',{text:"アーカイブ"})%>
+    <%- include(ejsPath + './component/_c-sidebar-title',{text:"アーカイブ"})%>
   </div>
   <ul class="p-sidebar-archive__lists">
     <% archiveList.forEach(function(list) { %>
       <li class="p-sidebar-archive__lists__item">
-              <%- include(project +  '/_p-sidebar-archiveList', {
+              <%- include(ejsPath +  '/_p-sidebar-archiveList', {
                   year: list.year,
                   month_1: list.month_1,
                   month_2: list.month_2,

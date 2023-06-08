@@ -1,12 +1,12 @@
-<% const pageStyle = ['lower'];%> 
+<% const pageStyle = ['lower'];%>
 <% const pageClass = pageStyle.includes(page) ? `p-aboutus--${page}` : ''; %>
 
 <div class="p-aboutus <%= pageClass %>">
   <div class="p-aboutus__images">
     <% if (type === 'top') { %>
       <img src="../../../assets/images/common/aboutus-all.jpg" alt="左側に青空の下のシーサーの写真、その画像に少し重なり、青い海を泳ぐ２匹の黄色い魚の写真が並ぶ">
-    
-    <% } else { %> 
+
+    <% } else { %>
       <picture>
         <source
           srcset="../../assets/images/common/aboutus-all.jpg"

@@ -1,6 +1,4 @@
 <%
-project = '.';
-
 let voiceCard = [
 {image:'1' , age:'20代(女性)', tag: 'ライセンス講習' , title: 'ここにタイトルが入ります。ここにタイトル' ,
 text: 'ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。' },
@@ -20,7 +18,7 @@ text: 'ここにテキストが入ります。ここにテキストが入りま�
 <ul class="p-lower-voiceCards">
 <% voiceCard.forEach(function(voice) { %>
     <li class="p-lower-voiceCards__item">
-            <%- include(project +  '/_p-lower-voiceCard', {
+            <%- include(ejsPath +  '/_p-lower-voiceCard', {
                 image: voice.image,
                 age: voice.age,
                 tag: voice.tag,

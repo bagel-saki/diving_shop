@@ -9,7 +9,7 @@ let popularArticle = [
 <ul class="p-sidebar-articleCards">
 <% popularArticle.forEach(function(popular) { %>
     <li class="p-sidebar-articleCards__item">
-        <%- include(project +  '/_p-sidebar-articleCard', {
+        <%- include(ejsPath +  '/_p-sidebar-articleCard', {
             image: popular.image,
             alt: popular.alt,
             datetime: popular.datetime,
@@ -18,5 +18,4 @@ let popularArticle = [
         }) %>
     </li>
 <% }) %>
-
 </ul>

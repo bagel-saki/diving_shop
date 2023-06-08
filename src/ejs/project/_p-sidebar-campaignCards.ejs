@@ -9,7 +9,7 @@ let campaignCard = [
 <ul class="p-sidebar-campaignCards">
     <% campaignCard.forEach(function(side) { %>
         <li class="p-sidebar-campaignCards__item">
-        <%- include(project + './project/_p-sidebar-campaignCard', {
+        <%- include(ejsPath + './project/_p-sidebar-campaignCard', {
             image: side.image,
             alt: side.alt,
             title: side.title,
