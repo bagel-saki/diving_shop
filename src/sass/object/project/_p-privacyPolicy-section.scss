@@ -32,11 +32,13 @@
 
 //ol,ulリスト
 .p-privacyPolicy-section__content ul li{
-    list-style-type: circle;
+    list-style-type: disc;
 }
 
 .p-privacyPolicy-section__content ol li{
     list-style-type: decimal;
+    padding-left:1em;
+    text-indent:-1em;
 }
 
 // .p-privacyPolicy-section__content:first-of-type {

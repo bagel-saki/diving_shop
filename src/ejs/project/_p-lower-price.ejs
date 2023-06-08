@@ -16,10 +16,12 @@ course: 'ナイトダイビング(2ダイブ)', price: '¥14,000' }, ] }, ]; %>
 
 <!-- p-lower-price.ejs -->
 <div class="p-lower-price">
+  <ul class="p-lower-price__item">
   <% priceContents.forEach(function(priceContent) { const { courseTitle,
   courseContent } = priceContent; %>
-  <ul class="p-lower-price__item">
+
     <%- include('_p-lower-priceTable', { title: courseTitle, courseContent:
     courseContent }) %> <% }); %>
+
   </ul>
 </div>
