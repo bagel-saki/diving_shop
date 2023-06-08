@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.p-lower-top{
+.p-lower-mv{
 	position: relative;
 	width: 100%;
 	filter: grayscale(30%);
@@ -13,7 +13,8 @@
 }
 
 
-.p-lower-top--campaign{
+
+.p-lower-mv--campaign{
 	background: url(../../../assets/images/common/lower-top_campaignSP.jpg)no-repeat center center / cover;
 
 	@include mq('md'){
@@ -23,7 +24,7 @@
 }
 
 
-.p-lower-top--aboutus{
+.p-lower-mv--aboutus{
 	background: url(../../../assets/images/common/lower-top_aboutusSP.jpg)no-repeat center center / cover;
 
 	@include mq('md'){
@@ -33,35 +34,35 @@
 
 
 
-.p-lower-top--information{
+.p-lower-mv--information{
 	background: url(../../../assets/images/common/lower-top_informationSP.jpg)no-repeat center center / cover;
 	@include mq('md'){
 		background: url(../../../assets/images/common/lower-top_information.jpg)no-repeat center center / cover;
 	}
 }
 
-.p-lower-top--blog{
+.p-lower-mv--blog{
 	background: url(../../../assets/images/common/lower-top_blogSP.jpg)no-repeat center center / cover;
 	@include mq('md'){
 		background: url(../../../assets/images/common/lower-top_blog.jpg)no-repeat center center / cover;
 	}
 }
 
-.p-lower-top--voice{
+.p-lower-mv--voice{
 	background: url(../../../assets/images/common/lower-top_voiceSP.jpg)no-repeat center center / cover;
 	@include mq('md'){
 		background: url(../../../assets/images/common/lower-top_voice.jpg)no-repeat center center / cover;
 	}
 }
 
-.p-lower-top--price{
+.p-lower-mv--price{
 	background: url(../../../assets/images/common/lower-top_priceSP.jpg)no-repeat center center / cover;
 	@include mq('md'){
 		background: url(../../../assets/images/common/lower-top_price.jpg)no-repeat center center / cover;
 	}
 }
 
-.p-lower-top--faq{
+.p-lower-mv--faq{
 	background: url(../../../assets/images/common/lower-top_faqSP.jpg)no-repeat center center / cover;
 	@include mq('md'){
 		background: url(../../../assets/images/common/lower-top_faq.jpg)no-repeat center center / cover;
@@ -69,16 +70,16 @@
 }
 
 
-.p-lower-top--contact{
+.p-lower-mv--contact{
 	background: url(../../../assets/images/common/lower-top_contactSP.jpg)no-repeat center center / cover;
 	@include mq('md'){
 		background: url(../../../assets/images/common/lower-top_contact.jpg)no-repeat center center / cover;
 	}
 }
 
-.p-lower-top--privacy,
-.p-lower-top--sitemap,
-.p-lower-top--terms{
+.p-lower-mv--privacy,
+.p-lower-mv--sitemap,
+.p-lower-mv--terms{
 	background: url(../../../assets/images/common/lower-top_otherSP.jpg)no-repeat center center / cover;
 	@include mq('md'){
 	background: url(../../../assets/images/common/lower-top_other.jpg)no-repeat center center / cover;
@@ -86,7 +87,7 @@
 }
 
 
-.p-lower-top_title{
+.p-lower-mv_title{
 	position: absolute;
     content:"";
     top:50%;
@@ -108,25 +109,21 @@
 	}
 }
 
-.p-lower-top--aboutus h1{
+.p-lower-mv--aboutus h1{
 	text-transform	:none;
 }
 
-.p-lower-top--aboutus h1:first-letter{
+.p-lower-mv--aboutus h1:first-letter{
 	text-transform: uppercase;
 }
-.p-lower-top--faq h1{
+.p-lower-mv--faq h1{
 	text-transform: uppercase;
 }
-.p-lower-top--sitemap h1 span{
+.p-lower-mv--sitemap h1 span{
 	text-transform:uppercase;
 }
 
-.p-lower-top--terms h1 span{
+.p-lower-mv--terms h1 span{
 	text-transform:	none;
 
 }
-
-// .capitalize{
-// 	text-transform:capitalize;	
-// }
