@@ -1,0 +1,22 @@
+<% const validLower = ['campaign', 'aboutus','information','blog','voice','price','faq','contact','privacy',
+'sitemap','terms']; %>
+<% const lowerClass = validLower.includes(lower) ? `p-lower-mv--${lower}` : ''; %>
+
+<div class="p-lower-mv <%- lowerClass %>">
+    <div class="p-lower-mv__content">
+        <h1 class="p-lower-mv_title"><%= first %>
+        <span><%= middle %></span><%= last %></h1>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
