@@ -60,6 +60,12 @@
 
 .p-price-section__fish {
     position: absolute;
-    left: rem(-81);
     bottom: rem(-40);
+    right: calc(50% + rem(193));
+    @media (max-width: 1175px) {
+        left: 0%;
+	}
+    @media (max-width: 1260px) {
+        left: -2%;
+	}
 }

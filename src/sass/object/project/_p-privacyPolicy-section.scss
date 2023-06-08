@@ -2,15 +2,6 @@
 
 .p-privacyPolicy-section__inner{
     position: relative;
-    max-width: rem(850);
-    width: 100%;
-    margin: auto;
-    padding-right: $padding-sp;
-	padding-left: $padding-sp;
-	@include mq(md) {
-		padding-right: $padding-pc;
-		padding-left: $padding-pc;
-	}
 }
 
 .p-privacyPolicy-section__title {
@@ -23,6 +14,10 @@
 
 .p-privacyPolicy-section__content {
     margin-top: rem(40);
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: rem(800);
     line-height: 2;
 }
 
@@ -32,11 +27,12 @@
 
 //ol,ulリスト
 .p-privacyPolicy-section__content ul li{
-    list-style-type: disc;
+    // list-style-type: disc;
 }
 
 .p-privacyPolicy-section__content ol li{
-    list-style-type: decimal;
+    // counter-increment: number;
+    // list-style-type: decimal;
     padding-left:1em;
     text-indent:-1em;
 }
