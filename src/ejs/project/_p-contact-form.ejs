@@ -1,58 +1,56 @@
 <section class="p-contact-form">
-	<div class="l-inner">
+	<div class="p-contact-form__inner l-inner">
 		<form class="p-contact-form__form" action="" method="post" id="form">
-		    <div class="contact-form___item">
-				<dt class="contact-form___itemTtl is-required">
+			<div class="p-contact-form__errorWrap"></div>
+		    <div class="p-contact-form__item">
+				<dt class="p-contact-form__itemTtl is-required">
 					お名前<span>必須</span>
 				</dt>
 				<dd class="p-contact-form__input">
-					<input class="js-require validate required" type="text" name="name" value="" placeholder="沖縄&emsp;太郎"/>
+					<input class="required" type="text" name="name" value="" placeholder="沖縄&emsp;太郎"/>
 				</dd>
 			</div>
-
-		    <div class="contact-form___item">
-		        <dt class="contact-form___itemTtl is-required">
+		    <div class="p-contact-form__item">
+		        <dt class="p-contact-form__itemTtl is-required">
 					メールアドレス<span>必須</span>
 				</dt>
 				<dd class="p-contact-form__input">
-		            <input class="js-require validate required" type="email" name="email" value="" id="form-email"  placeholder="aaa000@ggmail.com" />
+		            <input class="required" type="email" name="email" value="" id="form-email"  placeholder="aaa000@ggmail.com" />
 		        </dd>
 		    </div>
-		    <div class="contact-form___item">
-		        <dt class="contact-form___itemTtl is-required">
+		    <div class="p-contact-form__item">
+		        <dt class="p-contact-form__itemTtl is-required">
 					電話番号<span>必須</span>
 				</dt>      
 					<dd class="p-contact-form__input">
-		            <input class="js-require validate required" type="tel" name="tel" value="" placeholder="000-0000-0000"/>
+		            <input class="required" type="tel" name="tel" value="" placeholder="000-0000-0000"/>
 		        </dd>
 				
 		    </div>
-			<div class="contact-form___item">
-				<dt class="contact-form___itemTtl is-required">
+			<div class="p-contact-form__item">
+				<dt class="p-contact-form__itemTtl is-required">
 					お問い合わせ種別<span>必須</span>
 				</dt>
-				<dd class="p-contact-form__input p-contact-form__input--radio">
-				  <div class="contact-radio">
-					<input class="js-require validate required" type="radio" value="male" name="campaign" id="radio-dive" checked>
-					<label for="radio-dive" class="contact-radioLabel">ダイビング講習について</label>
+				<dd class="p-contact-form__input">
+				  <div class="p-contact-form__radio">
+					<input class="required" type="radio" value="male" name="campaign" id="radio-dive" checked>
+					<label for="radio-dive" class="p-contact-form__radioLabel">ダイビング講習について</label>
 				  </div>
-				  <div class="contact-radio">
+				  <div class="p-contact-form__radio">
 					<input type="radio" value="female" name="campaign" id="radio-fan">
-					<label for="radio-fan" class="contact-radioLabel">ファンダイビングについて</label>
+					<label for="radio-fan" class="p-contact-form__radioLabel">ファンダイビングについて</label>
 				  </div>
-				  <div class="contact-radio">
+				  <div class="p-contact-form__radio">
 					<input type="radio" value="female" name="campaign" id="radio-ex">
-					<label for="radio-ex" class="contact-radioLabel">体験ダイビングについて</label>
+					<label for="radio-ex" class="p-contact-form__radioLabel">体験ダイビングについて</label>
 				  </div>
 				</dd>
-
-				
 			  </div>
-			<div class="contact-form___item">
-				<dt class="contact-form___itemTtl">
+			<div class="p-contact-form__item">
+				<dt class="p-contact-form__itemTtl">
 					キャンペーン
 				</dt>
-				<dd class="p-contact-form__input p-contact-form__input--select">
+				<dd class="p-contact-form__input">
 					<select name="form-select" class="form-select">
 						<option value="" selected>キャンペーン内容を選択</option>
 						<option value="セレクト1">ダイビング講習</option>
@@ -62,22 +60,21 @@
 				</dd>
 
 			</div>
-			<div class="contact-form___item">
-				<dt class="contact-form___itemTtl is-required">
+			<div class="p-contact-form__item">
+				<dt class="p-contact-form__itemTtl is-required">
 					お問合せ内容<span>必須</span>
 				</dt>
 				<dd class="p-contact-form__input">
-					<textarea class="js-require validate required" name="contents"></textarea>
+					<textarea class="is-required" name="contents"></textarea>
 				</dd>
 			</div>
-			<dd class="p-contact-form__privacy checkboxRequired">
+			<dd class="p-contact-form__privacy">
 				<label>
-					<input class="p-contact-form__check validate required" type="checkbox" name="your-checkbox">
+					<input class="p-contact-form__check  required" type="checkbox" name="your-checkbox">
 					<span>個人情報の取り扱いについて同意のうえ送信します。</span>
 				</label>
 			</dd>
 		    <div class="p-contact-form__btn">
-				<p><input type="submit" value="送信" class="btn--send" /></p>
 				<%- include(ejsPath + './component/_c-btn',{type:"contact", link:"",text:"Send", btn:"send" ,overlay:""} ) %>
 			</div>
 		</form>
