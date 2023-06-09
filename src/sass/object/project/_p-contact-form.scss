@@ -133,7 +133,6 @@ input[type="radio"] {
 	position: relative;
 }
 
-
 .p-contact-form__radioLabel::before{
 	border: solid 1px $green;
 	content: '';
@@ -257,14 +256,17 @@ input[type="radio"]:checked + .p-contact-form__radioLabel:after {
 /*魚----------------*/
 .p-contact-form__fish{
 	position: absolute;
-	top: rem(-24);
-	left:calc(50% + rem(-640));
-	z-index: -1;
-	
-	@media (max-width: rem(1280)) {
-		left:0;
-	}
-
+    left: calc(50% - rem(624));
+    z-index: -1;
+    top:rem(-70);
+    @media (max-width: rem(1280)) {
+        left: rem(25);
+        top: rem(-70);
+    }
+    @media (max-width: rem(768)) {
+        left: rem(15);
+        top: rem(-24);
+    }
 }
 
 /*入力エラー----------*/
@@ -281,8 +283,6 @@ input[type="radio"]:checked + .p-contact-form__radioLabel:after {
 .required.error::placeholder{
 	color: $white;
 }
-
-
 
 .p-contact-form__errorWrap { 
 	text-align: center;

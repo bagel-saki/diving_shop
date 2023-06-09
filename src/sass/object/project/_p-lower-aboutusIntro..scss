@@ -23,29 +23,16 @@
 
 .p-lower-aboutusIntro__fish{
 	position: absolute;
-	top:rem(-24);
-	width: rem(120);
-	z-index: map-get($layer, "default") + 1;
-	left:calc(50% + rem(-300));
-
-	@media (max-width: rem(768)) {
-		left:5%;
-	}
-
-
-	@include mq('md'){
-		top: rem(-70);
-		left: rem(-80);
-		width: rem(301);
-		z-index: map-get($layer, "default")-1 ;
-		left:calc(50% + rem(-610));
-
-		@media (max-width: rem(1210)) {
-			left: calc(50% + rem(-580));
-		}
-		@media (max-width: rem(1150)) {
-			left: calc(50% + rem(-540));
-		}
-	}
+    left: calc(50% - rem(624));
+    z-index: -1;
+    top:rem(-70);
+    @media (max-width: rem(1280)) {
+        left: rem(25);
+        top: rem(-70);
+    }
+    @media (max-width: rem(768)) {
+        left: rem(15);
+        top: rem(-24);
+    }
 
 }
