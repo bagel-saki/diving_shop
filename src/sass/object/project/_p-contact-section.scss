@@ -115,12 +115,12 @@
 	@include mq(md){
 	left: calc(50% + rem(365));
     top: rem(-40);
+	@media (max-width: 1320px) {
+		left: calc(50% + rem(285));
 	}
 	@media (max-width: 1180px) {
 		left: calc(50% + rem(235));
 	}
-	@media (max-width: 1320px) {
-		left: calc(50% + rem(285));
 	}
 }
 
