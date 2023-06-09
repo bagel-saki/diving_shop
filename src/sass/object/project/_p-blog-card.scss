@@ -1,11 +1,13 @@
 @use "global" as *;
 
 .p-blog-card{
-	display: inline-block;
+	display: flex;
 	padding:rem(16) rem(16) rem(24) rem(16);
 	box-shadow: rem(2) rem(2) rem(10) rgba(0, 0, 0, 0.25);
 	background: $white;
 	text-align: left;
+	flex-direction: column;
+	height: 100%;
 }
 
 .p-blog-card:hover{
@@ -34,8 +36,6 @@
 	padding-top: rem(4);
 	margin: 0;
 }
-
-
 
 .p-blog-card__title{
 	font-size: rem(16);

@@ -5,12 +5,32 @@
   json[pageData] }) %>
 
   <body>
+    <%- include(ejsPath + '/project/_p-top-screen' )%>
     <%- include(ejsPath + '/common/_header' ) %>
     <main>
+      <div class="l-section">
+        <%- include(ejsPath + '/project/_p-campaign-section' )%>
+      </div>
+      <div class="l-section">
+        <%- include(ejsPath + '/project/_p-aboutus-section') %>
+      </div>
+      <div class="l-section">
+        <%- include(ejsPath + '/project/_p-information-section' ) %> 
+      </div>
+        <%- include(ejsPath + '/project/_p-blog-section' ) %>
+      <div class="l-section">
+        <%- include(ejsPath + '/project/_p-voice-section' )%>
+      </div>
+      <div class="l-section">
+        <%- include(ejsPath + '/project/_p-price-section' )%>
+      </div>
+      <div class="l-section">
+        <%- include(ejsPath + '/project/_p-contact-section' )%>
+      </div>
     </main>
-    <%- include(ejsPath + '/common/_footer' ) %>
+    <div class="l-footer">
+      <%- include(ejsPath + '/common/_footer' ) %>
+    </div>
   </body>
-  <main>
-    <div class="title"></div>
-  </main>
+    
 </html>
