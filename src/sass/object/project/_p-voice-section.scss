@@ -38,6 +38,9 @@
     position: absolute;
     left:rem(-80);
     top: rem(-120);
+    @media (max-width: rem(1320)) {
+        left: rem(25);
+    }
 }
 
 .p-voice-section__seahorse {
@@ -45,3 +48,4 @@
     right: rem(25);
     bottom: rem(-67);
 }
+

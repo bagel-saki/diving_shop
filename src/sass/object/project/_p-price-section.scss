@@ -62,10 +62,10 @@
     position: absolute;
     bottom: rem(-40);
     right: calc(50% + rem(193));
-    @media (max-width: 1175px) {
-        left: 0%;
+    @media (max-width: rem(1220)) {
+        left: rem(25);
 	}
-    @media (max-width: 1260px) {
+    @media (max-width: rem(1300)) {
         left: -2%;
 	}
 }
