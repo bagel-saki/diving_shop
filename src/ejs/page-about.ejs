@@ -1,0 +1,33 @@
+<% baseUrlPath='.' ; ejsPath='.' ; pageData="top" %>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
+  json[pageData] }) %>
+
+  <body>
+    <%- include(ejsPath + '/common/_header' ) %>
+    <main>
+      <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'aboutus', first: 'about us', middle:'', last:'', }) %>
+      <div class="l-lower__breadcrumb">
+        <div class="l-inner">
+          <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{ title: "私たちについて", url: "" }]}); %>
+        </div>
+      </div>
+      <div class="l-lower__head l-lower-aboutusIntro">
+        <%- include(ejsPath + '/project/_p-lower-aboutusIntro') %> 
+      </div>
+      <div class="l-lower__center l-lower-aboutusGallery">
+        <%- include(ejsPath + '/project/_p-lower-aboutusGallery') %>
+      </div>
+      <div class="l-lower__bottom l-lower-contact-section">
+        <%- include(ejsPath + '/project/_p-contact-section' )%>
+      </div>
+      </div>
+    </main>
+    <div class="l-footer">
+      <%- include(ejsPath + '/common/_footer' ) %>
+    </div>
+    <%- include(ejsPath + '/component/_c-page-top-btn' ) %>
+  </body>   
+</html>
+
