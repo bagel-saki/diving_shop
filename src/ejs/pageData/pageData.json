@@ -1,12 +1,105 @@
 {
   "top": {
-    "title": "トップページタイトル",
-    "description": "トップページディスクリプション",
+    "title": "diving_shop",
+    "description": "ダイビングショップのディスクリプション",
     "url": "https://aaa.com"
   },
+
+  "campain": {
+    "title": "campain__diving_shop",
+    "description": "ダイビングショップのキャンペーンページです",
+    "url": "https://aaa.com/campain/"
+  },
+
+  "about": {
+    "title": "about__diving_shop",
+    "description": "ダイビングショップの私たちについてのページです",
+    "url": "https://aaa.com/about/"
+  },
+
+  "diving-info": {
+    "title": "diving-info__diving_shop",
+    "description": "ダイビングショップのダイビング情報ページです",
+    "url": "https://aaa.com/diving-info/"
+  },
+
+  "blog": {
+    "title": "blog__diving_shop",
+    "description": "ダイビングショップのブログ一覧ページです",
+    "url": "https://aaa.com/blog/"
+  },
+
+  "投稿": {
+    "title": "投稿__diving_shop",
+    "description": "ダイビングショップのブログ詳細ページです",
+    "url": "https://aaa.com/blog/投稿/"
+  },
+
+  "voices": {
+    "title": "voices__diving_shop",
+    "description": "ダイビングショップのお客様の声ページです",
+    "url": "https://aaa.com/voices/"
+  },
+
+  "price": {
+    "title": "price__diving_shop",
+    "description": "ダイビングショップの料金一覧ページです",
+    "url": "https://aaa.com/price/"
+  },
+
+  "faq": {
+    "title": "faq__diving_shop",
+    "description": "ダイビングショップのよくある質問ページです",
+    "url": "https://aaa.com/faq/"
+  },
+
+  "contact": {
+    "title": "contact__diving_shop",
+    "description": "ダイビングショップのお問い合わせページです",
+    "url": "https://aaa.com/contact/"
+  },
+
+  "thanks": {
+    "title": "thanks__diving_shop",
+    "description": "ダイビングショップのお問い合わせ完了ページです",
+    "url": "https://aaa.com/contact/thanks/"
+  },
+
+  "sitemap": {
+    "title": "sitemap-diving_shop",
+    "description": "ダイビングショップのサイトマップです",
+    "url": "https://aaa.com/sitemap/"
+  },
+
+  "privacy-policy": {
+    "title": "privacy-policy__diving_shop",
+    "description": "ダイビングショップのプライバシーポリシーのページです",
+    "url": "https://aaa.com/privacy-policy"
+  },
+
+  "terms": {
+    "title": "terms__diving_shop",
+    "description": "ダイビングショップの利用規約のページです",
+    "url": "https://aaa.com/terms/"
+  },
+
+  "404": {
+    "title": "404__diving_shop",
+    "description": "ダイビングショップの404ページです",
+    "url": "https://aaa.com/404/"
+  },
+
+
+
+
+
   "tutorial": {
     "title": "チュートリアルのページタイトル",
     "description": "チュートリアルのコンテンツです！",
     "url": "https://turorialtest.com"
   }
+
+
+
+
 }

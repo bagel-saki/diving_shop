@@ -8,10 +8,8 @@
     <%- include(ejsPath + '/common/_header' ) %>
     <main>
       <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'aboutus', first: 'about us', middle:'', last:'', }) %>
-      <div class="l-lower__breadcrumb">
-        <div class="l-inner">
-          <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{ title: "私たちについて", url: "" }]}); %>
-        </div>
+      <div class="l-inner l-lower__breadcrumb">
+        <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{ title: "私たちについて", url: "" }]}); %>
       </div>
       <div class="l-lower__head l-lower-aboutusIntro">
         <%- include(ejsPath + '/project/_p-lower-aboutusIntro') %> 
