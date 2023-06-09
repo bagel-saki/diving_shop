@@ -1,0 +1,27 @@
+@use "global" as *;
+.l-lower__breadcrumb{
+   margin-top: rem(8);
+}
+
+.l-lower__head{
+    margin-top: rem(52);
+    @include mq('md'){
+        margin-top: rem(150);
+    }
+}
+
+.l-lower__center{
+    margin-top: rem(40);
+
+    @include mq('md'){
+     margin-top: rem(120);
+    }
+}
+
+.l-lower__bottom{
+    margin-top: rem(80);
+    @include mq('md'){
+        margin-top: rem(140);
+    }
+
+}

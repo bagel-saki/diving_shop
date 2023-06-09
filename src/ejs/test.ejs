@@ -1,0 +1,32 @@
+<% baseUrlPath='.' ; ejsPath='.' ; pageData="top" %>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
+  json[pageData] }) %>
+
+<body>
+  <%- include(ejsPath + '/common/_header' ) %>
+  <main>
+
+    <div class="l-lower__breadcrumb">
+      <div class="l-inner">
+      </div>
+   </div>
+    <div class="l-lower__head">
+      
+    </div>
+    <div class="l-lower__center">
+      
+    </div>
+    <div class="l-lower__bottom">
+      <%- include(ejsPath + '/project/_p-contact-section' )%>
+    </div>
+    </div>
+  </main>
+  <div class="l-footer">
+    <%- include(ejsPath + '/common/_footer' ) %>
+  </div>
+  <%- include(ejsPath + '/component/_c-page-top-btn' ) %>
+</body>  
+    
+</html>

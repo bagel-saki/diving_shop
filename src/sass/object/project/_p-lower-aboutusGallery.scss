@@ -1,0 +1,31 @@
+@use "global" as *;
+.p-lower-aboutusGallery_inner{
+    position: relative;
+}
+
+.p-lower-aboutusGallery__title{
+    text-align: center;
+}
+
+.p-lower-aboutusGallery__gallery{
+    margin-top: rem(40);
+    @include mq('md'){
+        margin-top: rem(80);
+    }   
+}
+
+.p-lower-aboutusGallery__fish{
+    position: absolute;
+    right: rem(15);
+    top: rem(-26);
+	@include mq(md){
+	left: calc(50% + rem(365));
+    top: rem(-40);
+	@media (max-width: 1380px) {
+		left: calc(50% + rem(285));
+	}
+	@media (max-width: 1200px) {
+		left: calc(50% + rem(220));
+	}
+	}
+}
