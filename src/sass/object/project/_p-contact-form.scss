@@ -1,4 +1,17 @@
 @use "global" as *;
+.p-contact-form__inner{
+	position: relative;
+	margin: 0 auto;
+	max-width: rem(540);
+	height: inherit;
+	padding-right: $padding-sp;
+	padding-left: $padding-sp;
+	@include mq(md) {
+		padding-right: $padding-pc;
+		padding-left: $padding-pc;
+	}
+}
+
 [type="text"],
 [type="email"],
 [type="tel"] {
@@ -40,7 +53,7 @@ textarea {
 
 
 .p-contact-form{
-	position: relative;
+	//position: relative;
 }
 
 .p-contact-form__form{
@@ -244,13 +257,13 @@ input[type="radio"]:checked + .p-contact-form__radioLabel:after {
 /*魚----------------*/
 .p-contact-form__fish{
 	position: absolute;
-	top: 0;
-    left: 50%;
-    transform: translate(-200%, -50%);
-    -webkit-transform: translate(-200%, -50%);
-    -ms-transform: translate(-200%, -50%);
+	top: rem(-24);
+	left:calc(50% + rem(-640));
 	z-index: -1;
-
+	
+	@media (max-width: rem(1280)) {
+		left:0;
+	}
 
 }
 
