@@ -19,13 +19,17 @@
     margin-top: rem(40);
 }
 
-.p-thanksPage-section__fish {
+.p-thanksPage-section__fish{
     position: absolute;
+    left: calc(50% - rem(624));
     z-index: -1;
-    left: rem(15);
-    top: rem(-24);
-    @include mq(md){
-        left: rem(-195);
-        top:rem(-70);
+    top:rem(-70);
+    @media (max-width: rem(1280)) {
+        left: rem(25);
+        top: rem(-70);
+    }
+    @media (max-width: rem(768)) {
+        left: rem(15);
+        top: rem(-24);
     }
 }
