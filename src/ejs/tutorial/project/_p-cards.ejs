@@ -13,7 +13,7 @@ let cardContent = [
 <ul class="p-cards">
   <% cardContent.forEach(function(card) { %>
     <li class="p-cards__item">
-      <%- include(project + '/_p-card', {
+      <%- include(ejsPath + '/_p-card', {
         title: card.title,
         text: card.text
         }) %>
@@ -25,7 +25,7 @@ let cardContent = [
 <ul class="p-cards">
   <% for (var item of cardContent) { %>
     <li class="p-cards__item">
-      <%- include(project + '/_p-card', {
+      <%- include(ejsPath + '/_p-card', {
         title: item.title,
         text: item.text
         }) %>
@@ -37,7 +37,7 @@ let cardContent = [
 <ul class="p-cards">
   <% for (var i = 0; i < cardContent.length; i++) { %>
     <li class="p-cards__item">
-      <%- include(project + '/_p-card', {
+      <%- include(ejsPath + '/_p-card', {
         title: cardContent[i].title,
         text: cardContent[i].text
         }) %>

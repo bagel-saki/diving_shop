@@ -8,35 +8,54 @@
 .p-terms-section__title {
     font-size: rem(24);
     font-weight: $medium;
+    line-height: calc(35/24);
     @include mq(md){
         font-size: rem(32);
+        line-height: calc(46/32);
     }
 }
 
-.p-terms-section__group {
+.p-terms-section__text{
     margin-top: rem(40);
+    line-height: 2;
+
+}
+
+.p-terms-section__content {
     margin-right: auto;
     margin-left: auto;
     width: 100%;
     max-width: rem(800);
 }
 
-.p-terms-section__content {
-    line-height: 2;
+//ol,ulリスト
+.p-terms-section__content ol,
+.p-terms-section__content ul{
+    list-style-position: inside;
 }
 
-.p-terms-section__content.p-terms-section__content--indent{
+.p-terms-section__content ul li{
+    list-style-type: disc;
+}
+
+.p-terms-section__content ol li{
+    counter-increment: number;
+    list-style-type: decimal;
     padding-left:1em;
-	text-indent:-1em;
+    text-indent:-1em;
 }
 
-.p-terms-section__fish {
+.p-terms-section__fish{
     position: absolute;
+    left: calc(50% - rem(624));
     z-index: -1;
-    left: rem(15);
-    top: rem(-24);
-    @include mq(md){
-        left: rem(-195);
-        top:rem(-70);
+    top:rem(-70);
+    @media (max-width: rem(1280)) {
+        left: rem(25);
+        top: rem(-70);
+    }
+    @media (max-width: rem(768)) {
+        left: rem(15);
+        top: rem(-24);
     }
 }
