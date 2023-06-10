@@ -7,24 +7,29 @@ i:'information2', alt:'青い海の中を泳ぐ美しい大量の魚',  state:''
 i:'information3', alt:'青い海の中を泳ぐ2匹のチョウチョウウオ',  state:'' }, ] %>
 
 
-
-<div class="p-lower-informationContents">
-  <div class="p-lower-informationContents__tab">
-    <%- include(ejsPath + './component/_c-information-tab' ,{text:'ライセンス<br class="u-mobile"/>講習', image: 'whale', style:'is-active'}) %> 
-    <%-include(ejsPath +
-    './component/_c-information-tab' ,{text:'ファン<br class="u-mobile"/>ダイビング', image: 'shark' , style:''}) %> 
-    <%- include(ejsPath
-    +'./component/_c-information-tab' ,{text:'体験<br class="u-mobile"/>ダイビング', image: 'fish', style:'' }) %>
+<section class="p-lower-informationContents">
+  <div class="l-inner p-lower-informationContents__inner">
+    <div class="p-lower-informationContents__tab">
+      <%- include(ejsPath + './component/_c-information-tab' ,{text:'ライセンス<br class="u-mobile"/>講習', image: 'whale', style:'is-active'}) %> 
+      <%-include(ejsPath +
+      './component/_c-information-tab' ,{text:'ファン<br class="u-mobile"/>ダイビング', image: 'shark' , style:''}) %> 
+      <%- include(ejsPath
+      +'./component/_c-information-tab' ,{text:'体験<br class="u-mobile"/>ダイビング', image: 'fish', style:'' }) %>
+    </div>
+    <% infoContent.slice(0, 3).forEach(function(infoCard) { %>
+    <ul class="p-lower-informationContents__items">
+      <li class="p-lower-informationCotents__item">
+       <%- include(ejsPath + '/_p-information-card', {
+        title: infoCard.title,
+        alt: infoCard.alt,
+        text:infoCard.text,
+        i: infoCard.i,
+        state: infoCard.state, }) %> <% }); %>
+      </li>
+    </ul>
+    <div class="p-lower-informationContents__fish">
+      <%- include(ejsPath + './component/_c-img-fish' ,{ style: 'reverse' }) %>
+    </div>
   </div>
-  <% infoContent.slice(0, 3).forEach(function(infoCard) { %>
-  <ul class="p-lower-informationContents__items">
-    <li class="p-lower-informationCotents__item">
-     <%- include(ejsPath + '/_p-information-card', {
-      title: infoCard.title,
-      alt: infoCard.alt,
-      text:infoCard.text,
-      i: infoCard.i,
-      state: infoCard.state, }) %> <% }); %>
-    </li>
-  </ul>
-</div>
+
+</section>
