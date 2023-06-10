@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.p-page-price-section__inner {
+    position: relative;
+}
+
+.p-page-price-section__content {
+    width: 100%;
+    max-width: rem(700);
+    margin: auto;
+}
+
+.p-page-price-section__fish {
+    position: absolute;
+    left: calc(50% - rem(624));
+    z-index: -1;
+    top:rem(-70);
+    @media (max-width: 1280px) {
+        left: rem(25);
+        top: rem(-70);
+    }
+    @media (max-width: 768px) {
+        left: rem(15);
+        top: rem(-24);
+    }
+}
