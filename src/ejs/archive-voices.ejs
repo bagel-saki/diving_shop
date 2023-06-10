@@ -1,4 +1,4 @@
-<% baseUrlPath='.' ; ejsPath='.' ; pageData="price" %>
+<% baseUrlPath='.' ; ejsPath='.' ; pageData="voices" %>
 <!DOCTYPE html>
 <html lang="ja">
   <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
@@ -7,13 +7,12 @@
 <body>
   <%- include(ejsPath + '/common/_header' ) %>
   <main>
-    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'price', first: 'price', middle:'', last:'', }) %> 
-
+    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'voice', first: 'voice', middle:'', last:'', }) %>
     <div class="l-inner l-lower__breadcrumb">
-        <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{ title: "料金一覧", url: "" }]}); %>
+        <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{ title: "お客様の声", url: "" }]}); %>
     </div>
     <div class="l-lower__head">
-        <%- include(ejsPath + '/project/_p-pagePrice-section' )%>
+      <%- include(ejsPath + '/project/_p-archiveVoices-section' )%>
     </div>
     <div class="l-lower__bottom">
       <%- include(ejsPath + '/project/_p-contact-section' )%>
@@ -25,4 +24,5 @@
   </div>
   <%- include(ejsPath + '/component/_c-page-top-btn' ) %>
 </body>
+
 </html>

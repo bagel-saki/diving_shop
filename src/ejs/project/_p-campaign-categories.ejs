@@ -1,0 +1,16 @@
+<% const campaignCategories = [
+  { text: 'all' },
+  { text: 'ライセンス講習' },
+  { text: 'ファンダイビング' },
+  { text: '体験ダイビング' }
+]; %>
+
+<div class="p-campaign-categories">
+    <% campaignCategories.forEach(function(category) { %>
+        <div class="p-campaign-categories__item">
+            <a href="#" class="c-campaign-category js-campaign-category <%= category.text === 'all' ? 'c-campaign-category--active' : '' %>">
+                <%= category.text %>
+            </a>
+        </div>
+    <% }) %>
+</div>

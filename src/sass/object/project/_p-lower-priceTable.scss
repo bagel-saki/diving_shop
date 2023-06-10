@@ -112,10 +112,3 @@
 		width: 32%;
 	}
 }
-
-.u-desktop-flex{
-	display: none;
-	@include mq(md){
-		display: flex;
-	}
-}

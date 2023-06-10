@@ -81,3 +81,17 @@ $mediaquerys: (
     }
   }
 }
+
+.u-desktop-flex{
+	display: none;
+	@include mq(md){
+		display: flex;
+	}
+}
+
+.u-mobile-flex{
+	display: flex;
+		@include mq(md){
+			display: none;
+		}
+	}

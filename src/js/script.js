@@ -164,5 +164,14 @@ jQuery(function ($) {
   });
 });
 
+//ページネーションのクリック時の動き
+$(document).ready(function() {
+  $('.js-pagination').on('click', function(e) {
+    e.preventDefault();
+    $('.nav-links .page-numbers.current').removeClass('current');
+    $(this).addClass('current');
+  });
+});
+
 
 });
