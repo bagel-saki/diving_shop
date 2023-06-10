@@ -3,9 +3,28 @@
 	width: 100%;
 }
 
+.p-lower-informationContents__inner{
+	position: relative;
+}
+
 .p-lower-informationContents__tab{
 	display: flex;
 	justify-content: center;
 	gap: 5.78%;
+}
+
+.p-lower-informationContents__fish{
+	position: absolute;
+    left: calc(50% - 624px);
+    z-index: -1;
+    top:rem(-70);
+    @media (max-width: 1280px) {
+        left: rem(25);
+        top: rem(-70);
+    }
+    @media (max-width: 768px) {
+        left: rem(15);
+        top: rem(-24);
+    }
 }
 
