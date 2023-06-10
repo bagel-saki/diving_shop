@@ -22,7 +22,7 @@ let priceCardContent = [
           <div class="swiper-wrapper">
             <% priceCardContent.forEach(function(one) { %>
               <div class="p-campaign-section__item  swiper-slide">
-                <%- include(project + './project/_p-campaign-card', {
+                <%- include(ejsPath + './project/_p-campaign-card', {
                   image: one.image,
                   alt: one.alt,
                   tag: one.tag,
