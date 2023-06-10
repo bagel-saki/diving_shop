@@ -47,14 +47,14 @@
 
 .p-terms-section__fish{
     position: absolute;
-    left: calc(50% - rem(624));
+    left: calc(50% - 624px);
     z-index: -1;
     top:rem(-70);
-    @media (max-width: rem(1280)) {
+    @media (max-width: 1280px) {
         left: rem(25);
         top: rem(-70);
     }
-    @media (max-width: rem(768)) {
+    @media (max-width: 768px) {
         left: rem(15);
         top: rem(-24);
     }
