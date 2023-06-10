@@ -1,4 +1,4 @@
-<% baseUrlPath='.' ; ejsPath='.' ; pageData="top" %>
+<% baseUrlPath='.' ; ejsPath='.' ; pageData="privacy-policy" %>
 <!DOCTYPE html>
 <html lang="ja">
   <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
@@ -9,7 +9,7 @@
   <main>
     <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'privacy', first: 'privacy policy', middle:'', last:'', }) %>
     <div class="l-lower__breadcrumb l-inner">
-        <%- include(ejsPath + '/component/_c-breadcrumb', { breadcrumbs: [{title: "プライバシーポリシー", url: "" }]}); %>
+        <%- include(ejsPath + '/component/_c-breadcrumb', { breadcrumbs: [{title: "プライバシーポリシー", url: "", color: "" }]}); %>
    </div>
     <div class="l-lower__head">
         <%- include(ejsPath + '/project/_p-privacyPolicy-section' )%>

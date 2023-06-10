@@ -2,9 +2,12 @@
 
 .breadcrumb {
   font-size: rem(14);
-	
   }
-  
+
+.breadcrumb.breadcrumb--white {
+  color: $white;
+}
+
   .breadcrumb-list {
     display: flex;
   }

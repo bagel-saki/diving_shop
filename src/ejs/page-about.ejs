@@ -1,4 +1,4 @@
-<% baseUrlPath='.' ; ejsPath='.' ; pageData="top" %>
+<% baseUrlPath='.' ; ejsPath='.' ; pageData="about" %>
 <!DOCTYPE html>
 <html lang="ja">
   <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
@@ -9,7 +9,7 @@
     <main>
       <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'aboutus', first: 'about us', middle:'', last:'', }) %>
       <div class="l-inner l-lower__breadcrumb">
-        <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{ title: "私たちについて", url: "" }]}); %>
+        <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{ title: "私たちについて", url: "" , color: ""}]}); %>
       </div>
       <div class="l-lower__head l-lower-aboutusIntro">
         <%- include(ejsPath + '/project/_p-lower-aboutusIntro') %> 

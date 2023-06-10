@@ -1,7 +1,10 @@
 @use "global" as *;
 .l-lower__breadcrumb{
-   margin-top: rem(8);
+   padding-top: rem(8);
 }
+.l-lower__breadcrumb.l-lower__breadcrumb--404{
+    background-color: $green;
+ }
 
 .l-lower__head{
     margin-top: rem(52);
