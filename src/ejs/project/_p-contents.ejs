@@ -39,7 +39,7 @@ let fourthContents = [
             <% if (title.main) { %>
               <li class="p-contents__item">
                 <a href="" class="p-contents__title<%- colorClass %>">
-                  <p><%- title.main %></p>
+                  <%- title.main %>
                 </a>
                 <% if (title.first || title.second || title.third) { %>
                   <div class="p-contents__lists">
@@ -60,4 +60,5 @@ let fourthContents = [
         </ul>
       <% }); %>
     </nav>
+    
   </div>
