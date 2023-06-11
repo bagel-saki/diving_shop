@@ -2,14 +2,16 @@
 
 .p-campaign-categories {
     display: grid;
+    justify-content: center;
     row-gap: rem(16);
     column-gap: rem(21);
     grid-template-columns: rem(162) rem(162);
-grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     @include mq(md){
         gap:rem(32);
-    grid-template-columns: rem(162) rem(162) rem(162) rem(162);
-    grid-template-rows:1fr;
+        justify-content: start;
+        grid-template-columns: rem(162) rem(162) rem(162) rem(162);
+        grid-template-rows:1fr;
     }
 }
 

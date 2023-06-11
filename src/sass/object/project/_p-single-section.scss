@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.p-single-section__inner {
+    position: relative;
+
+}
+
+
+.p-single-section__pagination {
+    margin-top: rem(80);
+}
+
+.p-single-section__fish {
+    position: absolute;
+    left: calc(50% - rem(432));
+    z-index: -1;
+    top:rem(-70);
+    @media (max-width: 1280px) {
+        left: rem(25);
+        top: rem(-70);
+    }
+    @media (max-width: 768px) {
+        left: rem(15);
+        top: rem(-24);
+    }
+}

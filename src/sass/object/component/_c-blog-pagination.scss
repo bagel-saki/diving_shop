@@ -1,0 +1,11 @@
+@use "global" as *;
+
+
+.c-blog-pagination {
+	text-align: center;
+}
+
+.c-blog-pagination .nav-links {
+	display: flex;
+	justify-content: center;
+}

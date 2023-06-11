@@ -1,0 +1,32 @@
+<% baseUrlPath='.' ; ejsPath='.' ; pageData="blog" %>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
+  json[pageData] }) %>
+
+<body>
+  <%- include(ejsPath + '/common/_header' ) %>
+  <main>
+    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'blog', first: 'blog', middle:'', last:'', }) %>
+    <div class="l-inner l-lower__breadcrumb">
+        <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{ title: "ブログ一覧", url: "", color: "" } ]}); %>
+    </div>
+    <div class="l-blog-container l-inner">
+        <div class="l-content">
+        <%- include(ejsPath + '/project/_p-home-section' )%>
+        </div>
+        <div class="l-sidebar">
+            <%- include(ejsPath + '/project/_p-sidebar' )%>
+        </div>
+    </div>
+    <div class="l-lower__bottom">
+      <%- include(ejsPath + '/project/_p-contact-section' )%>
+    </div>
+  </main>
+  <div class="l-footer">
+    <%- include(ejsPath + '/common/_footer' ) %>
+  </div>
+  <%- include(ejsPath + '/component/_c-page-top-btn' ) %>
+</body>  
+    
+</html>
