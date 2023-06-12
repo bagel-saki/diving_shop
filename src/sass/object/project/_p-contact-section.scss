@@ -49,8 +49,8 @@
 	@include mq(md){
 		display: flex;
 		justify-content: space-between;
-		padding-top: rem(25);
-		margin-top: rem(10);
+		padding-top: rem(24);
+		margin-top: rem(7);
 	}
 }
 
@@ -104,6 +104,9 @@
 	font-size: rem(14);
 	line-height: calc(18/14);
 	margin-top: rem(8);
+	@include mq(md){
+		margin-top: rem(4);
+	}
 }
 
 .p-contact-section__btn {
