@@ -78,10 +78,10 @@ jQuery(function ($) {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 2000,
+    //   disableOnInteraction: false,
+    // },
     breakpoints: {
       768: {
         spaceBetween: 40,
@@ -118,10 +118,10 @@ jQuery(function ($) {
   var swiper1 = new Swiper(".js-main-swiper", {
     loop: true,
     effect: "fade",
-    speed: 3000,
+    speed: 2000,
     allowTouchMove: false,
     autoplay: {
-      delay: 3000,
+      delay: 2000,
     },
   });
 
