@@ -1,25 +1,28 @@
 <% project = '.'; let priceContents = [ { courseTitle: 'ライセンス講習',
-courseContent: [ { course: 'オープンウォーターダイバーコース', price: '¥50,000'
-}, { course: 'アドバンスドオープンウォーターコース', price: '¥60,000' }, {
+courseContent: [ { course: 'オープンウォーター<br class="u-mobile">ダイバーコース', price: '¥50,000'
+}, { course: 'アドバンスド<br class="u-mobile">オープンウォーターコース', price: '¥60,000' }, {
 course: 'レスキュー＋EFRコース', price: '¥70,000' } ] }, { courseTitle:
-'体験ダイビング', courseContent: [ { course: 'ビーチ体験ダイビング(半日)',
-price: '¥7,000' }, { course: 'ビーチ体験ダイビング(1日)', price: '¥14,000' }, {
-course: 'ボート体験ダイビング(半日)', price: '¥10,000' }, { course:
-'ボート体験ダイビング(半日)', price: '¥10,000' } ] }, { courseTitle:
-'ファンダイビング', courseContent: [ { course: 'ビーチダイビング(2ダイブ)',
-price: '¥14,000' }, { course: 'ボートダイビング(2ダイブ)', price: '¥18,000' }, {
-course: 'スペシャルダイビング(2ダイブ)', price: '¥24,000' }, { course:
-'ナイトダイビング(1ダイブ)', price: '¥10,000' }, ] }, { courseTitle:
-'スペシャルダイビング', courseContent: [ { course: '貸切ダイビング(2ダイブ)',
-price: '¥24,000' }, { course: '1日ダイビング(3ダイブ)', price: '¥32,000' }, {
-course: 'ナイトダイビング(2ダイブ)', price: '¥14,000' }, ] }, ]; %>
+'体験ダイビング', courseContent: [ { course: 'ビーチ体験ダイビング<br class="u-mobile">(半日)',
+price: '¥7,000' }, { course: 'ビーチ体験ダイビング<br class="u-mobile">(1日)', price: '¥14,000' }, {
+course: 'ボート体験ダイビング<br class="u-mobile">(半日)', price: '¥10,000' }, { course:
+'ボート体験ダイビング<br class="u-mobile">(半日)', price: '¥10,000' } ] }, { courseTitle:
+'ファンダイビング', courseContent: [ { course: 'ビーチダイビング<br class="u-mobile">(2ダイブ)',
+price: '¥14,000' }, { course: 'ボートダイビング<br class="u-mobile">(2ダイブ)', price: '¥18,000' }, {
+course: 'スペシャルダイビング<br class="u-mobile">(2ダイブ)', price: '¥24,000' }, { course:
+'ナイトダイビング<br class="u-mobile">(1ダイブ)', price: '¥10,000' }, ] }, { courseTitle:
+'スペシャルダイビング', courseContent: [ { course: '貸切ダイビング<br class="u-mobile">(2ダイブ)',
+price: '¥24,000' }, { course: '1日ダイビング<br class="u-mobile">(3ダイブ)', price: '¥32,000' }, {
+course: 'ナイトダイビング<br class="u-mobile">(2ダイブ)', price: '¥14,000' }, ] }, ]; %>
 
 <!-- p-lower-price.ejs -->
 <div class="p-lower-price">
-  <ul class="p-lower-price__item">
+  <ul class="p-lower-price__items">
   <% priceContents.forEach(function(priceContent) { const { courseTitle,
   courseContent } = priceContent; %>
+  <li class="p-lower-price__item">
     <%- include('_p-lower-priceTable', { title: courseTitle, courseContent:
-    courseContent }) %> <% }); %>
+    courseContent }) %>
+  </li>
+    <% }); %>
   </ul>
 </div>
