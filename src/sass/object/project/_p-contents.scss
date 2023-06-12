@@ -11,11 +11,11 @@
 	display: grid;
 	grid-template-rows: repeat(2, 1fr);
 	grid-template-columns: repeat(2, 1fr);
-	grid-column-gap:4.4%;
+	grid-column-gap:13.5%;
 	grid-row-gap:0;
 	grid-auto-flow: column;
 	padding-left: rem(22);
-	place-items: center;
+	//place-items: center;
 	
 	@include mq('md'){
 		display: flex;
@@ -32,6 +32,7 @@
 .p-contents__items{
 	//width: 100%;
 	//max-width: min(100%,280px);
+
 	
 }
 
@@ -42,6 +43,7 @@
     transition: opacity 0.3s;
 	margin-top: rem(16);
 	position: relative;
+	white-space: nowrap
 }
 
 
