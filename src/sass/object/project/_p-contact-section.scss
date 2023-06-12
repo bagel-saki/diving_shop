@@ -49,8 +49,8 @@
 	@include mq(md){
 		display: flex;
 		justify-content: space-between;
-		padding-top: rem(24);
-		margin-top: rem(8);
+		padding-top: rem(25);
+		margin-top: rem(10);
 	}
 }
 
@@ -66,6 +66,11 @@
 	font-family: $english-second-font-family;
 	line-height: calc(24/16);
 }
+
+.p-contact-section__addressText + .p-contact-section__addressText{
+	margin-top: rem(4);
+}
+
 .p-contact-section__map{
 	width: 100%;
 	margin-top: rem(16);
@@ -113,8 +118,8 @@
     right: rem(15);
     top: rem(-26);
 	@include mq(md){
-	left: calc(50% + rem(365));
-    top: rem(-40);
+	left: calc(50% + rem(370));
+    top: rem(-37);
 	@media (max-width: 1380px) {
 		left: calc(50% + rem(285));
 	}

@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-drawer {
-	position: fixed;
+	position: absolute;
 	z-index: 5000;
     top: rem(80);
     left: 0;
@@ -18,7 +18,7 @@ html.is-fixed {
 
 .p-drawer__container {
 	width: 100%;
-    height: inherit;
+    // height: inherit;
 	display: flex;
 	gap: rem(7);
 	padding: rem(24) rem(17) 0;
@@ -28,6 +28,7 @@ html.is-fixed {
 .p-drawer__rightItems {
     min-height: 100vh;
 	width: 50%;
+	padding-bottom: rem(100);
 }
 
 .p-drawer__item {

@@ -8,9 +8,6 @@
     position: relative;
     margin-top: rem(40);
     margin-right: calc(50% - 50vw);
-    @include mq(md){
-    margin-top: rem(80);
-    }
 }
 
 .p-campaign-section__wrapper .p-campaign-section__swiper{
@@ -67,7 +64,7 @@
     transition: background-color 0.3s;
     width: rem(80);
     height: rem(80);
-    top:-20%;
+    top:-19%;
     }
 }
 
@@ -100,7 +97,7 @@
 
     .swiper-button-prev{
         @include mq(lg){
-            left: calc(50% + rem(300));
+            left: calc(50% + rem(210));
             }
     }
 
@@ -133,7 +130,7 @@
 /* 次への矢印 */
 .swiper-button-next {
     @include mq(lg){
-        left: calc( 50% + rem(460) );
+        left: calc( 50% + rem(370) );
     }
 }
 

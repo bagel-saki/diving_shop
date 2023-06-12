@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: column;
     gap: rem(40);
-    margin-top: rem(40);
+    margin-top: rem(25);
     margin-right: auto;
     margin-left: auto;
     @include mq(md){
@@ -29,6 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: rem(3);
     @include mq(md){
         margin-top: rem(80);
     }
@@ -36,10 +37,16 @@
 
 .p-voice-section__fish {
     position: absolute;
-    left:rem(-80);
-    top: rem(-120);
-    @media (max-width: rem(1320)) {
+    left: calc(50% - rem(432));
+    z-index: -1;
+    top:rem(-70);
+    @media (max-width: 1280px) {
         left: rem(25);
+        top: rem(-70);
+    }
+    @media (max-width: 768px) {
+        left: rem(15);
+        top: rem(-24);
     }
 }
 
