@@ -4,6 +4,7 @@
 .p-lower-gallery__top,
 .p-lower-gallery__bottoms{
     display: grid;
+    display: -ms-grid;
     gap: rem(8);
     height: 100%;
 }
@@ -12,8 +13,13 @@
     grid-template-columns:100%;
     grid-template-rows: 53.5% 22.5% 22.5%;
     @include mq(md){
-        grid-template-columns: 45.89% 54.1%;
-        grid-template-rows: 50%;
+        grid-template-columns: 45.5% 53.9%;
+        grid-column-gap:0.6%;
+        grid-template-rows: 49.5%;
+        grid-row-gap:1%;
+
+
+
     }
 }
 
@@ -22,8 +28,10 @@
     grid-template-columns:100%;
     grid-template-rows: 22.5% 22.5% 53.5%;
     @include mq(md){
-    grid-template-columns: 54.1% 45.89%;
-    grid-template-rows: 50%;
+    grid-template-columns: 53.9% 45.5%;
+    grid-column-gap:0.6%;
+    grid-template-rows: 49.5%;
+    grid-row-gap:1%;
 
     }
 }

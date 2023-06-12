@@ -6,8 +6,9 @@ mask-repeat: no-repeat;
 mask-position: center;
 mask-size: contain;
 background-color: $green;
-width: rem(120);
+width: rem(112);
 height: rem(55);
+
 
 @include mq(md){
 	width: rem(301);

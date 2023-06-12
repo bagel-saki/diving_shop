@@ -116,7 +116,7 @@
 .p-contact-section__fish {
 	position: absolute;
     right: rem(15);
-    top: rem(-26);
+    top: rem(-27);
 	@include mq(md){
 	left: calc(50% + rem(370));
     top: rem(-37);
@@ -127,5 +127,6 @@
 		left: calc(50% + rem(220));
 	}
 	}
+
 }
 

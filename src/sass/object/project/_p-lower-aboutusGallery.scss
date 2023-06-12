@@ -19,8 +19,8 @@
     right: rem(15);
     top: rem(-26);
 	@include mq(md){
-	left: calc(50% + rem(365));
-    top: rem(-40);
+	left: calc(50% + rem(340));
+    top: rem(-80);
 	@media (max-width: 1380px) {
 		left: calc(50% + rem(285));
 	}

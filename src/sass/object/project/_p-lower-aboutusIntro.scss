@@ -9,16 +9,6 @@
 
 .p-lower-aboutusIntro__inner{
 	position: relative;
-	margin: 0 auto;
-	max-width: rem(540);
-	height: inherit;
-	padding-right: $padding-sp;
-	padding-left: $padding-sp;
-	@include mq(md) {
-		max-width: rem(1210);
-		padding-right: $padding-pc;
-		padding-left: $padding-pc;
-	}
 }
 
 .p-lower-aboutusIntro__fish{

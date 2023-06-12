@@ -2,6 +2,11 @@
 
 .breadcrumb {
   font-size: rem(14);
+  letter-spacing: rem(-0.5);
+
+  @include mq('md'){
+    letter-spacing: rem(-0.8);
+  }
   }
 
 .breadcrumb.breadcrumb--white {

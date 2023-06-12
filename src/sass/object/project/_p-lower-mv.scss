@@ -100,13 +100,14 @@
 	font-size: rem(40);
 	font-family: $english-second-font-family;
 	font-weight: $normal;
-    letter-spacing: rem(2);
+    letter-spacing: rem(0.6);
 	white-space: nowrap;
 	
 	@include mq('md'){
 		font-size: rem(80);
-		top: 60.7%; //333/548
+		top: 59%; //333/548
 	}
+
 }
 
 .p-lower-mv--aboutus h1{
