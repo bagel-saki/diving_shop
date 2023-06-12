@@ -50,10 +50,11 @@
     display: none;
     background-color: $white;
     border: 1px solid $green;
-    padding: rem(24) rem(16);
+    padding: rem(22) rem(16);
+    line-height: 1.455;
     cursor: pointer;
     @include mq(md){
-        padding: rem(40);
+        padding: rem(37) rem(38);
         margin-top: rem(16);
     }
 }
