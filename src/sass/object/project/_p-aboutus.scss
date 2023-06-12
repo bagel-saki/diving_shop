@@ -1,103 +1,98 @@
 @use "global" as *;
 
 .p-aboutus {
-	width: 100%;
-	//max-width: rem(1080);
+  width: 100%;
+  //max-width: rem(1080);
+
+  @include mq("md") {
+    position: relative;
+  }
+}
+
+.p-aboutus__cont {
+  @include mq("md") {
+    display: flex;
+    gap: 4%;
+    position: absolute;
+    margin-right: rem(40);
+    top: 28%;
+    left: 18%;
+  }
+}
+
+.p-aboutus__left {
+  text-transform: capitalize;
+  color: $green;
+  font-size: rem(40);
+  font-family: $english-font-family;
+  line-height: 1;
+  margin-top: rem(40);
+  @include mq("md") {
+    font-size: rem(80);
+    line-height: calc(100 / 80);
+    width: 48%;
+    color: $white;
+    margin-top: rem(16);
+  }
+}
+
+.p-aboutus__left span {
+  text-transform: none;
+}
+
+.p-aboutus__right {
+  margin-top: rem(20);
+  @include mq("md") {
+	margin-top: rem(16);
+    width: 48%;
+    color: $white;
+    line-height: calc(24 / 16);
+    letter-spacing: rem(0.1);
+  }
+}
+
+.p-aboutus__btn {
+	padding-bottom: rem(3);
+  margin-top: rem(40);
+  display: flex;
+  justify-content: center;
+  @include mq(md){
 	
-	@include mq('md'){
-		position: relative;	
-	}
-}
-
-.p-aboutus__cont{
-	@include mq('md'){
-		display: flex;
-		gap:4%;
-		position: absolute;
-		margin-right: rem(40);	
-		top: 28%;
-    	left: 18%;
-
-	}	
-		}
-		
-.p-aboutus__left{
-	text-transform: capitalize;
-	color: $green;
-	font-size: rem(40);
-	font-family: $english-font-family;
-	line-height: 1;
-	margin-top: rem(16);
-	@include mq('md'){
-		font-size: rem(80);
-		line-height: calc(100 / 80);
-		width:48% ;
-		color: $white;
-	}
-}
-		
-.p-aboutus__left span{
-	text-transform: none;
-}
-		
-
-.p-aboutus__right{
-	margin-top: rem(16);
-	@include mq('md'){
-		width:48% ;
-		color: $white;
-		line-height: calc(24 /16);
-		letter-spacing: rem(0.1);
-	}
-}
-
-.p-aboutus__btn{
-	margin-top: rem(40);
-	display: flex;
-	justify-content: center;
+  }
 }
 
 //------------------
 // 下層ページ
 //------------------
 
-.p-aboutus--lower{
-	position: relative;
+.p-aboutus--lower {
+  position: relative;
 }
 
-.p-aboutus--lower
-.p-aboutus__images
-.p-aboutus__image02{
-	margin-left:0;
-	width: 100%;
-	@include mq('md'){
-		margin-left: 18.51%;
-		width: 81.48%;		
-	}	
+.p-aboutus--lower .p-aboutus__images .p-aboutus__image02 {
+  margin-left: 0;
+  width: 100%;
+  @include mq("md") {
+    margin-left: 18.51%;
+    width: 81.48%;
+  }
 }
 
-.p-aboutus--lower
-.p-aboutus__cont
-.p-aboutus__left{
-	color: $white;	
-	position: absolute;
-	top: rem(7);
-	left: 6.95%;
+.p-aboutus--lower .p-aboutus__cont .p-aboutus__left {
+  color: $white;
+  position: absolute;
+  top: rem(7);
+  left: 6.95%;
 
-
-	@include mq('md'){
-	position: static;
-
-	}
+  @include mq("md") {
+    position: static;
+  }
 }
 
-.p-aboutus--lower
-.p-aboutus__cont
-.p-aboutus__right{
-	margin-top: rem(40);
+.p-aboutus--lower .p-aboutus__cont .p-aboutus__right {
+  margin-top: rem(40);
 
-	@include mq('md'){
-		margin-top: rem(64);
-
-	}
+  @include mq("md") {
+    margin-top: rem(64);
+  }
 }

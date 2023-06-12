@@ -27,7 +27,7 @@
 }
 
 .p-campaign-card__head {
-    padding-top: rem(14);
+    padding-top: rem(17);
     margin-right: rem(14);
     margin-left: rem(14);
     padding-bottom: rem(7);
@@ -44,8 +44,12 @@
     color: $green;
     border: 1px solid $green;
     font-size: rem(12);
-    padding: rem(10) rem(16);
+    padding: rem(8) rem(13);
     line-height: 1;
+    @include mq(md){
+    padding: rem(10) rem(16);
+
+    }
 }
 
 .p-campaign-card__title {
@@ -66,11 +70,15 @@
 }
 
 .p-campaign-card__body{
-    padding-top: rem(16);
+    padding-top: rem(10);
     padding-right: rem(16);
     padding-left: rem(16);
     padding-bottom: rem(24);
     text-align: center;
+    @include mq(md){
+    padding-top: rem(16);
+
+    }
 }
 
 .p-campaign-card__text {

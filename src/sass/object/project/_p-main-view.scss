@@ -30,12 +30,13 @@
 
 .p-main-view__title {
   position: absolute;
-  left: 50%;
+  left: 53%;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
   @include mq(md) {
     top: 46.875%;
+    left: 50%;
     transform: translateX(-46%);
   }
 }

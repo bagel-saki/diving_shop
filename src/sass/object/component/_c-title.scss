@@ -1,73 +1,72 @@
 @use "global" as *;
 
-
 .c-title {
   text-align: center;
   display: inline-block;
 }
 
-
-
-.c-title__en{
+.c-title__en {
   font-family: $english-font-family;
   font-size: rem(32);
   font-weight: $normal;
-  line-height: 1;
-
+  line-height: 1.3;
 
   @include mq(md) {
     font-size: rem(40);
+    line-height: 1;
   }
 }
 
-.c-title h2{
-  color: $font-color; 
+.c-title h2 {
+  color: $font-color;
   display: inline-block;
 }
 
-.c-title--white h2{
-  @include mq('md'){
+.c-title--white h2 {
+  @include mq("md") {
     color: $white;
   }
 }
 
-.c-title h2:first-letter{
-  color:$green;
+.c-title h2:first-letter {
+  color: $green;
   text-transform: uppercase;
 }
 
-.c-title--large h2{
-    font-size: rem(80);
-    line-height: 1;
+.c-title--large h2 {
+  font-size: rem(80);
+  line-height: 1;
 }
 
-.c-title--large p{
-margin-top: 0;
+.c-title--large p {
+  margin-top: rem(-3);
+  @include mq(md){
+    margin-top: 0;
+  }
 }
 
-.c-title--white h2:first-letter{
-  @include mq('md'){
+.c-title--white h2:first-letter {
+  @include mq("md") {
     color: $light-green;
   }
-} 
+}
 
-.c-title__ja{
+.c-title__ja {
   font-family: $base-font-family;
   font-size: rem(12);
   line-height: 1;
-  margin-top: rem(11);
-  
+  margin-top: rem(6);
+  @include mq(md){
+    margin-top: rem(11);
+  }
 }
 
-
-
-.c-title p{
+.c-title p {
   color: $green;
 }
 
-
-.c-title--white p{
-  @include mq('md'){
+.c-title--white p {
+  @include mq("md") {
     color: $white;
   }
 }
