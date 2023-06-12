@@ -16,8 +16,8 @@ i:'information3', alt:'青い海の中を泳ぐ2匹のチョウチョウウオ',
       <%- include(ejsPath
       +'./component/_c-information-tab' ,{text:'体験<br class="u-mobile"/>ダイビング', image: 'fish', style:'' }) %>
     </div>
-    <% infoContent.slice(0, 3).forEach(function(infoCard) { %>
     <ul class="p-lower-informationContents__items">
+      <% infoContent.slice(0, 3).forEach(function(infoCard) { %>
       <li class="p-lower-informationCotents__item">
        <%- include(ejsPath + '/_p-information-card', {
         title: infoCard.title,

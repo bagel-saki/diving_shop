@@ -8,16 +8,21 @@ mask-size: contain;
 background-color: $green;
 width: rem(112);
 height: rem(55);
-
-
 @include mq(md){
 	width: rem(301);
 	height: rem(138);
 }
+
 }
 
 .c-img-fish--reverse{
 	transform: scaleX(-1);
+	width: rem(126);
+	height: rem(55);
+	@include mq(md){
+		width: rem(301);
+		height: rem(138);
+	}
 }
 
 .c-img-fish--white{
