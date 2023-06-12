@@ -15,8 +15,8 @@
 		gap:4%;
 		position: absolute;
 		margin-right: rem(40);	
-		top: 29%;
-    	left: 20%;
+		top: 28%;
+    	left: 18%;
 
 	}	
 		}
@@ -47,6 +47,7 @@
 		width:48% ;
 		color: $white;
 		line-height: calc(24 /16);
+		letter-spacing: rem(0.1);
 	}
 }
 
@@ -80,8 +81,9 @@
 .p-aboutus__left{
 	color: $white;	
 	position: absolute;
-	top:5.5%;
+	top: rem(7);
 	left: 6.95%;
+
 
 	@include mq('md'){
 	position: static;
