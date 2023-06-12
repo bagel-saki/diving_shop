@@ -16,23 +16,23 @@
 	grid-auto-flow: column;
 	padding-left: rem(22);
 	place-items: center;
-
+	
 	@include mq('md'){
 		display: flex;
 		gap:0;
 		justify-content: space-between;
+		padding-left: rem(20);
 	}
 }
 
 .p-contents__container {
-	width: 100%;
-    height: inherit;
-	align-items: flex-start;
-	@include mq('md'){
-		display: flex;
-		height: auto;
-		padding-left: rem(20);
-	}
+	align-items: flex-start;//これを上のクラス内に入れると表示崩れる
+}
+
+.p-contents__items{
+	//width: 100%;
+	//max-width: min(100%,280px);
+	
 }
 
 .p-contents__item {
@@ -43,6 +43,7 @@
 	margin-top: rem(16);
 	position: relative;
 }
+
 
 .p-contents__lists{
 	margin-bottom: rem(20) ;
@@ -57,13 +58,12 @@
 .p-contents__title {
 	font-weight: $bold;
 	cursor: pointer;
-}
-
-.p-contents__title p{
 	display: inline-block;
 	padding: rem(12) 0;
-
+	width: 100%;
 }
+
+
 
 .p-contents__title--white::before,
 .p-contents__title--black::before{

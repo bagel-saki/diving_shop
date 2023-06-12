@@ -1,21 +1,12 @@
 @use "global" as *;
 .p-contact-form__inner{
 	position: relative;
-	margin: 0 auto;
-	max-width: rem(540);
-	height: inherit;
-	padding-right: $padding-sp;
-	padding-left: $padding-sp;
-	@include mq(md) {
-		padding-right: $padding-pc;
-		padding-left: $padding-pc;
-	}
 }
 
 [type="text"],
 [type="email"],
 [type="tel"] {
-	padding: rem(12) rem(16);	
+	padding: rem(7) rem(16);	
 	width: 100%;
 	line-height: cac(24 /16);
 	border: 1px solid $green;
@@ -94,9 +85,11 @@ textarea {
 	color: $white;
 	background: $red;
 	text-align: center;
-	padding: rem(2) rem(16);
+	padding: rem(3) rem(12);
 	line-height: 1;
 	margin-left: rem(8);
+	letter-spacing: 0.4em;
+	
 	
 	@include mq('md'){
 		top: 50%;
@@ -287,3 +280,10 @@ input[type="radio"]:checked + .p-contact-form__radioLabel:after {
 .p-contact-form__errorWrap { 
 	text-align: center;
   }
+
+.p-contact-form__erroMessage{
+	color: $red;
+	display: inline-block;
+	text-align: left;
+	opacity: 0;
+}
