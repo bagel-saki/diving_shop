@@ -18,17 +18,9 @@ price: '¥24,000' }, { course: '1日ダイビング(3ダイブ)', price: '¥32,0
   <% priceContents.forEach(function(priceContent) { const { courseTitle,
   courseContent } = priceContent; %>
   <div class="p-price-contents__item">
-    <div class="p-price-content">
-      <div class="p-price-content__title"><%- courseTitle %></div>
-      <ul class="p-price-content__lists">
-        <% courseContent.forEach(function(list) { %>
-        <li class="p-price-content__list">
-          <p class="p-price-content__text"><%- list.course %></p>
-          <p class="p-price-content__price"><%- list.price %></p>
-        </li>
-        <% }); %>
-      </ul>
-    </div>
+    <%- include(ejsPath + './project/_p-price-content', {
+      courseTitle: priceContent.courseTitle, courseContent: priceContent.courseContent
+    }); %>
   </div>
   <%});%>
 </div>

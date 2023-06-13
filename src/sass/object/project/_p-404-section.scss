@@ -37,9 +37,10 @@
     font-family: $english-second-font-family;
     text-align: center;
     text-align-last: center;
+    line-height: 1;
     @include mq(md){
         font-size: rem(160);
-        margin-top: rem(80);
+        margin-top: rem(127);
     }
 }
 
@@ -47,7 +48,7 @@
     text-align: center;
     line-height: calc(24/16);
     @include mq(md){
-        margin-top: rem(24);
+        margin-top: rem(39);
     }
 }
 
