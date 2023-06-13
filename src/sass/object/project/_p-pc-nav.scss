@@ -24,6 +24,9 @@
     padding: 0 rem(20);
     gap: rem(4);
     position: relative;
+    @media (max-width: 1020px) {
+        padding: 0 rem(11);
+	}
 }
 .p-pc-nav__title:hover{
     opacity: 1;
