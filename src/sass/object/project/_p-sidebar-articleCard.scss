@@ -34,11 +34,14 @@
     font-family: $english-second-font-family;
     font-size: rem(12);
     line-height: calc(18/12);
+    vertical-align: top;
+    @include mq('md'){
+        letter-spacing:-0.06em;
+    }
 }
 
 .p-sidebar-articleCard__title {
     font-weight: $medium;
-    margin-top: rem(4);
     line-height: calc(23/16);
 }
 

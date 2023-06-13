@@ -9,11 +9,8 @@
     display: flex;
     align-items: center;
     position: relative;
-
-    @include mq('md'){
-        padding-left:rem(82);
-    }
 }
+
 
 .c-sidebar-title::before {
     position: absolute;
@@ -23,9 +20,9 @@
     mask-position: center;
     mask-size: contain;
     background-color: $font-color;
-    width: rem(50);
+    width: rem(40);
     height: inherit;
     top:50%;
-    left: rem(16);
+    left: rem(21);
     transform: translateY(-50%);
   }

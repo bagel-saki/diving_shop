@@ -9,7 +9,12 @@
   <main>
     <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'blog', first: 'blog', middle:'', last:'', }) %>
     <div class="l-inner l-lower__breadcrumb">
-        <%- include(ejsPath + '/component/_c-breadcrumb', { breadcrumbs: [{ title: "ブログ詳細", url: "", color: "" }]}); %>
+      <%- include(ejsPath + '/component/_c-breadcrumb', {
+        breadcrumbs: [
+        { title: "ブログ一覧", url: "", color: "" },
+        { title: "ブログ詳細", url: "", color: "" }
+        ]
+      }); %>
     </div>
     <div class="l-blog-container l-inner">
         <div class="l-content">
