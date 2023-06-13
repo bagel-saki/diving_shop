@@ -2,10 +2,11 @@
 
 .l-content{
     width: 100%;
-    margin-top: rem(52);
+    margin-top: rem(48);
     @include mq(md){
         width: 65.092%;
-        margin-top: rem(150);
+        margin-top: rem(146);
 
     }
+
 }

@@ -7,8 +7,12 @@
 
 
 .p-single-section__pagination {
-    margin-top: rem(80);
+    margin-top: rem(40);
+    @include mq('md'){
+        margin-top: rem(76);
+    }
 }
+
 
 .p-single-section__fish {
     position: absolute;
@@ -20,7 +24,7 @@
         top: rem(-70);
     }
     @media (max-width: 768px) {
-        left: rem(15);
-        top: rem(-24);
+        left: rem(0);
+        top: rem(-22);
     }
 }
