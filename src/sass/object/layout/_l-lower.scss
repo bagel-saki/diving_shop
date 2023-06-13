@@ -1,19 +1,19 @@
 @use "global" as *;
-.l-lower__breadcrumb{
+.l-breadcrumb{
    padding-top: rem(8);
 }
-.l-lower__breadcrumb.l-lower__breadcrumb--404{
+.l-breadcrumb.l-breadcrumb--404{
     background-color: $green;
  }
 
-.l-lower__head{
-    margin-top: rem(52);
+.l-lower-head{
+    margin-top: rem(50);
     @include mq('md'){
-        margin-top: rem(150);
+        margin-top: rem(147);
     }
 }
 
-.l-lower__center{
+.l-lower-center{
     margin-top: rem(40);
 
     @include mq('md'){
@@ -21,7 +21,7 @@
     }
 }
 
-.l-lower__bottom{
+.l-lower-bottom{
     margin-top: rem(106);
     @include mq('md'){
         margin-top: rem(140);

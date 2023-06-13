@@ -8,19 +8,19 @@
   <%- include(ejsPath + '/common/_header' ) %>
   <main>
     <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'information', first: 'information', middle:'', last:'', }) %> 
-    <div class="l-inner l-lower__breadcrumb">
+    <div class="l-inner l-breadcrumb">
       <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{ title: "ダイビング情報", url: "" }]}); %>
     </div>
-    <div class="l-lower__head l-lower-informationContents__head">
+    <div class="l-lower-head l-lower-informationContents__head">
       
         <%- include(ejsPath + '/project/_p-lower-informationContents' ) %> 
 
       
     </div>
-    <div class="l-lower__center">
+    <div class="l-lower-center">
       
     </div>
-    <div class="l-lower__bottom">
+    <div class="l-lower-bottom">
       <%- include(ejsPath + '/project/_p-contact-section' )%>
     </div>
   </main>

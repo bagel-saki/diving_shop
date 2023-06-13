@@ -8,7 +8,7 @@
   <%- include(ejsPath + '/common/_header' ) %>
   <main>
     <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'blog', first: 'blog', middle:'', last:'', }) %>
-    <div class="l-inner l-lower__breadcrumb">
+    <div class="l-inner l-breadcrumb">
         <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{ title: "ブログ一覧", url: "", color: "" } ]}); %>
     </div>
     <div class="l-blog-container l-inner">
@@ -19,7 +19,7 @@
             <%- include(ejsPath + '/project/_p-sidebar' )%>
         </div>
     </div>
-    <div class="l-lower__bottom">
+    <div class="l-lower-bottom">
       <%- include(ejsPath + '/project/_p-contact-section' )%>
     </div>
   </main>

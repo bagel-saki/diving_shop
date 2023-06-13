@@ -8,13 +8,13 @@
   <%- include(ejsPath + '/common/_header' ) %>
   <main>
     <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'terms', first: 'terms', middle:' of', last:' service', }) %> 
-    <div class="l-lower__breadcrumb l-inner">
+    <div class="l-breadcrumb l-inner">
         <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{ title: "利用規約", url: "", color: ""}]}); %>
    </div>
-    <div class="l-lower__head">
+    <div class="l-lower-head">
         <%- include(ejsPath + '/project/_p-terms-section' )%>
     </div>
-    <div class="l-lower__bottom">
+    <div class="l-lower-bottom">
       <%- include(ejsPath + '/project/_p-contact-section' )%>
     </div>
   </main>

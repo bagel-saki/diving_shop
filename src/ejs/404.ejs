@@ -8,14 +8,14 @@
     <%- include(ejsPath + '/common/_header' ) %>
     <main>
       <div class="l-lower-404">
-        <div class="l-inner l-lower__breadcrumb l-lower__breadcrumb--404">
+        <div class="l-inner l-breadcrumb l-breadcrumb--404">
           <%- include(ejsPath + '/component/_c-breadcrumb', { breadcrumbs: [ {
           title: "404", url: "", color: "white" } ] }); %>
         </div>
         <%- include(ejsPath + '/project/_p-404-section' )%>
       </div>
     </main>
-    <div class="l-footer__404">
+    <div class="l-footer--404">
     <%- include(ejsPath + '/common/_footer' ) %>
   </div>
   </body>
