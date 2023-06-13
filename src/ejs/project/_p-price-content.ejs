@@ -1,0 +1,11 @@
+<div class="p-price-content">
+    <div class="p-price-content__title"><%- courseTitle %></div>
+    <ul class="p-price-content__lists">
+      <% courseContent.forEach(function(list) { %>
+      <li class="p-price-content__list">
+        <p class="p-price-content__text"><%- list.course %></p>
+        <p class="p-price-content__price"><%- list.price %></p>
+      </li>
+      <% }); %>
+    </ul>
+  </div>
