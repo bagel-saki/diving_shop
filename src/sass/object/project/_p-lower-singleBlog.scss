@@ -16,6 +16,8 @@
     margin-top: rem(8);
     @include mq('md'){
         font-size: rem(32);
+        margin-top: rem(6);
+        line-height: 1.3;
     }
 }
 

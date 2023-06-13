@@ -6,20 +6,26 @@
 
 .p-sidebar-archiveList__year {
   position: relative;
-  padding-left: rem(24);
+  padding-left: rem(30);
   cursor: pointer;
+  letter-spacing: -0.1em;
+  @include mq('md'){
+  }
 }
 
 .p-sidebar-archiveList__months {
-  margin-left: rem(24);
+  margin-left: rem(30);
   display: none;
 }
 
 .p-sidebar-archiveList__month {
   margin-top: rem(4);
   position: relative;
-  padding-left: rem(24);
+  padding-left: rem(26);
   display: block;
+  @include mq('md'){
+    padding-left:rem(24);  
+  }
 }
 
 .p-sidebar-archiveList__year::before,
@@ -38,7 +44,7 @@
 .p-sidebar-archiveList__year::before,
 .p-sidebar-archiveList__month::before {
   border-bottom: rem(10) solid transparent;
-  border-left: rem(16) solid $green;
+  border-left: rem(18) solid $green;
   border-top: rem(10) solid transparent;
   opacity: 1;
   transition: opacity 0.3s, visibility 0.3s;

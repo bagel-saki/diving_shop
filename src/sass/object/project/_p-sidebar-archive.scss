@@ -1,8 +1,9 @@
 @use "global" as *;
 
 .p-sidebar-archive__lists {
-  margin-top: rem(24);
+  margin-top: rem(28);
   color: $green;
   font-size: rem(24);
   line-height: calc(35 / 24);
+
 }
