@@ -8,16 +8,16 @@
     <%- include(ejsPath + '/common/_header' ) %>
     <main>
       <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'aboutus', first: 'about us', middle:'', last:'', }) %>
-      <div class="l-inner l-lower__breadcrumb">
+      <div class="l-inner l-breadcrumb">
         <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{ title: "私たちについて", url: "" , color: ""}]}); %>
       </div>
-      <div class="l-lower__head l-lower-aboutusIntro">
+      <div class="l-lower-head">
         <%- include(ejsPath + '/project/_p-lower-aboutusIntro') %> 
       </div>
-      <div class="l-lower__center l-lower-aboutusGallery">
+      <div class="l-lower-center">
         <%- include(ejsPath + '/project/_p-lower-aboutusGallery') %>
       </div>
-      <div class="l-lower__bottom l-lower-contact-section">
+      <div class="l-lower-bottom">
         <%- include(ejsPath + '/project/_p-contact-section' )%>
       </div>
     </main>

@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.p-price-content {
+.p-price-contents__item {
     margin-top: rem(37);
 
     @include mq(md) {
@@ -8,34 +8,4 @@
             margin-top: 0;
         }
     }
-}
-
-.p-price-content__title {
-    font-weight: $bold;
-    line-height: 1.7;
-    @include mq(md){
-        line-height: 1.5;
-    }
-}
-
-.p-price-content__lists {
-    border-top: 1px solid $green;
-    margin-top: rem(3);
-}
-
-.p-price-content__list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    line-height: calc(24/14);
-    font-size: rem(14);
-    margin-top: rem(8);
-    @include mq(md){
-        font-size: rem(16);
-        margin-top: rem(5);
-    }
-}
-
-.p-price-content__price {
-    font-family: $english-second-font-family;
 }
