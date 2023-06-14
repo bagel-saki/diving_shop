@@ -5,15 +5,15 @@
 <% if (type === 'contact') { %>
     <div class="c-btn">
         <button type='submit' class="c-btn__link<%- btnClass %>">
-            <%- text %><span></span></button>
+            <%- text %><span></span>
+        </button>
         <div class="c-btn__overlay<%- overlayClass %>"></div>
         </div>
     <% } else { %>
     <div class="c-btn">
-        <a href="<%= link %>.html" class="c-btn__link<%- btnClass %>"></a>
-            <%- text %>
-            <span></span>
-    </a>
+        <a href="<%= link %>.html" class="c-btn__link<%- btnClass %>">
+            <%- text %><span></span>
+        </a>
      <div class="c-btn__overlay<%- overlayClass %>"></div>
     </div>
 <% } %>
