@@ -99,17 +99,18 @@ body{
 
     <h2 class="h2">.p-contents</h2>
     <p class="p">コンテンツ（フッター・サイトマップ）</p>
-    <%- include(ejsPath + '/project/_p-contents', { section: 'footer', color: 'white' }) %>
-    <%- include(ejsPath + '/project/_p-contents', { section: 'sitemap', color: 'black' }) %>
+    <%- include(ejsPath + '/project/_p-contents', { section: 'footer', color: 'white', project:'' }) %>
+    <%- include(ejsPath + '/project/_p-contents', { section: 'sitemap', color: 'black', project:'sitemap' }) %>
 
     <h2 class="h2">.p-sitemap.ejs</h2>
     <p class="p">サイトマップ</p>
     <%- include(ejsPath + '/project/_p-sitemap' ) %>
 
 
-    <h2 class="h2">.footer</h2>
-    <p class="p">フッター</p>
+    <h2 class="h2">.p-footer.ejs</h2>
+    <p> class="p">フッター</p>
     <%- include(ejsPath + '/common/_footer' ) %>
   </body>
 </html>
+
 

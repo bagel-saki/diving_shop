@@ -35,7 +35,11 @@
 	}
 }
 
-
+.p-contents__items--sitemap {
+	@include mq('md'){
+		width: 15%;
+	}
+}
 
 .p-contents__item {
 	line-height: calc(18/16);
