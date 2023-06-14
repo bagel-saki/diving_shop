@@ -17,10 +17,23 @@
 	opacity: 1;
 }
 
+.p-blog-card:hover .p-blog-card__img img{
+	transform: scale(1.4);
+}
+
+
+.p-blog-card__img{
+	overflow: hidden;
+
+}
+
 .p-blog-card__img img{
 	aspect-ratio: 301 / 201 ;
 	object-fit: cover;
+	height: auto;
+  	transition: transform .6s ease;
 }
+
 
 .p-blog-card__body{
 	margin-top: rem(18);
