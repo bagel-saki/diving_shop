@@ -6,9 +6,9 @@
 [type="text"],
 [type="email"],
 [type="tel"] {
-	padding: rem(7) rem(16);	
+	padding: rem(7) rem(16);
 	width: 100%;
-	line-height: cac(24 /16);
+	line-height: calc(24 /16);
 	border: 1px solid $green;
 }
 

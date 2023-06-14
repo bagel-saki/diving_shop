@@ -12,7 +12,6 @@
     }
 }
 
-
 .p-lower-voiceCard__head {
     display: flex;
     gap: rem(13);
@@ -57,8 +56,8 @@
 .p-lower-voiceCard__title {
     font-weight: $medium;
     margin-top: rem(4);
-    // padding-bottom: rem(3);
     border-bottom: 1px solid $green;
+    font-size: rem(16);
     @include mq(md){
         font-size: rem(24);
         margin-top: rem(10);
@@ -81,7 +80,6 @@
 .p-lower-voiceCard__img img{
     height: 100%;
     object-fit: cover;
-
 }
 
 .p-lower-voiceCard__body {
@@ -93,7 +91,5 @@
 
 .p-lower-voiceCard__text {
     line-height: calc(24/16);
-
-
 }
 

@@ -19,13 +19,15 @@ i:'information3', alt:'青い海の中を泳ぐ2匹のチョウチョウウオ',
     <ul class="p-lower-informationContents__items">
       <% infoContent.slice(0, 3).forEach(function(infoCard) { %>
       <li class="p-lower-informationCotents__item">
-       <%- include(ejsPath + '/_p-information-card', {
-        title: infoCard.title,
-        alt: infoCard.alt,
-        text:infoCard.text,
-        i: infoCard.i,
-        state: infoCard.state, }) %> <% }); %>
+        <%- include(ejsPath + '/_p-information-card', {
+          title: infoCard.title,
+          alt: infoCard.alt,
+          text:infoCard.text,
+          i: infoCard.i,
+          state: infoCard.state,
+        }) %>
       </li>
+      <% }); %>
     </ul>
     <div class="p-lower-informationContents__fish">
       <%- include(ejsPath + './component/_c-img-fish' ,{ style: 'reverse' }) %>

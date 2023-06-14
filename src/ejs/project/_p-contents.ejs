@@ -1,24 +1,24 @@
 <%
 let firstContents = [
-    {main: 'キャンペーン', first: 'ライセンス取得', second: '貸切体験ダイビング', third: 'ナイトダイビング'},
-    {main: '私たちについて', first: '', second: '', third: ''},
+    {main: 'キャンペーン', first: 'ライセンス取得', second: '貸切体験ダイビング', third: 'ナイトダイビング', link:'archive-campaign'},
+    {main: '私たちについて', first: '', second: '', third: '', link:'page-about'},
 ]
 
 let secondContents = [
-    {main: 'ダイビング情報', first: 'ライセンス講習', second: '体験ダイビング', third: 'ファンダイビング'},
-    {main: 'ブログ', first: '', second: '', third: ''},
+    {main: 'ダイビング情報', first: 'ライセンス講習', second: '体験ダイビング', third: 'ファンダイビング', link:'page-diving-info'},
+    {main: 'ブログ', first: '', second: '', third: '', link:'home'},
 ]
 
 let thirdContents = [
-    {main: 'お客様の声', first: '', second: '', third: ''},
-    {main: '料金一覧', first: 'ライセンス講習', second: '体験ダイビング', third: 'ファンダイビング'},
+    {main: 'お客様の声', first: '', second: '', third: '', link:'archive-voices'},
+    {main: '料金一覧', first: 'ライセンス講習', second: '体験ダイビング', third: 'ファンダイビング', link:'page-price'},
 ]
 
 let fourthContents = [
-    {main: 'よくある質問', first: '', second: '', third: ''},
-    {main: 'プライバシー<br class="u-mobile">ポリシー',  first: '', second: '', third: ''},
-    {main: '利用規約',  first: '', second: '', third: ''},
-    {main: 'お問い合わせ', first: '', second: '', third: ''},
+    {main: 'よくある質問', first: '', second: '', third: '', link:'page-faq'},
+    {main: 'プライバシー<br class="u-mobile">ポリシー',  first: '', second: '', third: '', link:'page-privacy-policy'},
+    {main: '利用規約',  first: '', second: '', third: '', link:'page-terms'},
+    {main: 'お問い合わせ', first: '', second: '', third: '', link:'page-contact'},
 ]
 %>
 
@@ -39,7 +39,7 @@ let fourthContents = [
           <% contentGroup.forEach(function(title) { %>
             <% if (title.main) { %>
               <li class="p-contents__item">
-                <a href="" class="p-contents__title<%- colorClass %>">
+                <a href="<%- title.link %>.html" class="p-contents__title<%- colorClass %>">
                   <%- title.main %>
                 </a>
                 <% if (title.first || title.second || title.third) { %>
