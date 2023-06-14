@@ -6,7 +6,7 @@ let inputContent = [
 ];
 %>
 
-<section class="p-contact-form">
+<div class="p-contact-form">
 	<div class="p-contact-form__inner l-inner">
 		<form class="p-contact-form__form" action="" method="post" id="form">
 			<div class="p-contact-form__errorWrap">
@@ -69,13 +69,11 @@ let inputContent = [
 					</dd>
 				</dl>
 			</div>
-			<div>
-				<dd class="p-contact-form__privacy">
-					<label>
-						<input class="p-contact-form__check  required" type="checkbox" name="your-checkbox">
-						<span>個人情報の取り扱いについて同意のうえ送信します。</span>
-					</label>
-				</dd>
+			<div class="p-contact-form__privacy">
+				<label>
+					<input class="p-contact-form__check  required" type="checkbox" name="your-checkbox">
+					<span>個人情報の取り扱いについて同意のうえ送信します。</span>
+				</label>
 			</div>
 			<div class="p-contact-form__btn">
 				<%- include(ejsPath + './component/_c-btn',{type:"contact", link:"",text:"Send", btn:"send" ,overlay:""} ) %>
