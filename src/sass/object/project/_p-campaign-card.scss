@@ -56,6 +56,10 @@
     line-height: calc(24/16);
     font-weight: $medium;
     margin-top: rem(4);
+    font-size: rem(16);
+    @include mq(md){
+        font-size: rem(24);
+    }
 }
 
 .p-campaign-card__border{
