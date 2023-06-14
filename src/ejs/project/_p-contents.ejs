@@ -28,13 +28,14 @@ let fourthContents = [
 <% const sectionClass = validSection.includes(section) ? ` p-contents--${section}` : ''; %>
 <% const validColor = ['white','black']; %>
 <% const colorClass = validColor.includes(color) ? ` p-contents__title--${color}` : ''; %>
-
+<% const validProject = ['sitemap']; %> 
+<% const projectClass = validProject.includes(project) ? ` p-contents__items--${project}` : ''; %>
 
 
 <div class="p-contents<%- sectionClass %>">
     <nav class="p-contents__container">
       <% contents.forEach(function(contentGroup) { %>
-        <ul class="p-contents__items">
+        <ul class="p-contents__items<%- projectClass %>">
           <% contentGroup.forEach(function(title) { %>
             <% if (title.main) { %>
               <li class="p-contents__item">
