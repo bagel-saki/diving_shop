@@ -2,8 +2,12 @@
 
 <% const logoClass = logoStyle.includes(logo) ? ` c-logo--${logo}` : ''; %>
 
-<% if (type === 'top') { %>
-    <h1 class="c-logo<%= logoClass %>"></h1>
-<% } else { %>
+<% if (pageData === 'top') { %>
+    <% if (logoClass === '') { %>
+      <h1 class="c-logo"></h1>
+    <% } else { %>
+      <div class="c-logo<%= logoClass %>"></div>
+    <% } %>
+  <% } else { %>
     <div class="c-logo<%= logoClass %>"></div>
-<% } %>
+  <% } %>

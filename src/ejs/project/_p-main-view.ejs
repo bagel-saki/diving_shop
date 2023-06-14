@@ -1,3 +1,10 @@
+<% const mainViewAlt = [
+  { alt: '美しい海の中を泳ぐウミガメ' },
+  { alt: '海を泳ぐウミガメと二人のダイバーを下から見ている' },
+  { alt: '海に浮かぶ船３艘と島' },
+  { alt: '砂浜とコバルトブルーの海' }
+]; %>
+
 <div class="p-main-view">
   <div class="p-main-view__inner">
     <div class="p-main-view__slider swiper js-main-swiper">
@@ -8,12 +15,10 @@
             <picture>
               <source
                 srcset="../../assets/images/common/main-view_<%- i %>.jpg"
-                media="(min-width:1024px)"
-              />
+                media="(min-width:1024px)">
               <img
                 src="../../assets/images/common/main-viewSP_<%- i %>.jpg"
-                alt=""
-              />
+                alt="<%= mainViewAlt[i - 1].alt %>">
             </picture>
           </div>
         </div>
@@ -25,4 +30,3 @@
     </div>
   </div>
 </div>
-
