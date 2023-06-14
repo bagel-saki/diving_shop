@@ -6,3 +6,11 @@
         margin-top: rem(147);
     }
 }
+
+.l-lower-head--contact{
+    margin-top: 0;
+    @include mq('md'){
+        margin-top: rem(80);
+
+    }
+}
