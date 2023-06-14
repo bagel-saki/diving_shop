@@ -7,6 +7,13 @@
     }
 }
 
+.l-lower-head--contact{
+    margin-top: 0;
+    @include mq('md'){
+        margin-top: rem(80);
+     }
+}
+
 .l-lower-head--sitemap{
     margin-top: rem(42);
     @include mq('md'){
