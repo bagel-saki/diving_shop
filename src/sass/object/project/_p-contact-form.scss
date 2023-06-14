@@ -70,20 +70,20 @@ textarea {
 	}
 }
 
-// .p-contact-form__item:first-of-type{
-// 	padding-top: 0;	
-// 	@include mq('md'){
-// 		padding-top: rem(40);
-// 	}
-// }
-
-.p-contact-form__item--first{
-	padding-top: 0;
-
+.p-contact-form__item:first-of-type{
+	padding-top: 0;	
 	@include mq('md'){
 		padding-top: rem(40);
 	}
 }
+
+// .p-contact-form__item--first{
+// 	padding-top: 0;
+
+// 	@include mq('md'){
+// 		padding-top: rem(40);
+// 	}
+// }
 
 
 .p-contact-form__itemTtl{
@@ -286,15 +286,20 @@ input[type="radio"]:checked + .p-contact-form__radioLabel:after {
 	position: absolute;
     left: calc(50% - 624px);
     z-index: -1;
-    top:0;
+    top:rem(-70);
     @media (max-width: 1280px) {
         left: rem(25);
         top: rem(-70);
     }
     @media (max-width: 768px) {
         left: rem(15);
+        top: 0;
+    }
+	@media (max-width: 420px) {
+        left: rem(15);
         top: rem(24);
     }
+
 }
 
 /*入力エラー----------*/
@@ -320,5 +325,5 @@ input[type="radio"]:checked + .p-contact-form__radioLabel:after {
 	color: $red;
 	display: inline-block;
 	text-align: left;
-	//opacity: 0;
+	opacity: 0;
 }
