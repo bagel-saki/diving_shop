@@ -61,16 +61,15 @@ body.appear .p-loading__splash {
 
 .p-loading__leftImage {
   left: 0;
-  background-image: url(../../assets/images/common/firstView-left.jpg);
+  background-image: url(../../assets/images/common/firstview-left.jpg);
   animation-name: imageAnimation;
   background-position: right;
   animation-delay: 0.3s;
 }
 
-
 .p-loading__rightImage {
   right: 0;
-  background-image: url(../../assets/images/common/firstView-right.jpg);
+  background-image: url(../../assets/images/common/firstview-right.jpg);
   animation-name: imageAnimation;
   background-position: left;
   animation-delay: 2s;

@@ -15,7 +15,7 @@
 
 
 .p-lower-mv--campaign{
-	background: url(../../assets/images/common/lower-top_campaignSP.jpg)no-repeat center center / cover;
+	background: url(../../assets/images/common/lower-top_campaign-sp.jpg)no-repeat center center / cover;
 
 	@include mq('md'){
 	background: url(../../assets/images/common/lower-top_campaign.jpg)no-repeat center center / cover;
@@ -25,7 +25,7 @@
 
 
 .p-lower-mv--aboutus{
-	background: url(../../assets/images/common/lower-top_aboutusSP.jpg)no-repeat center center / cover;
+	background: url(../../assets/images/common/lower-top_aboutus-sp.jpg)no-repeat center center / cover;
 
 	@include mq('md'){
 	background: url(../../assets/images/common/lower-top_aboutus.jpg)no-repeat center center / cover;
@@ -35,35 +35,35 @@
 
 
 .p-lower-mv--information{
-	background: url(../../assets/images/common/lower-top_informationSP.jpg)no-repeat center center / cover;
+	background: url(../../assets/images/common/lower-top_information-sp.jpg)no-repeat center center / cover;
 	@include mq('md'){
 		background: url(../../assets/images/common/lower-top_information.jpg)no-repeat center center / cover;
 	}
 }
 
 .p-lower-mv--blog{
-	background: url(../../assets/images/common/lower-top_blogSP.jpg)no-repeat center center / cover;
+	background: url(../../assets/images/common/lower-top_blog-sp.jpg)no-repeat center center / cover;
 	@include mq('md'){
 		background: url(../../assets/images/common/lower-top_blog.jpg)no-repeat center center / cover;
 	}
 }
 
 .p-lower-mv--voice{
-	background: url(../../assets/images/common/lower-top_voiceSP.jpg)no-repeat center center / cover;
+	background: url(../../assets/images/common/lower-top_voice-sp.jpg)no-repeat center center / cover;
 	@include mq('md'){
 		background: url(../../assets/images/common/lower-top_voice.jpg)no-repeat center center / cover;
 	}
 }
 
 .p-lower-mv--price{
-	background: url(../../assets/images/common/lower-top_priceSP.jpg)no-repeat center center / cover;
+	background: url(../../assets/images/common/lower-top_price-sp.jpg)no-repeat center center / cover;
 	@include mq('md'){
 		background: url(../../assets/images/common/lower-top_price.jpg)no-repeat center center / cover;
 	}
 }
 
 .p-lower-mv--faq{
-	background: url(../../assets/images/common/lower-top_faqSP.jpg)no-repeat center center / cover;
+	background: url(../../assets/images/common/lower-top_faq-sp.jpg)no-repeat center center / cover;
 	@include mq('md'){
 		background: url(../../assets/images/common/lower-top_faq.jpg)no-repeat center center / cover;
 	}
@@ -71,7 +71,7 @@
 
 
 .p-lower-mv--contact{
-	background: url(../../assets/images/common/lower-top_contactSP.jpg)no-repeat center center / cover;
+	background: url(../../assets/images/common/lower-top_contact-sp.jpg)no-repeat center center / cover;
 	@include mq('md'){
 		background: url(../../assets/images/common/lower-top_contact.jpg)no-repeat center center / cover;
 	}
@@ -80,7 +80,7 @@
 .p-lower-mv--privacy,
 .p-lower-mv--sitemap,
 .p-lower-mv--terms{
-	background: url(../../assets/images/common/lower-top_otherSP.jpg)no-repeat center center / cover;
+	background: url(../../assets/images/common/lower-top_other-sp.jpg)no-repeat center center / cover;
 	@include mq('md'){
 	background: url(../../assets/images/common/lower-top_other.jpg)no-repeat center center / cover;
 	}
@@ -128,3 +128,4 @@
 	text-transform:	none;
 
 }
+
