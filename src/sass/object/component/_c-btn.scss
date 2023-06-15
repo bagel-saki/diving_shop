@@ -71,24 +71,54 @@ background-color: $green;
   border: 1px solid $white;
 }
 
-.c-btn__link:hover{
-background-color: $white;
-color: $green;
-border: 1px solid $green;
-opacity: 1;
-}
 
-.c-btn__link.c-btn__link--white:hover{
-  background-color: $green;
-  border: 1px solid $white;
-  color: $white;
-  opacity: 1;
+
+@media (hover: hover) {
+  /* hover指定できるPCを想定したスタイル */
+  .c-btn__link:hover{
+    background-color: $white;
+    color: $green;
+    border: 1px solid $green;
+    opacity: 1;
+    }
+    
+    .c-btn__link.c-btn__link--white:hover{
+      background-color: $green;
+      border: 1px solid $white;
+      color: $white;
+      opacity: 1;
+      }
+    
+    .c-btn__link:hover span{
+      background-color: $green;
+    }
+    
+    .c-btn__link.c-btn__link--white:hover span{
+      background-color: $white;
+    }
+
   }
-
-.c-btn__link:hover span{
-  background-color: $green;
-}
-
-.c-btn__link.c-btn__link--white:hover span{
-  background-color: $white;
-}
+  @media (hover: none) {
+  /* hoverが使えないタッチ端末を想定した装飾 */
+  .c-btn__link:active{
+    background-color: $white;
+    color: $green;
+    border: 1px solid $green;
+    opacity: 1;
+    }
+    
+    .c-btn__link.c-btn__link--white:active{
+      background-color: $green;
+      border: 1px solid $white;
+      color: $white;
+      opacity: 1;
+      }
+    
+    .c-btn__link:active span{
+      background-color: $green;
+    }
+    
+    .c-btn__link.c-btn__link--white:active span{
+      background-color: $white;
+    }
+  }
