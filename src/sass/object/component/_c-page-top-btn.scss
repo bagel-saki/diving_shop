@@ -38,11 +38,27 @@ transition: background-color 0.3s;
 	}
 }
 
-.c-page-top-btn:hover{
-	cursor: pointer;
-	background-color: $green;
-}
 
-.c-page-top-btn:hover::after{
-	background-color: $white;
-}
+
+@media (hover: hover) {
+	/* hover指定できるPCを想定したスタイル */
+	.c-page-top-btn:hover{
+		cursor: pointer;
+		background-color: $green;
+	}
+
+	.c-page-top-btn:hover::after{
+		background-color: $white;
+	}
+	}
+	@media (hover: none) {
+	/* hoverが使えないタッチ端末を想定した装飾 */
+	.c-page-top-btn:active{
+		cursor: pointer;
+		background-color: $green;
+	}
+	
+	.c-page-top-btn:active::after{
+		background-color: $white;
+	}
+	}

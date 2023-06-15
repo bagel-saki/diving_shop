@@ -22,8 +22,13 @@ html.is-fixed {
 }
 
 .p-gallery-modal__content {
+    width: 100%;
     height: 76.30%;
-    width: auto;
+    margin: auto rem(15);
+    @include mq(md){
+        width: auto;
+        margin: 0;
+    }
 }
 
 .p-gallery-modal.is-open{
