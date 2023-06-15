@@ -4,7 +4,7 @@
     display: none;
 
     @include mq('md'){
-        mask-image: url(../../../assets/images/common/coral.svg);
+        mask-image: url(../../assets/images/common/coral.svg);
         mask-repeat: no-repeat;
         mask-position: center;
         mask-size: contain;
