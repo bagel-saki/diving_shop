@@ -126,52 +126,50 @@ jQuery(function ($) {
   });
 
   //ファーストビュー
-  $(window).on("load", function () {
+  $(document).ready(function() {
     if ($(".p-main-view").length > 0) {
-    $("html").toggleClass("is-fixed");
-  } else {}
+      $("html").toggleClass("is-fixed");
+    }
+  
     $(".p-loading")
       .delay(2000)
-      .queue(function (next) {
+      .queue(function(next) {
         $("body").addClass("appear");
         $(this).dequeue();
         next();
       });
+  
     $(".p-loading__title").delay(1000).fadeIn();
-
-    $(".p-loading__rightImage").on("animationend", function () {
+  
+    $(".p-loading__rightImage").on("animationend", function() {
       $(".p-loading__leftImage").delay(2000).fadeOut();
       $(".p-loading__rightImage").delay(2000).fadeOut();
       $("body").addClass("fadeout");
-      // $(".p-first-view").fadeIn();
-      // $(".p-header").addClass("p-header--bgc");
-      setTimeout(function () {
+      setTimeout(function() {
         $(".p-loading__splash").delay(3000).fadeOut();
       }, 3000);
-    $("html").removeClass("is-fixed");
+      $("html").removeClass("is-fixed");
     });
-    // $(".p-first-view").click(function () {
-    //   $(this).toggle();
-    //   $(".p-header").removeClass("p-header--bgc");
-    // });
+  });
+  
+
+
 
   //サイドバーアーカイブ
   $(".js-archive-lists:first").css("display", "block");
   $(".js-archive:first").addClass("is-open");
-  $(".js-archive").on("click", function () {
+  $(".js-archive").on("click touchstart", function (event) {
+    event.preventDefault(); // デフォルトのクリックイベントをキャンセル
     $(this).toggleClass("is-open");
     $(this).next().slideToggle(300);
   });
-});
 
-//ページネーションのクリック時の動き
-$(document).ready(function() {
-  $('.js-pagination').on('click', function(e) {
-    e.preventDefault();
-    $('.nav-links .page-numbers.current').removeClass('current');
-    $(this).addClass('current');
+  //ページネーションのクリック時の動き
+  $(document).ready(function () {
+    $(".js-pagination").on("click", function (e) {
+      e.preventDefault();
+      $(".nav-links .page-numbers.current").removeClass("current");
+      $(this).addClass("current");
+    });
   });
-});
-
-
 });
