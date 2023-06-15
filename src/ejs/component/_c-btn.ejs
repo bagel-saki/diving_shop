@@ -3,14 +3,14 @@
 <% const overlayClass = validBtn.includes(overlay) ? ` c-btn__overlay--${overlay}` : ''; %>
 
 <% if (type === 'contact') { %>
-    <div class="c-btn">
+    <div class="c-btn" ontouchstart="">
         <button type='submit' class="c-btn__link<%- btnClass %>">
             <%- text %><span></span>
         </button>
         <div class="c-btn__overlay<%- overlayClass %>"></div>
         </div>
     <% } else { %>
-    <div class="c-btn">
+    <div class="c-btn" ontouchstart="">
         <a href="<%= link %>.html" class="c-btn__link<%- btnClass %>">
             <%- text %><span></span>
         </a>

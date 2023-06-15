@@ -126,34 +126,32 @@ jQuery(function ($) {
   });
 
   //ファーストビュー
-  $(document).ready(function() {
+  $(window).on("load", function () {
     if ($(".p-main-view").length > 0) {
       $("html").toggleClass("is-fixed");
+    } else {
     }
-  
-    $(".p-loading")
-      .delay(2000)
-      .queue(function(next) {
-        $("body").addClass("appear");
-        $(this).dequeue();
-        next();
-      });
-  
-    $(".p-loading__title").delay(1000).fadeIn();
-  
-    $(".p-loading__rightImage").on("animationend", function() {
-      $(".p-loading__leftImage").delay(2000).fadeOut();
-      $(".p-loading__rightImage").delay(2000).fadeOut();
-      $("body").addClass("fadeout");
-      setTimeout(function() {
-        $(".p-loading__splash").delay(3000).fadeOut();
-      }, 3000);
-      $("html").removeClass("is-fixed");
-    });
   });
-  
 
+  $(".p-loading")
+    .delay(2000)
+    .queue(function (next) {
+      $("body").addClass("appear");
+      $(this).dequeue();
+      next();
+    });
 
+  $(".p-loading__title").delay(1000).fadeIn();
+
+  $(".p-loading__rightImage").on("animationend", function () {
+    $(".p-loading__leftImage").delay(2000).fadeOut();
+    $(".p-loading__rightImage").delay(2000).fadeOut();
+    $("body").addClass("fadeout");
+    setTimeout(function () {
+      $(".p-loading__splash").delay(3000).fadeOut();
+    }, 3000);
+    $("html").removeClass("is-fixed");
+  });
 
   //サイドバーアーカイブ
   $(".js-archive-lists:first").css("display", "block");
