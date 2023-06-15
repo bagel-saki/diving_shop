@@ -21,7 +21,7 @@ transition: background-color 0.3s;
 .c-page-top-btn::after{
 	position: absolute;
 	content: "";
-	mask-image: url(../../../assets/images/common/arrow.svg);
+	mask-image: url(../../assets/images/common/arrow.svg);
 	mask-repeat: no-repeat;
 	mask-position: center;
 	mask-size: contain;
