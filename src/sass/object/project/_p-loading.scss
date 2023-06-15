@@ -80,7 +80,8 @@ body.appear .p-loading__splash {
   0% {
     bottom:-100vh;
   }
-  100% {
+  99.9%,
+  to {
     bottom:0;
   }
 }

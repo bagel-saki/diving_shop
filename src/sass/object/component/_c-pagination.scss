@@ -31,12 +31,6 @@
 	color: $white;
     }
 
-.page-numbers:hover {
-	background-color: $green;
-	color: $white;
-	opacity: 1;
-	}
-
 .prev.page-numbers,
 .next.page-numbers {
 	margin: 0 rem(34);
@@ -60,7 +54,31 @@
 	mask-image: url(../../assets/images/common/prev.svg);
 }
 
-.prev.page-numbers:hover span,
-.next.page-numbers:hover span{
-	background-color: $white;
+
+
+
+@media (hover: hover) {
+	/* hover指定できるPCを想定したスタイル */
+	.page-numbers:hover {
+		background-color: $green;
+		color: $white;
+		opacity: 1;
+		}
+	.prev.page-numbers:hover span,
+	.next.page-numbers:hover span{
+		background-color: $white;
+}
+
+	}
+	@media (hover: none) {
+	/* hoverが使えないタッチ端末を想定した装飾 */
+	.page-numbers:active {
+		background-color: $green;
+		color: $white;
+		opacity: 1;
+		}
+	.prev.page-numbers:active span,
+	.next.page-numbers:active span{
+		background-color: $white;
+	}
 }
