@@ -18,6 +18,7 @@
   background-color: $white;
   width: rem(102);
   height: rem(38);
+  color: transparent;
   @include mq(md){
     width: rem(131);
     height: rem(50);
