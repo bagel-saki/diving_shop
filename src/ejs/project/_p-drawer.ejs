@@ -17,24 +17,12 @@ let rightContent = [
 %>
 
             <nav class="p-drawer js-drawer">
-                <div class="p-drawer__container">
-                    <ul class="p-drawer__leftItems"> <% leftContent.forEach(function(title) { %>
-                    <li class="p-drawer__item">
-                        <a class="p-drawer__title" href="<%- title.link %>.html"><%- title.main %></a>
-                            <% if (title.first || title.second || title.third) { %>
-                        <div class="p-drawer__lists">
-                            <a class="p-drawer__list" href=""><%- title.first %></a>
-                            <a class="p-drawer__list" href=""><%- title.second %></a>
-                            <a class="p-drawer__list" href=""><%- title.third %></a>
-                        </div>
-                        <% } %>
-                    </li>
-                    <% }); %>
-                    </ul>
-                    <ul class="p-drawer__rightItems"> <% rightContent.forEach(function(title) { %>
+                <div class="l-inner">
+                    <div class="p-drawer__container">
+                        <ul class="p-drawer__leftItems"> <% leftContent.forEach(function(title) { %>
                         <li class="p-drawer__item">
                             <a class="p-drawer__title" href="<%- title.link %>.html"><%- title.main %></a>
-                            <% if (title.first || title.second || title.third) { %>
+                                <% if (title.first || title.second || title.third) { %>
                             <div class="p-drawer__lists">
                                 <a class="p-drawer__list" href=""><%- title.first %></a>
                                 <a class="p-drawer__list" href=""><%- title.second %></a>
@@ -42,7 +30,21 @@ let rightContent = [
                             </div>
                             <% } %>
                         </li>
-                    <% }); %>
-                    </ul>
+                        <% }); %>
+                        </ul>
+                        <ul class="p-drawer__rightItems"> <% rightContent.forEach(function(title) { %>
+                            <li class="p-drawer__item">
+                                <a class="p-drawer__title" href="<%- title.link %>.html"><%- title.main %></a>
+                                <% if (title.first || title.second || title.third) { %>
+                                <div class="p-drawer__lists">
+                                    <a class="p-drawer__list" href=""><%- title.first %></a>
+                                    <a class="p-drawer__list" href=""><%- title.second %></a>
+                                    <a class="p-drawer__list" href=""><%- title.third %></a>
+                                </div>
+                                <% } %>
+                            </li>
+                        <% }); %>
+                        </ul>
+                    </div>
                 </div>
             </nav>

@@ -24,6 +24,29 @@ jQuery(function ($) {
     );
     return false;
   });
+  
+  // フッター手前でストップ
+  $(".js-page-top").hide();
+  $(window).on("scroll", function () {
+    var scrollHeight = $(document).height(); // scrollHeightを宣言
+    var scrollPosition = $(window).height() + $(window).scrollTop();
+    var footHeight = $("footer").innerHeight();
+    if (scrollHeight - scrollPosition <= footHeight) {
+
+      // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
+      $(".js-page-top").css({
+        position: "absolute",
+        bottom: footHeight + 16,
+      });
+    } else {
+      $(".js-page-top").css({
+        position: "fixed",
+        bottom: "0",
+      });
+    }
+  });
+
+
 
   //キャンペーンカテゴリーのactive付与
   $(".js-campaign-category").on("click", function () {
