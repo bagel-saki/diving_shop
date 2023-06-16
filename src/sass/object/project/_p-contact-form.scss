@@ -20,12 +20,13 @@ select{
 	width: 100%;
 	background-color:transparent;
 	background-image: url(../../assets/images/common/Polygon.svg);
-	background-position: top rem(10) right rem(8) ;
+	background-position: top rem(15) right rem(8) ;
 	background-size: rem(12);
 	background-repeat: no-repeat;
 	color:#000;
 	@include mq('md'){
-		padding: rem(4) rem(8);
+		// padding: rem(4) rem(8);
+		// background-position: top rem(10) right rem(8) ;
 	}
 
 }
@@ -220,9 +221,10 @@ input[type="radio"]:checked + .p-contact-form__radioLabel:after {
 	  align-items: center;
 	  font-size: rem(14);
 	  justify-content: center;
-	  padding-left: rem(40);
+	  padding-left: rem(18);
 	  line-height: calc(22 / 14);
 		@include mq('md'){
+			padding-left: rem(40);
 			margin-top: rem(80);
 		}
 	}
