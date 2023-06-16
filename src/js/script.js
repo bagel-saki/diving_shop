@@ -143,7 +143,7 @@ jQuery(function ($) {
 
   $(".p-loading__title").delay(1000).fadeIn();
 
-  $(".p-loading__rightImage").on("animationend", function () {
+  $(document).on("animationend", ".p-loading__rightImage", function () {
     $(".p-loading__leftImage").delay(2000).fadeOut();
     $(".p-loading__rightImage").delay(2000).fadeOut();
     $("body").addClass("fadeout");
