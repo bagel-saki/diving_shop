@@ -23,11 +23,19 @@ select{
 	background-position: top rem(10) right rem(8) ;
 	background-size: rem(12);
 	background-repeat: no-repeat;
+	color:#000;
 	@include mq('md'){
 		padding: rem(4) rem(8);
 	}
 
 }
+
+.p-contact-form__input .form-select{
+	color:#000;	
+}
+
+
+
 
 
 textarea {
