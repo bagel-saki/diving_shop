@@ -9,7 +9,7 @@
   text-align: center;
 }
 
-body.fadeout .p-loading{
+.p-loading.fadeout{
   display: none;
 }
 
@@ -30,11 +30,6 @@ body.fadeout .p-loading{
 /* 画面遷移アニメーション */
 .p-loading__splash {
   display: none;
-}
-
-/* bodyにappearクラスがついたら出現 */
-body.appear .p-loading__splash {
-  display: block;
   content: "";
   position: fixed;
   z-index: 999999;
@@ -44,6 +39,11 @@ body.appear .p-loading__splash {
   left: 0;
   background-color: transparent;
   overflow: hidden;
+}
+
+/* bodyにappearクラスがついたら出現 */
+.p-loading__splash.appear {
+  display: block;
 }
 
 .p-loading__leftImage,
@@ -65,7 +65,7 @@ body.appear .p-loading__splash {
   background-image: url(../../assets/images/common/first-view-left.jpg);
   animation-name: imageAnimation;
   background-position: right;
-  animation-delay: 0.3s;
+  animation-delay: 0.1s;
 }
 
 .p-loading__rightImage {
@@ -73,7 +73,7 @@ body.appear .p-loading__splash {
   background-image: url(../../assets/images/common/first-view-right.jpg);
   animation-name: imageAnimation;
   background-position: left;
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 
 @keyframes imageAnimation {
