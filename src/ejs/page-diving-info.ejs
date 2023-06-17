@@ -4,30 +4,24 @@
   <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
   json[pageData] }) %>
 
-<body>
-  <%- include(ejsPath + '/common/_header' ) %>
-  <main>
-    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'information', first: 'information', middle:'', last:'', }) %> 
-    <div class="l-inner l-breadcrumb">
-      <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{ title: "ダイビング情報", url: "" }]}); %>
-    </div>
-    <div class="l-lower-head l-lower-informationContents__head">
-      
-        <%- include(ejsPath + '/project/_p-lower-informationContents' ) %> 
-
-      
-    </div>
-    <div class="l-lower-center">
-      
-    </div>
-    <div class="l-lower-bottom">
-      <%- include(ejsPath + '/project/_p-contact-section' )%>
-    </div>
-  </main>
-  <div class="l-footer">
-    <%- include(ejsPath + '/common/_footer' ) %>
-  </div>
-  <%- include(ejsPath + '/component/_c-page-top-btn' ) %>
-</body>  
-    
+  <body>
+    <%- include(ejsPath + '/common/_header' ) %>
+    <main>
+      <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'information', first:
+      'information', middle:'', last:'', }) %>
+      <div class="l-inner l-breadcrumb">
+        <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{
+        title: "ダイビング情報", url: "" }]}); %>
+      </div>
+      <div class="l-lower-head l-lower-informationContents__head">
+        <%- include(ejsPath + '/project/_p-lower-informationContents' ) %>
+      </div>
+      <div class="l-lower-center"></div>
+      <div class="l-lower-bottom">
+        <%- include(ejsPath + '/project/_p-contact-section' )%>
+      </div>
+    </main>
+    <div class="l-footer"><%- include(ejsPath + '/common/_footer' ) %></div>
+    <%- include(ejsPath + '/component/_c-page-top-btn' ) %>
+  </body>
 </html>
