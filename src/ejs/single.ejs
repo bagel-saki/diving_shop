@@ -9,8 +9,8 @@
     <main>
       <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'blog', title:'blog',}) %>
       <div class="l-inner l-breadcrumb">
-        <%- include(ejsPath + '/component/_c-breadcrumb', { breadcrumbs: [{
-        title: "ブログ詳細", url: "", color: "" }]}); %>
+        <%- include(ejsPath + '/component/_c-breadcrumb', {
+          breadcrumbs: [{ title: "ブログ一覧", url: "", color: "" },{ title: "ブログ詳細", url: "", color: "" }]}); %>
       </div>
       <%- include(ejsPath + '/project/_p-single-container' )%>
       <div class="l-lower-bottom">
@@ -21,4 +21,3 @@
     <%- include(ejsPath + '/component/_c-page-top-btn' ) %>
   </body>
 </html>
-
