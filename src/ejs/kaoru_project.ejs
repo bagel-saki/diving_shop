@@ -62,24 +62,23 @@ body{
       <p class="p">コンタクトフォーム</p>
       <%- include(ejsPath + '/project/_p-contact-form') %> 
 
-      
-      
     </div>
     <h2 class="h2">.p-lower-top</h2>
     <p class="p">下層ページトップ</p>
-    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'campaign', first: 'campaign', middle:'', last:'',}) %> 
-    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'aboutus', first: 'about us', middle:'', last:'', }) %> 
-    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'information', first: 'information', middle:'', last:'', }) %> 
-    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'blog', first: 'blog', middle:'', last:'', }) %>
-    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'voice', first: 'voice', middle:'', last:'', }) %> 
-    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'price', first: 'price', middle:'', last:'', }) %> 
-    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'faq', first: 'faq',  middle:'', last:'',}) %> 
-    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'contact', first: 'contact', middle:'', last:'', }) %> 
-    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'privacy', first: 'privacy policy', middle:'', last:'', }) %> 
-    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'sitemap', first: 'site', middle:' map', last:'', }) %> 
-    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'terms', first: 'terms', middle:' of', last:' service', }) %> 
-    
-    
+    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'campaign', title: 'campaign',}) %> 
+    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'aboutus', title: 'about us',}) %> 
+    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'information', title: 'information',}) %> 
+    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'blog', title: 'blog',}) %>
+    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'voice', title: 'voice',}) %> 
+    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'price', title: 'price',}) %> 
+    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'faq', title: 'faq',}) %> 
+    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'contact', title: 'contact',}) %> 
+    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'privacy', title: 'privacy policy',}) %> 
+    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'sitemap', title: 'site<span> map</span>',}) %> 
+    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'terms', title: 'terms<span> of</span> service',}) %> 
+
+  
+
     <h2 class="h2">.p-blog-section</h2>
     <p class="p">ブログセクション</p>
     <%- include(ejsPath + '/project/_p-blog-section' ) %> 

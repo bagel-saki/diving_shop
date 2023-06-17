@@ -7,8 +7,7 @@
   <body>
     <%- include(ejsPath + '/common/_header' ) %>
     <main>
-      <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'voice', first:
-      'voice', middle:'', last:'', }) %>
+      <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'voice', title:'voice',}) %>
       <div class="l-inner l-breadcrumb">
         <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{
         title: "お客様の声", url: "" }]}); %>
@@ -24,3 +23,4 @@
     <%- include(ejsPath + '/component/_c-page-top-btn' ) %>
   </body>
 </html>
+
