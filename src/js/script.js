@@ -60,7 +60,7 @@ jQuery(function ($) {
     $(".js-hamburger").toggleClass("is-active");
     $(".js-header").toggleClass("is-background-color");
     $(".js-drawer").fadeToggle();
-    $("html").toggleClass("is-fixed");
+    $("body").toggleClass("is-fixed");
   });
 
   //ダイビング情報コンテンツ切り替え
@@ -101,10 +101,10 @@ jQuery(function ($) {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 2000,
+    //   disableOnInteraction: false,
+    // },
     breakpoints: {
       768: {
         spaceBetween: 40,
@@ -123,7 +123,7 @@ jQuery(function ($) {
     );
     $(".p-gallery-modal__content img").attr("src", modalImagePath);
     $(".p-gallery-modal").addClass("is-open");
-    $("html").toggleClass("is-fixed");
+    $("body").toggleClass("is-fixed");
     setTimeout(function () {
       $(this)
         .find(".p-lower-gallery__topItem, .p-lower-gallery__bottomItem")
@@ -134,7 +134,7 @@ jQuery(function ($) {
   // 閉じるボタンをクリックしたらモーダルを閉じる
   $(".js-modal").on("click", function () {
     modal.removeClass("is-open");
-    $("html").removeClass("is-fixed");
+    $("body").removeClass("is-fixed");
   });
 
   //swiper メインビュー
@@ -148,27 +148,36 @@ jQuery(function ($) {
     },
   });
 
-  // ファーストビュー
-$(window).on("load", function () {
-  if ($(".p-main-view").length > 0) {
-    $("html").toggleClass("is-fixed");
+// スクロールを無効にする
+function disableScroll() {
+  document.body.classList.add('is-fixed');
+}
+
+// スクロールを有効にする
+function enableScroll() {
+  document.body.classList.remove('is-fixed');
+}
+
+$(window).on('load', function () {
+  if ($('.p-main-view').length > 0) {
+    disableScroll();
   }
 });
 
-$(".p-loading").delay(2000).queue(function (next) {
-  $(".p-loading__splash").addClass("appear");
+$('.p-loading').delay(2000).queue(function (next) {
+  $('.p-loading__splash').addClass('appear');
   $(this).dequeue();
   next();
 });
 
-$(".p-loading__title").delay(1000).fadeIn();
+$('.p-loading__title').delay(1000).fadeIn();
 
-$(document).on("animationend", ".p-loading__rightImage", function () {
-  $(".p-loading__leftImage").delay(2000).fadeOut();
-  $(".p-loading__rightImage").delay(2000).fadeOut();
-  $(".p-loading").addClass("fadeout");
-  $(".p-loading__splash").delay(1000).fadeOut();
-  $("html").removeClass("is-fixed");
+$(document).on('animationend', '.p-loading__rightImage', function () {
+  $('.p-loading__leftImage').delay(2000).fadeOut();
+  $('.p-loading__rightImage').delay(2000).fadeOut();
+  $('.p-loading').addClass('fadeout');
+  $('.p-loading__splash').delay(1000).fadeOut();
+  enableScroll();
 });
 
   //サイドバーアーカイブ
