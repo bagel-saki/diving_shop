@@ -38,6 +38,8 @@
     text-align: center;
     text-align-last: center;
     line-height: 1;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
     @include mq(md){
         font-size: rem(160);
         margin-top: rem(127);
