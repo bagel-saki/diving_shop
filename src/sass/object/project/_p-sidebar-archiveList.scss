@@ -9,8 +9,6 @@
   padding-left: rem(30);
   cursor: pointer;
   letter-spacing: -0.1em;
-  @include mq('md'){
-  }
 }
 
 .p-sidebar-archiveList__months {
@@ -24,7 +22,7 @@
   padding-left: rem(26);
   display: block;
   @include mq('md'){
-    padding-left:rem(24);  
+    padding-left:rem(24);
   }
 }
 

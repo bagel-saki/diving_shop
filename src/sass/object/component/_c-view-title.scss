@@ -5,11 +5,11 @@
     text-align: center;
     color: $white;
   }
-  
+
   .c-view-title.c-view-title--green {
     color: $green;
   }
-  
+
   .c-view-title__main {
     text-transform: uppercase;
     font-size: rem(40);
@@ -22,7 +22,7 @@
       line-height: 1.25;
     }
   }
-  
+
   .c-view-title__sub {
     font-size: rem(20);
     line-height: calc(30 / 20);
@@ -32,4 +32,3 @@
       padding-right: rem(50);
     }
   }
-  

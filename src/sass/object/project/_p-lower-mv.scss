@@ -26,13 +26,10 @@
 
 .p-lower-mv--aboutus{
 	background: url(../../assets/images/common/lower-top_aboutus-sp.jpg)no-repeat center center / cover;
-
 	@include mq('md'){
 	background: url(../../assets/images/common/lower-top_aboutus.jpg)no-repeat center center / cover;
 	}
 }
-
-
 
 .p-lower-mv--information{
 	background: url(../../assets/images/common/lower-top_information-sp.jpg)no-repeat center center / cover;
@@ -86,7 +83,6 @@
 	}
 }
 
-
 .p-lower-mv_title{
 	position: absolute;
     content:"";
@@ -102,10 +98,9 @@
 	font-weight: $normal;
     letter-spacing: rem(0.6);
 	white-space: nowrap;
-	
 	@include mq('md'){
 		font-size: rem(80);
-		top: 59%; //333/548
+		top: 59%;
 	}
 
 }
@@ -117,15 +112,16 @@
 .p-lower-mv--aboutus h1:first-letter{
 	text-transform: uppercase;
 }
+
 .p-lower-mv--faq h1{
 	text-transform: uppercase;
 }
+
 .p-lower-mv--sitemap h1 span{
 	text-transform:uppercase;
 }
 
 .p-lower-mv--terms h1 span{
 	text-transform:	none;
-
 }
 

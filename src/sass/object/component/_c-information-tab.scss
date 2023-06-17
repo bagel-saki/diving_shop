@@ -14,14 +14,12 @@
     width: 29.47%;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
     white-space: nowrap;
-    
+
     @include mq('md'){
-    
         width: 100%;
         font-size: rem(24);
         padding: rem(13);
     }
-    
 }
 
 .c-information-tab span {
@@ -34,7 +32,6 @@
         height: rem(64);
     }
 }
-
 
 .c-information-tab--whale span{
     mask-image: url(../../assets/images/common/icon-whale.svg);
@@ -49,7 +46,6 @@
     mask-image: url(../../assets/images/common/icon-fish.svg);
 
 }
-
 
 .c-information-tab:hover,
 .c-information-tab.is-active{
