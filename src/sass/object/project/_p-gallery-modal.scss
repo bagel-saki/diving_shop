@@ -22,7 +22,6 @@
 .p-gallery-modal__content {
     height: 76.30%;
     padding: rem(15);
-    margin: auto rem(15);
     @include mq(md){
         padding: rem(25);
     }

@@ -24,7 +24,7 @@ jQuery(function ($) {
     );
     return false;
   });
-  
+
   // フッター手前でストップ
   $(".js-page-top").hide();
   $(window).on("scroll", function () {
@@ -45,8 +45,6 @@ jQuery(function ($) {
       });
     }
   });
-
-
 
   //キャンペーンカテゴリーのactive付与
   $(".js-campaign-category").on("click", function () {
@@ -176,7 +174,7 @@ $(document).on('animationend', '.p-loading__rightImage', function () {
   $('.p-loading__leftImage').delay(2000).fadeOut();
   $('.p-loading__rightImage').delay(2000).fadeOut();
   $('.p-loading').addClass('fadeout');
-  $('.p-loading__splash').delay(1000).fadeOut();
+  $('.p-loading__splash').fadeOut();
   enableScroll();
 });
 
