@@ -24,10 +24,6 @@ select{
 	background-size: rem(12);
 	background-repeat: no-repeat;
 	color:#000;
-	@include mq('md'){
-		// padding: rem(4) rem(8);
-		// background-position: top rem(10) right rem(8) ;
-	}
 
 }
 
@@ -35,13 +31,9 @@ select{
 	color:#000;	
 }
 
-
-
-
-
 textarea {
 	height: rem(200);
-	resize: none; //右下のサイズ変更できるボタンを消す場合
+	resize: none;
 	box-shadow: none;
 	padding: rem(12) rem(16);
 	border: 1px solid $green;
@@ -54,11 +46,6 @@ textarea {
 ::placeholder {
 	color: $light-green;
 }	
-
-
-.p-contact-form{
-	//position: relative;
-}
 
 .p-contact-form__form{
 	@include mq('md'){
@@ -86,15 +73,6 @@ textarea {
 	}
 }
 
-// .p-contact-form__item--first{
-// 	padding-top: 0;
-
-// 	@include mq('md'){
-// 		padding-top: rem(40);
-// 	}
-// }
-
-
 .p-contact-form__itemTtl{
 	font-weight: $bold;
 	@include mq('md'){
@@ -114,7 +92,10 @@ textarea {
 	color: $white;
 	background: $red;
 	text-align: center;
-	padding: rem(3) rem(12);
+	padding-top: rem(3);
+	padding-bottom:rem(3);
+	padding-right:rem(12);
+	padding-left:rem(16);
 	line-height: 1;
 	margin-left: rem(8);
 	letter-spacing: 0.4em;
@@ -125,6 +106,7 @@ textarea {
 		transform: translateY(-50%);
 		left: calc(100% + rem(6));
 		width: rem(44);	
+		margin-left: rem(6);
 	}
 }
 
@@ -139,7 +121,7 @@ textarea {
 	}
 }
 
-/*-----------------------ラジオボタン*/
+/*ラジオボタン-------*/
 
 input[type="radio"] {
 	display: none;
@@ -169,13 +151,12 @@ input[type="radio"] {
 	width: rem(14);
 	height: rem(14);
 	position: absolute;
-	top: rem(0);
+	top: rem(6);
 	left: 0;
 	transition: 0.2s;
 
 	@include mq('md'){
-		top: rem(6);	
-		//border-radius: 50%;
+		top: rem(10);	
 	}
 }
 
@@ -191,22 +172,10 @@ input[type="radio"] {
 	border-left: rem(2) solid $red;
 	border-bottom: rem(2) solid $red;
 	left: rem(1);
-	top: rem(8);
+	top: rem(14);
 
 	@include mq('md'){
-		top:rem(14);
-
-		// transform:none;
-		// border-left:none;
-		// border-bottom: none;
-		// background: $green;
-		// border-radius: 50%;
-		// display: block;
-		// width: rem(8);
-		// height: rem(8);
-		// transition: 0.2s;
-		// left: rem(1.5);
-		// top:rem(4.5);
+		top:rem(18);
 	}
 }
 
@@ -214,7 +183,7 @@ input[type="radio"]:checked + .p-contact-form__radioLabel:after {
 	opacity: 1;
   }
   
-  /*----------------------チェックボックス*/
+  /*チェックボックス-------*/
   .p-contact-form__privacy{
 	  margin-top: rem(40);
 	  display: flex;
