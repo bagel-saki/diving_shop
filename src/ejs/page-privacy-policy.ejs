@@ -4,24 +4,23 @@
   <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
   json[pageData] }) %>
 
-<body>
-  <%- include(ejsPath + '/common/_header' ) %>
-  <main>
-    <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'privacy', first: 'privacy policy', middle:'', last:'', }) %>
-    <div class="l-breadcrumb l-inner">
-        <%- include(ejsPath + '/component/_c-breadcrumb', { breadcrumbs: [{title: "プライバシーポリシー", url: "", color: "" }]}); %>
-   </div>
-    <div class="l-lower-head">
+  <body>
+    <%- include(ejsPath + '/common/_header' ) %>
+    <main>
+      <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'privacy', first:
+      'privacy policy', middle:'', last:'', }) %>
+      <div class="l-breadcrumb l-inner">
+        <%- include(ejsPath + '/component/_c-breadcrumb', { breadcrumbs:
+        [{title: "プライバシーポリシー", url: "", color: "" }]}); %>
+      </div>
+      <div class="l-lower-head">
         <%- include(ejsPath + '/project/_p-privacyPolicy-section' )%>
-    </div>
-    <div class="l-lower-bottom">
-      <%- include(ejsPath + '/project/_p-contact-section' )%>
-    </div>
-  </main>
-  <div class="l-footer">
-    <%- include(ejsPath + '/common/_footer' ) %>
-  </div>
-  <%- include(ejsPath + '/component/_c-page-top-btn' ) %>
-</body>
-
+      </div>
+      <div class="l-lower-bottom">
+        <%- include(ejsPath + '/project/_p-contact-section' )%>
+      </div>
+    </main>
+    <div class="l-footer"><%- include(ejsPath + '/common/_footer' ) %></div>
+    <%- include(ejsPath + '/component/_c-page-top-btn' ) %>
+  </body>
 </html>

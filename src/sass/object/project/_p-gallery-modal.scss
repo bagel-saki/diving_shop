@@ -15,11 +15,9 @@
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s , visibility 0.3s;
+    overscroll-behavior-y: contain;
 }
 
-// html.is-fixed {
-//     overflow: hidden;
-// }
 
 .p-gallery-modal__content {
     width: 100%;
