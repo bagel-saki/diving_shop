@@ -3,12 +3,11 @@
 <html lang="ja">
   <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
   json[pageData] }) %>
-
   <body>
     <%- include(ejsPath + '/common/_header' ) %>
     <main>
-      <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'aboutus', first:
-      'about us', middle:'', last:'', }) %>
+      <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'aboutus', title:
+      'about us',}) %>
       <div class="l-inner l-breadcrumb">
         <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{
         title: "私たちについて", url: "" , color: ""}]}); %>

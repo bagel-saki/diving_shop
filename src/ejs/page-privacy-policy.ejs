@@ -7,8 +7,8 @@
   <body>
     <%- include(ejsPath + '/common/_header' ) %>
     <main>
-      <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'privacy', first:
-      'privacy policy', middle:'', last:'', }) %>
+      <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'privacy', title:
+      'privacy policy',}) %>
       <div class="l-breadcrumb l-inner">
         <%- include(ejsPath + '/component/_c-breadcrumb', { breadcrumbs:
         [{title: "プライバシーポリシー", url: "", color: "" }]}); %>
@@ -24,3 +24,4 @@
     <%- include(ejsPath + '/component/_c-page-top-btn' ) %>
   </body>
 </html>
+

@@ -7,8 +7,8 @@
   <body>
     <%- include(ejsPath + '/common/_header' ) %>
     <main>
-      <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'information', first:
-      'information', middle:'', last:'', }) %>
+      <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'information', title:
+      'information',}) %>
       <div class="l-inner l-breadcrumb">
         <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{
         title: "ダイビング情報", url: "" }]}); %>
@@ -25,3 +25,4 @@
     <%- include(ejsPath + '/component/_c-page-top-btn' ) %>
   </body>
 </html>
+
