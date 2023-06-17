@@ -2,7 +2,6 @@
 
 .p-price-contents__item {
     margin-top: rem(37);
-
     @include mq(md) {
         &:first-child{
             margin-top: 0;
