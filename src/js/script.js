@@ -25,26 +25,25 @@ jQuery(function ($) {
     return false;
   });
 
-  // フッター手前でストップ
-  $(".js-page-top").hide();
-  $(window).on("scroll", function () {
-    var scrollHeight = $(document).height(); // scrollHeightを宣言
-    var scrollPosition = $(window).height() + $(window).scrollTop();
-    var footHeight = $("footer").innerHeight();
-    if (scrollHeight - scrollPosition <= footHeight) {
-
-      // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
-      $(".js-page-top").css({
-        position: "absolute",
-        bottom: footHeight + 16,
-      });
-    } else {
-      $(".js-page-top").css({
-        position: "fixed",
-        bottom: "0",
-      });
-    }
-  });
+// フッター手前でストップ
+$(".js-page-top").hide();
+var footerHeight = $("footer").innerHeight();
+$(window).on("scroll", function () {
+  var windowHeight = $(window).height();
+  var scrollPosition = $(window).scrollTop();
+  var scrollHeight = $(document).height() - footerHeight;
+  if (scrollHeight - scrollPosition <= windowHeight) {
+    $(".js-page-top").css({
+      position: "absolute",
+      bottom: footerHeight + 16,
+    });
+  } else {
+    $(".js-page-top").css({
+      position: "fixed",
+      bottom: "16px",
+    });
+  }
+});
 
   //キャンペーンカテゴリーのactive付与
   $(".js-campaign-category").on("click", function () {
@@ -111,7 +110,24 @@ jQuery(function ($) {
   });
 
   var modal = $(".js-modal");
-  // モーダル
+  var $body = $('body');
+  var scrollTop;
+  function bodyFixedOn() {
+  scrollTop = $(window).scrollTop();
+
+  $body.css({
+    overflow: 'hidden',
+    position: 'fixed',
+    top: -scrollTop
+  });
+}
+
+//スクロールの固定を解除
+function bodyFixedOff() {
+  $body.css({
+    position: '',
+    top: ''
+  });
   // クリックしたらモーダルを表示する
   $(".js-modal-open").on("click", function () {
     var imagePath = $(this).find("img").attr("src");
@@ -121,7 +137,7 @@ jQuery(function ($) {
     );
     $(".p-gallery-modal__content img").attr("src", modalImagePath);
     $(".p-gallery-modal").addClass("is-open");
-    $("body").toggleClass("is-fixed");
+    bodyFixedOn();
     setTimeout(function () {
       $(this)
         .find(".p-lower-gallery__topItem, .p-lower-gallery__bottomItem")
@@ -132,7 +148,7 @@ jQuery(function ($) {
   // 閉じるボタンをクリックしたらモーダルを閉じる
   $(".js-modal").on("click", function () {
     modal.removeClass("is-open");
-    $("body").removeClass("is-fixed");
+    bodyFixedOff();
   });
 
   //swiper メインビュー
@@ -146,37 +162,43 @@ jQuery(function ($) {
     },
   });
 
-// スクロールを無効にする
-function disableScroll() {
-  document.body.classList.add('is-fixed');
-}
+  //ファーストビュー
+  function runOpeningAnimation() {
+    const $loading = $('.p-loading');
+    const $splash = $('.p-loading__splash');
+    const $leftImage = $('.p-loading__leftImage');
+    const $rightImage = $('.p-loading__rightImage');
+    const $title = $('.p-loading__title');
+    // トップページでのみアニメーションを実行
+    if ($loading.length === 0) {
+      return;
+    }
+    // オープニングアニメーション開始時にスクロール禁止の処理を実行
+    $('html, body').css('overflow', 'hidden');
+    // オープニングアニメーションの処理を実行
+    $loading.delay(1000).queue(function(next) {
+      $title.delay(1000).fadeIn(function() {
+        $splash.delay(2000).addClass('appear');
+      });
+      next();
+    });
 
-// スクロールを有効にする
-function enableScroll() {
-  document.body.classList.remove('is-fixed');
-}
+    $(document).on('animationend', '.p-loading__rightImage', function() {
+      $leftImage.delay(2000).fadeOut();
+      $rightImage.delay(2000).fadeOut();
+      $loading.addClass('fadeout');
+      $splash.delay(1000).fadeOut();
+    });
 
-$(window).on('load', function () {
-  if ($('.p-main-view').length > 0) {
-    disableScroll();
+    // オープニングアニメーション終了時にスクロール許可の処理を実行
+    setTimeout(function() {
+      $('html, body').css('overflow', 'auto');
+    }, 6000);
   }
-});
 
-$('.p-loading').delay(2000).queue(function (next) {
-  $('.p-loading__splash').addClass('appear');
-  $(this).dequeue();
-  next();
-});
-
-$('.p-loading__title').delay(1000).fadeIn();
-
-$(document).on('animationend', '.p-loading__rightImage', function () {
-  $('.p-loading__leftImage').delay(2000).fadeOut();
-  $('.p-loading__rightImage').delay(2000).fadeOut();
-  $('.p-loading').addClass('fadeout');
-  $('.p-loading__splash').fadeOut();
-  enableScroll();
-});
+  $(document).ready(function() {
+    runOpeningAnimation();
+  });
 
   //サイドバーアーカイブ
   $(".js-archive-lists:first").css("display", "block");

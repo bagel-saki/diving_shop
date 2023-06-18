@@ -29,15 +29,12 @@
 /* 初期状態ではスクロールが有効 */
 body {
   overflow: auto;
-  position: static;
+  position: relative;
 }
 
 /* is-fixedクラスが追加された場合はスクロールを無効化 */
 body.is-fixed {
   overflow: hidden;
-  position: fixed;
-  left: 0;
-  right: 0;
 }
 
 
