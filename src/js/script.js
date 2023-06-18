@@ -111,42 +111,41 @@ jQuery(function ($) {
 
   var modal = $(".js-modal");
   var initialScrollPosition = 0;
-
-// モーダルを開く
-$(".js-modal-open").on("click", function () {
-  var imagePath = $(this).find("img").attr("src");
-  var modalImagePath = imagePath.replace("/common/gallery_", "/common/gallery_");
-  $(".p-gallery-modal__content img").attr("src", modalImagePath);
-  $(".p-gallery-modal").addClass("is-open");
-
-  // モーダルが開かれたら、背景要素とbodyを固定する
-  $("body").addClass("modal-open");
-  $(".p-gallery-modal").addClass("modal-fixed");
-
-  // スクロール位置を保存
-  initialScrollPosition = $(window).scrollTop();
-});
-
-// touchmove イベントを無効化する
-$(window).on("touchmove", function (event) {
-  if ($(".p-gallery-modal").hasClass("is-open")) {
-    event.preventDefault();
+  
+  // モーダルを開く
+  $(".js-modal-open").on("click", function () {
+    var imagePath = $(this).find("img").attr("src");
+    var modalImagePath = imagePath.replace("/common/gallery_", "/common/gallery_");
+    $(".p-gallery-modal__content img").attr("src", modalImagePath);
+    $(".p-gallery-modal").addClass("is-open");
+  
+    // モーダルが開いたら、背景要素とbodyを固定する
+    var scrollPosition = $(window).scrollTop();
+    $("body").css({
+      position: "fixed",
+      width: "100%",
+      top: -scrollPosition + "px",
+    });
+    $("html").addClass("modal-open");
+    initialScrollPosition = scrollPosition;
+  });
+  
+  // モーダルを閉じる
+  $(".js-modal-close, .p-gallery-modal").on("click", closeModal);
+  
+  function closeModal() {
+    modal.removeClass("is-open");
+  
+    // モーダルが閉じられたら、背景要素とbodyの固定を解除し、元のスクロール位置に戻す
+    $("body").css({
+      position: "",
+      width: "",
+      top: "",
+    });
+    $("html").removeClass("modal-open");
+    $(window).scrollTop(initialScrollPosition);
   }
-});
-
-// モーダルを閉じる
-$(".js-modal-close, .p-gallery-modal").on("click", closeModal);
-
-function closeModal() {
-  modal.removeClass("is-open");
-
-  // モーダルが閉じられたら、背景要素
-  $("body").removeClass("modal-open");
-
-  // 元のスクロール位置に戻す
-  $(window).scrollTop(initialScrollPosition);
-}
-
+  
   //swiper メインビュー
   var swiper1 = new Swiper(".js-main-swiper", {
     loop: true,
