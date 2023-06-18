@@ -117,11 +117,15 @@ jQuery(function ($) {
     var modalImagePath = imagePath.replace("/common/gallery_", "/common/gallery_");
     $(".p-gallery-modal__content img").attr("src", modalImagePath);
     $(".p-gallery-modal").addClass("is-open");
-  
+
     // モーダルが開かれたら、背景要素とbodyを固定する
     $("body").addClass("modal-open");
+    $(".p-gallery-modal").addClass("modal-fixed");
   });
-  
+  // touchmove イベントを無効化する
+  $(window).on("touchmove", function (event) {
+    event.preventDefault();
+  });
   // モーダルを閉じる
   $(".js-modal-close, .p-gallery-modal").on("click", closeModal);
   

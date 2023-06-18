@@ -40,9 +40,13 @@
     transition: opacity 0.3s;
 }
 
-.p-lower-gallery__topItem:hover,
-.p-lower-gallery__bottomItem:hover{
+
+@media (hover: hover) {
+    /* hover指定できるPCを想定したスタイル */
+    .p-lower-gallery__topItem:hover,
+    .p-lower-gallery__bottomItem:hover{
     opacity: 0.8;
+}
 }
 
 .p-lower-gallery__topItem img,
