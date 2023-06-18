@@ -110,46 +110,28 @@ jQuery(function ($) {
   });
 
   var modal = $(".js-modal");
-  var $body = $("body");
-  var scrollTop;
-  function bodyFixedOn() {
-    scrollTop = $(window).scrollTop();
 
-    $body.css({
-      overflow: "hidden",
-      position: "fixed",
-      top: -scrollTop,
-    });
-  }
-  //スクロールの固定を解除
-  function bodyFixedOff() {
-    $body.css({
-      position: "",
-      top: "",
-    });
-  }
-  // クリックしたらモーダルを表示する
+  // モーダルを開く
   $(".js-modal-open").on("click", function () {
     var imagePath = $(this).find("img").attr("src");
-    var modalImagePath = imagePath.replace(
-      "/common/gallery_",
-      "/common/gallery_"
-    );
+    var modalImagePath = imagePath.replace("/common/gallery_", "/common/gallery_");
     $(".p-gallery-modal__content img").attr("src", modalImagePath);
     $(".p-gallery-modal").addClass("is-open");
-    bodyFixedOn();
-    setTimeout(function () {
-      $(this)
-        .find(".p-lower-gallery__topItem, .p-lower-gallery__bottomItem")
-        .addClass("is-open"); // フェードインのクラスを追加
-    }, 300);
+  
+    // モーダルが開かれたら、背景要素とbodyを固定する
+    $("body").addClass("modal-open");
   });
-
-  // 閉じるボタンをクリックしたらモーダルを閉じる
-  $(".js-modal").on("click", function () {
+  
+  // モーダルを閉じる
+  $(".js-modal-close, .p-gallery-modal").on("click", closeModal);
+  
+  function closeModal() {
     modal.removeClass("is-open");
-    bodyFixedOff();
-  });
+  
+    // モーダルが閉じられたら、背景要素とbodyの固定を解除し、元のスクロール位置に戻す
+    $("body").removeClass("modal-open");
+  }
+  
 
   //swiper メインビュー
   var swiper1 = new Swiper(".js-main-swiper", {
