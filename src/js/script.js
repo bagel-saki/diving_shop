@@ -25,25 +25,25 @@ jQuery(function ($) {
     return false;
   });
 
-// フッター手前でストップ
-$(".js-page-top").hide();
-var footerHeight = $("footer").innerHeight();
-$(window).on("scroll", function () {
-  var windowHeight = $(window).height();
-  var scrollPosition = $(window).scrollTop();
-  var scrollHeight = $(document).height() - footerHeight;
-  if (scrollHeight - scrollPosition <= windowHeight) {
-    $(".js-page-top").css({
-      position: "absolute",
-      bottom: footerHeight + 16,
-    });
-  } else {
-    $(".js-page-top").css({
-      position: "fixed",
-      bottom: "16px",
-    });
-  }
-});
+  // フッター手前でストップ
+  $(".js-page-top").hide();
+  var footerHeight = $("footer").innerHeight();
+  $(window).on("scroll", function () {
+    var windowHeight = $(window).height();
+    var scrollPosition = $(window).scrollTop();
+    var scrollHeight = $(document).height() - footerHeight;
+    if (scrollHeight - scrollPosition <= windowHeight) {
+      $(".js-page-top").css({
+        position: "absolute",
+        bottom: footerHeight + 16,
+      });
+    } else {
+      $(".js-page-top").css({
+        position: "fixed",
+        bottom: "16px",
+      });
+    }
+  });
 
   //キャンペーンカテゴリーのactive付与
   $(".js-campaign-category").on("click", function () {
@@ -110,24 +110,24 @@ $(window).on("scroll", function () {
   });
 
   var modal = $(".js-modal");
-  var $body = $('body');
+  var $body = $("body");
   var scrollTop;
   function bodyFixedOn() {
-  scrollTop = $(window).scrollTop();
+    scrollTop = $(window).scrollTop();
 
-  $body.css({
-    overflow: 'hidden',
-    position: 'fixed',
-    top: -scrollTop
-  });
-}
-
-//スクロールの固定を解除
-function bodyFixedOff() {
-  $body.css({
-    position: '',
-    top: ''
-  });
+    $body.css({
+      overflow: "hidden",
+      position: "fixed",
+      top: -scrollTop,
+    });
+  }
+  //スクロールの固定を解除
+  function bodyFixedOff() {
+    $body.css({
+      position: "",
+      top: "",
+    });
+  }
   // クリックしたらモーダルを表示する
   $(".js-modal-open").on("click", function () {
     var imagePath = $(this).find("img").attr("src");
@@ -164,39 +164,39 @@ function bodyFixedOff() {
 
   //ファーストビュー
   function runOpeningAnimation() {
-    const $loading = $('.p-loading');
-    const $splash = $('.p-loading__splash');
-    const $leftImage = $('.p-loading__leftImage');
-    const $rightImage = $('.p-loading__rightImage');
-    const $title = $('.p-loading__title');
+    const $loading = $(".p-loading");
+    const $splash = $(".p-loading__splash");
+    const $leftImage = $(".p-loading__leftImage");
+    const $rightImage = $(".p-loading__rightImage");
+    const $title = $(".p-loading__title");
     // トップページでのみアニメーションを実行
     if ($loading.length === 0) {
       return;
     }
     // オープニングアニメーション開始時にスクロール禁止の処理を実行
-    $('html, body').css('overflow', 'hidden');
+    $("html, body").css("overflow", "hidden");
     // オープニングアニメーションの処理を実行
-    $loading.delay(1000).queue(function(next) {
-      $title.delay(1000).fadeIn(function() {
-        $splash.delay(2000).addClass('appear');
+    $loading.delay(1000).queue(function (next) {
+      $title.delay(1000).fadeIn(function () {
+        $splash.delay(2000).addClass("appear");
       });
       next();
     });
 
-    $(document).on('animationend', '.p-loading__rightImage', function() {
+    $(document).on("animationend", ".p-loading__rightImage", function () {
       $leftImage.delay(2000).fadeOut();
       $rightImage.delay(2000).fadeOut();
-      $loading.addClass('fadeout');
+      $loading.addClass("fadeout");
       $splash.delay(1000).fadeOut();
     });
 
     // オープニングアニメーション終了時にスクロール許可の処理を実行
-    setTimeout(function() {
-      $('html, body').css('overflow', 'auto');
+    setTimeout(function () {
+      $("html, body").css("overflow", "auto");
     }, 6000);
   }
 
-  $(document).ready(function() {
+  $(document).ready(function () {
     runOpeningAnimation();
   });
 
