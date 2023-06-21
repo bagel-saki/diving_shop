@@ -1,6 +1,6 @@
 @use "global" as *;
-.p-contact-form__inner{
-	position: relative;
+.p-contact-form{
+	position: relative;	
 }
 
 [type="text"],
@@ -263,22 +263,16 @@ input[type="radio"]:checked + .p-contact-form__radioLabel:after {
 /*魚----------------*/
 .p-contact-form__fish{
 	position: absolute;
-    left: calc(50% - 624px);
+    left: rem(15);
+    top:rem(-24);
     z-index: -1;
-    top:rem(-70);
-    @media (max-width: 1280px) {
-        left: rem(25);
-        top: rem(-70);
-    }
-    @media (max-width: 768px) {
-        left: rem(15);
-        top: 0;
+    @include mq('md'){
+        left: clamp(rem(15), 50% - rem(624),50% - rem(624));
+        top:rem(-70);
     }
 	@media (max-width: 420px) {
-        left: rem(15);
         top: rem(24);
     }
-
 }
 
 /*入力エラー----------*/
@@ -305,4 +299,5 @@ input[type="radio"]:checked + .p-contact-form__radioLabel:after {
 	display: inline-block;
 	text-align: left;
 	opacity: 0;
+
 }

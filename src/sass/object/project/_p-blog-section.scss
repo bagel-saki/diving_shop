@@ -57,9 +57,6 @@
 	content:"";
 	position: absolute;
     top: rem(24);
-	left:calc(50% - rem(615));
-	@media (max-width: rem(1280)) {
-		left: rem(25);
-	}
+	left: clamp(15px, 50% - rem(624),50% - rem(624));	
 }
 

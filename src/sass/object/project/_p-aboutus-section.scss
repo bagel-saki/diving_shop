@@ -1,7 +1,9 @@
 @use "global" as *;
+.p-aboutus-section{
+	position: relative;
+}
 
 .p-aboutus-section__inner{
-	position: relative;
 	}
 
 .p-aboutus-section__coral{
@@ -10,10 +12,7 @@
 		height: rem(181);
 		position: absolute;
 		bottom: rem(-90);
-		left: calc(50% + rem(443));
-	}
-	@media (max-width: rem(1280)) {
-		left: calc(50% + rem(339));
+		right: clamp(rem(15), 50% - rem(637),50% - rem(637));
 	}
 }
 

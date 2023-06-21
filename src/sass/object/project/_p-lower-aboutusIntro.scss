@@ -1,26 +1,21 @@
 @use "global" as *;
 
 .p-lower-aboutusIntro{
-	@include mq('md'){
+    position: relative;
+    @include mq('md'){
 	}
 }
 
 .p-lower-aboutusIntro__inner{
-	position: relative;
 }
 
 .p-lower-aboutusIntro__fish{
 	position: absolute;
-    left: calc(50% - 624px);
+    left: rem(15);
+    top:rem(-24);
     z-index: -1;
-    top:rem(-70);
-    @media (max-width: 1280px) {
-        left: rem(25);
-        top: rem(-70);
+    @include mq('md'){
+        left: clamp(15px, 50% - rem(624),50% - rem(624));
+        top:rem(-70);
     }
-    @media (max-width: 768px) {
-        left: rem(15);
-        top: rem(-24);
-    }
-
 }

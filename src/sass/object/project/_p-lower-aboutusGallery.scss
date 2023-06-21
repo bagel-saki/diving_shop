@@ -1,7 +1,8 @@
 @use "global" as *;
-.p-lower-aboutusGallery_inner{
+.p-lower-aboutusGallery{
     position: relative;
 }
+
 
 .p-lower-aboutusGallery__title{
     text-align: center;
@@ -16,16 +17,6 @@
 
 .p-lower-aboutusGallery__fish{
     position: absolute;
-    right: rem(15);
-    top: rem(-26);
-	@include mq(md){
-	left: calc(50% + rem(340));
+    right: clamp(rem(15), 50% - rem(670),50% - rem(670));
     top: rem(-80);
-	@media (max-width: 1380px) {
-		left: calc(50% + rem(285));
-	}
-	@media (max-width: 1200px) {
-		left: calc(50% + rem(220));
-	}
-	}
 }

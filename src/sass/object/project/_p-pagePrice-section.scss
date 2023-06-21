@@ -1,8 +1,9 @@
 @use "global" as *;
 
-.p-pagePrice-section__inner {
+.p-pagePrice-section{
     position: relative;
 }
+
 
 .p-pagePrice-section__content {
     width: 100%;
@@ -12,15 +13,11 @@
 
 .p-pagePrice-section__fish {
     position: absolute;
-    left: calc(50% - rem(624));
+    left: clamp(rem(15), 50% - rem(220),50% - rem(220));
     z-index: -1;
-    top:rem(-70);
-    @media (max-width: 1280px) {
-        left: rem(25);
-        top: rem(-70);
-    }
-    @media (max-width: 768px) {
-        left: rem(15);
-        top: rem(-24);
+    top:rem(-24);
+    @include mq('md'){
+        left: clamp(rem(15), 50% - rem(624),50% - rem(624));
+        top:rem(-70);
     }
 }

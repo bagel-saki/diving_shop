@@ -1,8 +1,9 @@
 @use "global" as *;
 
-.p-archiveVoices-section__inner {
+.p-archiveVoices-section{
     position: relative;
 }
+
 
 .p-archiveVoices-section__content {
     margin-top: rem(39);
@@ -17,15 +18,11 @@
 
 .p-archiveVoices-section__fish {
     position: absolute;
-    left: calc(50% - rem(624));
+    left: clamp(rem(15), 50% - rem(220),50% - rem(220));
+    top:rem(-24);
     z-index: -1;
-    top:rem(-70);
-    @media (max-width: 1280px) {
-        left: rem(25);
-        top: rem(-70);
-    }
-    @media (max-width: 768px) {
-        left: rem(15);
-        top: rem(-24);
+    @include mq('md'){
+        left: clamp(rem(15), 50% - rem(624),50% - rem(624));
+        top:rem(-70);
     }
 }

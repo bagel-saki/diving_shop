@@ -3,10 +3,10 @@
 .p-contact-section {
 	width: 100%;
 	background-color: $white;
+	position: relative;
 }
 
 .p-contact-section__inner{
-	position: relative;
 }
 
 .p-contact-section__container {
@@ -118,18 +118,12 @@
 
 .p-contact-section__fish {
 	position: absolute;
-    right: rem(15);
+    right: clamp(rem(15), 50% - rem(220),50% - rem(220));
     top: rem(-27);
 	@include mq(md){
-	left: calc(50% + rem(370));
-    top: rem(-37);
-	@media (max-width: 1380px) {
-		left: calc(50% + rem(285));
+	right: clamp(rem(15), 50% - rem(670),50% - rem(670));
+    top: rem(-40);
 	}
-	@media (max-width: 1200px) {
-		left: calc(50% + rem(220));
-	}
-	}
-
 }
+
 
