@@ -8,6 +8,7 @@
     position: fixed;
     right: rem(15);
     bottom: rem(16);
+    z-index: 5000;
     background-color: transparent;
     transition: background-color 0.3s;
     @include mq(md) {

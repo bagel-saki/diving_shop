@@ -3,12 +3,11 @@
 
 .p-faq-box__question {
     background-color: $green;
-    padding: rem(16);
+    padding: rem(16) rem(60) rem(16) rem(16);
     position: relative;
     cursor: pointer;
     @include mq(md){
-        padding: rem(26) rem(40);
-
+        padding: rem(26) rem(92) rem(26) rem(40);
     }
 }
 

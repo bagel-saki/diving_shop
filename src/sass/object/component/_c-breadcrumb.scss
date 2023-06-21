@@ -4,23 +4,29 @@
   font-size: rem(14);
   letter-spacing: rem(-0.5);
 
-  @include mq('md'){
+  @include mq("md") {
     letter-spacing: rem(-0.8);
   }
-  }
+}
+
+.breadcrumb-item.active,
+.breadcrumb-item a {
+  padding:rem(8);
+  display: inline-block;
+}
 
 .breadcrumb.breadcrumb--white {
   color: $white;
 }
 
-  .breadcrumb-list {
-    display: flex;
-  }
+.breadcrumb-list {
+  display: flex;
+}
 
-  .breadcrumb-item span{
-    padding: 0 rem(8);
-  }
+// .breadcrumb-item span{
+//   padding: 0 rem(8);
+// }
 
-  .breadcrumb-item:first-child{
-    text-transform: uppercase;
-  }
+.breadcrumb-item:first-child {
+  text-transform: uppercase;
+}
