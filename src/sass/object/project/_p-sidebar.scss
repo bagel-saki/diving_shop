@@ -5,13 +5,6 @@
     width: 100%;
 }
 
-.p-sidebar__popularArticle{
-    margin-top: rem(81);
-    @include mq('md'){
-        margin-top: rem(148);
-    }
-}
-
 .p-sidebar__review,
 .p-sidebar__campaign,
 .p-sidebar__archive {

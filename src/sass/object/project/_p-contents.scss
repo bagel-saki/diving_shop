@@ -62,7 +62,6 @@
 	}
 }
 
-
 .p-contents__lists{
 	margin-bottom: rem(20) ;
 }
@@ -70,9 +69,8 @@
 .p-contents__list {
 	padding: rem(12) 0;
 	display: block;
-	line-height: calc(18 / 16);	
+	line-height: calc(18 / 16);
 }
-
 
 .p-contents__title {
 	font-weight: $bold;

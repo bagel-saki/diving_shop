@@ -1,8 +1,7 @@
 <% baseUrlPath='.' ; ejsPath='.' ; pageData="top" %>
 <!DOCTYPE html>
 <html lang="ja">
-  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
-json[pageData] }) %>
+  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:json[pageData] }) %>
   <body>
     <%- include(ejsPath + '/common/_header' ) %>
     <main>
@@ -16,9 +15,7 @@ json[pageData] }) %>
       <div class="l-section">
         <%- include(ejsPath + '/project/_p-information-section' ) %>
       </div>
-      <div>
         <%- include(ejsPath + '/project/_p-blog-section' ) %>
-      </div>
       <div class="l-section">
         <%- include(ejsPath + '/project/_p-voice-section' )%>
       </div>
