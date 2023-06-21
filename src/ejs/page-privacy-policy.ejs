@@ -1,14 +1,11 @@
 <% baseUrlPath='.' ; ejsPath='.' ; pageData="privacy-policy" %>
 <!DOCTYPE html>
 <html lang="ja">
-  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
-  json[pageData] }) %>
-
+  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:json[pageData] }) %>
   <body>
     <%- include(ejsPath + '/common/_header' ) %>
     <main>
-      <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'privacy', title:
-      'privacy policy',}) %>
+      <%- include(ejsPath + '/project/_p-lower-mv' ,{lower:'privacy', title:'privacy policy',}) %>
       <div class="l-breadcrumb l-inner">
         <%- include(ejsPath + '/component/_c-breadcrumb', { breadcrumbs:[{title: "プライバシーポリシー", url: "", color: "" }]}); %>
       </div>
@@ -19,7 +16,9 @@
         <%- include(ejsPath + '/project/_p-contact-section' )%>
       </div>
     </main>
-    <div class="l-footer"><%- include(ejsPath + '/common/_footer' ) %></div>
+    <div class="l-footer">
+      <%- include(ejsPath + '/common/_footer' ) %>
+    </div>
     <%- include(ejsPath + '/component/_c-page-top-btn' ) %>
   </body>
 </html>

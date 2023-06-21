@@ -1,9 +1,7 @@
 <% baseUrlPath='.' ; ejsPath='.' ; pageData="sitemap" %>
 <!DOCTYPE html>
 <html lang="ja">
-  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:
-  json[pageData] }) %>
-
+  <%- include(ejsPath + '/common/_head' ,{ baseUrl: baseUrlPath, page:json[pageData] }) %>
   <body>
     <%- include(ejsPath + '/common/_header' ) %>
     <main>
@@ -11,14 +9,16 @@
       <div class="l-inner l-breadcrumb">
         <%- include(ejsPath + '/component/_c-breadcrumb', {breadcrumbs: [{title: "サイトマップ", url: "", color: "" }]}); %>
       </div>
-      <div class="l-lower-head--sitemap">
+      <div class="l-sitemap">
         <%- include(ejsPath + '/project/_p-sitemap' ) %>
       </div>
       <div class="l-lower-bottom">
         <%- include(ejsPath + '/project/_p-contact-section' )%>
       </div>
     </main>
-    <div class="l-footer"><%- include(ejsPath + '/common/_footer' ) %></div>
+    <div class="l-footer">
+      <%- include(ejsPath + '/common/_footer' ) %>
+    </div>
     <%- include(ejsPath + '/component/_c-page-top-btn' ) %>
   </body>
 </html>
