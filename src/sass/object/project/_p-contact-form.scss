@@ -69,7 +69,7 @@ textarea {
 .p-contact-form__item:first-of-type{
 	padding-top: 0;	
 	@include mq('md'){
-		padding-top: rem(40);
+		padding-top: rem(0);
 	}
 }
 
@@ -110,7 +110,6 @@ textarea {
 	}
 }
 
-
 .p-contact-form__input{
 	margin-top: rem(16);
 	max-width: rem(480);
@@ -121,49 +120,41 @@ textarea {
 	}
 }
 
-/*ラジオボタン-------*/
+/*チェックボックス-------*/
 
-input[type="radio"] {
-	display: none;
-    vertical-align: text-top;
-}
+// .p-contact-form__check{
+// 	display: block;
+// }
 
-.p-contact-form__radio{
-	display: block;
-}
-
-.p-contact-form__radioLabel {
+.p-contact-form__checkLabel {
 	padding-left: rem(22);
 	position: relative;
 	@include mq('md'){
 		display: inline-block;
 		padding-top: rem(2);
 		padding-bottom: rem(2);
-
-
 	}
 }
 
-.p-contact-form__radioLabel::before{
-	border: solid 1px $green;
+.p-contact-form__checkLabel::before{
 	content: '';
+	position: absolute;
 	display: block;
 	width: rem(14);
 	height: rem(14);
-	position: absolute;
+	border: solid 1px $green;
 	top: rem(6);
 	left: 0;
-	transition: 0.2s;
+	transition: 0.3s ease;
 
 	@include mq('md'){
 		top: rem(10);	
 	}
 }
 
-.p-contact-form__radioLabel::after{
+.p-contact-form__checkLabel::after{
 	content: '';
 	position: absolute;
-	opacity: 0;
 	transform: translateY(-50%) rotate(-45deg);
 	width: rem(10);
 	height: rem(5);
@@ -173,25 +164,57 @@ input[type="radio"] {
 	border-bottom: rem(2) solid $red;
 	left: rem(1);
 	top: rem(14);
+	opacity: 0;
 
 	@include mq('md'){
 		top:rem(18);
 	}
 }
 
-input[type="radio"]:checked + .p-contact-form__radioLabel:after {
+input[type="checkbox"]:checked + .p-contact-form__checkLabel:after {
 	opacity: 1;
   }
   
-  /*チェックボックス-------*/
-  .p-contact-form__privacy{
-	  margin-top: rem(40);
-	  display: flex;
-	  align-items: center;
-	  font-size: rem(14);
-	  justify-content: center;
-	  padding-left: rem(18);
+  .p-contact-form__check--privacy {  
+	  display: block;
+	  position: relative;
+	  padding: 0 0 0 calc(rem(25));
 	  line-height: calc(22 / 14);
+  }
+  
+  .p-contact-form__checkLabel--privacy::before {
+	  top: rem(12);
+	  left: rem(-8);
+	  transform: translateY(-50%);
+	  width: rem(22);
+	  height: rem(22);
+	  
+	  @include mq('md'){
+		  left: rem(-16);
+	  }
+  }
+   
+.p-contact-form__checkLabel--privacy::after{
+	top: rem(12);
+	left: rem(-6);
+	width: rem(16);
+	height: rem(8);
+	margin-top: -0.1em;
+	margin-left: 0.1em;
+	@include mq('md'){
+		left: rem(-14);
+	}
+}
+
+/*プライバシー-------*/
+.p-contact-form__privacy{
+	margin-top: rem(40);
+	display: flex;
+	align-items: center;
+	font-size: rem(14);
+	justify-content: center;
+	padding-left: rem(18);
+	line-height: calc(22 / 14);
 		@include mq('md'){
 			padding-left: rem(40);
 			margin-top: rem(80);
@@ -199,57 +222,6 @@ input[type="radio"]:checked + .p-contact-form__radioLabel:after {
 	}
 
 
-
-
-  .p-contact-form__check + span {  
-	display: block;
-	position: relative;
-	padding: 0 0 0 calc(rem(25));
-	line-height: calc(22 / 14);
-	transition: 0.3s ease;
-}
-
-.p-contact-form__check +span::before {
-	position: absolute;
-	content: "";
-	top: rem(12);
-	left: rem(-8);
-	transform: translateY(-50%);
-	border: rem(1) solid $green;
-	width: rem(22);
-	height: rem(22);
-	display: block;
-
-
-	@include mq('md'){
-		left: rem(-16);
-	}
-}
-
-.p-contact-form__check +span::after{
-	opacity: 0;
-	transition: 0.3s ease;
-}
-
-
-.p-contact-form__check:checked+ span::after{
-	content: "";
-	position: absolute;
-	top: rem(12);
-	left: rem(-6);
-	display: block;
-	opacity: 1;
-	transform: translateY(-50%) rotate(-45deg);
-	width: rem(16);
-	height: rem(8);
-	margin-top: -0.1em;
-	margin-left: 0.1em;
-	border-left: rem(2) solid $red;
-	border-bottom: rem(2) solid $red;
-	@include mq('md'){
-		left: rem(-14);
-	}
-}
 
 
 /*ボタン------------*/
@@ -263,17 +235,15 @@ input[type="radio"]:checked + .p-contact-form__radioLabel:after {
 /*魚----------------*/
 .p-contact-form__fish{
 	position: absolute;
-    left: rem(15);
+    left: clamp(rem(15), 50% - rem(300),50% - rem(300));
     top:rem(-24);
     z-index: -1;
     @include mq('md'){
         left: clamp(rem(15), 50% - rem(624),50% - rem(624));
         top:rem(-70);
     }
-	@media (max-width: 420px) {
-        top: rem(24);
-    }
 }
+
 
 /*入力エラー----------*/
 
@@ -292,12 +262,13 @@ input[type="radio"]:checked + .p-contact-form__radioLabel:after {
 
 .p-contact-form__errorWrap { 
 	text-align: center;
+	display: none;
+	margin: rem(40);
   }
 
 .p-contact-form__errorMessage {
 	color: $red;
 	display: inline-block;
 	text-align: left;
-	opacity: 0;
 
 }

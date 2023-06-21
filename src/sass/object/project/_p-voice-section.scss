@@ -45,7 +45,8 @@
 
 .p-voice-section__seahorse {
     position: absolute;
-    right: rem(25);
+    right: clamp(rem(15), 50% - rem(542),50% - rem(542));
     bottom: rem(-67);
 }
+
 
