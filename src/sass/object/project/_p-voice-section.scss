@@ -1,10 +1,6 @@
 @use "global" as *;
 
 .p-voice-section {
-    background-color: $white;
-}
-
-.p-voice-section__inner{
     position: relative;
 }
 
@@ -38,16 +34,12 @@
 
 .p-voice-section__fish {
     position: absolute;
-    left: calc(50% - rem(432));
+    left: rem(15);
+    top:rem(-24);
     z-index: -1;
-    top:rem(-70);
-    @media (max-width: 1280px) {
-        left: rem(25);
-        top: rem(-70);
-    }
-    @media (max-width: 768px) {
-        left: rem(15);
-        top: rem(-24);
+    @include mq('md'){
+        left: clamp(15px, 50% - rem(624),50% - rem(624));
+        top:rem(-122);
     }
 }
 

@@ -1,21 +1,13 @@
 @use "global" as *;
 
-.p-sitemap__inner{
+.p-sitemap{
 	position: relative;
 }
 
 .p-sitemap__fish{
 	position: absolute;
-    left: calc(50% - 624px);
+    left: rem(15);
+    top:rem(-24);
     z-index: -1;
-    top:rem(-70);
-    @media (max-width: 1280px) {
-        left: rem(25);
-        top: rem(-70);
-    }
-    @media (max-width: 768px) {
-        left: rem(15);
-        top: rem(-24);
-    }
 }
 

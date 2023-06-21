@@ -1,7 +1,7 @@
 @use "global" as *;
 
-.p-faq-section__inner {
-    position: relative;
+.p-faq-section{
+    position: relative; 
 }
 
 .p-faq-section__content {
@@ -12,16 +12,12 @@
 
 .p-faq-section__fish {
     position: absolute;
-    left: calc(50% - rem(624));
+    left: rem(15);
+    top:rem(-24);
     z-index: -1;
-    top:rem(-70);
-    @media (max-width: 1280px) {
-        left: rem(25);
-        top: rem(-70);
-    }
-    @media (max-width: 768px) {
-        left: rem(15);
-        top: rem(-24);
+    @include mq('md'){
+        left: clamp(rem(15), 50% - rem(624),50% - rem(624));
+        top:rem(-70);
     }
 }
 

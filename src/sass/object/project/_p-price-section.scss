@@ -4,15 +4,11 @@
     background-color:$light-green;
     padding-top: rem(80);
     padding-bottom: rem(80);
+    position: relative;
     @include mq(md){
         padding-top: rem(100);
         padding-bottom: rem(100);
     }
-}
-
-.p-price-section__inner {
-    position: relative;
-
 }
 
 .p-price-section__title {
@@ -57,12 +53,6 @@
 
 .p-price-section__fish {
     position: absolute;
-    bottom: rem(-40);
-    right: calc(50% + rem(185));
-    @media (max-width: rem(1220)) {
-        left: rem(25);
-	}
-    @media (max-width: rem(1300)) {
-        left: -2%;
-	}
+    bottom: rem(60);
+    left: clamp(rem(15), 50% - rem(624),50% - rem(624));
 }
