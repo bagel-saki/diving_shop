@@ -74,17 +74,26 @@
 .p-contact-section__map{
 	width: 100%;
 	margin-top: rem(16);
+	overflow: hidden;
 	@include mq(md){
 		width: 62%;
 		margin-top: 0;
 	}
 }
 
-.p-contact-section__map-demo{
+.iframe-wrap {
+	position: relative;
 	width: 100%;
-	aspect-ratio: 273/148;
-	background-color: #D9D9D9;
-}
+	padding-top: 54.212%;
+  }
+
+  .iframe-wrap iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
 
 .p-contact-section__body {
 	text-align: center;
