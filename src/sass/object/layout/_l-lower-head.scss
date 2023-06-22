@@ -1,8 +1,8 @@
 @use "global" as *;
 
 .l-lower-head{
-    margin-top: rem(50);
+    margin-top: rem(43);
     @include mq('md'){
-        margin-top: rem(147);
+        margin-top: rem(140);
     }
 }

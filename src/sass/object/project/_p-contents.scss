@@ -10,16 +10,12 @@
 	height: 100%;
 	display: grid;
 	grid-template-rows: repeat(2, 1fr);
-	grid-template-columns: repeat(2, 1fr);
-	grid-column-gap:13.5%;
 	grid-row-gap:0;
 	grid-auto-flow: column;
-	padding-left: rem(22);
 	@include mq('md'){
 		display: flex;
 		gap:0;
 		justify-content: space-between;
-		padding-left: rem(20);
 	}
 }
 
@@ -28,8 +24,10 @@
 }
 
 .p-contents__items{
+	padding-left: rem(22);
 	@include mq('md'){
 		width: 22%;
+		padding-left: rem(24);
 	}
 }
 
@@ -46,7 +44,6 @@
     transition: opacity 0.3s;
 	margin-top: rem(16);
 	position: relative;
-	white-space: nowrap;
 }
 
 .p-contents__item:first-of-type{

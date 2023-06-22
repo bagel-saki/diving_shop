@@ -99,7 +99,6 @@
 	font-family: $english-second-font-family;
 	font-weight: $normal;
     letter-spacing: rem(0.6);
-	white-space: nowrap;
 	@include mq('md'){
 		font-size: rem(80);
 		top: 59%;
@@ -127,3 +126,11 @@
 	text-transform:	none;
 }
 
+.p-lower-mv__content{
+	width: 100%;
+}
+
+.p-lower-mv_title{
+	width: 100%;
+	text-align: center;
+}
