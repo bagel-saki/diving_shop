@@ -126,9 +126,7 @@ textarea {
 	padding-left: rem(22);
 	position: relative;
 	@include mq('md'){
-		display: inline-block;
-		padding-top: rem(2);
-		padding-bottom: rem(2);
+		
 	}
 }
 
@@ -140,12 +138,8 @@ textarea {
 	height: rem(14);
 	border: solid 1px $green;
 	top: rem(6);
-	left: rem(-3);
+	left: rem(-1);
 	transition: 0.3s ease;
-	@include mq('md'){
-		top: rem(8);
-		left: rem(-1);
-	}
 }
 
 .p-contact-form__checkLabel::after{
@@ -158,14 +152,9 @@ textarea {
 	margin-left: 0.1em;
 	border-left: rem(2) solid $red;
 	border-bottom: rem(2) solid $red;
-	left: rem(1);
 	top: rem(14);
+	left: rem(0);
 	opacity: 0;
-
-	@include mq('md'){
-		left: 0;
-		top:rem(16);
-	}
 }
 
 input[type="checkbox"]:checked + .p-contact-form__checkLabel:after {
@@ -208,6 +197,7 @@ input[type="checkbox"]:checked + .p-contact-form__checkLabel:after {
 	margin-top: -0.1em;
 	margin-left: 0.1em;
 	@include mq('md'){
+		top: rem(12);
 		left: rem(-14);
 	}
 }
