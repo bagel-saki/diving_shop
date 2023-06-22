@@ -233,7 +233,7 @@ input[type="checkbox"]:checked + .p-contact-form__checkLabel:after {
 /*魚----------------*/
 .p-contact-form__fish{
 	position: absolute;
-    left: clamp(rem(15), 50% - rem(300),50% - rem(300));
+    left: clamp(rem(15), 50% - rem(320),50% - rem(250));
     top:rem(-24);
     z-index: -1;
     @include mq('md'){

@@ -7,7 +7,7 @@
 .p-home-container__fish {
     position: absolute;
 	left: clamp(rem(15), 50% - rem(250),50% - rem(250));
-    z-index:30;
+    z-index:-1;
     top:rem(-24);
 
     @include mq('md'){
@@ -15,4 +15,5 @@
         top:rem(-70);
     }
 }
+
 
