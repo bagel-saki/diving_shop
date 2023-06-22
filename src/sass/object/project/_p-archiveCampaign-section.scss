@@ -18,7 +18,7 @@
 
 .p-archiveCampaign-section__fish {
     position: absolute;
-    left: clamp(rem(15), 50% - rem(220),50% - rem(220));
+    left: clamp(rem(15), 50% - rem(300),50% - rem(300));
     top:rem(-24);
     z-index: -1;
     @include mq('md'){
