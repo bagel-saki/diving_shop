@@ -7,7 +7,7 @@
 
 .p-lower-aboutusIntro__fish{
 	position: absolute;
-    left: clamp(rem(15), 50% - rem(250),50% - rem(250));
+    left: clamp(rem(15), 50% - rem(320),50% - rem(250));
     top:rem(-24);
     z-index: -1;
     @include mq('md'){
