@@ -12,28 +12,25 @@
 	grid-template-rows: repeat(2, 1fr);
 	grid-row-gap:0;
 	grid-auto-flow: column;
+	align-items: flex-start;
 	@include mq('md'){
 		display: flex;
-		gap:0;
-		justify-content: space-between;
+		gap:3.5%;
 	}
 }
 
-.p-contents__container {
-	align-items: flex-start;//これを上のクラス内に入れると表示崩れる
+.p-contents__container--sitemap{
+	@include mq('md'){
+		gap:9%;
+	}	
 }
+
 
 .p-contents__items{
 	padding-left: rem(22);
 	@include mq('md'){
 		width: 22%;
 		padding-left: rem(24);
-	}
-}
-
-.p-contents__items--sitemap {
-	@include mq('md'){
-		width: 15%;
 	}
 }
 
