@@ -127,7 +127,7 @@
 
 .p-contact-section__fish {
 	position: absolute;
-    right: clamp(rem(15), 50% - rem(220),50% - rem(220));
+    right: clamp(rem(15), 50% - rem(290),50% - rem(220));
     top: rem(-27);
 	@include mq(md){
 	right: clamp(rem(15), 50% - rem(670),50% - rem(670));
