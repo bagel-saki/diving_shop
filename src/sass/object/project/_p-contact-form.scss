@@ -76,11 +76,11 @@ textarea {
 .p-contact-form__itemTtl{
 	font-weight: $bold;
 	@include mq('md'){
-		width: rem(220);
+		width: rem(210);
 	}
 }
 
-.p-contact-form__itemTtl.is-required{
+.p-contact-form__itemTtl{
 	display: inline-block;
 	margin-right: rem(8);	
 }
@@ -122,10 +122,6 @@ textarea {
 
 /*チェックボックス-------*/
 
-// .p-contact-form__check{
-// 	display: block;
-// }
-
 .p-contact-form__checkLabel {
 	padding-left: rem(22);
 	position: relative;
@@ -144,11 +140,11 @@ textarea {
 	height: rem(14);
 	border: solid 1px $green;
 	top: rem(6);
-	left: 0;
+	left: rem(-3);
 	transition: 0.3s ease;
-
 	@include mq('md'){
-		top: rem(10);	
+		top: rem(8);
+		left: rem(-1);
 	}
 }
 
@@ -167,7 +163,8 @@ textarea {
 	opacity: 0;
 
 	@include mq('md'){
-		top:rem(18);
+		left: 0;
+		top:rem(16);
 	}
 }
 
@@ -182,6 +179,14 @@ input[type="checkbox"]:checked + .p-contact-form__checkLabel:after {
 	  line-height: calc(22 / 14);
   }
   
+  .p-contact-form__checkLabel--privacy{
+	margin-right: rem(24);
+	margin-left: rem(24);
+	@include mq('md'){
+		margin-right: rem(30);
+	}
+  }
+
   .p-contact-form__checkLabel--privacy::before {
 	  top: rem(12);
 	  left: rem(-8);
@@ -190,7 +195,8 @@ input[type="checkbox"]:checked + .p-contact-form__checkLabel:after {
 	  height: rem(22);
 	  
 	  @include mq('md'){
-		  left: rem(-16);
+		top: rem(12);
+		left: rem(-16);
 	  }
   }
    
@@ -229,7 +235,9 @@ input[type="checkbox"]:checked + .p-contact-form__checkLabel:after {
 	margin-top: rem(24);
 	display: flex;
 	justify-content: center;
-
+	@include mq('md'){
+		margin-top: rem(34);
+	}
 }
 
 /*魚----------------*/
