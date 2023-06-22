@@ -70,7 +70,9 @@
   position: relative;
 }
 
-.p-aboutus--lower .p-aboutus__images .p-aboutus__image02 {
+.p-aboutus--lower 
+.p-aboutus__images 
+.p-aboutus__image02 {
   margin-left: 0;
   width: 100%;
   @include mq("md") {
@@ -79,14 +81,17 @@
   }
 }
 
-.p-aboutus--lower .p-aboutus__cont .p-aboutus__left {
+.p-aboutus--lower 
+.p-aboutus__cont 
+.p-aboutus__left {
   color: $white;
   position: absolute;
-  top: rem(7);
+  top: -4%;
   left: 6.95%;
 
   @include mq("md") {
     position: static;
+    top: rem(7);
   }
 }
 

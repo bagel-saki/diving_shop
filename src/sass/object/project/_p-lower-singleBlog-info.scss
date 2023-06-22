@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.p-lower-singleBlog-info__time {
+	font-family: $english-font-family;
+    font-size: rem(14);
+}
+
+.p-lower-singleBlog-info__title{
+	font-size: rem(24);
+    font-weight: 500;
+    border-bottom: 1px solid $green;
+	margin-top: rem(6);
+    @include mq('md'){
+        font-size: rem(32);
+        line-height: 1.3;
+    }
+}
+

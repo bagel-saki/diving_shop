@@ -1,27 +1,20 @@
 @use "global" as *;
+.p-single-container{
+    position: relative;
+
+}
+
+.p-single-section{
+    //position: relative;
+}
+
 
 .p-single-section__inner {
-    position: relative;
 }
 
 .p-single-section__pagination {
     margin-top: rem(40);
     @include mq('md'){
         margin-top: rem(76);
-    }
-}
-
-.p-single-section__fish {
-    position: absolute;
-    left: calc(50% - rem(432));
-    z-index: -1;
-    top:rem(-70);
-    @media (max-width: 1280px) {
-        left: rem(25);
-        top: rem(-70);
-    }
-    @media (max-width: 768px) {
-        left: rem(0);
-        top: rem(-22);
     }
 }

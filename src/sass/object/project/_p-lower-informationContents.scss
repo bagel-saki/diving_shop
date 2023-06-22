@@ -8,12 +8,15 @@
 .p-lower-informationContents__tab{
 	display: flex;
 	justify-content: center;
-	gap: 8.2%;
+    gap: 6.2%;
+    @include mq('md'){
+        gap: 8.2%;
+    }
 }
 
 .p-lower-informationContents__fish{
     position: absolute;
-    left: rem(15);
+    left: clamp(rem(15), 50% - rem(250),50% - rem(250));
     top:rem(-24);
     z-index: -1;
     @include mq('md'){
