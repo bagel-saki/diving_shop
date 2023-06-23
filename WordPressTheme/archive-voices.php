@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <!-- meta情報 -->
-  <title>投稿__diving_shop</title>
-  <meta name="description" content="ダイビングショップのブログ詳細ページです">
-  <meta property="og:site_name" content="投稿__diving_shop">
-  <meta property="og:url" content="https://aaa.com/blog/投稿/">
+  <title>voices__diving_shop</title>
+  <meta name="description" content="ダイビングショップのお客様の声ページです">
+  <meta property="og:site_name" content="voices__diving_shop">
+  <meta property="og:url" content="https://aaa.com/voices/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="投稿__diving_shop">
-  <meta property="og:description" content="ダイビングショップのブログ詳細ページです">
+  <meta property="og:title" content="voices__diving_shop">
+  <meta property="og:description" content="ダイビングショップのお客様の声ページです">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <!-- （画像関連） -->
@@ -171,249 +171,196 @@
     </div>
   </header>
   <main>
-    <div class="p-lower-mv p-lower-mv--blog">
+    <div class="p-lower-mv p-lower-mv--voice">
       <div class="p-lower-mv__content">
-        <h1 class="p-lower-mv_title">blog</h1>
+        <h1 class="p-lower-mv_title">voice</h1>
       </div>
     </div>
     <div class="l-inner">
       <nav class="breadcrumb">
         <ul class="breadcrumb-list">
           <li class="breadcrumb-item"><a href="index.html">top</a><span>&gt;</span></li>
-          <li class="breadcrumb-item"><a href="">ブログ一覧</a><span>&gt;</span></li>
-          <li class="breadcrumb-item active">ブログ詳細</li>
+          <li class="breadcrumb-item active">お客様の声</li>
         </ul>
       </nav>
     </div>
     <div class="l-lower-head">
-      <div class="p-single-container">
-        <div class="l-blog-container l-inner">
-          <div class="p-single-container__fish">
-            <div class="c-img-fish c-img-fish--reverse"></div>
-          </div>
-          <div class="l-content">
-            <div class="p-single-section">
-              <div class="p-single-section__inner">
-                <div class="p-single-section__content">
-                  <div class="p-lower-singleBlog-info">
-                    <time class="p-lower-singleBlog-info__time" datetime="2023-11-17">2023.11/17</time>
-                    <h2 class="p-lower-singleBlog-info__title">ライセンス取得</h2>
-                  </div>
-                  <div class="p-lower-singleBlog">
-                    <div>
-                      <img src="./assets/images/common/blog1.jpg" alt="" />
-                    </div>
-                    <p> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 </p>
-                    <div>
-                      <img src="./assets/images/common/blog1.jpg" alt="" />
-                    </div>
-                    <p> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 </p>
-                    <nav>
-                      <ul>
-                        <div class="c-img-starfish c-img-starfish--green"></div>
-                        <li>リスト１</li>
-                      </ul>
-                      <ul>
-                        <div class="c-img-starfish c-img-starfish--green"></div>
-                        <li>リスト２</li>
-                      </ul>
-                      <ul>
-                        <div class="c-img-starfish c-img-starfish--green"></div>
-                        <li>リスト３</li>
-                      </ul>
-                    </nav>
-                    <p> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 </p>
-                  </div>
-                </div>
-                <div class="p-single-section__pagination">
-                  <div class="c-blog-pagination" ontouchstart="">
-                    <div class="pagination">
-                      <nav class="navigation">
-                        <div class="nav-links">
-                          <a class="prev page-numbers" href="#"><span></span></a>
-                          <a class="next page-numbers" href="#"><span></span></a>
-                        </div>
-                      </nav>
-                    </div>
-                  </div>
-                </div>
-                <!-- <div class="p-single-section__fish">
-      </div> -->
+      <div class="p-archiveVoices-section">
+        <div class="p-archiveVoices-section__inner l-inner">
+          <div class="p-archiveVoices-section__category">
+            <div class="p-campaign-categories">
+              <div class="p-campaign-categories__item">
+                <a href="#" class="c-campaign-category js-campaign-category c-campaign-category--active"> all </a>
+              </div>
+              <div class="p-campaign-categories__item">
+                <a href="#" class="c-campaign-category js-campaign-category "> ライセンス講習 </a>
+              </div>
+              <div class="p-campaign-categories__item">
+                <a href="#" class="c-campaign-category js-campaign-category "> ファンダイビング </a>
+              </div>
+              <div class="p-campaign-categories__item">
+                <a href="#" class="c-campaign-category js-campaign-category "> 体験ダイビング </a>
               </div>
             </div>
           </div>
-          <div class="l-sidebar">
-            <aside class="p-sidebar">
-              <div class="p-sidebar__popularArticle">
-                <div class="p-sidebar-popularArticle">
-                  <div class="p-sidebar-popularArticle__title">
-                    <h3 class="c-sidebar-title">人気記事</h3>
-                  </div>
-                  <div class="p-sidebar-popularArticle__cards">
-                    <ul class="p-sidebar-articleCards">
-                      <li class="p-sidebar-articleCards__item">
-                        <div class="p-sidebar-articleCard">
-                          <a class="p-sidebar-articleCard__link" href="single.html">
-                            <div class="p-sidebar-articleCard__inner">
-                              <div class="p-sidebar-articleCard__img">
-                                <img src="
-            ./assets/images/common/blog4.jpg" alt="海の中を泳ぐ黄色い魚">
-                              </div>
-                              <div class="p-sidebar-articleCard__body">
-                                <time datetime="2023-11-17" class="p-sidebar-articleCard__date">2023/11/17</time>
-                                <div class="p-sidebar-articleCard__title">ライセンス取得</div>
-                              </div>
-                            </div>
-                          </a>
+          <div class="p-archiveVoices-section__content">
+            <ul class="p-lower-voiceCards">
+              <li class="p-lower-voiceCards__item">
+                <div class="p-lower-voiceCard">
+                  <div class="p-lower-voiceCard__inner">
+                    <div class="p-lower-voiceCard__head">
+                      <div class="p-lower-voiceCard__info">
+                        <div class="p-lower-voiceCard__meta">
+                          <p class="p-lower-voiceCard__age">20代(女性)</p>
+                          <p class="p-lower-voiceCard__tag">ライセンス講習</p>
                         </div>
-                      </li>
-                      <li class="p-sidebar-articleCards__item">
-                        <div class="p-sidebar-articleCard">
-                          <a class="p-sidebar-articleCard__link" href="single.html">
-                            <div class="p-sidebar-articleCard__inner">
-                              <div class="p-sidebar-articleCard__img">
-                                <img src="
-            ./assets/images/common/blog3.jpg" alt="海の中を泳ぐ亀">
-                              </div>
-                              <div class="p-sidebar-articleCard__body">
-                                <time datetime="2023-11-17" class="p-sidebar-articleCard__date">2023/11/17</time>
-                                <div class="p-sidebar-articleCard__title">ウミガメと泳ぐ</div>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-                      <li class="p-sidebar-articleCards__item">
-                        <div class="p-sidebar-articleCard">
-                          <a class="p-sidebar-articleCard__link" href="single.html">
-                            <div class="p-sidebar-articleCard__inner">
-                              <div class="p-sidebar-articleCard__img">
-                                <img src="
-            ./assets/images/common/blog2.jpg" alt="イソギンチャクから顔を出すクマノミ">
-                              </div>
-                              <div class="p-sidebar-articleCard__body">
-                                <time datetime="2023-11-17" class="p-sidebar-articleCard__date">2023/11/17</time>
-                                <div class="p-sidebar-articleCard__title">カクレクマノミ</div>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="p-sidebar__review">
-                <div class="p-sidebar-review">
-                  <a class="p-sidebar-review__link" href="archive-voices.html">
-                    <div class="p-sidebar-review__title">
-                      <h3 class="c-sidebar-title">口コミ</h3>
-                    </div>
-                    <div class="p-sidebar-review__content">
-                      <div class="p-sidebar-review__img">
-                        <img src="./assets/images/common/voice_side.jpg" alt="ソファに座って腕を組み微笑む若いカップル" />
+                        <h3 class="p-lower-voiceCard__title">ここにタイトルが入ります。ここにタイトル</h3>
+                      </div>
+                      <div class="p-lower-voiceCard__img">
+                        <img src="./assets/images/common/voice_1.jpg" alt="麦わら帽子をかぶり微笑む女性">
                       </div>
                     </div>
-                    <div class="p-sidebar-review__age">30代(カップル)</div>
-                    <div class="p-sidebar-review__articleTitle">ここにタイトルが入ります。ここにタイトル</div>
-                  </a>
-                  <div class="p-sidebar-review__btn">
-                    <div class="c-btn" ontouchstart="">
-                      <a href="archive-voices.html" class="c-btn__link"> View more<span></span>
-                      </a>
-                      <div class="c-btn__overlay"></div>
+                    <div class="p-lower-voiceCard__body">
+                      <p class="p-lower-voiceCard__text"> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。 </p>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="p-sidebar__campaign">
-                <div class="p-sidebar-campaign">
-                  <div class="p-sidebar-campaign__title">
-                    <h3 class="c-sidebar-title">キャンペーン</h3>
-                  </div>
-                  <div class="p-sidebar-campaign__cards">
-                    <ul class="p-sidebar-campaignCards">
-                      <li class="p-sidebar-campaignCards__item">
-                        <div class="p-sidebar-campaignCard">
-                          <a class="p-sidebar-campaignCard__link" href="archive-campaign.html">
-                            <div class="p-sidebar-campaignCard__img">
-                              <img src="./assets/images/common/campaign-card_1.jpg" alt="赤、青、黄等の小さな魚が海の中を泳いでいる">
-                            </div>
-                            <div class="p-sidebar-campaignCard__head">
-                              <p class="p-sidebar-campaignCard__title">ライセンス取得</p>
-                              <span class="p-sidebar-campaignCard__border"></span>
-                            </div>
-                            <div class="p-sidebar-campaignCard__body">
-                              <p class="p-sidebar-campaignCard__text">全部コミコミ(お一人様)</p>
-                              <div class="p-sidebar-campaignCard__price">
-                                <p class="p-sidebar-campaignCard__originalPrice">￥56,000</p>
-                                <p class="p-sidebar-campaignCard__newPrice">￥46,000</p>
-                              </div>
-                            </div>
-                          </a>
+              </li>
+              <li class="p-lower-voiceCards__item">
+                <div class="p-lower-voiceCard">
+                  <div class="p-lower-voiceCard__inner">
+                    <div class="p-lower-voiceCard__head">
+                      <div class="p-lower-voiceCard__info">
+                        <div class="p-lower-voiceCard__meta">
+                          <p class="p-lower-voiceCard__age">30代(男性)</p>
+                          <p class="p-lower-voiceCard__tag">ファンダイビング</p>
                         </div>
-                      </li>
-                      <li class="p-sidebar-campaignCards__item">
-                        <div class="p-sidebar-campaignCard">
-                          <a class="p-sidebar-campaignCard__link" href="archive-campaign.html">
-                            <div class="p-sidebar-campaignCard__img">
-                              <img src="./assets/images/common/campaign-card_2.jpg" alt="海岸を出発し島に向かう二艘の船">
-                            </div>
-                            <div class="p-sidebar-campaignCard__head">
-                              <p class="p-sidebar-campaignCard__title">貸切体験ダイビング</p>
-                              <span class="p-sidebar-campaignCard__border"></span>
-                            </div>
-                            <div class="p-sidebar-campaignCard__body">
-                              <p class="p-sidebar-campaignCard__text">全部コミコミ(お一人様)</p>
-                              <div class="p-sidebar-campaignCard__price">
-                                <p class="p-sidebar-campaignCard__originalPrice">￥20,000</p>
-                                <p class="p-sidebar-campaignCard__newPrice">￥16,000</p>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="p-sidebar-campaign__btn">
-                    <div class="c-btn" ontouchstart="">
-                      <a href="archive-campaign.html" class="c-btn__link"> View more<span></span>
-                      </a>
-                      <div class="c-btn__overlay"></div>
+                        <h3 class="p-lower-voiceCard__title">ここにタイトルが入ります。ここにタイトル</h3>
+                      </div>
+                      <div class="p-lower-voiceCard__img">
+                        <img src="./assets/images/common/voice_2.jpg" alt="笑顔でポーズをとる紺色の服を着た男性">
+                      </div>
+                    </div>
+                    <div class="p-lower-voiceCard__body">
+                      <p class="p-lower-voiceCard__text"> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。 </p>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="p-sidebar__archive">
-                <div class="p-sidebar-archive">
-                  <div class="p-sidebar-archive__title">
-                    <h3 class="c-sidebar-title">アーカイブ</h3>
+              </li>
+              <li class="p-lower-voiceCards__item">
+                <div class="p-lower-voiceCard">
+                  <div class="p-lower-voiceCard__inner">
+                    <div class="p-lower-voiceCard__head">
+                      <div class="p-lower-voiceCard__info">
+                        <div class="p-lower-voiceCard__meta">
+                          <p class="p-lower-voiceCard__age">30代(女性)</p>
+                          <p class="p-lower-voiceCard__tag">体験ダイビング</p>
+                        </div>
+                        <h3 class="p-lower-voiceCard__title">ここにタイトルが入ります。ここにタイトル</h3>
+                      </div>
+                      <div class="p-lower-voiceCard__img">
+                        <img src="./assets/images/common/voice_3.jpg" alt="並んで微笑む２人の女性">
+                      </div>
+                    </div>
+                    <div class="p-lower-voiceCard__body">
+                      <p class="p-lower-voiceCard__text"> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。 </p>
+                    </div>
                   </div>
-                  <ul class="p-sidebar-archive__lists">
-                    <li class="p-sidebar-archive__lists__item">
-                      <div class="p-sidebar-archiveList">
-                        <p class="p-sidebar-archiveList__year js-archive">2023</p>
-                        <div class="p-sidebar-archiveList__months js-archive-lists">
-                          <a href="" class="p-sidebar-archiveList__month">3月</a>
-                          <a href="" class="p-sidebar-archiveList__month">2月</a>
-                          <a href="" class="p-sidebar-archiveList__month">1月</a>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="p-sidebar-archive__lists__item">
-                      <div class="p-sidebar-archiveList">
-                        <p class="p-sidebar-archiveList__year js-archive">2022</p>
-                        <div class="p-sidebar-archiveList__months js-archive-lists">
-                          <a href="" class="p-sidebar-archiveList__month">12月</a>
-                          <a href="" class="p-sidebar-archiveList__month">11月</a>
-                          <a href="" class="p-sidebar-archiveList__month">10月</a>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
                 </div>
+              </li>
+              <li class="p-lower-voiceCards__item">
+                <div class="p-lower-voiceCard">
+                  <div class="p-lower-voiceCard__inner">
+                    <div class="p-lower-voiceCard__head">
+                      <div class="p-lower-voiceCard__info">
+                        <div class="p-lower-voiceCard__meta">
+                          <p class="p-lower-voiceCard__age">20代(女性)</p>
+                          <p class="p-lower-voiceCard__tag">体験ダイビング</p>
+                        </div>
+                        <h3 class="p-lower-voiceCard__title">ここにタイトルが入ります。ここにタイトル</h3>
+                      </div>
+                      <div class="p-lower-voiceCard__img">
+                        <img src="./assets/images/common/voice_4.jpg" alt="笑顔でこちらを見ているロングヘアの女性">
+                      </div>
+                    </div>
+                    <div class="p-lower-voiceCard__body">
+                      <p class="p-lower-voiceCard__text"> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。 </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="p-lower-voiceCards__item">
+                <div class="p-lower-voiceCard">
+                  <div class="p-lower-voiceCard__inner">
+                    <div class="p-lower-voiceCard__head">
+                      <div class="p-lower-voiceCard__info">
+                        <div class="p-lower-voiceCard__meta">
+                          <p class="p-lower-voiceCard__age">30代(カップル)</p>
+                          <p class="p-lower-voiceCard__tag">ファンダイビング</p>
+                        </div>
+                        <h3 class="p-lower-voiceCard__title">ここにタイトルが入ります。ここにタイトル</h3>
+                      </div>
+                      <div class="p-lower-voiceCard__img">
+                        <img src="./assets/images/common/voice_5.jpg" alt="ソファに座って腕を組み微笑む若いカップル">
+                      </div>
+                    </div>
+                    <div class="p-lower-voiceCard__body">
+                      <p class="p-lower-voiceCard__text"> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。 </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="p-lower-voiceCards__item">
+                <div class="p-lower-voiceCard">
+                  <div class="p-lower-voiceCard__inner">
+                    <div class="p-lower-voiceCard__head">
+                      <div class="p-lower-voiceCard__info">
+                        <div class="p-lower-voiceCard__meta">
+                          <p class="p-lower-voiceCard__age">20代(女性)</p>
+                          <p class="p-lower-voiceCard__tag">ライセンス講習</p>
+                        </div>
+                        <h3 class="p-lower-voiceCard__title">ここにタイトルが入ります。ここにタイトル</h3>
+                      </div>
+                      <div class="p-lower-voiceCard__img">
+                        <img src="./assets/images/common/voice_6.jpg" alt="左側に視線を向けて笑顔で話すお団子ヘアの女性">
+                      </div>
+                    </div>
+                    <div class="p-lower-voiceCard__body">
+                      <p class="p-lower-voiceCard__text"> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。 </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="p-archiveVoices-section__pagination">
+            <div class="c-pagination" ontouchstart="">
+              <div class="pagination">
+                <nav class="navigation">
+                  <div class="nav-links u-desktop-flex">
+                    <a class="prev page-numbers" href="#"><span></span></a>
+                    <a class="page-numbers current js-pagination">1</a>
+                    <a class="page-numbers js-pagination" href="#">2</a>
+                    <a class="page-numbers js-pagination" href="#">3</a>
+                    <a class="page-numbers js-pagination" href="#">4</a>
+                    <a class="page-numbers js-pagination" href="#">5</a>
+                    <a class="page-numbers js-pagination" href="#">6</a>
+                    <a class="next page-numbers" href="#"><span></span></a>
+                  </div>
+                  <div class="nav-links u-mobile-flex">
+                    <a class="prev page-numbers" href="#"><span></span></a>
+                    <span class="page-numbers current">1</span>
+                    <a class="page-numbers" href="#">2</a>
+                    <a class="page-numbers" href="#">3</a>
+                    <a class="page-numbers" href="#">4</a>
+                    <a class="next page-numbers" href="#"><span></span></a>
+                  </div>
+                </nav>
               </div>
-            </aside>
+            </div>
+          </div>
+          <div class="p-archiveVoices-section__fish">
+            <div class="c-img-fish c-img-fish--reverse"></div>
           </div>
         </div>
       </div>
@@ -544,6 +491,4 @@
   <div class="c-page-top-btn js-page-top" ontouchstart=""></div>
 </body>
 </html>
-
-
 <?php get_footer(); ?>

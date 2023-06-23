@@ -7,13 +7,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <!-- meta情報 -->
-  <title>投稿__diving_shop</title>
-  <meta name="description" content="ダイビングショップのブログ詳細ページです">
-  <meta property="og:site_name" content="投稿__diving_shop">
-  <meta property="og:url" content="https://aaa.com/blog/投稿/">
+  <title>price__diving_shop</title>
+  <meta name="description" content="ダイビングショップの料金一覧ページです">
+  <meta property="og:site_name" content="price__diving_shop">
+  <meta property="og:url" content="https://aaa.com/price/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="投稿__diving_shop">
-  <meta property="og:description" content="ダイビングショップのブログ詳細ページです">
+  <meta property="og:title" content="price__diving_shop">
+  <meta property="og:description" content="ダイビングショップの料金一覧ページです">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
   <!-- （画像関連） -->
@@ -171,249 +171,143 @@
     </div>
   </header>
   <main>
-    <div class="p-lower-mv p-lower-mv--blog">
+    <div class="p-lower-mv p-lower-mv--price">
       <div class="p-lower-mv__content">
-        <h1 class="p-lower-mv_title">blog</h1>
+        <h1 class="p-lower-mv_title">price</h1>
       </div>
     </div>
     <div class="l-inner">
       <nav class="breadcrumb">
         <ul class="breadcrumb-list">
           <li class="breadcrumb-item"><a href="index.html">top</a><span>&gt;</span></li>
-          <li class="breadcrumb-item"><a href="">ブログ一覧</a><span>&gt;</span></li>
-          <li class="breadcrumb-item active">ブログ詳細</li>
+          <li class="breadcrumb-item active">料金一覧</li>
         </ul>
       </nav>
     </div>
     <div class="l-lower-head">
-      <div class="p-single-container">
-        <div class="l-blog-container l-inner">
-          <div class="p-single-container__fish">
-            <div class="c-img-fish c-img-fish--reverse"></div>
-          </div>
-          <div class="l-content">
-            <div class="p-single-section">
-              <div class="p-single-section__inner">
-                <div class="p-single-section__content">
-                  <div class="p-lower-singleBlog-info">
-                    <time class="p-lower-singleBlog-info__time" datetime="2023-11-17">2023.11/17</time>
-                    <h2 class="p-lower-singleBlog-info__title">ライセンス取得</h2>
-                  </div>
-                  <div class="p-lower-singleBlog">
-                    <div>
-                      <img src="./assets/images/common/blog1.jpg" alt="" />
+      <div class="p-pagePrice-section">
+        <div class="p-pagePrice-section__inner l-inner">
+          <div class="p-pagePrice-section__content">
+            <!-- p-lower-price.ejs -->
+            <div class="p-lower-price">
+              <ul class="p-lower-price__items">
+                <li class="p-lower-price__item">
+                  <div class="p-lower-priceTable">
+                    <div class="p-lower-priceTable__line u-mobile">
+                      <h2 class="p-lower-priceTable__title"> ライセンス講習 <span></span>
+                      </h2>
                     </div>
-                    <p> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 </p>
-                    <div>
-                      <img src="./assets/images/common/blog1.jpg" alt="" />
+                    <div class="p-lower-priceTable__row u-desktop-flex">
+                      <div class="p-lower-priceTable__title">ライセンス講習</div>
+                      <div class="p-lower-priceTable__icon"></div>
                     </div>
-                    <p> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 </p>
-                    <nav>
-                      <ul>
-                        <div class="c-img-starfish c-img-starfish--green"></div>
-                        <li>リスト１</li>
-                      </ul>
-                      <ul>
-                        <div class="c-img-starfish c-img-starfish--green"></div>
-                        <li>リスト２</li>
-                      </ul>
-                      <ul>
-                        <div class="c-img-starfish c-img-starfish--green"></div>
-                        <li>リスト３</li>
-                      </ul>
-                    </nav>
-                    <p> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 </p>
-                  </div>
-                </div>
-                <div class="p-single-section__pagination">
-                  <div class="c-blog-pagination" ontouchstart="">
-                    <div class="pagination">
-                      <nav class="navigation">
-                        <div class="nav-links">
-                          <a class="prev page-numbers" href="#"><span></span></a>
-                          <a class="next page-numbers" href="#"><span></span></a>
-                        </div>
-                      </nav>
+                    <div class="p-lower-priceTable__content">
+                      <dl class="p-lower-priceTable__list">
+                        <dt class="p-lower-priceTable__listLeft">オープンウォーター<br class="u-mobile">ダイバーコース</dt>
+                        <dd class="p-lower-priceTable__listRight">¥50,000</dd>
+                      </dl>
+                      <dl class="p-lower-priceTable__list">
+                        <dt class="p-lower-priceTable__listLeft">アドバンスド<br class="u-mobile">オープンウォーターコース</dt>
+                        <dd class="p-lower-priceTable__listRight">¥60,000</dd>
+                      </dl>
+                      <dl class="p-lower-priceTable__list">
+                        <dt class="p-lower-priceTable__listLeft">レスキュー＋EFRコース</dt>
+                        <dd class="p-lower-priceTable__listRight">¥70,000</dd>
+                      </dl>
                     </div>
                   </div>
-                </div>
-                <!-- <div class="p-single-section__fish">
-      </div> -->
-              </div>
+                </li>
+                <li class="p-lower-price__item">
+                  <div class="p-lower-priceTable">
+                    <div class="p-lower-priceTable__line u-mobile">
+                      <h2 class="p-lower-priceTable__title"> 体験ダイビング <span></span>
+                      </h2>
+                    </div>
+                    <div class="p-lower-priceTable__row u-desktop-flex">
+                      <div class="p-lower-priceTable__title">体験ダイビング</div>
+                      <div class="p-lower-priceTable__icon"></div>
+                    </div>
+                    <div class="p-lower-priceTable__content">
+                      <dl class="p-lower-priceTable__list">
+                        <dt class="p-lower-priceTable__listLeft">ビーチ体験ダイビング<br class="u-mobile">(半日)</dt>
+                        <dd class="p-lower-priceTable__listRight">¥7,000</dd>
+                      </dl>
+                      <dl class="p-lower-priceTable__list">
+                        <dt class="p-lower-priceTable__listLeft">ビーチ体験ダイビング<br class="u-mobile">(1日)</dt>
+                        <dd class="p-lower-priceTable__listRight">¥14,000</dd>
+                      </dl>
+                      <dl class="p-lower-priceTable__list">
+                        <dt class="p-lower-priceTable__listLeft">ボート体験ダイビング<br class="u-mobile">(半日)</dt>
+                        <dd class="p-lower-priceTable__listRight">¥10,000</dd>
+                      </dl>
+                      <dl class="p-lower-priceTable__list">
+                        <dt class="p-lower-priceTable__listLeft">ボート体験ダイビング<br class="u-mobile">(半日)</dt>
+                        <dd class="p-lower-priceTable__listRight">¥10,000</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </li>
+                <li class="p-lower-price__item">
+                  <div class="p-lower-priceTable">
+                    <div class="p-lower-priceTable__line u-mobile">
+                      <h2 class="p-lower-priceTable__title"> ファンダイビング <span></span>
+                      </h2>
+                    </div>
+                    <div class="p-lower-priceTable__row u-desktop-flex">
+                      <div class="p-lower-priceTable__title">ファンダイビング</div>
+                      <div class="p-lower-priceTable__icon"></div>
+                    </div>
+                    <div class="p-lower-priceTable__content">
+                      <dl class="p-lower-priceTable__list">
+                        <dt class="p-lower-priceTable__listLeft">ビーチダイビング<br class="u-mobile">(2ダイブ)</dt>
+                        <dd class="p-lower-priceTable__listRight">¥14,000</dd>
+                      </dl>
+                      <dl class="p-lower-priceTable__list">
+                        <dt class="p-lower-priceTable__listLeft">ボートダイビング<br class="u-mobile">(2ダイブ)</dt>
+                        <dd class="p-lower-priceTable__listRight">¥18,000</dd>
+                      </dl>
+                      <dl class="p-lower-priceTable__list">
+                        <dt class="p-lower-priceTable__listLeft">スペシャルダイビング<br class="u-mobile">(2ダイブ)</dt>
+                        <dd class="p-lower-priceTable__listRight">¥24,000</dd>
+                      </dl>
+                      <dl class="p-lower-priceTable__list">
+                        <dt class="p-lower-priceTable__listLeft">ナイトダイビング<br class="u-mobile">(1ダイブ)</dt>
+                        <dd class="p-lower-priceTable__listRight">¥10,000</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </li>
+                <li class="p-lower-price__item">
+                  <div class="p-lower-priceTable">
+                    <div class="p-lower-priceTable__line u-mobile">
+                      <h2 class="p-lower-priceTable__title"> スペシャルダイビング <span></span>
+                      </h2>
+                    </div>
+                    <div class="p-lower-priceTable__row u-desktop-flex">
+                      <div class="p-lower-priceTable__title">スペシャルダイビング</div>
+                      <div class="p-lower-priceTable__icon"></div>
+                    </div>
+                    <div class="p-lower-priceTable__content">
+                      <dl class="p-lower-priceTable__list">
+                        <dt class="p-lower-priceTable__listLeft">貸切ダイビング<br class="u-mobile">(2ダイブ)</dt>
+                        <dd class="p-lower-priceTable__listRight">¥24,000</dd>
+                      </dl>
+                      <dl class="p-lower-priceTable__list">
+                        <dt class="p-lower-priceTable__listLeft">1日ダイビング<br class="u-mobile">(3ダイブ)</dt>
+                        <dd class="p-lower-priceTable__listRight">¥32,000</dd>
+                      </dl>
+                      <dl class="p-lower-priceTable__list">
+                        <dt class="p-lower-priceTable__listLeft">ナイトダイビング<br class="u-mobile">(2ダイブ)</dt>
+                        <dd class="p-lower-priceTable__listRight">¥14,000</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="l-sidebar">
-            <aside class="p-sidebar">
-              <div class="p-sidebar__popularArticle">
-                <div class="p-sidebar-popularArticle">
-                  <div class="p-sidebar-popularArticle__title">
-                    <h3 class="c-sidebar-title">人気記事</h3>
-                  </div>
-                  <div class="p-sidebar-popularArticle__cards">
-                    <ul class="p-sidebar-articleCards">
-                      <li class="p-sidebar-articleCards__item">
-                        <div class="p-sidebar-articleCard">
-                          <a class="p-sidebar-articleCard__link" href="single.html">
-                            <div class="p-sidebar-articleCard__inner">
-                              <div class="p-sidebar-articleCard__img">
-                                <img src="
-            ./assets/images/common/blog4.jpg" alt="海の中を泳ぐ黄色い魚">
-                              </div>
-                              <div class="p-sidebar-articleCard__body">
-                                <time datetime="2023-11-17" class="p-sidebar-articleCard__date">2023/11/17</time>
-                                <div class="p-sidebar-articleCard__title">ライセンス取得</div>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-                      <li class="p-sidebar-articleCards__item">
-                        <div class="p-sidebar-articleCard">
-                          <a class="p-sidebar-articleCard__link" href="single.html">
-                            <div class="p-sidebar-articleCard__inner">
-                              <div class="p-sidebar-articleCard__img">
-                                <img src="
-            ./assets/images/common/blog3.jpg" alt="海の中を泳ぐ亀">
-                              </div>
-                              <div class="p-sidebar-articleCard__body">
-                                <time datetime="2023-11-17" class="p-sidebar-articleCard__date">2023/11/17</time>
-                                <div class="p-sidebar-articleCard__title">ウミガメと泳ぐ</div>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-                      <li class="p-sidebar-articleCards__item">
-                        <div class="p-sidebar-articleCard">
-                          <a class="p-sidebar-articleCard__link" href="single.html">
-                            <div class="p-sidebar-articleCard__inner">
-                              <div class="p-sidebar-articleCard__img">
-                                <img src="
-            ./assets/images/common/blog2.jpg" alt="イソギンチャクから顔を出すクマノミ">
-                              </div>
-                              <div class="p-sidebar-articleCard__body">
-                                <time datetime="2023-11-17" class="p-sidebar-articleCard__date">2023/11/17</time>
-                                <div class="p-sidebar-articleCard__title">カクレクマノミ</div>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="p-sidebar__review">
-                <div class="p-sidebar-review">
-                  <a class="p-sidebar-review__link" href="archive-voices.html">
-                    <div class="p-sidebar-review__title">
-                      <h3 class="c-sidebar-title">口コミ</h3>
-                    </div>
-                    <div class="p-sidebar-review__content">
-                      <div class="p-sidebar-review__img">
-                        <img src="./assets/images/common/voice_side.jpg" alt="ソファに座って腕を組み微笑む若いカップル" />
-                      </div>
-                    </div>
-                    <div class="p-sidebar-review__age">30代(カップル)</div>
-                    <div class="p-sidebar-review__articleTitle">ここにタイトルが入ります。ここにタイトル</div>
-                  </a>
-                  <div class="p-sidebar-review__btn">
-                    <div class="c-btn" ontouchstart="">
-                      <a href="archive-voices.html" class="c-btn__link"> View more<span></span>
-                      </a>
-                      <div class="c-btn__overlay"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="p-sidebar__campaign">
-                <div class="p-sidebar-campaign">
-                  <div class="p-sidebar-campaign__title">
-                    <h3 class="c-sidebar-title">キャンペーン</h3>
-                  </div>
-                  <div class="p-sidebar-campaign__cards">
-                    <ul class="p-sidebar-campaignCards">
-                      <li class="p-sidebar-campaignCards__item">
-                        <div class="p-sidebar-campaignCard">
-                          <a class="p-sidebar-campaignCard__link" href="archive-campaign.html">
-                            <div class="p-sidebar-campaignCard__img">
-                              <img src="./assets/images/common/campaign-card_1.jpg" alt="赤、青、黄等の小さな魚が海の中を泳いでいる">
-                            </div>
-                            <div class="p-sidebar-campaignCard__head">
-                              <p class="p-sidebar-campaignCard__title">ライセンス取得</p>
-                              <span class="p-sidebar-campaignCard__border"></span>
-                            </div>
-                            <div class="p-sidebar-campaignCard__body">
-                              <p class="p-sidebar-campaignCard__text">全部コミコミ(お一人様)</p>
-                              <div class="p-sidebar-campaignCard__price">
-                                <p class="p-sidebar-campaignCard__originalPrice">￥56,000</p>
-                                <p class="p-sidebar-campaignCard__newPrice">￥46,000</p>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-                      <li class="p-sidebar-campaignCards__item">
-                        <div class="p-sidebar-campaignCard">
-                          <a class="p-sidebar-campaignCard__link" href="archive-campaign.html">
-                            <div class="p-sidebar-campaignCard__img">
-                              <img src="./assets/images/common/campaign-card_2.jpg" alt="海岸を出発し島に向かう二艘の船">
-                            </div>
-                            <div class="p-sidebar-campaignCard__head">
-                              <p class="p-sidebar-campaignCard__title">貸切体験ダイビング</p>
-                              <span class="p-sidebar-campaignCard__border"></span>
-                            </div>
-                            <div class="p-sidebar-campaignCard__body">
-                              <p class="p-sidebar-campaignCard__text">全部コミコミ(お一人様)</p>
-                              <div class="p-sidebar-campaignCard__price">
-                                <p class="p-sidebar-campaignCard__originalPrice">￥20,000</p>
-                                <p class="p-sidebar-campaignCard__newPrice">￥16,000</p>
-                              </div>
-                            </div>
-                          </a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="p-sidebar-campaign__btn">
-                    <div class="c-btn" ontouchstart="">
-                      <a href="archive-campaign.html" class="c-btn__link"> View more<span></span>
-                      </a>
-                      <div class="c-btn__overlay"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="p-sidebar__archive">
-                <div class="p-sidebar-archive">
-                  <div class="p-sidebar-archive__title">
-                    <h3 class="c-sidebar-title">アーカイブ</h3>
-                  </div>
-                  <ul class="p-sidebar-archive__lists">
-                    <li class="p-sidebar-archive__lists__item">
-                      <div class="p-sidebar-archiveList">
-                        <p class="p-sidebar-archiveList__year js-archive">2023</p>
-                        <div class="p-sidebar-archiveList__months js-archive-lists">
-                          <a href="" class="p-sidebar-archiveList__month">3月</a>
-                          <a href="" class="p-sidebar-archiveList__month">2月</a>
-                          <a href="" class="p-sidebar-archiveList__month">1月</a>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="p-sidebar-archive__lists__item">
-                      <div class="p-sidebar-archiveList">
-                        <p class="p-sidebar-archiveList__year js-archive">2022</p>
-                        <div class="p-sidebar-archiveList__months js-archive-lists">
-                          <a href="" class="p-sidebar-archiveList__month">12月</a>
-                          <a href="" class="p-sidebar-archiveList__month">11月</a>
-                          <a href="" class="p-sidebar-archiveList__month">10月</a>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </aside>
+          <div class="p-pagePrice-section__fish">
+            <div class="c-img-fish c-img-fish--reverse"></div>
           </div>
         </div>
       </div>
