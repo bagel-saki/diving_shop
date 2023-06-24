@@ -18,9 +18,8 @@ $price = esc_url(home_url('/price/'));
 $faq = esc_url(home_url('/faq/'));
 $contact = esc_url(home_url('/contact/'));
 $privacy = esc_url(home_url('/privacy-policy/'));
-$terms = esc_url(home_url('/page-terms/'));
+$terms = esc_url(home_url('/terms/'));
 ?>
-
 
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
