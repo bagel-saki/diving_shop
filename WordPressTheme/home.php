@@ -7,12 +7,7 @@
       </div>
     </div>
     <div class="l-inner">
-      <nav class="breadcrumb">
-        <ul class="breadcrumb-list">
-          <li class="breadcrumb-item"><a href="index.html">top</a><span>&gt;</span></li>
-          <li class="breadcrumb-item active">ブログ一覧</li>
-        </ul>
-      </nav>
+    <?php get_template_part('breadcrumb'); ?>
     </div>
     <div class="l-lower-head">
       <div class="p-home-container">
@@ -25,146 +20,28 @@
               <div class="p-home-section__inner">
                 <div class="p-home-section__content">
                   <ul class="p-lower-blogCards">
+                  <?php if (have_posts()) : ?>
+                    <?php while (have_posts()) : the_post(); ?>
                     <li class="p-blog-cards__item">
-                      <a href="single.html" class="p-blog-card">
+                      <a href="<?php the_permalink(); ?>" class="p-blog-card">
                         <figure class="p-blog-card__img">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog1.jpg" alt="ピンク色の珊瑚の写真">
+                          <?php if (has_post_thumbnail()) : ?>  
+                          <?php the_post_thumbnail(); ?>
+                          <?php else : ?>
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/common/noimage.jpg" alt="no image">
+                          <?php endif; ?>
                         </figure>
                         <div class="p-blog-card__body">
-                          <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
+                          <time class="p-blog-card__date" datetime="<?php echo get_the_date('Y-m-d'); ?>"><?php echo get_the_date('Y.m.d'); ?></time>
                           <div class="p-blog-card__titleBox">
-                            <h3 class="p-blog-card__title">ライセンス取得</h3>
+                            <h3 class="p-blog-card__title"><?php the_title(); ?></h3>
                           </div>
-                          <p class="p-blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストここにテキストが入ります。ここにテキストが入ります。ここにテキストここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
+                          <p class="p-blog-card__text"><?php echo get_the_excerpt(); ?></p>
                         </div>
                       </a>
                     </li>
-                    <li class="p-blog-cards__item">
-                      <a href="single.html" class="p-blog-card">
-                        <figure class="p-blog-card__img">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog2.jpg" alt="青い海を泳ぐ亀の写真">
-                        </figure>
-                        <div class="p-blog-card__body">
-                          <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                          <div class="p-blog-card__titleBox">
-                            <h3 class="p-blog-card__title">ウミガメと泳ぐ</h3>
-                          </div>
-                          <p class="p-blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="p-blog-cards__item">
-                      <a href="single.html" class="p-blog-card">
-                        <figure class="p-blog-card__img">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog3.jpg" alt="イソギンチャクの中から顔を出すクマノミの写真">
-                        </figure>
-                        <div class="p-blog-card__body">
-                          <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                          <div class="p-blog-card__titleBox">
-                            <h3 class="p-blog-card__title">カクレクマノミ</h3>
-                          </div>
-                          <p class="p-blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="p-blog-cards__item">
-                      <a href="single.html" class="p-blog-card">
-                        <figure class="p-blog-card__img">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog4.jpg" alt="黄色い魚の写真">
-                        </figure>
-                        <div class="p-blog-card__body">
-                          <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                          <div class="p-blog-card__titleBox">
-                            <h3 class="p-blog-card__title">カクレクマノミ</h3>
-                          </div>
-                          <p class="p-blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="p-blog-cards__item">
-                      <a href="single.html" class="p-blog-card">
-                        <figure class="p-blog-card__img">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog5.jpg" alt="海中を這うウミムシの写真">
-                        </figure>
-                        <div class="p-blog-card__body">
-                          <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                          <div class="p-blog-card__titleBox">
-                            <h3 class="p-blog-card__title">カクレクマノミ</h3>
-                          </div>
-                          <p class="p-blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="p-blog-cards__item">
-                      <a href="single.html" class="p-blog-card">
-                        <figure class="p-blog-card__img">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog6.jpg" alt="暗い水の中で光るクラゲ群">
-                        </figure>
-                        <div class="p-blog-card__body">
-                          <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                          <div class="p-blog-card__titleBox">
-                            <h3 class="p-blog-card__title">カクレクマノミ</h3>
-                          </div>
-                          <p class="p-blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="p-blog-cards__item">
-                      <a href="single.html" class="p-blog-card">
-                        <figure class="p-blog-card__img">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog3.jpg" alt="イソギンチャクの中から顔を出すクマノミの写真">
-                        </figure>
-                        <div class="p-blog-card__body">
-                          <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                          <div class="p-blog-card__titleBox">
-                            <h3 class="p-blog-card__title">カクレクマノミ</h3>
-                          </div>
-                          <p class="p-blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="p-blog-cards__item">
-                      <a href="single.html" class="p-blog-card">
-                        <figure class="p-blog-card__img">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog4.jpg" alt="黄色い魚の写真">
-                        </figure>
-                        <div class="p-blog-card__body">
-                          <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                          <div class="p-blog-card__titleBox">
-                            <h3 class="p-blog-card__title">カクレクマノミ</h3>
-                          </div>
-                          <p class="p-blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="p-blog-cards__item">
-                      <a href="single.html" class="p-blog-card">
-                        <figure class="p-blog-card__img">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog5.jpg" alt="海中を這うウミムシの写真">
-                        </figure>
-                        <div class="p-blog-card__body">
-                          <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                          <div class="p-blog-card__titleBox">
-                            <h3 class="p-blog-card__title">カクレクマノミ</h3>
-                          </div>
-                          <p class="p-blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                        </div>
-                      </a>
-                    </li>
-                    <li class="p-blog-cards__item">
-                      <a href="single.html" class="p-blog-card">
-                        <figure class="p-blog-card__img">
-                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog6.jpg" alt="暗い水の中で光るクラゲ群">
-                        </figure>
-                        <div class="p-blog-card__body">
-                          <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                          <div class="p-blog-card__titleBox">
-                            <h3 class="p-blog-card__title">カクレクマノミ</h3>
-                          </div>
-                          <p class="p-blog-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキスト</p>
-                        </div>
-                      </a>
-                    </li>
+                    <?php endwhile; ?>
+                  <?php endif; ?>
                   </ul>
                 </div>
                 <div class="p-home-section__pagination">
