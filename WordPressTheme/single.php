@@ -31,11 +31,11 @@
                   </div>
                   <div class="p-lower-singleBlog">
                     <div>
-                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/blog1.jpg" alt="" />
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog1.jpg" alt="" />
                     </div>
                     <p> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 </p>
                     <div>
-                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/blog1.jpg" alt="" />
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog1.jpg" alt="" />
                     </div>
                     <p> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 </p>
                     <nav>
@@ -86,8 +86,7 @@
                           <a class="p-sidebar-articleCard__link" href="single.html">
                             <div class="p-sidebar-articleCard__inner">
                               <div class="p-sidebar-articleCard__img">
-                                <img src="<?php echo get_template_directory_uri(); ?>
-            ./assets/images/common/blog4.jpg" alt="海の中を泳ぐ黄色い魚">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog4.jpg" alt="海の中を泳ぐ黄色い魚">
                               </div>
                               <div class="p-sidebar-articleCard__body">
                                 <time datetime="2023-11-17" class="p-sidebar-articleCard__date">2023/11/17</time>
@@ -102,8 +101,7 @@
                           <a class="p-sidebar-articleCard__link" href="single.html">
                             <div class="p-sidebar-articleCard__inner">
                               <div class="p-sidebar-articleCard__img">
-                                <img src="<?php echo get_template_directory_uri(); ?>
-            ./assets/images/common/blog3.jpg" alt="海の中を泳ぐ亀">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog3.jpg" alt="海の中を泳ぐ亀">
                               </div>
                               <div class="p-sidebar-articleCard__body">
                                 <time datetime="2023-11-17" class="p-sidebar-articleCard__date">2023/11/17</time>
@@ -118,8 +116,7 @@
                           <a class="p-sidebar-articleCard__link" href="single.html">
                             <div class="p-sidebar-articleCard__inner">
                               <div class="p-sidebar-articleCard__img">
-                                <img src="<?php echo get_template_directory_uri(); ?>
-            ./assets/images/common/blog2.jpg" alt="イソギンチャクから顔を出すクマノミ">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog2.jpg" alt="イソギンチャクから顔を出すクマノミ">
                               </div>
                               <div class="p-sidebar-articleCard__body">
                                 <time datetime="2023-11-17" class="p-sidebar-articleCard__date">2023/11/17</time>
@@ -141,7 +138,7 @@
                     </div>
                     <div class="p-sidebar-review__content">
                       <div class="p-sidebar-review__img">
-                        <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/voice_side.jpg" alt="ソファに座って腕を組み微笑む若いカップル" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/voice_side.jpg" alt="ソファに座って腕を組み微笑む若いカップル" />
                       </div>
                     </div>
                     <div class="p-sidebar-review__age">30代(カップル)</div>
@@ -167,7 +164,7 @@
                         <div class="p-sidebar-campaignCard">
                           <a class="p-sidebar-campaignCard__link" href="archive-campaign.html">
                             <div class="p-sidebar-campaignCard__img">
-                              <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_1.jpg" alt="赤、青、黄等の小さな魚が海の中を泳いでいる">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/campaign-card_1.jpg" alt="赤、青、黄等の小さな魚が海の中を泳いでいる">
                             </div>
                             <div class="p-sidebar-campaignCard__head">
                               <p class="p-sidebar-campaignCard__title">ライセンス取得</p>
@@ -187,7 +184,7 @@
                         <div class="p-sidebar-campaignCard">
                           <a class="p-sidebar-campaignCard__link" href="archive-campaign.html">
                             <div class="p-sidebar-campaignCard__img">
-                              <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_2.jpg" alt="海岸を出発し島に向かう二艘の船">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/campaign-card_2.jpg" alt="海岸を出発し島に向かう二艘の船">
                             </div>
                             <div class="p-sidebar-campaignCard__head">
                               <p class="p-sidebar-campaignCard__title">貸切体験ダイビング</p>

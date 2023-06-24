@@ -11,7 +11,7 @@ let cardContent = [
 <ul class="p-blog-cards">
   <% cardContent.slice(0, 3).forEach(function(blogCard) { %>
     <li class="p-blog-cards__item">
-      <%- include(ejsPath +  '/_p-blog-card', {
+      <%- include(ejsPath +  './project/_p-blog-card', {
         i: blogCard.i,
         alt: blogCard.alt,
         dt: blogCard.dt,

@@ -24,40 +24,32 @@
                 <div class="swiper-slide">
                   <div class="slide-img">
                     <picture>
-                      <source srcset="
-                ./assets/images/common/main-view_1.jpg" media="(min-width:1024px)">
-                      <img src="<?php echo get_template_directory_uri(); ?>
-                ./assets/images/common/main-view-sp_1.jpg" alt="美しい海の中を泳ぐウミガメ">
+                      <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/main-view_1.jpg" media="(min-width:1024px)">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/main-view-sp_1.jpg" alt="美しい海の中を泳ぐウミガメ">
                     </picture>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="slide-img">
                     <picture>
-                      <source srcset="
-                ./assets/images/common/main-view_2.jpg" media="(min-width:1024px)">
-                      <img src="<?php echo get_template_directory_uri(); ?>
-                ./assets/images/common/main-view-sp_2.jpg" alt="海を泳ぐウミガメと二人のダイバーを下から見ている">
+                      <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/main-view_2.jpg" media="(min-width:1024px)">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/main-view-sp_2.jpg" alt="海を泳ぐウミガメと二人のダイバーを下から見ている">
                     </picture>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="slide-img">
                     <picture>
-                      <source srcset="
-                ./assets/images/common/main-view_3.jpg" media="(min-width:1024px)">
-                      <img src="<?php echo get_template_directory_uri(); ?>
-                ./assets/images/common/main-view-sp_3.jpg" alt="海に浮かぶ船３艘と島">
+                      <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/main-view_3.jpg" media="(min-width:1024px)">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/main-view-sp_3.jpg" alt="海に浮かぶ船３艘と島">
                     </picture>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="slide-img">
                     <picture>
-                      <source srcset="
-                ./assets/images/common/main-view_4.jpg" media="(min-width:1024px)">
-                      <img src="<?php echo get_template_directory_uri(); ?>
-                ./assets/images/common/main-view-sp_4.jpg" alt="砂浜とコバルトブルーの海">
+                      <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/main-view_4.jpg" media="(min-width:1024px)">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/main-view-sp_4.jpg" alt="砂浜とコバルトブルーの海">
                     </picture>
                   </div>
                 </div>
@@ -88,7 +80,7 @@
                 <div class="p-campaign-section__item  swiper-slide">
                   <div class="p-campaign-card">
                     <div class="p-campaign-card__img">
-                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_1.jpg" alt="赤、青、黄等の小さな魚が海の中を泳いでいる">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/campaign-card_1.jpg" alt="赤、青、黄等の小さな魚が海の中を泳いでいる">
                     </div>
                     <div class="p-campaign-card__head">
                       <p class="p-campaign-card__tag">ライセンス講習</p>
@@ -107,7 +99,7 @@
                 <div class="p-campaign-section__item  swiper-slide">
                   <div class="p-campaign-card">
                     <div class="p-campaign-card__img">
-                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_2.jpg" alt="海岸を出発し島に向かう二艘の船">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/campaign-card_2.jpg" alt="海岸を出発し島に向かう二艘の船">
                     </div>
                     <div class="p-campaign-card__head">
                       <p class="p-campaign-card__tag">体験ダイビング</p>
@@ -126,7 +118,7 @@
                 <div class="p-campaign-section__item  swiper-slide">
                   <div class="p-campaign-card">
                     <div class="p-campaign-card__img">
-                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_3.jpg" alt="暗い水の中で光を放つクラゲ群">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/campaign-card_3.jpg" alt="暗い水の中で光を放つクラゲ群">
                     </div>
                     <div class="p-campaign-card__head">
                       <p class="p-campaign-card__tag">体験ダイビング</p>
@@ -145,7 +137,7 @@
                 <div class="p-campaign-section__item  swiper-slide">
                   <div class="p-campaign-card">
                     <div class="p-campaign-card__img">
-                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_4.jpg" alt="水上に顔を出し会話する4人のダイバー">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/campaign-card_4.jpg" alt="水上に顔を出し会話する4人のダイバー">
                     </div>
                     <div class="p-campaign-card__head">
                       <p class="p-campaign-card__tag">ファンダイビング</p>
@@ -164,7 +156,7 @@
                 <div class="p-campaign-section__item  swiper-slide">
                   <div class="p-campaign-card">
                     <div class="p-campaign-card__img">
-                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_1.jpg" alt="赤、青、黄等の小さな魚が海の中を泳いでいる">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/campaign-card_1.jpg" alt="赤、青、黄等の小さな魚が海の中を泳いでいる">
                     </div>
                     <div class="p-campaign-card__head">
                       <p class="p-campaign-card__tag">ライセンス講習</p>
@@ -183,7 +175,7 @@
                 <div class="p-campaign-section__item  swiper-slide">
                   <div class="p-campaign-card">
                     <div class="p-campaign-card__img">
-                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_2.jpg" alt="海岸を出発し島に向かう二艘の船">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/campaign-card_2.jpg" alt="海岸を出発し島に向かう二艘の船">
                     </div>
                     <div class="p-campaign-card__head">
                       <p class="p-campaign-card__tag">体験ダイビング</p>
@@ -202,7 +194,7 @@
                 <div class="p-campaign-section__item  swiper-slide">
                   <div class="p-campaign-card">
                     <div class="p-campaign-card__img">
-                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_3.jpg" alt="暗い水の中で光を放つクラゲ群">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/campaign-card_3.jpg" alt="暗い水の中で光を放つクラゲ群">
                     </div>
                     <div class="p-campaign-card__head">
                       <p class="p-campaign-card__tag">体験ダイビング</p>
@@ -221,7 +213,7 @@
                 <div class="p-campaign-section__item  swiper-slide">
                   <div class="p-campaign-card">
                     <div class="p-campaign-card__img">
-                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_4.jpg" alt="水上に顔を出し会話する4人のダイバ-">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/campaign-card_4.jpg" alt="水上に顔を出し会話する4人のダイバ-">
                     </div>
                     <div class="p-campaign-card__head">
                       <p class="p-campaign-card__tag">ファンダイビング</p>
@@ -264,7 +256,7 @@
           <div class="p-aboutus-section__main">
             <div class="p-aboutus ">
               <div class="p-aboutus__images">
-                <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/aboutus-all.jpg" alt="左側に青空の下のシーサーの写真、その画像に少し重なり、青い海を泳ぐ２匹の黄色い魚の写真が並ぶ">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/aboutus-all.jpg" alt="左側に青空の下のシーサーの写真、その画像に少し重なり、青い海を泳ぐ２匹の黄色い魚の写真が並ぶ">
               </div>
               <div class="p-aboutus__cont">
                 <h2 class="p-aboutus__left"> dive&nbsp;<span>into&nbsp;<br>the&nbsp;</span>ocean </h2>
@@ -299,7 +291,7 @@
             </div>
             <div class="p-information-section__wrapper">
               <div class="p-information-section__img">
-                <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/information.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/information.jpg" alt="">
               </div>
               <div class="p-information-section__contentBox">
                 <h3 class="p-information-section__subTitle">ライセンス講習</h3>
@@ -332,7 +324,7 @@
                 <li class="p-blog-cards__item">
                   <a href="single.html" class="p-blog-card">
                     <figure class="p-blog-card__img">
-                      <img src="<?php echo get_template_directory_uri(); ?>assets/images/common/blog1.jpg" alt="ピンク色の珊瑚の写真">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog1.jpg" alt="ピンク色の珊瑚の写真">
                     </figure>
                     <div class="p-blog-card__body">
                       <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
@@ -346,7 +338,7 @@
                 <li class="p-blog-cards__item">
                   <a href="single.html" class="p-blog-card">
                     <figure class="p-blog-card__img">
-                      <img src="<?php echo get_template_directory_uri(); ?>assets/images/common/blog2.jpg" alt="青い海を泳ぐ亀の写真">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog2.jpg" alt="青い海を泳ぐ亀の写真">
                     </figure>
                     <div class="p-blog-card__body">
                       <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
@@ -360,7 +352,7 @@
                 <li class="p-blog-cards__item">
                   <a href="single.html" class="p-blog-card">
                     <figure class="p-blog-card__img">
-                      <img src="<?php echo get_template_directory_uri(); ?>assets/images/common/blog3.jpg" alt="イソギンチャクの中から顔を出すクマノミの写真">
+                      <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog3.jpg" alt="イソギンチャクの中から顔を出すクマノミの写真">
                     </figure>
                     <div class="p-blog-card__body">
                       <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
@@ -408,7 +400,7 @@
                     <h3 class="p-lower-voiceCard__title">ここにタイトルが入ります。ここにタイトル</h3>
                   </div>
                   <div class="p-lower-voiceCard__img">
-                    <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/voice_1.jpg" alt="麦わら帽子をかぶり微笑む20代女性">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/voice_1.jpg" alt="麦わら帽子をかぶり微笑む20代女性">
                   </div>
                 </div>
                 <div class="p-lower-voiceCard__body">
@@ -427,7 +419,7 @@
                     <h3 class="p-lower-voiceCard__title">ここにタイトルが入ります。ここにタイトル</h3>
                   </div>
                   <div class="p-lower-voiceCard__img">
-                    <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/voice_2.jpg" alt="笑顔でポーズをとる紺色の服を着た30代男性">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/voice_2.jpg" alt="笑顔でポーズをとる紺色の服を着た30代男性">
                   </div>
                 </div>
                 <div class="p-lower-voiceCard__body">
@@ -548,9 +540,8 @@
             </div>
             <div class="p-price-section__img">
               <picture>
-                <source srcset="
-                    ./assets/images/common/price-section.jpg" media="(min-width:768px)">
-                <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/price-section-sp.jpg" alt="ウミガメが海の中を泳いでいる">
+                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/price-section.jpg" media="(min-width:768px)">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/price-section-sp.jpg" alt="ウミガメが海の中を泳いでいる">
               </picture>
             </div>
           </div>
@@ -567,51 +558,7 @@
         </div>
       </section>
     </div>
-    <div class="l-section">
-      <section class="p-contact-section">
-        <div class="p-contact-section__inner l-inner">
-          <div class="p-contact-section__container">
-            <div class="p-contact-section__head">
-              <div class="p-contact-section__logo">
-                <div class="c-logo c-logo--green"></div>
-              </div>
-              <div class="p-contact-section__access">
-                <div class="p-contact-section__address">
-                  <p class="p-contact-section__addressText">沖縄県那覇市1-1</p>
-                  <p class="p-contact-section__addressText">TEL:0120-000-0000</p>
-                  <p class="p-contact-section__addressText">営業時間:8:30-19:00</p>
-                  <p class="p-contact-section__addressText">定休日:毎週火曜日</p>
-                </div>
-                <div class="p-contact-section__map">
-                  <div class="iframe-wrap">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9115.569389246235!2d127.67438112885138!3d26.214049447648904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e569900ff36f09%3A0x583dec31994d039e!2z5rOi44Gu5LiK44OT44O844OB!5e0!3m2!1sja!2sjp!4v1687379223556!5m2!1sja!2sjp" width="295" height="160" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="p-contact-section__body">
-              <div class="p-contact-section__title">
-                <div class="c-title c-title--large">
-                  <h2 class="c-title__en">contact</h2>
-                  <p class="c-title__ja">お問い合わせ</p>
-                </div>
-              </div>
-              <p class="p-contact-section__contactText">ご予約・お問い合わせはコチラ</p>
-              <div class="p-contact-section__btn">
-                <div class="c-btn" ontouchstart="">
-                  <a href="page-contact.html" class="c-btn__link"> Contact us<span></span>
-                  </a>
-                  <div class="c-btn__overlay"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="p-contact-section__fish">
-            <div class="c-img-fish"></div>
-          </div>
-        </div>
-      </section>
-    </div>
+
   </main>
 
 <?php get_footer(); ?>

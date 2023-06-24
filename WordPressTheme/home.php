@@ -28,7 +28,7 @@
                     <li class="p-blog-cards__item">
                       <a href="single.html" class="p-blog-card">
                         <figure class="p-blog-card__img">
-                          <img src="assets/images/common/blog1.jpg" alt="ピンク色の珊瑚の写真">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog1.jpg" alt="ピンク色の珊瑚の写真">
                         </figure>
                         <div class="p-blog-card__body">
                           <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
@@ -42,7 +42,7 @@
                     <li class="p-blog-cards__item">
                       <a href="single.html" class="p-blog-card">
                         <figure class="p-blog-card__img">
-                          <img src="assets/images/common/blog2.jpg" alt="青い海を泳ぐ亀の写真">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog2.jpg" alt="青い海を泳ぐ亀の写真">
                         </figure>
                         <div class="p-blog-card__body">
                           <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
@@ -56,7 +56,7 @@
                     <li class="p-blog-cards__item">
                       <a href="single.html" class="p-blog-card">
                         <figure class="p-blog-card__img">
-                          <img src="assets/images/common/blog3.jpg" alt="イソギンチャクの中から顔を出すクマノミの写真">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog3.jpg" alt="イソギンチャクの中から顔を出すクマノミの写真">
                         </figure>
                         <div class="p-blog-card__body">
                           <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
@@ -70,7 +70,7 @@
                     <li class="p-blog-cards__item">
                       <a href="single.html" class="p-blog-card">
                         <figure class="p-blog-card__img">
-                          <img src="assets/images/common/blog4.jpg" alt="黄色い魚の写真">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog4.jpg" alt="黄色い魚の写真">
                         </figure>
                         <div class="p-blog-card__body">
                           <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
@@ -84,7 +84,7 @@
                     <li class="p-blog-cards__item">
                       <a href="single.html" class="p-blog-card">
                         <figure class="p-blog-card__img">
-                          <img src="assets/images/common/blog5.jpg" alt="海中を這うウミムシの写真">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog5.jpg" alt="海中を這うウミムシの写真">
                         </figure>
                         <div class="p-blog-card__body">
                           <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
@@ -98,7 +98,7 @@
                     <li class="p-blog-cards__item">
                       <a href="single.html" class="p-blog-card">
                         <figure class="p-blog-card__img">
-                          <img src="assets/images/common/blog6.jpg" alt="暗い水の中で光るクラゲ群">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog6.jpg" alt="暗い水の中で光るクラゲ群">
                         </figure>
                         <div class="p-blog-card__body">
                           <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
@@ -112,7 +112,7 @@
                     <li class="p-blog-cards__item">
                       <a href="single.html" class="p-blog-card">
                         <figure class="p-blog-card__img">
-                          <img src="assets/images/common/blog3.jpg" alt="イソギンチャクの中から顔を出すクマノミの写真">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog3.jpg" alt="イソギンチャクの中から顔を出すクマノミの写真">
                         </figure>
                         <div class="p-blog-card__body">
                           <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
@@ -126,7 +126,7 @@
                     <li class="p-blog-cards__item">
                       <a href="single.html" class="p-blog-card">
                         <figure class="p-blog-card__img">
-                          <img src="assets/images/common/blog4.jpg" alt="黄色い魚の写真">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog4.jpg" alt="黄色い魚の写真">
                         </figure>
                         <div class="p-blog-card__body">
                           <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
@@ -140,7 +140,7 @@
                     <li class="p-blog-cards__item">
                       <a href="single.html" class="p-blog-card">
                         <figure class="p-blog-card__img">
-                          <img src="assets/images/common/blog5.jpg" alt="海中を這うウミムシの写真">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog5.jpg" alt="海中を這うウミムシの写真">
                         </figure>
                         <div class="p-blog-card__body">
                           <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
@@ -154,7 +154,7 @@
                     <li class="p-blog-cards__item">
                       <a href="single.html" class="p-blog-card">
                         <figure class="p-blog-card__img">
-                          <img src="assets/images/common/blog6.jpg" alt="暗い水の中で光るクラゲ群">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog6.jpg" alt="暗い水の中で光るクラゲ群">
                         </figure>
                         <div class="p-blog-card__body">
                           <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
@@ -210,8 +210,7 @@
                           <a class="p-sidebar-articleCard__link" href="single.html">
                             <div class="p-sidebar-articleCard__inner">
                               <div class="p-sidebar-articleCard__img">
-                                <img src="
-            ./assets/images/common/blog4.jpg" alt="海の中を泳ぐ黄色い魚">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog4.jpg" alt="海の中を泳ぐ黄色い魚">
                               </div>
                               <div class="p-sidebar-articleCard__body">
                                 <time datetime="2023-11-17" class="p-sidebar-articleCard__date">2023/11/17</time>
@@ -226,8 +225,7 @@
                           <a class="p-sidebar-articleCard__link" href="single.html">
                             <div class="p-sidebar-articleCard__inner">
                               <div class="p-sidebar-articleCard__img">
-                                <img src="
-            ./assets/images/common/blog3.jpg" alt="海の中を泳ぐ亀">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog3.jpg" alt="海の中を泳ぐ亀">
                               </div>
                               <div class="p-sidebar-articleCard__body">
                                 <time datetime="2023-11-17" class="p-sidebar-articleCard__date">2023/11/17</time>
@@ -242,8 +240,7 @@
                           <a class="p-sidebar-articleCard__link" href="single.html">
                             <div class="p-sidebar-articleCard__inner">
                               <div class="p-sidebar-articleCard__img">
-                                <img src="
-            ./assets/images/common/blog2.jpg" alt="イソギンチャクから顔を出すクマノミ">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog2.jpg" alt="イソギンチャクから顔を出すクマノミ">
                               </div>
                               <div class="p-sidebar-articleCard__body">
                                 <time datetime="2023-11-17" class="p-sidebar-articleCard__date">2023/11/17</time>
@@ -265,7 +262,7 @@
                     </div>
                     <div class="p-sidebar-review__content">
                       <div class="p-sidebar-review__img">
-                        <img src="./assets/images/common/voice_side.jpg" alt="ソファに座って腕を組み微笑む若いカップル" />
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/voice_side.jpg" alt="ソファに座って腕を組み微笑む若いカップル" />
                       </div>
                     </div>
                     <div class="p-sidebar-review__age">30代(カップル)</div>
@@ -291,7 +288,7 @@
                         <div class="p-sidebar-campaignCard">
                           <a class="p-sidebar-campaignCard__link" href="archive-campaign.html">
                             <div class="p-sidebar-campaignCard__img">
-                              <img src="./assets/images/common/campaign-card_1.jpg" alt="赤、青、黄等の小さな魚が海の中を泳いでいる">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/campaign-card_1.jpg" alt="赤、青、黄等の小さな魚が海の中を泳いでいる">
                             </div>
                             <div class="p-sidebar-campaignCard__head">
                               <p class="p-sidebar-campaignCard__title">ライセンス取得</p>
@@ -311,7 +308,7 @@
                         <div class="p-sidebar-campaignCard">
                           <a class="p-sidebar-campaignCard__link" href="archive-campaign.html">
                             <div class="p-sidebar-campaignCard__img">
-                              <img src="./assets/images/common/campaign-card_2.jpg" alt="海岸を出発し島に向かう二艘の船">
+                              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/campaign-card_2.jpg" alt="海岸を出発し島に向かう二艘の船">
                             </div>
                             <div class="p-sidebar-campaignCard__head">
                               <p class="p-sidebar-campaignCard__title">貸切体験ダイビング</p>
@@ -372,51 +369,7 @@
         </div>
       </div>
     </div>
-    <div class="l-lower-bottom">
-      <section class="p-contact-section">
-        <div class="p-contact-section__inner l-inner">
-          <div class="p-contact-section__container">
-            <div class="p-contact-section__head">
-              <div class="p-contact-section__logo">
-                <div class="c-logo c-logo--green"></div>
-              </div>
-              <div class="p-contact-section__access">
-                <div class="p-contact-section__address">
-                  <p class="p-contact-section__addressText">沖縄県那覇市1-1</p>
-                  <p class="p-contact-section__addressText">TEL:0120-000-0000</p>
-                  <p class="p-contact-section__addressText">営業時間:8:30-19:00</p>
-                  <p class="p-contact-section__addressText">定休日:毎週火曜日</p>
-                </div>
-                <div class="p-contact-section__map">
-                  <div class="iframe-wrap">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9115.569389246235!2d127.67438112885138!3d26.214049447648904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e569900ff36f09%3A0x583dec31994d039e!2z5rOi44Gu5LiK44OT44O844OB!5e0!3m2!1sja!2sjp!4v1687379223556!5m2!1sja!2sjp" width="295" height="160" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="p-contact-section__body">
-              <div class="p-contact-section__title">
-                <div class="c-title c-title--large">
-                  <h2 class="c-title__en">contact</h2>
-                  <p class="c-title__ja">お問い合わせ</p>
-                </div>
-              </div>
-              <p class="p-contact-section__contactText">ご予約・お問い合わせはコチラ</p>
-              <div class="p-contact-section__btn">
-                <div class="c-btn" ontouchstart="">
-                  <a href="page-contact.html" class="c-btn__link"> Contact us<span></span>
-                  </a>
-                  <div class="c-btn__overlay"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="p-contact-section__fish">
-            <div class="c-img-fish"></div>
-          </div>
-        </div>
-      </section>
-    </div>
+
   </main>
 
 <?php get_footer(); ?>

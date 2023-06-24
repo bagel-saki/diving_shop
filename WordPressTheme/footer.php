@@ -15,7 +15,7 @@ $terms = esc_url(home_url('/page-terms/'));
     <?php if (is_front_page()) : ?>
         <div class="l-section">
         <?php else : ?>
-        <div class="l-lower-bottom">  
+        <div class="l-lower-bottom">
     <?php endif; ?>
       <section class="p-contact-section">
         <div class="p-contact-section__inner l-inner">
@@ -75,8 +75,8 @@ $terms = esc_url(home_url('/page-terms/'));
             <div class="c-logo c-logo--large"></div>
           </a>
           <div class="p-footer__sns">
-            <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/icon-facebook.png" alt="フェイスブック">
-            <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/icon-instaglam.png" alt="インスタグラム">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-facebook.png" alt="フェイスブック">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-instaglam.png" alt="インスタグラム">
           </div>
         </div>
         <div class="p-footer__contents">
