@@ -17,7 +17,7 @@ $terms = esc_url(home_url('/terms/'));
       <?php elseif (is_page('page-sitemap')) : ?>
       <div class="l-sitemap-bottom">
       <?php else : ?>
-      <div class="l-lower-section">
+      <div class="l-lower-bottom">
     <?php endif; ?>
       <section class="p-contact-section">
         <div class="p-contact-section__inner l-inner">
@@ -65,7 +65,7 @@ $terms = esc_url(home_url('/terms/'));
     </div>
 <?php endif; ?>
 </main>
-<?php if (is_page('404')) : ?>
+<?php if (is_404()) : ?>
   <div class="l-footer-404">
   <?php else : ?>  
   <div class="l-footer">
