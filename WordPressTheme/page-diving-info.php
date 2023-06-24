@@ -7,12 +7,7 @@
       </div>
     </div>
     <div class="l-inner">
-      <nav class="breadcrumb">
-        <ul class="breadcrumb-list">
-          <li class="breadcrumb-item"><a href="index.html">top</a><span>&gt;</span></li>
-          <li class="breadcrumb-item active">ダイビング情報</li>
-        </ul>
-      </nav>
+    <?php get_template_part('breadcrumb'); ?>
     </div>
     <div class="l-lower-head">
       <section class="p-lower-informationContents">
