@@ -9,13 +9,15 @@ $price = esc_url(home_url('/price/'));
 $faq = esc_url(home_url('/faq/'));
 $contact = esc_url(home_url('/contact/'));
 $privacy = esc_url(home_url('/privacy-policy/'));
-$terms = esc_url(home_url('/page-terms/'));
+$terms = esc_url(home_url('/terms/'));
 ?>
 <?php if (!is_page('contact') && !is_page('thanks') && !is_404()) : ?>
     <?php if (is_front_page()) : ?>
-        <div class="l-section">
-        <?php else : ?>
-        <div class="l-lower-bottom">
+      <div class="l-section">
+      <?php elseif (is_page('page-sitemap')) : ?>
+      <div class="l-sitemap-bottom">
+      <?php else : ?>
+      <div class="l-lower-section">
     <?php endif; ?>
       <section class="p-contact-section">
         <div class="p-contact-section__inner l-inner">
@@ -60,14 +62,14 @@ $terms = esc_url(home_url('/page-terms/'));
           </div>
         </div>
       </section>
-    <?php if (is_front_page()) : ?>
-        </div>
-    <?php else : ?>
-        </div>
-    <?php endif; ?>
+    </div>
 <?php endif; ?>
 </main>
-<div class="l-footer">
+<?php if (is_page('404')) : ?>
+  <div class="l-footer-404">
+  <?php else : ?>  
+  <div class="l-footer">
+<?php endif; ?> 
     <footer class="p-footer">
       <div class="p-footer__inner l-inner">
         <div class="p-footer__head">
