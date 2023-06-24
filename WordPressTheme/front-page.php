@@ -883,5 +883,4 @@
   <div class="c-page-top-btn js-page-top" ontouchstart=""></div>
 </body>
 </html>
-
 <?php get_footer(); ?>
