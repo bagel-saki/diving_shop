@@ -1,16 +1,25 @@
+<% const galleryAlt = [
+  { alt: '珊瑚の周りを小さな赤い魚' },
+  { alt: '海岸を出発し島に向かう二艘の船' },
+  { alt: '海の中を泳ぐ2匹の魚' },
+  { alt: '黄色い魚の写真' },
+  { alt: '海の中をおよく白い魚の群れ' },
+  { alt: '珊瑚の中をおよく魚たち' }
+]; %>
+
+
 <div class="p-lower-gallery">
   <ul class="p-lower-gallery__top">
     <% for (let i = 1; i <= 3; i++) { %>
     <li class="p-lower-gallery__topItem js-modal-open">
-      <img src="./assets/images/common/gallery_<%= i %>.jpg" alt="沖縄の海中や海辺の美しい写真">
+      <img src="./assets/images/common/gallery_<%= i %>.jpg" alt="<%= galleryAlt[i - 1].alt %>">
     </li>
     <% } %>
   </ul>
   <ul class="p-lower-gallery__bottoms">
     <% for (let i = 4; i <= 6; i++) { %>
     <li class="p-lower-gallery__bottomItem js-modal-open">
-      <img src="
-      ./assets/images/common/gallery_<%= i %>.jpg" alt="沖縄の海中や海辺の美しい写真">
+      <img src="./assets/images/common/gallery_<%= i %>.jpg" alt="<%= galleryAlt[i - 1].alt %>">
     </li>
     <% } %>
   </ul>
