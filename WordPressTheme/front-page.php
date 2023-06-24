@@ -1,175 +1,5 @@
 <?php get_header(); ?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta name="robots" content="noindex">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-  <!-- meta情報 -->
-  <title>diving_shop</title>
-  <meta name="description" content="ダイビングショップのディスクリプション">
-  <meta property="og:site_name" content="diving_shop">
-  <meta property="og:url" content="https://aaa.com">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="diving_shop">
-  <meta property="og:description" content="ダイビングショップのディスクリプション">
-  <meta property="og:locale" content="ja_JP">
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- （画像関連） -->
-  <link rel="icon" href="#">
-  <meta property="og:image" content="./img/common/ogp.jpg">
-  <!-- フォント -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <!-- swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-  <!-- css -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js" defer></script>
-  <script src="./assets/js/script.js" defer></script>
-</head>
-<body>
-  <header class="p-header js-header">
-    <div class="p-header__inner">
-      <div class="p-header__container">
-        <a class="p-header__link" href="index.html">
-          <div class="p-header__logo">
-            <h1 class="c-logo">CodeUps</h1>
-          </div>
-        </a>
-        <div class="p-header__pc-nav">
-          <nav class="p-pc-nav  u-desktop">
-            <ul class="p-pc-nav__items">
-              <li class="p-pc-nav__item">
-                <a class="p-pc-nav__title" href="archive-campaign.html">
-                  <p class="p-pc-nav__en-title">Campaign</p>
-                  <p class="p-pc-nav__ja-title">キャンペーン</p>
-                  <span></span>
-                </a>
-              </li>
-              <li class="p-pc-nav__item">
-                <a class="p-pc-nav__title" href="page-about.html">
-                  <p class="p-pc-nav__en-title">About us</p>
-                  <p class="p-pc-nav__ja-title">私たちについて</p>
-                  <span></span>
-                </a>
-              </li>
-              <li class="p-pc-nav__item">
-                <a class="p-pc-nav__title" href="page-diving-info.html">
-                  <p class="p-pc-nav__en-title">Information</p>
-                  <p class="p-pc-nav__ja-title">ダイビング情報</p>
-                  <span></span>
-                </a>
-              </li>
-              <li class="p-pc-nav__item">
-                <a class="p-pc-nav__title" href="home.html">
-                  <p class="p-pc-nav__en-title">Blog</p>
-                  <p class="p-pc-nav__ja-title">ブログ</p>
-                  <span></span>
-                </a>
-              </li>
-              <li class="p-pc-nav__item">
-                <a class="p-pc-nav__title" href="archive-voices.html">
-                  <p class="p-pc-nav__en-title">Voice</p>
-                  <p class="p-pc-nav__ja-title">お客様の声</p>
-                  <span></span>
-                </a>
-              </li>
-              <li class="p-pc-nav__item">
-                <a class="p-pc-nav__title" href="page-price.html">
-                  <p class="p-pc-nav__en-title">Price</p>
-                  <p class="p-pc-nav__ja-title">料金一覧</p>
-                  <span></span>
-                </a>
-              </li>
-              <li class="p-pc-nav__item">
-                <a class="p-pc-nav__title" href="page-faq.html">
-                  <p class="p-pc-nav__en-title">FAQ</p>
-                  <p class="p-pc-nav__ja-title">よくある質問</p>
-                  <span></span>
-                </a>
-              </li>
-              <li class="p-pc-nav__item">
-                <a class="p-pc-nav__title" href="page-contact.html">
-                  <p class="p-pc-nav__en-title">Contact</p>
-                  <p class="p-pc-nav__ja-title">お問合せ</p>
-                  <span></span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="p-header__hamburger">
-          <div class="p-hamburger js-hamburger u-mobile">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-        <div class="p-header__drawer">
-          <nav class="p-drawer js-drawer">
-            <div class="p-drawer__inner l-inner">
-              <div class="p-drawer__container">
-                <ul class="p-drawer__leftItems">
-                  <li class="p-drawer__item">
-                    <a class="p-drawer__title" href="archive-campaign.html">キャンペーン</a>
-                    <div class="p-drawer__lists">
-                      <a class="p-drawer__list" href="">ライセンス取得</a>
-                      <a class="p-drawer__list" href="">貸切体験ダイビング</a>
-                      <a class="p-drawer__list" href="">ナイトダイビング</a>
-                    </div>
-                  </li>
-                  <li class="p-drawer__item">
-                    <a class="p-drawer__title" href="page-about.html">私たちについて</a>
-                  </li>
-                  <li class="p-drawer__item">
-                    <a class="p-drawer__title" href="page-diving-info.html">ダイビング情報</a>
-                    <div class="p-drawer__lists">
-                      <a class="p-drawer__list" href="">ライセンス講習</a>
-                      <a class="p-drawer__list" href="">体験ダイビング</a>
-                      <a class="p-drawer__list" href="">ファンダイビング</a>
-                    </div>
-                  </li>
-                  <li class="p-drawer__item">
-                    <a class="p-drawer__title" href="home.html">ブログ</a>
-                  </li>
-                </ul>
-                <ul class="p-drawer__rightItems">
-                  <li class="p-drawer__item">
-                    <a class="p-drawer__title" href="archive-voices.html">お客様の声</a>
-                  </li>
-                  <li class="p-drawer__item">
-                    <a class="p-drawer__title" href="page-price.html">料金一覧</a>
-                    <div class="p-drawer__lists">
-                      <a class="p-drawer__list" href="">ライセンス講習</a>
-                      <a class="p-drawer__list" href="">体験ダイビング</a>
-                      <a class="p-drawer__list" href="">ファンダイビング</a>
-                    </div>
-                  </li>
-                  <li class="p-drawer__item">
-                    <a class="p-drawer__title" href="page-faq.html">よくある質問</a>
-                  </li>
-                  <li class="p-drawer__item">
-                    <a class="p-drawer__title" href="page-privacy-policy.html">プライバシー<br>ポリシー</a>
-                  </li>
-                  <li class="p-drawer__item">
-                    <a class="p-drawer__title" href="page-terms.html">利用規約</a>
-                  </li>
-                  <li class="p-drawer__item">
-                    <a class="p-drawer__title" href="page-contact.html">お問い合わせ</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
+
   <main>
     <div class="p-top-screen">
       <div class="p-top-screen__loading">
@@ -186,26 +16,6 @@
           <div class="p-loading__rightImage"></div>
         </div>
       </div>
-      <!-- <div class="p-top-screen__first-view">
-        <div class="p-first-view">
-  <div class="p-first-view__container">
-    <div class="p-first-view__title">
-<div class="c-view-title">
-    <h2 class="c-view-title__main">diving</h2>
-    <p class="c-view-title__sub">into&nbsp;the&nbsp;ocean</p>
-</div>
-    </div>
-    <div class="p-first-view__btn">
-    <div class="c-btn" ontouchstart="">
-        <a href="index.html" class="c-btn__link">
-            View more<span></span>
-        </a>
-     <div class="c-btn__overlay"></div>
-    </div>
-    </div>
-  </div>
-</div>
-    </div> -->
       <div class="p-top-screen__main-view">
         <div class="p-main-view">
           <div class="p-main-view__inner">
@@ -216,7 +26,7 @@
                     <picture>
                       <source srcset="
                 ./assets/images/common/main-view_1.jpg" media="(min-width:1024px)">
-                      <img src="
+                      <img src="<?php echo get_template_directory_uri(); ?>
                 ./assets/images/common/main-view-sp_1.jpg" alt="美しい海の中を泳ぐウミガメ">
                     </picture>
                   </div>
@@ -226,7 +36,7 @@
                     <picture>
                       <source srcset="
                 ./assets/images/common/main-view_2.jpg" media="(min-width:1024px)">
-                      <img src="
+                      <img src="<?php echo get_template_directory_uri(); ?>
                 ./assets/images/common/main-view-sp_2.jpg" alt="海を泳ぐウミガメと二人のダイバーを下から見ている">
                     </picture>
                   </div>
@@ -236,7 +46,7 @@
                     <picture>
                       <source srcset="
                 ./assets/images/common/main-view_3.jpg" media="(min-width:1024px)">
-                      <img src="
+                      <img src="<?php echo get_template_directory_uri(); ?>
                 ./assets/images/common/main-view-sp_3.jpg" alt="海に浮かぶ船３艘と島">
                     </picture>
                   </div>
@@ -246,7 +56,7 @@
                     <picture>
                       <source srcset="
                 ./assets/images/common/main-view_4.jpg" media="(min-width:1024px)">
-                      <img src="
+                      <img src="<?php echo get_template_directory_uri(); ?>
                 ./assets/images/common/main-view-sp_4.jpg" alt="砂浜とコバルトブルーの海">
                     </picture>
                   </div>
@@ -278,7 +88,7 @@
                 <div class="p-campaign-section__item  swiper-slide">
                   <div class="p-campaign-card">
                     <div class="p-campaign-card__img">
-                      <img src="./assets/images/common/campaign-card_1.jpg" alt="赤、青、黄等の小さな魚が海の中を泳いでいる">
+                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_1.jpg" alt="赤、青、黄等の小さな魚が海の中を泳いでいる">
                     </div>
                     <div class="p-campaign-card__head">
                       <p class="p-campaign-card__tag">ライセンス講習</p>
@@ -297,7 +107,7 @@
                 <div class="p-campaign-section__item  swiper-slide">
                   <div class="p-campaign-card">
                     <div class="p-campaign-card__img">
-                      <img src="./assets/images/common/campaign-card_2.jpg" alt="海岸を出発し島に向かう二艘の船">
+                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_2.jpg" alt="海岸を出発し島に向かう二艘の船">
                     </div>
                     <div class="p-campaign-card__head">
                       <p class="p-campaign-card__tag">体験ダイビング</p>
@@ -316,7 +126,7 @@
                 <div class="p-campaign-section__item  swiper-slide">
                   <div class="p-campaign-card">
                     <div class="p-campaign-card__img">
-                      <img src="./assets/images/common/campaign-card_3.jpg" alt="暗い水の中で光を放つクラゲ群">
+                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_3.jpg" alt="暗い水の中で光を放つクラゲ群">
                     </div>
                     <div class="p-campaign-card__head">
                       <p class="p-campaign-card__tag">体験ダイビング</p>
@@ -335,7 +145,7 @@
                 <div class="p-campaign-section__item  swiper-slide">
                   <div class="p-campaign-card">
                     <div class="p-campaign-card__img">
-                      <img src="./assets/images/common/campaign-card_4.jpg" alt="水上に顔を出し会話する4人のダイバー">
+                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_4.jpg" alt="水上に顔を出し会話する4人のダイバー">
                     </div>
                     <div class="p-campaign-card__head">
                       <p class="p-campaign-card__tag">ファンダイビング</p>
@@ -354,7 +164,7 @@
                 <div class="p-campaign-section__item  swiper-slide">
                   <div class="p-campaign-card">
                     <div class="p-campaign-card__img">
-                      <img src="./assets/images/common/campaign-card_1.jpg" alt="赤、青、黄等の小さな魚が海の中を泳いでいる">
+                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_1.jpg" alt="赤、青、黄等の小さな魚が海の中を泳いでいる">
                     </div>
                     <div class="p-campaign-card__head">
                       <p class="p-campaign-card__tag">ライセンス講習</p>
@@ -373,7 +183,7 @@
                 <div class="p-campaign-section__item  swiper-slide">
                   <div class="p-campaign-card">
                     <div class="p-campaign-card__img">
-                      <img src="./assets/images/common/campaign-card_2.jpg" alt="海岸を出発し島に向かう二艘の船">
+                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_2.jpg" alt="海岸を出発し島に向かう二艘の船">
                     </div>
                     <div class="p-campaign-card__head">
                       <p class="p-campaign-card__tag">体験ダイビング</p>
@@ -392,7 +202,7 @@
                 <div class="p-campaign-section__item  swiper-slide">
                   <div class="p-campaign-card">
                     <div class="p-campaign-card__img">
-                      <img src="./assets/images/common/campaign-card_3.jpg" alt="暗い水の中で光を放つクラゲ群">
+                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_3.jpg" alt="暗い水の中で光を放つクラゲ群">
                     </div>
                     <div class="p-campaign-card__head">
                       <p class="p-campaign-card__tag">体験ダイビング</p>
@@ -411,7 +221,7 @@
                 <div class="p-campaign-section__item  swiper-slide">
                   <div class="p-campaign-card">
                     <div class="p-campaign-card__img">
-                      <img src="./assets/images/common/campaign-card_4.jpg" alt="水上に顔を出し会話する4人のダイバ-">
+                      <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/campaign-card_4.jpg" alt="水上に顔を出し会話する4人のダイバ-">
                     </div>
                     <div class="p-campaign-card__head">
                       <p class="p-campaign-card__tag">ファンダイビング</p>
@@ -454,7 +264,7 @@
           <div class="p-aboutus-section__main">
             <div class="p-aboutus ">
               <div class="p-aboutus__images">
-                <img src="./assets/images/common/aboutus-all.jpg" alt="左側に青空の下のシーサーの写真、その画像に少し重なり、青い海を泳ぐ２匹の黄色い魚の写真が並ぶ">
+                <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/aboutus-all.jpg" alt="左側に青空の下のシーサーの写真、その画像に少し重なり、青い海を泳ぐ２匹の黄色い魚の写真が並ぶ">
               </div>
               <div class="p-aboutus__cont">
                 <h2 class="p-aboutus__left"> dive&nbsp;<span>into&nbsp;<br>the&nbsp;</span>ocean </h2>
@@ -489,7 +299,7 @@
             </div>
             <div class="p-information-section__wrapper">
               <div class="p-information-section__img">
-                <img src="./assets/images/common/information.jpg" alt="">
+                <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/information.jpg" alt="">
               </div>
               <div class="p-information-section__contentBox">
                 <h3 class="p-information-section__subTitle">ライセンス講習</h3>
@@ -522,7 +332,7 @@
                 <li class="p-blog-cards__item">
                   <a href="single.html" class="p-blog-card">
                     <figure class="p-blog-card__img">
-                      <img src="assets/images/common/blog1.jpg" alt="ピンク色の珊瑚の写真">
+                      <img src="<?php echo get_template_directory_uri(); ?>assets/images/common/blog1.jpg" alt="ピンク色の珊瑚の写真">
                     </figure>
                     <div class="p-blog-card__body">
                       <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
@@ -536,7 +346,7 @@
                 <li class="p-blog-cards__item">
                   <a href="single.html" class="p-blog-card">
                     <figure class="p-blog-card__img">
-                      <img src="assets/images/common/blog2.jpg" alt="青い海を泳ぐ亀の写真">
+                      <img src="<?php echo get_template_directory_uri(); ?>assets/images/common/blog2.jpg" alt="青い海を泳ぐ亀の写真">
                     </figure>
                     <div class="p-blog-card__body">
                       <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
@@ -550,7 +360,7 @@
                 <li class="p-blog-cards__item">
                   <a href="single.html" class="p-blog-card">
                     <figure class="p-blog-card__img">
-                      <img src="assets/images/common/blog3.jpg" alt="イソギンチャクの中から顔を出すクマノミの写真">
+                      <img src="<?php echo get_template_directory_uri(); ?>assets/images/common/blog3.jpg" alt="イソギンチャクの中から顔を出すクマノミの写真">
                     </figure>
                     <div class="p-blog-card__body">
                       <time class="p-blog-card__date" datetime="2023-11-17">2023.11/17</time>
@@ -598,7 +408,7 @@
                     <h3 class="p-lower-voiceCard__title">ここにタイトルが入ります。ここにタイトル</h3>
                   </div>
                   <div class="p-lower-voiceCard__img">
-                    <img src="./assets/images/common/voice_1.jpg" alt="麦わら帽子をかぶり微笑む20代女性">
+                    <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/voice_1.jpg" alt="麦わら帽子をかぶり微笑む20代女性">
                   </div>
                 </div>
                 <div class="p-lower-voiceCard__body">
@@ -617,7 +427,7 @@
                     <h3 class="p-lower-voiceCard__title">ここにタイトルが入ります。ここにタイトル</h3>
                   </div>
                   <div class="p-lower-voiceCard__img">
-                    <img src="./assets/images/common/voice_2.jpg" alt="笑顔でポーズをとる紺色の服を着た30代男性">
+                    <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/voice_2.jpg" alt="笑顔でポーズをとる紺色の服を着た30代男性">
                   </div>
                 </div>
                 <div class="p-lower-voiceCard__body">
@@ -740,7 +550,7 @@
               <picture>
                 <source srcset="
                     ./assets/images/common/price-section.jpg" media="(min-width:768px)">
-                <img src="./assets/images/common/price-section-sp.jpg" alt="ウミガメが海の中を泳いでいる">
+                <img src="<?php echo get_template_directory_uri(); ?>./assets/images/common/price-section-sp.jpg" alt="ウミガメが海の中を泳いでいる">
               </picture>
             </div>
           </div>
@@ -803,85 +613,5 @@
       </section>
     </div>
   </main>
-  <div class="l-footer">
-    <footer class="p-footer">
-      <div class="p-footer__inner l-inner">
-        <div class="p-footer__head">
-          <a href="index.html" class="p-footer__logo">
-            <div class="c-logo c-logo--large"></div>
-          </a>
-          <div class="p-footer__sns">
-            <img src="./assets/images/common/icon-facebook.png" alt="フェイスブック">
-            <img src="./assets/images/common/icon-instaglam.png" alt="インスタグラム">
-          </div>
-        </div>
-        <div class="p-footer__contents">
-          <div class="p-contents p-contents--footer">
-            <nav class="p-contents__container">
-              <ul class="p-contents__items">
-                <li class="p-contents__item">
-                  <a href="archive-campaign.html" class="p-contents__title p-contents__title--white"> キャンペーン </a>
-                  <div class="p-contents__lists">
-                    <a href="" class="p-contents__list">ライセンス取得</a>
-                    <a href="" class="p-contents__list">貸切体験ダイビング</a>
-                    <a href="" class="p-contents__list">ナイトダイビング</a>
-                  </div>
-                </li>
-                <li class="p-contents__item">
-                  <a href="page-about.html" class="p-contents__title p-contents__title--white"> 私たちについて </a>
-                </li>
-              </ul>
-              <ul class="p-contents__items">
-                <li class="p-contents__item">
-                  <a href="page-diving-info.html" class="p-contents__title p-contents__title--white"> ダイビング情報 </a>
-                  <div class="p-contents__lists">
-                    <a href="" class="p-contents__list">ライセンス講習</a>
-                    <a href="" class="p-contents__list">体験ダイビング</a>
-                    <a href="" class="p-contents__list">ファンダイビング</a>
-                  </div>
-                </li>
-                <li class="p-contents__item">
-                  <a href="home.html" class="p-contents__title p-contents__title--white"> ブログ </a>
-                </li>
-              </ul>
-              <ul class="p-contents__items">
-                <li class="p-contents__item">
-                  <a href="archive-voices.html" class="p-contents__title p-contents__title--white"> お客様の声 </a>
-                </li>
-                <li class="p-contents__item">
-                  <a href="page-price.html" class="p-contents__title p-contents__title--white"> 料金一覧 </a>
-                  <div class="p-contents__lists">
-                    <a href="" class="p-contents__list">ライセンス講習</a>
-                    <a href="" class="p-contents__list">体験ダイビング</a>
-                    <a href="" class="p-contents__list">ファンダイビング</a>
-                  </div>
-                </li>
-              </ul>
-              <ul class="p-contents__items">
-                <li class="p-contents__item">
-                  <a href="page-faq.html" class="p-contents__title p-contents__title--white"> よくある質問 </a>
-                </li>
-                <li class="p-contents__item">
-                  <a href="page-privacy-policy.html" class="p-contents__title p-contents__title--white"> プライバシー<br class="u-mobile">ポリシー </a>
-                </li>
-                <li class="p-contents__item">
-                  <a href="page-terms.html" class="p-contents__title p-contents__title--white"> 利用規約 </a>
-                </li>
-                <li class="p-contents__item">
-                  <a href="page-contact.html" class="p-contents__title p-contents__title--white"> お問い合わせ </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <div class="p-footer__copy">
-          <small class="p-footer__copyright">copyright&ensp;&copy;&ensp;2021&ensp;-&ensp;2023&ensp;code<span>u</span>ps&ensp;<span>llc.&ensp;</span>all&ensp;rights&ensp;reserved.</small>
-        </div>
-      </div>
-    </footer>
-  </div>
-  <div class="c-page-top-btn js-page-top" ontouchstart=""></div>
-</body>
-</html>
 
 <?php get_footer(); ?>
