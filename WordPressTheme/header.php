@@ -38,6 +38,7 @@ $terms = esc_url(home_url('/terms/'));
             <?php else : ?>
             </div>
             <?php endif; ?>
+          </div>
         </a>
         <div class="p-header__pc-nav">
           <nav class="p-pc-nav  u-desktop">

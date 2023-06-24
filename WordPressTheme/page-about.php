@@ -24,7 +24,7 @@
             <div class="p-aboutus p-aboutus--lower">
               <div class="p-aboutus__images">
                 <picture>
-                  <source srcset="/assets/images/common/aboutus-all.jpg" media="(min-width:768px)" alt="青空の下、赤い屋根の上に佇むシーサー像の写真">
+                  <source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/common/aboutus-all.jpg" media="(min-width:768px)" alt="青空の下、赤い屋根の上に佇むシーサー像の写真">
                   <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/aboutus2.jpg" alt="青い海の中を泳ぐ２匹の黄色い魚の写真">
                 </picture>
               </div>
@@ -52,24 +52,24 @@
             <div class="p-lower-gallery">
               <ul class="p-lower-gallery__top">
                 <li class="p-lower-gallery__topItem js-modal-open">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/gallery_1.jpg" alt="沖縄の海中や海辺の美しい写真">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/gallery_1.jpg" alt="珊瑚の周りを小さな赤い魚">
                 </li>
                 <li class="p-lower-gallery__topItem js-modal-open">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/gallery_2.jpg" alt="沖縄の海中や海辺の美しい写真">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/gallery_2.jpg" alt="海岸を出発し島に向かう二艘の船">
                 </li>
                 <li class="p-lower-gallery__topItem js-modal-open">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/gallery_3.jpg" alt="沖縄の海中や海辺の美しい写真">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/gallery_3.jpg" alt="海の中を泳ぐ2匹の魚">
                 </li>
               </ul>
               <ul class="p-lower-gallery__bottoms">
                 <li class="p-lower-gallery__bottomItem js-modal-open">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/gallery_4.jpg" alt="沖縄の海中や海辺の美しい写真">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/gallery_4.jpg" alt="黄色い魚の写真">
                 </li>
                 <li class="p-lower-gallery__bottomItem js-modal-open">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/gallery_5.jpg" alt="沖縄の海中や海辺の美しい写真">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/gallery_5.jpg" alt="海の中をおよく白い魚の群れ">
                 </li>
                 <li class="p-lower-gallery__bottomItem js-modal-open">
-                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/gallery_6.jpg" alt="沖縄の海中や海辺の美しい写真">
+                  <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/gallery_6.jpg" alt="珊瑚の中をおよく魚たち">
                 </li>
               </ul>
             </div>
