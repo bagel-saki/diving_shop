@@ -14,19 +14,42 @@
       <div class="p-archiveCampaign-section__inner l-inner">
         <div class="p-archiveCampaign-section__category">
           <div class="p-campaign-categories">
-            <div class="p-campaign-categories__item">
-              <a href="<?php echo esc_url(get_post_type_archive_link('campaign')); ?>" class="c-campaign-category js-campaign-category c-campaign-category--active"> all </a>
-            </div>
             <?php
-            $taxonomy_terms = get_terms('campaign_category', array('hide_empty' => false));
-            foreach ($taxonomy_terms as $taxonomy_term) :
+            $taxonomy_terms = get_terms('campaign_category');
+            if (!empty($taxonomy_terms) && !is_wp_error($taxonomy_terms)) {
+              foreach ($taxonomy_terms as $taxonomy_term) :
             ?>
-              <div class="p-campaign-categories__item">
-                <a href="<?php echo esc_url(get_term_link($taxonomy_term, 'campaign_category')); ?>" class="c-campaign-category js-campaign-category "><?php echo esc_html($taxonomy_term->name); ?></a>
-              </div>
-            <?php endforeach; ?>
+                <div class="p-campaign-categories__item">
+                  <a href="<?php echo get_term_link($taxonomy_term); ?>" class="c-campaign-category js-campaign-category
+                  <?php if ($taxonomy_term->slug === $term) {
+                    echo 'c-campaign-category--active';
+                  } ?>"><?php echo esc_html($taxonomy_term->name); ?>
+                  </a>
+                </div>
+            <?php
+              endforeach;
+            }
+            ?>
           </div>
         </div>
+
+        <?php
+        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+        $type = get_query_var('campaign_category'); // タクソノミーのスラッグ
+        $args = [
+          'post_type' => 'campaign', // 投稿タイプスラッグ
+          'paged' => $paged, // ページネーションがある場合に必要
+          'posts_per_page' => 4, // 表示件数（変更不要）
+          'tax_query' => array(
+            array(
+              'taxonomy' => 'campaign_category', // タクソノミーのスラッグ
+              'field' => 'slug', // ターム名をスラッグで指定する（変更不要）
+              'terms' => $type,
+            ),
+          )
+        ];
+        ?>
+      <?php $wp_query = new WP_Query($args); ?>
         <div class="p-archiveCampaign-section__content">
           <ul class="p-lower-campaignCards">
             <?php if (have_posts()) : ?>
@@ -70,6 +93,7 @@
             <?php endif; ?>
           </ul>
         </div>
+
         <div class="p-archiveCampaign-section__pagination">
           <div class="c-pagination" ontouchstart="">
             <?php
@@ -83,7 +107,11 @@
             } else {
               $args['mid_size'] = 6;
             }
-            the_posts_pagination($args);
+            the_posts_pagination(array(
+              'mid_size' => $args['mid_size'],
+              'prev_text' => '<span></span>',
+              'next_text' => '<span></span>',
+            ));
             ?>
           </div>
         </div>
