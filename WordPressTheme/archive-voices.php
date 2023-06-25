@@ -160,29 +160,20 @@
           </div>
           <div class="p-archiveVoices-section__pagination">
             <div class="c-pagination" ontouchstart="">
-              <div class="pagination">
-                <nav class="navigation">
-                  <div class="nav-links u-desktop-flex">
-                    <a class="prev page-numbers" href="#"><span></span></a>
-                    <a class="page-numbers current js-pagination">1</a>
-                    <a class="page-numbers js-pagination" href="#">2</a>
-                    <a class="page-numbers js-pagination" href="#">3</a>
-                    <a class="page-numbers js-pagination" href="#">4</a>
-                    <a class="page-numbers js-pagination" href="#">5</a>
-                    <a class="page-numbers js-pagination" href="#">6</a>
-                    <a class="next page-numbers" href="#"><span></span></a>
-                  </div>
-                  <div class="nav-links u-mobile-flex">
-                    <a class="prev page-numbers" href="#"><span></span></a>
-                    <span class="page-numbers current">1</span>
-                    <a class="page-numbers" href="#">2</a>
-                    <a class="page-numbers" href="#">3</a>
-                    <a class="page-numbers" href="#">4</a>
-                    <a class="next page-numbers" href="#"><span></span></a>
-                  </div>
-                </nav>
-              </div>
-            </div>
+            <?php
+                    $args = array(
+                      'mid_size' => 4,
+                      'prev_text' => '<span></span>',
+                      'next_text' => '<span></span>',
+                    );
+                    if (wp_is_mobile()) {
+                      $args['mid_size'] = 4;
+                    }
+                    else {
+                      $args['mid_size'] = 6;
+                    }
+                    the_posts_pagination($args);
+                    ?>
           </div>
           <div class="p-archiveVoices-section__fish">
             <div class="c-img-fish c-img-fish--reverse"></div>

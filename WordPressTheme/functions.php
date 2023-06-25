@@ -159,3 +159,18 @@ function my_excerpt_more( $more ) {
 
 }
 add_filter( 'excerpt_more', 'my_excerpt_more' );
+
+/* --------------------------------------------
+カスタム投稿タイプ【キャンペーン】：メインクエリの変更（アーカイブページにて表示件数を４件にする）
+ * -------------------------------------------- */
+function change_set_campaign($query)
+{
+	if (is_admin() || !$query->is_main_query()) {
+		return;
+	}
+	if ($query->is_post_type_archive('campaign') || is_tax('campaign_category') || is_search()) {
+		$query->set('posts_per_page', '4');
+		return;
+	}
+}
+add_action('pre_get_posts', 'change_set_campaign');
