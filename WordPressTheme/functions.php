@@ -174,3 +174,30 @@ function change_set_campaign($query)
 	}
 }
 add_action('pre_get_posts', 'change_set_campaign');
+
+
+function custom_breadcrumb_list() {
+    $delimiter = ' > '; // 区切り文字
+    $home = 'ホーム'; // ホームのテキスト
+
+    // パンくずリストの開始タグ
+    echo '<nav class="breadcrumb" vocab="http://schema.org/" typeof="BreadcrumbList">';
+
+    // ホームへのリンク
+    echo '<a href="' . get_home_url() . '">' . $home . '</a>' . $delimiter;
+
+    // カスタムパンくずリストの作成
+    if (function_exists('bcn_display')) {
+        ob_start();
+        bcn_display();
+        $breadcrumb = ob_get_clean();
+
+        // カテゴリーを除外する
+        $breadcrumb = preg_replace('/<span typeof="v:Breadcrumb"><a.*?>(.*?)<\/a><\/span>/', '', $breadcrumb);
+
+        echo $breadcrumb;
+    }
+
+    // パンくずリストの終了タグ
+    echo '</nav>';
+}

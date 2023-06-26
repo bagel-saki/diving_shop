@@ -35,15 +35,23 @@ jQuery(function ($) {
     if (scrollHeight - scrollPosition <= windowHeight) {
       $(".js-page-top").css({
         position: "absolute",
-        bottom: footerHeight + 16,
+        bottom: footerHeight + 20,
       });
     } else {
-      $(".js-page-top").css({
-        position: "fixed",
-        bottom: "16px",
-      });
+      if ($(window).width() <= 768) {
+        $(".js-page-top").css({
+          position: "fixed",
+          bottom: "16px",
+        });
+      } else {
+        $(".js-page-top").css({
+          position: "fixed",
+          bottom: "20px",
+        });
+      }
     }
   });
+
 
   //キャンペーンカテゴリーのactive付与
   $(".js-campaign-category").on("click", function () {
