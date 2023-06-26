@@ -72,8 +72,8 @@
                     <div class="p-lower-campaignCard__body">
                       <p class="p-lower-campaignCard__text">全部コミコミ(お一人様)</p>
                       <div class="p-lower-campaignCard__price">
-                        <p class="p-lower-campaignCard__originalPrice"><?php echo get_field('original_price'); ?></p>
-                        <p class="p-lower-campaignCard__newPrice"><?php echo get_field('new_price'); ?></p>
+                        <p class="p-lower-campaignCard__originalPrice">¥<?php echo get_field('original_price'); ?></p>
+                        <p class="p-lower-campaignCard__newPrice">¥<?php echo get_field('new_price'); ?></p>
                       </div>
                       <p class="p-lower-campaignCard__details u-desktop"><?php echo get_field('details'); ?></p>
                     </div>
