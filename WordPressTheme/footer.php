@@ -50,7 +50,7 @@ $terms = esc_url(home_url('/terms/'));
               <p class="p-contact-section__contactText">ご予約・お問い合わせはコチラ</p>
               <div class="p-contact-section__btn">
                 <div class="c-btn" ontouchstart="">
-                  <a href="page-contact.html" class="c-btn__link"> Contact us<span></span>
+                  <a href="<?php echo $contact; ?>" class="c-btn__link"> Contact us<span></span>
                   </a>
                   <div class="c-btn__overlay"></div>
                 </div>

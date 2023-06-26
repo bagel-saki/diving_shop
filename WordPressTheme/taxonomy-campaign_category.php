@@ -36,7 +36,7 @@
         <?php
         $paged = get_query_var('paged') ? get_query_var('paged') : 1;
         $type = get_query_var('campaign_category'); // タクソノミーのスラッグ
-        $args = [
+        $args = array(
           'post_type' => 'campaign', // 投稿タイプスラッグ
           'paged' => $paged, // ページネーションがある場合に必要
           'posts_per_page' => 4, // 表示件数（変更不要）
@@ -46,14 +46,15 @@
               'field' => 'slug', // ターム名をスラッグで指定する（変更不要）
               'terms' => $type,
             ),
-          )
-        ];
+          ),
+        );
+        $wp_query = new WP_Query($args);
         ?>
-      <?php $wp_query = new WP_Query($args); ?>
+
         <div class="p-archiveCampaign-section__content">
           <ul class="p-lower-campaignCards">
-            <?php if (have_posts()) : ?>
-              <?php while (have_posts()) : the_post(); ?>
+            <?php if ($wp_query->have_posts()) : ?>
+              <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
                 <li class="p-lower-campaignCards__item">
                   <div class="p-lower-campaignCard">
                     <div class="p-lower-campaignCard__img">
@@ -93,33 +94,33 @@
             <?php endif; ?>
           </ul>
         </div>
-
-        <div class="p-archiveCampaign-section__pagination">
-          <div class="c-pagination" ontouchstart="">
-            <?php
-            $args = array(
-              'mid_size' => 4,
-              'prev_text' => '<span></span>',
-              'next_text' => '<span></span>',
-            );
-            if (wp_is_mobile()) {
-              $args['mid_size'] = 4;
-            } else {
-              $args['mid_size'] = 6;
-            }
-            the_posts_pagination(array(
-              'mid_size' => $args['mid_size'],
-              'prev_text' => '<span></span>',
-              'next_text' => '<span></span>',
-            ));
-            ?>
+        <?php if ($wp_query->max_num_pages > 1) : ?>
+          <div class="p-archiveCampaign-section__pagination">
+            <div class="c-pagination" ontouchstart="">
+              <?php
+              $args = array(
+                'mid_size' => 4,
+                'prev_text' => '<span></span>',
+                'next_text' => '<span></span>',
+              );
+              if (wp_is_mobile()) {
+                $args['mid_size'] = 4;
+              } else {
+                $args['mid_size'] = 6;
+              }
+              echo paginate_links($args);
+              ?>
+            </div>
           </div>
-        </div>
-        <div class="p-archiveCampaign-section__fish">
-          <div class="c-img-fish c-img-fish--reverse"></div>
-        </div>
+        <?php endif; ?>
+        <?php wp_reset_postdata(); ?>
       </div>
     </div>
+    <div class="p-archiveCampaign-section__fish">
+      <div class="c-img-fish c-img-fish--reverse"></div>
+    </div>
+  </div>
+  </div>
   </div>
 
 </main>
