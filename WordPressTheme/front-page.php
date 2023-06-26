@@ -193,7 +193,7 @@ $terms = esc_url(home_url('/terms/'));
               <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/information.jpg" alt="">
             </div>
             <div class="p-information-section__contentBox">
-              <h3 class="p-information-section__subTitle"><?php the_title(); ?></h3>
+              <h3 class="p-information-section__subTitle">ダイビング講習</h3>
               <p class="p-information-section__text"> 当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br> 正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。</p>
               <div class="p-information-section__btn">
                 <div class="c-btn" ontouchstart="">
@@ -286,32 +286,35 @@ $terms = esc_url(home_url('/terms/'));
               </div>
             </div>
             <div class="p-voice-section__cards">
-              <div class="p-lower-voiceCard">
-                <?php while ($voices_query->have_posts()) : $voices_query->the_post(); ?>
-                  <div class="p-lower-voiceCard__inner">
-                    <div class="p-lower-voiceCard__head">
-                      <div class="p-lower-voiceCard__info">
-                        <div class="p-lower-voiceCard__meta">
-                          <p class="p-lower-voiceCard__age"><?php echo get_field('age'); ?>(<?php echo get_field('age'); ?>)</p>
-                          <p class="p-lower-voiceCard__tag"><?php echo get_field('tag'); ?></p>
+              <?php while ($voices_query->have_posts()) : $voices_query->the_post(); ?>
+                <div class="p-voice-section__card">
+                  <div class="p-lower-voiceCard">
+                    <div class="p-lower-voiceCard__inner">
+                      <div class="p-lower-voiceCard__head">
+                        <div class="p-lower-voiceCard__info">
+                          <div class="p-lower-voiceCard__meta">
+                            <p class="p-lower-voiceCard__age"><?php echo get_field('age'); ?>(<?php echo get_field('age'); ?>)</p>
+                            <p class="p-lower-voiceCard__tag"><?php echo get_field('tag'); ?></p>
+                          </div>
+                          <h3 class="p-lower-voiceCard__title"><?php the_title(); ?></h3>
                         </div>
-                        <h3 class="p-lower-voiceCard__title"><?php the_title(); ?></h3>
+                        <div class="p-lower-voiceCard__img">
+                          <?php if (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail(); ?>
+                          <?php else : ?>
+                            <img src="<?php echo get_template_directory_uri() ?>/assets/images/common/noimage.jpg" alt="no image">
+                          <?php endif; ?>
+                        </div>
                       </div>
-                      <div class="p-lower-voiceCard__img">
-                        <?php if (has_post_thumbnail()) : ?>
-                          <?php the_post_thumbnail(); ?>
-                        <?php else : ?>
-                          <img src="<?php echo get_template_directory_uri() ?>/assets/images/common/noimage.jpg" alt="no image">
-                        <?php endif; ?>
+                      <div class="p-lower-voiceCard__body">
+                        <p class="p-lower-voiceCard__text"> <?php echo get_field('details'); ?></p>
                       </div>
-                    </div>
-                    <div class="p-lower-voiceCard__body">
-                      <p class="p-lower-voiceCard__text"> <?php echo get_field('details'); ?></p>
                     </div>
                   </div>
-                <?php endwhile; ?>
-              </div>
+                </div>
+              <?php endwhile; ?>
             </div>
+
             <div class="p-voice-section__btn">
               <div class="c-btn" ontouchstart="">
                 <a href="<?php echo $voices; ?>" class="c-btn__link"> View more<span></span>

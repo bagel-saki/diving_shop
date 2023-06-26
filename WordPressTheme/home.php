@@ -48,15 +48,15 @@
                 <div class="c-pagination" ontouchstart="">
                     <?php
                     $args = array(
-                      'mid_size' => 4,
+                      'mid_size' => 3,
                       'prev_text' => '<span></span>',
                       'next_text' => '<span></span>',
                     );
                     if (wp_is_mobile()) {
-                      $args['mid_size'] = 4;
+                      $args['mid_size'] = 1;
                     }
                     else {
-                      $args['mid_size'] = 6;
+                      $args['mid_size'] = 3;
                     }
                     the_posts_pagination($args);
                     ?>
