@@ -1,5 +1,17 @@
 <?php get_header(); ?>
-
+<?php
+$top = esc_url(home_url('/'));
+$campaign = esc_url(home_url('/campaign/'));
+$about = esc_url(home_url('/about/'));
+$diving = esc_url(home_url('/diving-info/'));
+$blog = esc_url(home_url('/blog/'));
+$voices = esc_url(home_url('/voices/'));
+$price = esc_url(home_url('/price/'));
+$faq = esc_url(home_url('/faq/'));
+$contact = esc_url(home_url('/contact/'));
+$privacy = esc_url(home_url('/privacy-policy/'));
+$terms = esc_url(home_url('/terms/'));
+?>
   <main>
     <div class="p-top-screen">
       <div class="p-top-screen__loading">
@@ -236,7 +248,7 @@
           </div>
           <div class="p-campaign-section__btn">
             <div class="c-btn" ontouchstart="">
-              <a href="archive-campaign.html" class="c-btn__link"> View more<span></span>
+              <a href="<?php echo $campaign; ?>" class="c-btn__link"> View more<span></span>
               </a>
               <div class="c-btn__overlay"></div>
             </div>
@@ -264,7 +276,7 @@
                   <p class="p-aboutus__text"> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト </p>
                   <div class="p-aboutus__btn">
                     <div class="c-btn" ontouchstart="">
-                      <a href="page-about.html" class="c-btn__link"> View more<span></span>
+                      <a href="<?php echo $about; ?>" class="c-btn__link"> View more<span></span>
                       </a>
                       <div class="c-btn__overlay"></div>
                     </div>
@@ -298,7 +310,7 @@
                 <p class="p-information-section__text"> 当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br> 正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。</p>
                 <div class="p-information-section__btn">
                   <div class="c-btn" ontouchstart="">
-                    <a href="page-diving-info.html" class="c-btn__link"> View more<span></span>
+                    <a href="<?php echo $diving; ?>" class="c-btn__link"> View more<span></span>
                     </a>
                     <div class="c-btn__overlay"></div>
                   </div>
@@ -322,7 +334,7 @@
             <div class="p-blog-section__wrap">
               <ul class="p-blog-cards">
                 <li class="p-blog-cards__item">
-                  <a href="single.html" class="p-blog-card">
+                  <a href="<?php echo $blog; ?>" class="p-blog-card">
                     <figure class="p-blog-card__img">
                       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog1.jpg" alt="ピンク色の珊瑚の写真">
                     </figure>
@@ -336,7 +348,7 @@
                   </a>
                 </li>
                 <li class="p-blog-cards__item">
-                  <a href="single.html" class="p-blog-card">
+                  <a href="<?php echo $blog; ?>" class="p-blog-card">
                     <figure class="p-blog-card__img">
                       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog2.jpg" alt="青い海を泳ぐ亀の写真">
                     </figure>
@@ -350,7 +362,7 @@
                   </a>
                 </li>
                 <li class="p-blog-cards__item">
-                  <a href="single.html" class="p-blog-card">
+                  <a href="s<?php echo $blog; ?>" class="p-blog-card">
                     <figure class="p-blog-card__img">
                       <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog3.jpg" alt="イソギンチャクの中から顔を出すクマノミの写真">
                     </figure>
@@ -366,7 +378,7 @@
               </ul>
               <div class="p-blog-section__btn">
                 <div class="c-btn" ontouchstart="">
-                  <a href="home.html" class="c-btn__link"> View more<span></span>
+                  <a href="<?php echo $blog; ?>" class="c-btn__link"> View more<span></span>
                   </a>
                   <div class="c-btn__overlay"></div>
                 </div>
@@ -430,7 +442,7 @@
           </div>
           <div class="p-voice-section__btn">
             <div class="c-btn" ontouchstart="">
-              <a href="archive-voices.html" class="c-btn__link"> View more<span></span>
+              <a href="<?php echo $voice; ?>" class="c-btn__link"> View more<span></span>
               </a>
               <div class="c-btn__overlay"></div>
             </div>
@@ -547,7 +559,7 @@
           </div>
           <div class="p-price-section__btn">
             <div class="c-btn" ontouchstart="">
-              <a href="page-price.html" class="c-btn__link"> View more<span></span>
+              <a href="<?php echo $price; ?>" class="c-btn__link"> View more<span></span>
               </a>
               <div class="c-btn__overlay"></div>
             </div>
