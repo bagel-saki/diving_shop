@@ -14,23 +14,46 @@
         <div class="p-archiveVoices-section__inner l-inner">
           <div class="p-archiveVoices-section__category">
             <div class="p-campaign-categories">
+            <?php
+            $taxonomy_terms = get_terms('voices_category');
+            if (!empty($taxonomy_terms) && !is_wp_error($taxonomy_terms)) {
+              foreach ($taxonomy_terms as $taxonomy_term) :
+            ?>
               <div class="p-campaign-categories__item">
-                <a href="<?php echo esc_url(get_post_type_archive_link('voices')); ?>" class="c-campaign-category js-campaign-category c-campaign-category--active"> all </a>
+                <a href="<?php echo get_term_link($taxonomy_term); ?>" class="c-campaign-category js-campaign-category 
+                <?php if ($taxonomy_term->slug === $term) {
+                    echo 'c-campaign-category--active';
+                } ?>"><?php echo esc_html($taxonomy_term->name); ?>
+                </a>
               </div>
               <?php
-              $taxonomy_terms = get_terms('voices_category', array('hide_empty' => false));
-              foreach ($taxonomy_terms as $taxonomy_term) :
-              ?>
-              <div class="p-campaign-categories__item">
-                <a href="<?php echo esc_url(get_term_link($taxonomy_term, 'voices_category')); ?>" class="c-campaign-category js-campaign-category "><?php echo esc_html($taxonomy_term->name); ?></a>
-              </div>
-              <?php endforeach; ?>  
+              endforeach;
+            }?>
             </div>
           </div>
+
+          <?php
+          $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+          $type = get_query_var('voices_category'); // タクソノミーのスラッグ
+          $args = [
+            'post_type' => 'voices', // 投稿タイプスラッグ
+            'paged' => $paged, // ページネーションがある場合に必要
+            'posts_per_page' => 4, // 表示件数（変更不要）
+            'tax_query' => array(
+              array(
+                'taxonomy' => 'voices_category', // タクソノミーのスラッグ
+                'field' => 'slug', // ターム名をスラッグで指定する（変更不要）
+                'terms' => $type,
+              ),
+            )
+          ];
+          $wp_query = new WP_Query($args);
+          ?>
+
           <div class="p-archiveVoices-section__content">
             <ul class="p-lower-voiceCards">
-              <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); ?>
+              <?php if ($wp_query->have_posts()) : ?>
+                <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
                 <li class="p-lower-voiceCards__item">
                   <div class="p-lower-voiceCard">
                     <div class="p-lower-voiceCard__inner">
@@ -60,27 +83,30 @@
             <?php endif; ?>
             </ul>
           </div>
+          <?php if ($wp_query->max_num_pages > 1) : ?>
           <div class="p-archiveVoices-section__pagination">
             <div class="c-pagination" ontouchstart="">
             <?php
-                    $args = array(
-                      'mid_size' => 4,
-                      'prev_text' => '<span></span>',
-                      'next_text' => '<span></span>',
-                    );
-                    if (wp_is_mobile()) {
-                      $args['mid_size'] = 4;
-                    }
-                    else {
-                      $args['mid_size'] = 6;
-                    }
-                    the_posts_pagination($args);
-                    ?>
+              $args = array(
+                'mid_size' => 4,
+                'prev_text' => '<span></span>',
+                'next_text' => '<span></span>',
+              );
+              if (wp_is_mobile()) {
+                $args['mid_size'] = 4;
+              } else {
+                $args['mid_size'] = 6;
+              }
+              echo paginate_links($args);
+              ?>
+            </div>
           </div>
+          <?php endif; ?>
+          <?php wp_reset_postdata(); ?>
+        </div>
           <div class="p-archiveVoices-section__fish">
             <div class="c-img-fish c-img-fish--reverse"></div>
           </div>
-        </div>
       </div>
     </div>
   </main>
