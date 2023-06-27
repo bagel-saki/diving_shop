@@ -1,41 +1,41 @@
 <?php get_header(); ?>
 
-  <main>
-    <div class="p-lower-mv p-lower-mv--voice">
-      <div class="p-lower-mv__content">
-        <h1 class="p-lower-mv_title">voice</h1>
-      </div>
+<main>
+  <div class="p-lower-mv p-lower-mv--voice">
+    <div class="p-lower-mv__content">
+      <h1 class="p-lower-mv_title">voice</h1>
     </div>
-    <div class="l-inner">
+  </div>
+  <div class="l-inner">
     <?php get_template_part('breadcrumb'); ?>
-    </div>
-    <div class="l-lower-head">
-      <div class="p-archiveVoices-section">
-        <div class="p-archiveVoices-section__inner l-inner">
-          <div class="p-archiveVoices-section__category">
-            <div class="p-campaign-categories">
-              <div class="p-campaign-categories__item">
-                <a href="<?php echo esc_url(get_post_type_archive_link('voices')); ?>" class="c-campaign-category js-campaign-category c-campaign-category--active"> all </a>
-              </div>
-              <?php
-              $taxonomy_terms = get_terms('voices_category', array('hide_empty' => false));
-              foreach ($taxonomy_terms as $taxonomy_term) :
-              ?>
+  </div>
+  <div class="l-lower-head">
+    <div class="p-archiveVoices-section">
+      <div class="p-archiveVoices-section__inner l-inner">
+        <div class="p-archiveVoices-section__category">
+          <div class="p-campaign-categories">
+            <div class="p-campaign-categories__item">
+              <a href="<?php echo esc_url(get_post_type_archive_link('voices')); ?>" class="c-campaign-category js-campaign-category c-campaign-category--active"> all </a>
+            </div>
+            <?php
+            $taxonomy_terms = get_terms('voices_category', array('hide_empty' => false));
+            foreach ($taxonomy_terms as $taxonomy_term) :
+            ?>
               <div class="p-campaign-categories__item">
                 <a href="<?php echo esc_url(get_term_link($taxonomy_term, 'voices_category')); ?>" class="c-campaign-category js-campaign-category "><?php echo esc_html($taxonomy_term->name); ?></a>
               </div>
-              <?php endforeach; ?>  
-            </div>
+            <?php endforeach; ?>
           </div>
-          <div class="p-archiveVoices-section__content">
-            <ul class="p-lower-voiceCards">
-              <?php if (have_posts()) : ?>
-                <?php while (have_posts()) : the_post(); ?>
+        </div>
+        <div class="p-archiveVoices-section__content">
+          <ul class="p-lower-voiceCards">
+            <?php if (have_posts()) : ?>
+              <?php while (have_posts()) : the_post(); ?>
                 <li class="p-lower-voiceCards__item">
                   <div class="p-lower-voiceCard">
                     <div class="p-lower-voiceCard__inner">
                       <div class="p-lower-voiceCard__head">
-                       <div class="p-lower-voiceCard__info">
+                        <div class="p-lower-voiceCard__info">
                           <div class="p-lower-voiceCard__meta">
                             <p class="p-lower-voiceCard__age"><?php echo get_field('age'); ?>(<?php echo get_field('sex'); ?>)</p>
                             <p class="p-lower-voiceCard__tag"><?php echo get_field('tag'); ?></p>
@@ -58,30 +58,29 @@
                 </li>
               <?php endwhile; ?>
             <?php endif; ?>
-            </ul>
-          </div>
-          <div class="p-archiveVoices-section__pagination">
-            <div class="c-pagination" ontouchstart="">
+          </ul>
+        </div>
+        <div class="p-archiveVoices-section__pagination">
+          <div class="c-pagination" ontouchstart="">
             <?php
-                    $args = array(
-                      'mid_size' => 4,
-                      'prev_text' => '<span></span>',
-                      'next_text' => '<span></span>',
-                    );
-                    if (wp_is_mobile()) {
-                      $args['mid_size'] = 4;
-                    }
-                    else {
-                      $args['mid_size'] = 6;
-                    }
-                    the_posts_pagination($args);
-                    ?>
+            $args = array(
+              'mid_size' => 4,
+              'prev_text' => '<span></span>',
+              'next_text' => '<span></span>',
+            );
+            if (wp_is_mobile()) {
+              $args['mid_size'] = 4;
+            } else {
+              $args['mid_size'] = 6;
+            }
+            the_posts_pagination($args);
+            ?>
           </div>
-          <div class="p-archiveVoices-section__fish">
-            <div class="c-img-fish c-img-fish--reverse"></div>
-          </div>
+        </div>
+        <div class="p-archiveVoices-section__fish">
+          <div class="c-img-fish c-img-fish--reverse"></div>
         </div>
       </div>
     </div>
-  </main>
-<?php get_footer(); ?>
+  </div>
+  <?php get_footer(); ?>

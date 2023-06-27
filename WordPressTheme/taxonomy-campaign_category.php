@@ -94,36 +94,56 @@
             <?php endif; ?>
           </ul>
         </div>
+
+        <?php global $wp_rewrite;
+        $paginate_base = get_pagenum_link(1);
+        if (strpos($paginate_base, '?') || !$wp_rewrite->using_permalinks()) {
+          $paginate_format = '';
+          $paginate_base = add_query_arg('paged', '%#%');
+        } else {
+          $paginate_format = (substr($paginate_base, -1, 1) == '/' ? '' : '/') .
+            user_trailingslashit('page/%#%/', 'paged');;
+          $paginate_base .= '%_%';
+        }
+        echo paginate_links(array(
+          'base' => $paginate_base,
+          'format' => $paginate_format,
+          'total' => $wp_query->max_num_pages,
+          'mid_size' => 1,
+          'current' => ($paged ? $paged : 1),
+          'prev_text' => '<',
+          'next_text' => '>',
+        ));
+        ?>
+
+
         <?php if ($wp_query->max_num_pages > 1) : ?>
           <div class="p-archiveCampaign-section__pagination">
             <div class="c-pagination" ontouchstart="">
-            <div class="nav-links">
-              <?php
-              $args = array(
-                'mid_size' => 4,
-                'prev_text' => '<span></span>',
-                'next_text' => '<span></span>',
-              );
-              if (wp_is_mobile()) {
-                $args['mid_size'] = 4;
-              } else {
-                $args['mid_size'] = 6;
-              }
-              echo paginate_links($args);
-              ?>
+              <div class="nav-links">
+                <?php
+                $args = array(
+                  'mid_size' => 4,
+                  'prev_text' => '<span></span>',
+                  'next_text' => '<span></span>',
+                );
+                if (wp_is_mobile()) {
+                  $args['mid_size'] = 4;
+                } else {
+                  $args['mid_size'] = 6;
+                }
+                echo paginate_links($args);
+                ?>
+              </div>
             </div>
+          <?php endif; ?>
+          <?php wp_reset_postdata(); ?>
           </div>
-        <?php endif; ?>
-        <?php wp_reset_postdata(); ?>
+      </div>
+      <div class="p-archiveCampaign-section__fish">
+        <div class="c-img-fish c-img-fish--reverse"></div>
       </div>
     </div>
-    <div class="p-archiveCampaign-section__fish">
-      <div class="c-img-fish c-img-fish--reverse"></div>
-    </div>
   </div>
   </div>
-  </div>
-
-</main>
-
 <?php get_footer(); ?>

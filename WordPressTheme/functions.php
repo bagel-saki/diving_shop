@@ -201,3 +201,17 @@ function custom_breadcrumb_list() {
     // パンくずリストの終了タグ
     echo '</nav>';
 }
+
+
+//カスタム投稿でページネーションを使う問題を解決するにはpre_get_posts関数を使う
+function custom_query( $query ) {
+	if ( is_admin() || ! $query->is_main_query() )
+	  return;
+  
+	if ( $query->is_tax( 'campaign_category' ) ) {
+	  $query->set( 'posts_per_page', 4 ); // 4件の投稿を表示
+	  return;
+	}
+  }
+  add_action( 'pre_get_posts', 'custom_query' );
+  

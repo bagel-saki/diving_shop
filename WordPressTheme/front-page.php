@@ -86,19 +86,21 @@ $terms = esc_url(home_url('/terms/'));
             <p class="c-title__ja">キャンペーン</p>
           </div>
         </div>
-        <?php $campaign_args = array(
+        <?php
+        $campaign_args = array(
           'post_type' => 'campaign',
           'posts_per_page' => 4,
           'orderby' => 'date',
           'order' => 'DESC'
-        ); ?>
-        <?php $campaign_query = new WP_Query($campaign_args); ?>
-        <?php if ($campaign_query->have_posts()) : ?>
+        );
+        $campaign_query = new WP_Query($campaign_args);
+        if ($campaign_query->have_posts()) :
+        ?>
           <div class="p-campaign-section__wrapper">
             <div class="p-campaign-section__swiper js-campaign-swiper">
               <div class="swiper-wrapper">
                 <?php while ($campaign_query->have_posts()) : $campaign_query->the_post(); ?>
-                  <div class="p-campaign-section__item  swiper-slide">
+                  <div class="p-campaign-section__item swiper-slide">
                     <div class="p-campaign-card">
                       <div class="p-campaign-card__img">
                         <?php if (has_post_thumbnail()) : ?>
@@ -128,19 +130,17 @@ $terms = esc_url(home_url('/terms/'));
         <?php endif; ?>
         <?php wp_reset_postdata(); ?>
       </div>
+    </section>
   </div>
+
   <div class="swiper-button-next"></div>
   <div class="swiper-button-prev"></div>
-  </div>
   <div class="p-campaign-section__btn">
     <div class="c-btn" ontouchstart="">
       <a href="<?php echo $campaign; ?>" class="c-btn__link"> View more<span></span>
       </a>
       <div class="c-btn__overlay"></div>
     </div>
-  </div>
-  </div>
-  </section>
   </div>
 
   <div class="l-section">
@@ -229,8 +229,8 @@ $terms = esc_url(home_url('/terms/'));
           <div class="l-inner">
             <div class="p-blog-section__wrap">
               <ul class="p-blog-cards">
-                <li class="p-blog-cards__item">
-                  <?php while ($blog_query->have_posts()) : $blog_query->the_post(); ?>
+                <?php while ($blog_query->have_posts()) : $blog_query->the_post(); ?>
+                  <li class="p-blog-cards__item">
                     <a href="<?php the_permalink(); ?>" class="p-blog-card">
                       <figure class="p-blog-card__img">
                         <?php if (has_post_thumbnail()) : ?>
@@ -247,10 +247,10 @@ $terms = esc_url(home_url('/terms/'));
                         <p class="p-blog-card__text"><?php the_excerpt(); ?></p>
                       </div>
                     </a>
-                </li>
-              <?php endwhile; ?>
-              <?php wp_reset_postdata(); ?>
-            <?php endif; ?>
+                  </li>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+              <?php endif; ?>
               </ul>
               <div class="p-blog-section__btn">
                 <div class="c-btn" ontouchstart="">
@@ -447,7 +447,4 @@ $terms = esc_url(home_url('/terms/'));
         </div>
       </section>
     </div>
-
-</main>
-
 <?php get_footer(); ?>
