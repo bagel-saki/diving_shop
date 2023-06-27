@@ -97,6 +97,7 @@
         <?php if ($wp_query->max_num_pages > 1) : ?>
           <div class="p-archiveCampaign-section__pagination">
             <div class="c-pagination" ontouchstart="">
+            <div class="nav-links">
               <?php
               $args = array(
                 'mid_size' => 4,
