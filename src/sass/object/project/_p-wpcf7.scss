@@ -122,36 +122,11 @@ textarea {
 
 /*チェックボックス-------*/
 
-// .p-contact-form__check label {
-// 	padding-left: rem(22);
-// 	position: relative;
-// 	@include mq('md'){
-		
-// 	}
-// }
-
 .wpcf7-form-control-wrap[data-name="campaign"]
 .wpcf7-list-item-label  {
 	padding-left: rem(22);
 	position: relative;
 }
-
-// label {
-// 	[type="checkbox"] {
-// 	  & + span::before {
-// 		  content: '';
-// 		  position: absolute;
-// 		  display: block;
-// 		  width: rem(14);
-// 		  height: rem(14);
-// 		  border: solid 1px $green;
-// 		  top: rem(6);
-// 		  left: rem(-1);
-// 		  transition: 0.3s ease;
-		
-// 	  }
-// 	}
-//   }
 
 
 .wpcf7-form-control-wrap[data-name="campaign"] 
@@ -172,32 +147,16 @@ textarea {
 	display: block;
 }
 
-  span.wpcf7-form-control-wrap{
-	position: inherit;
-  }
 
 
+[type="checkbox"] + span::after{
+	opacity: 0;
+	transition : all 0.3s ease 0s;	
+}
 
 
-
-
-
-
-
-// .p-contact-form__checkLabel::before{
-// 	content: '';
-// 	position: absolute;
-// 	display: block;
-// 	width: rem(14);
-// 	height: rem(14);
-// 	border: solid 1px $green;
-// 	top: rem(6);
-// 	left: rem(-1);
-// 	transition: 0.3s ease;
-// }
-
-.wpcf7-form-control-wrap[data-name="campaign"] 
-.wpcf7-list-item-label::after{
+[type="checkbox"]:checked + span::after{
+	opacity: 1;
 	content: '';
 	position: absolute;
 	transform: translateY(-50%) rotate(-45deg);
@@ -209,19 +168,6 @@ textarea {
 	border-bottom: rem(2) solid $red;
 	top: rem(14);
 	left: rem(0);
-	opacity: 0;
-}
-
-.form__checkbox:checked+ .wpcf7-list-item-label::after {
-	opacity: 1;
-  }
-
-.wpcf7-list-item-label:checked+ .wpcf7-list-item-label::after {
-	opacity: 1;
-}
-
-input[type="checkbox"]:checked + .p-contact-form__checkLabel:after {
-	opacity: 1;
   }
   
   .p-contact-form__check--privacy { 
@@ -240,6 +186,13 @@ input[type="checkbox"]:checked + .p-contact-form__checkLabel:after {
   }
 
 
+  .wpcf7-form-control-wrap[data-name="privacy"]
+  .wpcf7-list-item-label  {
+	  padding-left: rem(22);
+	  position: relative;
+  }
+
+
 .wpcf7-form-control-wrap[data-name="privacy"] 
 .wpcf7-list-item-label::before {
 	content: '';
@@ -249,8 +202,7 @@ input[type="checkbox"]:checked + .p-contact-form__checkLabel:after {
 	transform: translateY(-50%);
 	width: rem(22);
 	height: rem(22);
-	border-left: rem(2) solid $red;
-	border-bottom: rem(2) solid $red;
+	border: solid 1px $green;
 	  
 	  @include mq('md'){
 		top: rem(12);
@@ -313,6 +265,13 @@ input[type="checkbox"]:checked + .p-contact-form__checkLabel:after {
 
 
 /*入力エラー----------*/
+
+input.wpcf7-not-valid, 
+textarea.wpcf7-not-valid, 
+select.wpcf7-not-valid::placeholder{
+	color: $white;
+}
+
 
 .required.error
 {
