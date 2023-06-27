@@ -1,0 +1,341 @@
+@use "global" as *;
+.p-contact-form{
+	position: relative;	
+}
+
+[type="text"],
+[type="email"],
+[type="tel"] {
+	padding: rem(7) rem(16);
+	width: 100%;
+	line-height: calc(24 /16);
+	border: 1px solid $green;
+}
+
+select{
+	font-size: rem(12);
+	padding: rem(10) rem(8);
+	border: rem(1) solid $green;
+	max-width: rem(480);
+	width: 100%;
+	background-color:transparent;
+	background-image: url(../../assets/images/common/Polygon.svg);
+	background-position: top rem(15) right rem(8) ;
+	background-size: rem(12);
+	background-repeat: no-repeat;
+	color:#000;
+
+}
+
+.p-contact-form__input .form-select{
+	color:#000;	
+}
+
+textarea {
+	height: rem(200);
+	resize: none;
+	box-shadow: none;
+	padding: rem(12) rem(16);
+	border: 1px solid $green;
+	appearance: none; 
+	font-size: rem(14);
+	width: 100%;
+}
+
+
+::placeholder {
+	color: $light-green;
+}	
+
+.p-contact-form__form{
+	@include mq('md'){
+		max-width: rem(700);
+		margin: 0 auto;
+		position: relative;
+	}
+}
+
+.p-contact-form__item{
+	border-bottom: rem(1) dashed $green;
+	padding-top: rem(24);
+	padding-bottom: rem(24);
+	@include mq('md'){
+		display: flex;
+		padding-top: rem(40);
+		padding-bottom: rem(40);
+	}
+}
+
+.p-contact-form__item:first-of-type{
+	padding-top: 0;	
+	@include mq('md'){
+		padding-top: rem(0);
+	}
+}
+
+.p-contact-form__itemTtl{
+	font-weight: $bold;
+	@include mq('md'){
+		width: rem(210);
+	}
+}
+
+.p-contact-form__itemTtl{
+	display: inline-block;
+	margin-right: rem(8);	
+}
+
+
+.p-contact-form__itemTtl.is-required span{
+	font-size: rem(12);
+	font-weight: $normal;
+	color: $white;
+	background: $red;
+	text-align: center;
+	padding-top: rem(3);
+	padding-bottom:rem(3);
+	padding-right:rem(12);
+	padding-left:rem(16);
+	line-height: 1;
+	margin-left: rem(8);
+	letter-spacing: 0.4em;
+	
+	
+	@include mq('md'){
+		top: 50%;
+		transform: translateY(-50%);
+		left: calc(100% + rem(6));
+		width: rem(44);	
+		margin-left: rem(6);
+	}
+}
+
+.p-contact-form__input{
+	margin-top: rem(16);
+	max-width: rem(480);
+	width: 100%;
+	@include mq('md'){
+		max-width: calc(100% - rem(220));
+		margin-top: 0;
+	}
+}
+
+/*チェックボックス-------*/
+
+// .p-contact-form__check label {
+// 	padding-left: rem(22);
+// 	position: relative;
+// 	@include mq('md'){
+		
+// 	}
+// }
+
+.wpcf7-form-control-wrap[data-name="campaign"]
+.wpcf7-list-item-label  {
+	padding-left: rem(22);
+	position: relative;
+}
+
+// label {
+// 	[type="checkbox"] {
+// 	  & + span::before {
+// 		  content: '';
+// 		  position: absolute;
+// 		  display: block;
+// 		  width: rem(14);
+// 		  height: rem(14);
+// 		  border: solid 1px $green;
+// 		  top: rem(6);
+// 		  left: rem(-1);
+// 		  transition: 0.3s ease;
+		
+// 	  }
+// 	}
+//   }
+
+
+.wpcf7-form-control-wrap[data-name="campaign"] 
+.wpcf7-list-item-label::before{
+	content: '';
+	position: absolute;
+	display: block;
+	width: rem(14);
+	height: rem(14);
+	border: solid 1px $green;
+	top: rem(6);
+	left: rem(-1);
+	transition: 0.3s ease;
+} 
+
+.wpcf7-form-control-wrap[data-name="campaign"]
+.wpcf7-list-item{
+	display: block;
+}
+
+  span.wpcf7-form-control-wrap{
+	position: inherit;
+  }
+
+
+
+
+
+
+
+
+
+// .p-contact-form__checkLabel::before{
+// 	content: '';
+// 	position: absolute;
+// 	display: block;
+// 	width: rem(14);
+// 	height: rem(14);
+// 	border: solid 1px $green;
+// 	top: rem(6);
+// 	left: rem(-1);
+// 	transition: 0.3s ease;
+// }
+
+.wpcf7-form-control-wrap[data-name="campaign"] 
+.wpcf7-list-item-label::after{
+	content: '';
+	position: absolute;
+	transform: translateY(-50%) rotate(-45deg);
+	width: rem(10);
+	height: rem(5);
+	margin-top: -0.1em;
+	margin-left: 0.1em;
+	border-left: rem(2) solid $red;
+	border-bottom: rem(2) solid $red;
+	top: rem(14);
+	left: rem(0);
+	opacity: 0;
+}
+
+.form__checkbox:checked+ .wpcf7-list-item-label::after {
+	opacity: 1;
+  }
+
+.wpcf7-list-item-label:checked+ .wpcf7-list-item-label::after {
+	opacity: 1;
+}
+
+input[type="checkbox"]:checked + .p-contact-form__checkLabel:after {
+	opacity: 1;
+  }
+  
+  .p-contact-form__check--privacy { 
+	  display: block;
+	  position: relative;
+	  padding: 0 0 0 calc(rem(25));
+	  line-height: calc(22 / 14);
+  }
+  
+  .p-contact-form__checkLabel--privacy{
+	margin-right: rem(24);
+	margin-left: rem(24);
+	@include mq('md'){
+		margin-right: rem(30);
+	}
+  }
+
+
+.wpcf7-form-control-wrap[data-name="privacy"] 
+.wpcf7-list-item-label::before {
+	content: '';
+	position: absolute;
+	top: rem(12);
+	left: rem(-8);
+	transform: translateY(-50%);
+	width: rem(22);
+	height: rem(22);
+	border-left: rem(2) solid $red;
+	border-bottom: rem(2) solid $red;
+	  
+	  @include mq('md'){
+		top: rem(12);
+		left: rem(-16);
+	  }
+  }
+   
+.p-contact-form__checkLabel--privacy::after{
+	top: rem(12);
+	left: rem(-6);
+	width: rem(16);
+	height: rem(8);
+	margin-top: -0.1em;
+	margin-left: 0.1em;
+	@include mq('md'){
+		top: rem(12);
+		left: rem(-14);
+	}
+}
+
+/*プライバシー-------*/
+.p-contact-form__privacy{
+	margin-top: rem(40);
+	display: flex;
+	align-items: center;
+	font-size: rem(14);
+	justify-content: center;
+	padding-left: rem(18);
+	line-height: calc(22 / 14);
+		@include mq('md'){
+			padding-left: rem(40);
+			margin-top: rem(80);
+		}
+	}
+
+
+
+
+/*ボタン------------*/
+.p-contact-form__btn{
+	margin-top: rem(24);
+	display: flex;
+	justify-content: center;
+	@include mq('md'){
+		margin-top: rem(34);
+	}
+}
+
+/*魚----------------*/
+.p-contact-form__fish{
+	position: absolute;
+    left: clamp(rem(15), 50% - rem(320),50% - rem(250));
+    top:rem(-24);
+    z-index: -1;
+    @include mq('md'){
+        left: clamp(rem(15), 50% - rem(624),50% - rem(624));
+        top:rem(-70);
+    }
+}
+
+
+/*入力エラー----------*/
+
+.required.error
+{
+	background: rgba(201, 72, 0, 0.2);
+	border: rem(1) solid $red;
+	color:$red;
+    font-weight:$normal;
+	font-size: rem(14);
+}
+
+.required.error::placeholder{
+	color: $white;
+}
+
+.p-contact-form__errorWrap { 
+	text-align: center;
+	display: none;
+	margin: rem(40);
+  }
+
+.p-contact-form__errorMessage {
+	color: $red;
+	display: inline-block;
+	text-align: left;
+
+}
