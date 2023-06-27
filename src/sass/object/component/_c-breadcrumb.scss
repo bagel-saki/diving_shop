@@ -9,14 +9,8 @@
   }
 }
 
-// .breadcrumb-item.active,
-// .breadcrumb-item a {
-//   padding:rem(8);
-//   display: inline-block;
-// }
-
 .breadcrumb .home,
-.breadcrumb .current-item
+.breadcrumb .post
 {
   padding:rem(8);
   display: inline-block;
@@ -24,5 +18,4 @@
 
 .breadcrumb .home{
   text-transform: uppercase;
-
 }

@@ -11,7 +11,10 @@
 
 }
 
-.page-numbers {
+.page-numbers,
+.nav-previous,
+.nav-next
+{
 	display: flex;
 	align-items: center;
     justify-content: center;
@@ -34,31 +37,39 @@
     }
 
 .prev.page-numbers,
-.next.page-numbers {
+.next.page-numbers,
+.nav-previous,
+.nav-next
+{
 	margin: 0 rem(34);
-	color:transparent;;
+	color:transparent;
 }
 
 .prev.page-numbers span,
-.next.page-numbers span{
+.next.page-numbers span,
+.nav-previous span,
+.nav-next span
+{
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: contain;
     background-color: $green;
     width: rem(8);
     height: rem(16);
+	display: inline-block;
 }
 
-.next.page-numbers span{
-	mask-image: url(../../assets/images/common/next.svg);
-}
-
-.prev.page-numbers span{
+.prev.page-numbers span,
+.nav-previous span
+{
 	mask-image: url(../../assets/images/common/prev.svg);
 }
 
-
-
+.next.page-numbers span,
+.nav-next span
+{
+	mask-image: url(../../assets/images/common/next.svg);
+}
 
 @media (hover: hover) {
 	/* hover指定できるPCを想定したスタイル */
