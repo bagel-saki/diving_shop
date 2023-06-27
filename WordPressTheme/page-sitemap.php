@@ -122,6 +122,4 @@
         </div>
       </section>
     </div>
-  </main>
-
 <?php get_footer(); ?>

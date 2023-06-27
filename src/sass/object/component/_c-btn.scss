@@ -1,10 +1,10 @@
 @use "global" as *;
 
-.c-btn{
+.c-btn {
   position: relative;
 }
 
-.c-btn__link{
+.c-btn__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,49 +12,68 @@
   text-decoration: none;
   width: rem(202);
   height: rem(54);
-  gap:rem(7);
+  gap: rem(7);
   background-color: $green;
   border: 1px solid $green;
   position: relative;
   font-size: rem(14);
-  line-height: calc(40/22);
-  font-family: 'Gotu', sans-serif;
+  line-height: calc(40 / 22);
+  font-family: "Gotu", sans-serif;
   transition: background-color 0.3s, color 0.3s;
   z-index: map-get($layer, floating);
   text-transform: capitalize;
 }
 
-.c-btn__link.c-btn__link--white .c-btn__uppercare{
+.c-btn__link.c-btn__link--white .c-btn__uppercare {
   text-transform: uppercase;
 }
 
-.c-btn span{
+.c-btn__link.c-btn__link--send {
+  justify-content: flex-start;
+  padding-left: rem(54);
+}
+
+.c-btn span {
   mask-image: url(../../assets/images/common/arrow.svg);
-mask-repeat: no-repeat;
-mask-position: center;
-mask-size: contain;
-background-color: $white;
-transition: background-color 0.3s;
-width: rem(39);
-height: rem(7);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  background-color: $white;
+  transition: background-color 0.3s;
+  width: rem(39);
+  height: rem(7);
 }
 
-.c-btn__link.c-btn__link--white span{
-background-color: $green;
+.c-btn__link.c-btn__link--white span {
+  background-color: $green;
 }
 
-.c-btn__link.c-btn__link--send{
+.c-btn.c-btn--send::after {
   gap: rem(16);
+  content: "";
+  position: absolute;
+  right: rem(56);
+  z-index: 600;
+  top: 46%;
+  transform: translateY(-50%);
+  mask-image: url(../../assets/images/common/arrow.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  background-color: $white;
+  transition: background-color 0.3s;
+  width: rem(39);
+  height: rem(7);
 }
 
-.c-btn__link.c-btn__link--white{
+.c-btn__link.c-btn__link--white {
   background-color: $white;
   border: $white;
   color: $green;
   gap: rem(17);
 }
 
-.c-btn__overlay{
+.c-btn__overlay {
   position: absolute;
   content: "";
   display: inline-block;
@@ -67,56 +86,59 @@ background-color: $green;
   z-index: map-get($layer, default);
 }
 
-.c-btn__overlay.c-btn__overlay--white{
+.c-btn__overlay.c-btn__overlay--white {
   border: 1px solid $white;
 }
 
 @media (hover: hover) {
   /* hover指定できるPCを想定したスタイル */
-  .c-btn__link:hover{
+  .c-btn__link:hover {
     background-color: $white;
     color: $green;
     border: 1px solid $green;
     opacity: 1;
-    }
-
-    .c-btn__link.c-btn__link--white:hover{
-      background-color: $green;
-      border: 1px solid $white;
-      color: $white;
-      opacity: 1;
-      }
-
-    .c-btn__link:hover span{
-      background-color: $green;
-    }
-    
-    .c-btn__link.c-btn__link--white:hover span{
-      background-color: $white;
-    }
-
   }
-  @media (hover: none) {
+
+  .c-btn.c-btn--send:hover::after {
+    background-color: $green;
+  }
+
+  .c-btn__link.c-btn__link--white:hover {
+    background-color: $green;
+    border: 1px solid $white;
+    color: $white;
+    opacity: 1;
+  }
+
+  .c-btn__link:hover span {
+    background-color: $green;
+  }
+
+  .c-btn__link.c-btn__link--white:hover span {
+    background-color: $white;
+  }
+}
+@media (hover: none) {
   /* hoverが使えないタッチ端末を想定した装飾 */
-  .c-btn__link:active{
+  .c-btn__link:active {
     background-color: $white;
     color: $green;
     border: 1px solid $green;
     opacity: 1;
-    }
-
-    .c-btn__link.c-btn__link--white:active{
-      background-color: $green;
-      border: 1px solid $white;
-      color: $white;
-      opacity: 1;
-      }
-
-    .c-btn__link:active span{
-      background-color: $green;
-    }
-
-    .c-btn__link.c-btn__link--white:active span{
-      background-color: $white;
-    }
   }
+
+  .c-btn__link.c-btn__link--white:active {
+    background-color: $green;
+    border: 1px solid $white;
+    color: $white;
+    opacity: 1;
+  }
+
+  .c-btn__link:active span {
+    background-color: $green;
+  }
+
+  .c-btn__link.c-btn__link--white:active span {
+    background-color: $white;
+  }
+}
