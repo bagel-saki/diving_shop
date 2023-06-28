@@ -12,7 +12,7 @@
     <div class="l-lower-head">
       <div class="p-contact-form">
         <div class="p-contact-form__inner l-inner">
-        <?php echo do_shortcode('[contact-form-7 id="45" title="お問い合わせ"]');?>
+        <?php echo do_shortcode('[contact-form-7 id="91" title="コンタクトフォーム 1"]');?>
           <div class="p-contact-form__fish">
             <div class="c-img-fish c-img-fish--reverse"></div>
           </div>
