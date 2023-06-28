@@ -89,7 +89,7 @@ $terms = esc_url(home_url('/terms/'));
         <?php
         $campaign_args = array(
           'post_type' => 'campaign',
-          'posts_per_page' => 4,
+          'posts_per_page' => 8,
           'orderby' => 'date',
           'order' => 'DESC'
         );
@@ -124,25 +124,23 @@ $terms = esc_url(home_url('/terms/'));
                     </div>
                   </div>
                 <?php endwhile; ?>
+              <?php endif; ?>
+              <?php wp_reset_postdata(); ?>
               </div>
             </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
           </div>
-        <?php endif; ?>
-        <?php wp_reset_postdata(); ?>
+          <div class="p-campaign-section__btn">
+            <div class="c-btn" ontouchstart="">
+              <a href="<?php echo $campaign; ?>" class="c-btn__link"> View more<span></span>
+              </a>
+              <div class="c-btn__overlay"></div>
+            </div>
+          </div>
       </div>
     </section>
   </div>
-
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="p-campaign-section__btn">
-    <div class="c-btn" ontouchstart="">
-      <a href="<?php echo $campaign; ?>" class="c-btn__link"> View more<span></span>
-      </a>
-      <div class="c-btn__overlay"></div>
-    </div>
-  </div>
-
   <div class="l-section">
     <section class="p-aboutus-section">
       <div class="l-inner p-aboutus-section__inner">
@@ -447,4 +445,4 @@ $terms = esc_url(home_url('/terms/'));
         </div>
       </section>
     </div>
-<?php get_footer(); ?>
+    <?php get_footer(); ?>
