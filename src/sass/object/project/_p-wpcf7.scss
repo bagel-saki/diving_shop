@@ -120,7 +120,17 @@ textarea {
 	}
 }
 
+
 /*チェックボックス-------*/
+
+.wpcf7-list-item{
+	margin-left:0;
+}
+
+.p-contact-form__privacy
+.wpcf7-list-item{
+	margin-left:rem(25);
+}
 
 .wpcf7-form-control-wrap[data-name="campaign"]
 .wpcf7-list-item-label  {
@@ -137,24 +147,55 @@ textarea {
 	width: rem(14);
 	height: rem(14);
 	border: solid 1px $green;
-	top: rem(6);
+	top: rem(4);
 	left: rem(-1);
 	transition: 0.3s ease;
 } 
 
-.wpcf7-form-control-wrap[data-name="campaign"]
+
+.wpcf7-form-control-wrap[data-name="privacy"]
+.wpcf7-list-item-label  {
+	padding-left: rem(22);
+	position: relative;
+}
+
+
+.wpcf7-form-control-wrap[data-name="privacy"] 
+.wpcf7-list-item-label::before {
+  content: '';
+  position: absolute;
+  top: rem(12);
+  left: rem(-8);
+  transform: translateY(-50%);
+  width: rem(22);
+  height: rem(22);
+  border: solid 1px $green;
+	
+	@include mq('md'){
+	  top: rem(8);
+	  left: rem(-16);
+	}
+}
+
+.wpcf7-form-control-wrap //お問い合わせ項目の縦並び
 .wpcf7-list-item{
+	display: block;
+}
+
+.wpcf7-form-control-wrap //プライバシーセクション改行時の左揃え
+.wpcf7-list-item-label{
 	display: block;
 }
 
 
 
+.p-contact-form__check
 [type="checkbox"] + span::after{
 	opacity: 0;
 	transition : all 0.3s ease 0s;	
 }
 
-
+.p-contact-form__check
 [type="checkbox"]:checked + span::after{
 	opacity: 1;
 	content: '';
@@ -166,62 +207,57 @@ textarea {
 	margin-left: 0.1em;
 	border-left: rem(2) solid $red;
 	border-bottom: rem(2) solid $red;
-	top: rem(14);
-	left: rem(0);
+	top: rem(12);
+	left: 0;
   }
+
+.p-contact-form__privacy
+[type="checkbox"] + span::after{
+	opacity: 0;
+	transition : all 0.3s ease 0s;	
+}
+
+.p-contact-form__privacy
+[type="checkbox"]:checked + span::after{
+	opacity: 1;
+	content: '';
+	position: absolute;
+	transform: translateY(-50%) rotate(-45deg);
+	width: rem(16);
+	height: rem(8);
+	margin-top: -0.1em;
+	margin-left: 0.1em;
+	border-left: rem(2) solid $red;
+	border-bottom: rem(2) solid $red;
+	top: rem(12);
+	left: rem(-6);
+
+	@include mq('md'){
+		top: rem(12);
+		left: rem(-14);	
+	}
+  }
+
+
   
+
   .p-contact-form__check--privacy { 
 	  display: block;
 	  position: relative;
 	  padding: 0 0 0 calc(rem(25));
 	  line-height: calc(22 / 14);
   }
+
   
   .p-contact-form__checkLabel--privacy{
 	margin-right: rem(24);
 	margin-left: rem(24);
+	padding-left: rem(22);
+	
 	@include mq('md'){
 		margin-right: rem(30);
 	}
   }
-
-
-  .wpcf7-form-control-wrap[data-name="privacy"]
-  .wpcf7-list-item-label  {
-	  padding-left: rem(22);
-	  position: relative;
-  }
-
-
-.wpcf7-form-control-wrap[data-name="privacy"] 
-.wpcf7-list-item-label::before {
-	content: '';
-	position: absolute;
-	top: rem(12);
-	left: rem(-8);
-	transform: translateY(-50%);
-	width: rem(22);
-	height: rem(22);
-	border: solid 1px $green;
-	  
-	  @include mq('md'){
-		top: rem(12);
-		left: rem(-16);
-	  }
-  }
-   
-.p-contact-form__checkLabel--privacy::after{
-	top: rem(12);
-	left: rem(-6);
-	width: rem(16);
-	height: rem(8);
-	margin-top: -0.1em;
-	margin-left: 0.1em;
-	@include mq('md'){
-		top: rem(12);
-		left: rem(-14);
-	}
-}
 
 /*プライバシー-------*/
 .p-contact-form__privacy{
@@ -230,7 +266,8 @@ textarea {
 	align-items: center;
 	font-size: rem(14);
 	justify-content: center;
-	padding-left: rem(18);
+	padding-left: rem(25);
+	padding-right:rem(25);
 	line-height: calc(22 / 14);
 		@include mq('md'){
 			padding-left: rem(40);
@@ -268,33 +305,62 @@ textarea {
 
 input.wpcf7-not-valid, 
 textarea.wpcf7-not-valid, 
-select.wpcf7-not-valid::placeholder{
-	color: $white;
-}
-
-
-.required.error
-{
+select.wpcf7-not-valid{
 	background: rgba(201, 72, 0, 0.2);
 	border: rem(1) solid $red;
-	color:$red;
-    font-weight:$normal;
-	font-size: rem(14);
 }
 
-.required.error::placeholder{
-	color: $white;
+
+input.wpcf7-not-valid::placeholder{
+	color: $white;	
 }
 
-.p-contact-form__errorWrap { 
+.wpcf7-form.wpcf7-response-output{
 	text-align: center;
-	display: none;
-	margin: rem(40);
-  }
+}
 
-.p-contact-form__errorMessage {
+.wpcf7-response-output{
 	color: $red;
 	display: inline-block;
 	text-align: left;
+}
+.wpcf7-not-valid-tip{
+	color: $red;	
+}
 
+.wpcf7 form .wpcf7-response-output{
+	margin-top: 0;
+	margin-bottom: rem(35);
+	
+}
+
+//エラーメッセージの枠線
+.wpcf7 form.invalid 
+.wpcf7-response-output, 
+.wpcf7 form.unaccepted 
+.wpcf7-response-output, 
+.wpcf7 form.payment-required 
+.wpcf7-response-output{
+	border: none;
+
+}
+
+
+/*--送信OK-----------*/
+div.wpcf7-mail-sent-ok {
+	border: 2px solid transparent; 
+	}
+
+
+div.wpcf7-mail-sent-ng {
+border: 2px solid #398f14;
+}
+
+div.wpcf7-spam-blocked {
+border: 2px solid #ffa500;
+
+}
+
+div.wpcf7-validation-errors {
+border: 2px solid #f7e700;
 }
