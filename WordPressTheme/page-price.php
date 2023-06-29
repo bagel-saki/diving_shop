@@ -13,7 +13,6 @@
       <div class="p-pagePrice-section">
         <div class="p-pagePrice-section__inner l-inner">
           <div class="p-pagePrice-section__content">
-            <!-- p-lower-price.ejs -->
             <div class="p-lower-price">
               <ul class="p-lower-price__items">
                 <li class="p-lower-price__item">

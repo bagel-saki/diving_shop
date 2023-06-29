@@ -22,7 +22,7 @@
                 <ul class="p-lower-blogCards">
                   <?php if (have_posts()) : ?>
                     <?php while (have_posts()) : the_post(); ?>
-                      <li class="p-blog-cards__item">
+                      <li class="p-lower-blogCards__item">
                         <a href="<?php the_permalink(); ?>" class="p-blog-card">
                           <figure class="p-blog-card__img">
                             <?php if (has_post_thumbnail()) : ?>
