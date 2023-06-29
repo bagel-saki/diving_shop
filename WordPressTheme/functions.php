@@ -158,7 +158,7 @@ function my_excerpt_more( $more ) {
 add_filter( 'excerpt_more', 'my_excerpt_more' );
 
 /* --------------------------------------------
-カスタム投稿タイプ【キャンペーン】：メインクエリの変更（アーカイブページにて表示件数を４件にする）
+カスタム投稿タイプ【キャンペーン、お客様の声】：メインクエリの変更（アーカイブページの表示件数）
  * -------------------------------------------- */
 function change_set_campaign($query)
 {
@@ -167,6 +167,9 @@ function change_set_campaign($query)
 	}
 	if ($query->is_post_type_archive('campaign') || is_tax('campaign_category') || is_search()) {
 		$query->set('posts_per_page', '4');
+		return;
+	}if ($query->is_post_type_archive('voices') || is_tax('voices_category') || is_search()) {
+		$query->set('posts_per_page', '6');
 		return;
 	}
 }
@@ -198,7 +201,6 @@ function custom_breadcrumb_list() {
     // パンくずリストの終了タグ
     echo '</nav>';
 }
-
 
 
 //Contact Form7の送信ボタンをクリックした後の遷移先設定

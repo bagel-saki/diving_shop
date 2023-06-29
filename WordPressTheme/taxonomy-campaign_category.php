@@ -33,28 +33,10 @@
           </div>
         </div>
 
-        <?php
-        $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-        $type = get_query_var('campaign_category'); // タクソノミーのスラッグ
-        $args = array(
-          'post_type' => 'campaign', // 投稿タイプスラッグ
-          'paged' => $paged, // ページネーションがある場合に必要
-          'posts_per_page' => 4, // 表示件数（変更不要）
-          'tax_query' => array(
-            array(
-              'taxonomy' => 'campaign_category', // タクソノミーのスラッグ
-              'field' => 'slug', // ターム名をスラッグで指定する（変更不要）
-              'terms' => $type,
-            ),
-          ),
-        );
-        $wp_query = new WP_Query($args);
-        ?>
-
         <div class="p-archiveCampaign-section__content">
           <ul class="p-lower-campaignCards">
-            <?php if ($wp_query->have_posts()) : ?>
-              <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
+            <?php if (have_posts()) : ?>
+              <?php while (have_posts()) : the_post(); ?>
                 <li class="p-lower-campaignCards__item">
                   <div class="p-lower-campaignCard">
                     <div class="p-lower-campaignCard__img">
@@ -65,7 +47,7 @@
                       <?php endif; ?>
                     </div>
                     <div class="p-lower-campaignCard__head">
-                      <p class="p-lower-campaignCard__tag"><?php echo get_field('tag'); ?></p>
+                      <p class="p-lower-campaignCard__tag"><?php single_term_title(); ?></p>
                       <h3 class="p-lower-campaignCard__title"><?php the_title(); ?></h3>
                       <span class="p-lower-campaignCard__border"></span>
                     </div>
@@ -113,20 +95,8 @@
                 </div>
               </div>
             <?php endif; ?>
-            <?php wp_reset_postdata(); ?>
-            </div>
-            <div class="p-archiveCampaign-section__pagination">
-              <div class="c-pagination" ontouchstart="">
-                <div class="nav-links">
-                  <?php if (function_exists('wp_pagenavi')) {
-                    wp_pagenavi();
-                  } ?>
-                </div>
-              </div>
             </div>
         </div>
-
-
 
         <div class="p-archiveCampaign-section__fish">
           <div class="c-img-fish c-img-fish--reverse"></div>
