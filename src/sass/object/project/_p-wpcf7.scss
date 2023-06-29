@@ -172,7 +172,7 @@ textarea {
   border: solid 1px $green;
 	
 	@include mq('md'){
-	  top: rem(8);
+	  top: rem(10);
 	  left: rem(-16);
 	}
 }
@@ -233,13 +233,10 @@ textarea {
 	left: rem(-6);
 
 	@include mq('md'){
-		top: rem(12);
+		top: rem(8);
 		left: rem(-14);	
 	}
   }
-
-
-  
 
   .p-contact-form__check--privacy { 
 	  display: block;
@@ -276,6 +273,65 @@ textarea {
 	}
 
 
+/*入力エラー----------*/
+
+input.wpcf7-not-valid, 
+textarea.wpcf7-not-valid, 
+select.wpcf7-not-valid{
+	background: rgba(201, 72, 0, 0.2);
+	border: rem(1) solid $red;
+}
+
+
+input.wpcf7-not-valid::placeholder{
+	color: $white;	
+}
+
+.wpcf7-response-output{
+	color: $red;
+	display: inline-block;
+}
+
+.wpcf7-not-valid-tip{
+	color: $red;	
+}
+
+//エラーメッセージの枠線と位置
+.wpcf7 form.invalid 
+.wpcf7-response-output, 
+.wpcf7 form.unaccepted 
+.wpcf7-response-output, 
+.wpcf7 form.payment-required 
+.wpcf7-response-output{
+	display: flex;
+	border: none;
+	justify-content: center;
+	text-align: left;
+	margin-bottom: rem(35);
+
+}
+
+
+/*--送信OK-----------*/
+
+.wpcf7-form.sent .wpcf7-response-output{//送信完了メッセージ
+	display: none;
+}
+
+.wpcf7 form.sent .wpcf7-response-output{//送信完了メッセージの外枠
+	border: none;
+}//display:noneにしてるからなくても良い
+
+
+.wpcf7 form .wpcf7-response-output{//display:noneにしてるからなくても良い
+	margin: 0;
+}
+
+
+// .wpcf7 form.sent p,
+// .wpcf7 form.sent div{//送信後に遷移までの間にフォームを消したい場合
+// 	display:none;
+// }
 
 
 /*ボタン------------*/
@@ -300,67 +356,3 @@ textarea {
     }
 }
 
-
-/*入力エラー----------*/
-
-input.wpcf7-not-valid, 
-textarea.wpcf7-not-valid, 
-select.wpcf7-not-valid{
-	background: rgba(201, 72, 0, 0.2);
-	border: rem(1) solid $red;
-}
-
-
-input.wpcf7-not-valid::placeholder{
-	color: $white;	
-}
-
-.wpcf7-form.wpcf7-response-output{
-	text-align: center;
-}
-
-.wpcf7-response-output{
-	color: $red;
-	display: inline-block;
-	text-align: left;
-}
-.wpcf7-not-valid-tip{
-	color: $red;	
-}
-
-.wpcf7 form .wpcf7-response-output{
-	margin-top: 0;
-	margin-bottom: rem(35);
-	
-}
-
-//エラーメッセージの枠線
-.wpcf7 form.invalid 
-.wpcf7-response-output, 
-.wpcf7 form.unaccepted 
-.wpcf7-response-output, 
-.wpcf7 form.payment-required 
-.wpcf7-response-output{
-	border: none;
-
-}
-
-
-/*--送信OK-----------*/
-div.wpcf7-mail-sent-ok {
-	border: 2px solid transparent; 
-	}
-
-
-div.wpcf7-mail-sent-ng {
-border: 2px solid #398f14;
-}
-
-div.wpcf7-spam-blocked {
-border: 2px solid #ffa500;
-
-}
-
-div.wpcf7-validation-errors {
-border: 2px solid #f7e700;
-}
