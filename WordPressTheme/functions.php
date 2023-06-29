@@ -10,6 +10,7 @@
  */
 function my_setup() {
 	add_theme_support( 'post-thumbnails' ); /* アイキャッチ */
+	add_image_size('blog', 700, 468, true);
 	add_theme_support( 'automatic-feed-links' ); /* RSSフィード */
 	add_theme_support( 'title-tag' ); /* タイトルタグ自動生成 */
 	add_theme_support(

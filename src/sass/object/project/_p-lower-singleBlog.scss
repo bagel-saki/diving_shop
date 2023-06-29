@@ -7,6 +7,7 @@
 .p-lower-singleBlog img{
     aspect-ratio: 345 / 231;
     width: 100%;
+    height: inherit;
     object-fit: cover;
 
     @include mq('md'){
@@ -24,8 +25,9 @@
     }
 }
 
-.p-lower-singleBlog ul{
-    display: flex;
-    gap: rem(9);
+.p-lower-singleBlog ul li{
     margin-top: rem(4);
+	background: url(../../assets/images/common/starfish-green.png) left rem(3) top rem(4) no-repeat;
+    background-size: rem(18) auto;
+    padding-left: rem(30);
 }

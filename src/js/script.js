@@ -201,4 +201,28 @@ jQuery(function ($) {
       $(this).addClass("current");
     });
   });
+
+
+  // $(document).ready(function() {
+  //   // 初期状態でwpcf7-response-outputを非表示にする
+  //   $(".wpcf7-response-output").hide();
+  
+  //   // wpcf7-not-validクラスが表示された場合にwpcf7-response-outputを表示する
+  //   if ($(".wpcf7-response-output").hasClass("wpcf7-not-valid-tip")) {
+  //     $(".wpcf7-response-output").show();
+  //   }
+  
+  //   // wpcf7-response-outputを監視し、wpcf7-not-validクラスが追加/削除されたときに表示/非表示を切り替える
+  //   $(".wpcf7-response-output").on("DOMSubtreeModified", function() {
+  //     if ($(this).hasClass("wpcf7-not-valid-tip")) {
+  //       $(this).show();
+  //     } else {
+  //       $(this).hide();
+  //     }
+  //   });
+  // });
+
+  
+
+
 });
