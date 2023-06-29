@@ -26,7 +26,7 @@
                     </div>
                     <div class="p-lower-singleBlog">
                       <div>
-                        <?php the_post_thumbnail('post-thumbnail', array('alt' => the_title_attribute('echo=0'))); ?>
+                        <?php the_post_thumbnail('blog', array('alt' => the_title_attribute('echo=0'))); ?>
                         <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog1.jpg" alt="" /> -->
                       </div>
                       <?php the_content(); ?>
