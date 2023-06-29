@@ -35,7 +35,6 @@ add_action( 'after_setup_theme', 'my_setup' );
 function my_script_init()
 {
 	//css
-	wp_enqueue_style( 'style-css', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.1', 'all' );
 	wp_enqueue_style('swiper-css', '//cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css', array(), '9.2.4', 'all');
 	wp_enqueue_style(
 		'googleFonts-css',
@@ -44,16 +43,13 @@ function my_script_init()
 		'9.2.4',
 		'all'
 	);
+	wp_enqueue_style('style-css', get_template_directory_uri() . '/assets/css/style.css', array(), '1.0.1', 'all');
 	//js
 	wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.6.0.js', array('jquery'), '1.0.1', true);
 	wp_enqueue_script('swiper-jp', '//cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js', array('jquery'), '9.2.4', true);
 	wp_enqueue_script('script-jp', get_template_directory_uri() . '/assets/js/script.js', array('jquery'), '1.0.1', true);
-
 }
 add_action('wp_enqueue_scripts', 'my_script_init');
-
-
-
 
 /**
  * メニューの登録
@@ -202,18 +198,6 @@ function custom_breadcrumb_list() {
     echo '</nav>';
 }
 
-
-//カスタム投稿でページネーションを使う問題を解決するにはpre_get_posts関数を使う
-function custom_query( $query ) {
-	if ( is_admin() || ! $query->is_main_query() )
-	  return;
-  
-	if ( $query->is_tax( 'campaign_category' ) ) {
-	  $query->set( 'posts_per_page', 4 ); // 4件の投稿を表示
-	  return;
-	}
-  }
-  add_action( 'pre_get_posts', 'custom_query' );
 
 
 //Contact Form7の送信ボタンをクリックした後の遷移先設定
