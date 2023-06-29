@@ -78,7 +78,7 @@
                       <p class="p-lower-campaignCard__details u-desktop"><?php echo get_field('details'); ?></p>
                     </div>
                     <div class="p-lower-campaignCard__bottom u-desktop">
-                      <p class="p-lower-campaignCard__contactDate"><?php echo get_field('contact_date'); ?></p>
+                      <p class="p-lower-campaignCard__contactDate"><?php echo get_field('beginning_date'); ?>-<?php echo get_field('end_date'); ?></p>
                       <p class="p-lower-campaignCard__contactText">ご予約・お問い合わせはコチラ</p>
                       <div class="p-lower-campaignCard__btn">
                         <div class="c-btn" ontouchstart="">
@@ -92,63 +92,38 @@
                 </li>
               <?php endwhile; ?>
             <?php endif; ?>
-            <?php if ($wp_query->max_num_pages > 1) : ?>
-              <div class="p-archiveCampaign-section__pagination">
-                <div class="c-pagination" ontouchstart="">
-                  <div class="nav-links">
-                    <?php
-                    $args = array(
-                      'mid_size' => 4,
-                      'prev_text' => '<span></span>',
-                      'next_text' => '<span></span>',
-                    );
-                    if (wp_is_mobile()) {
-                      $args['mid_size'] = 4;
-                    } else {
-                      $args['mid_size'] = 6;
-                    }
-                    echo paginate_links($args);
-                    ?>
-                  </div>
+          </ul>
+          <?php if ($wp_query->max_num_pages > 1) : ?>
+            <div class="p-archiveCampaign-section__pagination">
+              <div class="c-pagination" ontouchstart="">
+                <div class="nav-links">
+                  <?php
+                  $args = array(
+                    'mid_size' => 4,
+                    'prev_text' => '<span></span>',
+                    'next_text' => '<span></span>',
+                  );
+                  if (wp_is_mobile()) {
+                    $args['mid_size'] = 4;
+                  } else {
+                    $args['mid_size'] = 6;
+                  }
+                  echo paginate_links($args);
+                  ?>
                 </div>
-              <?php endif; ?>
-              <?php wp_reset_postdata(); ?>
               </div>
-              <div class="p-archiveCampaign-section__pagination">
-                <div class="c-pagination" ontouchstart="">
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
+            </div>
+            <div class="p-archiveCampaign-section__pagination">
+              <div class="c-pagination" ontouchstart="">
+                <div class="nav-links">
                   <?php if (function_exists('wp_pagenavi')) {
                     wp_pagenavi();
                   } ?>
-                  <?php wp_reset_query(); ?>
                 </div>
               </div>
-              <div class="p-archiveCampaign-section__pagination">
-                <div class="c-pagination" ontouchstart="">
-                  <div class="nav-links">
-                    <?php global $wp_rewrite;
-                    $paginate_base = get_pagenum_link(1);
-                    if (strpos($paginate_base, '?') || !$wp_rewrite->using_permalinks()) {
-                      $paginate_format = '';
-                      $paginate_base = add_query_arg('paged', '%#%');
-                    } else {
-                      $paginate_format = (substr($paginate_base, -1, 1) == '/' ? '' : '/') .
-                        user_trailingslashit('?paged=%#%', 'paged');;
-                      $paginate_base .= '%_%';
-                    }
-                    echo paginate_links(array(
-                      'base' => $paginate_base,
-                      'format' => $paginate_format,
-                      'total' => $wp_query->max_num_pages,
-                      'mid_size' => 1,
-                      'current' => ($paged ? $paged : 1),
-                      'prev_text' => '<span></span>',
-                      'next_text' => '<span></span>',
-                    ));
-                    ?>
-                  </div>
-                </div>
-              </div>
-          </ul>
+            </div>
         </div>
 
 

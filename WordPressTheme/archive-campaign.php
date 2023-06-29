@@ -48,13 +48,13 @@
                     <div class="p-lower-campaignCard__body">
                       <p class="p-lower-campaignCard__text">全部コミコミ(お一人様)</p>
                       <div class="p-lower-campaignCard__price">
-                        <p class="p-lower-campaignCard__originalPrice"><?php echo get_field('original_price'); ?></p>
-                        <p class="p-lower-campaignCard__newPrice"><?php echo get_field('new_price'); ?></p>
+                        <p class="p-lower-campaignCard__originalPrice">¥<?php echo get_field('original_price'); ?></p>
+                        <p class="p-lower-campaignCard__newPrice">¥<?php echo get_field('new_price'); ?></p>
                       </div>
                       <p class="p-lower-campaignCard__details u-desktop"><?php echo get_field('details'); ?></p>
                     </div>
                     <div class="p-lower-campaignCard__bottom u-desktop">
-                      <p class="p-lower-campaignCard__contactDate"><?php echo get_field('contact_date'); ?></p>
+                      <p class="p-lower-campaignCard__contactDate"><?php echo get_field('beginning_date'); ?>-<?php echo get_field('end_date'); ?></p>
                       <p class="p-lower-campaignCard__contactText">ご予約・お問い合わせはコチラ</p>
                       <div class="p-lower-campaignCard__btn">
                         <div class="c-btn" ontouchstart="">
