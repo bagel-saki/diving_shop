@@ -43,7 +43,14 @@
                         <div class="p-lower-voiceCard__info">
                           <div class="p-lower-voiceCard__meta">
                             <p class="p-lower-voiceCard__age"><?php echo get_field('age'); ?>(<?php echo get_field('sex'); ?>)</p>
-                            <p class="p-lower-voiceCard__tag"><?php echo get_field('tag'); ?></p>
+                            <p class="p-lower-voiceCard__tag">
+                            <?php
+                            $taxonomy_terms = get_the_terms($post->ID, 'voices_category');
+                            if ($taxonomy_terms) {
+                                echo $taxonomy_terms[0]->name;
+                            }
+                            ?>
+                            </p>
                           </div>
                           <h3 class="p-lower-voiceCard__title"><?php the_title(); ?></h3>
                         </div>
@@ -56,7 +63,7 @@
                         </div>
                       </div>
                       <div class="p-lower-voiceCard__body">
-                        <p class="p-lower-voiceCard__text"><?php echo $limited_excerpt; ?></p>
+                        <p class="p-lower-voiceCard__text"><?php echo get_field('details'); ?></p>
                       </div>
                     </div>
                   </div>

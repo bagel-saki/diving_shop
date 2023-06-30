@@ -43,7 +43,7 @@
                         <div class="p-lower-voiceCard__info">
                           <div class="p-lower-voiceCard__meta">
                             <p class="p-lower-voiceCard__age"><?php echo get_field('age'); ?>(<?php echo get_field('sex'); ?>)</p>
-                            <p class="p-lower-voiceCard__tag"><?php echo get_field('tag'); ?></p>
+                            <p class="p-lower-voiceCard__tag"><?php single_term_title(); ?></p>
                           </div>
                           <h3 class="p-lower-voiceCard__title"><?php the_title(); ?></h3>
                         </div>
