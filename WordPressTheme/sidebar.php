@@ -25,7 +25,7 @@
                                         <a class="p-sidebar-articleCard__link" href="<?php the_permalink(); ?>">
                                             <div class="p-sidebar-articleCard__inner">
                                                 <div class="p-sidebar-articleCard__img">
-                                                    <?php the_post_thumbnail('blog'); ?>
+                                                    <?php the_post_thumbnail('sidebar-art'); ?>
                                                 </div>
                                                 <div class="p-sidebar-articleCard__body">
                                                     <time datetime="<?php the_time('Y-m-d'); ?>" class="p-sidebar-articleCard__date"><?php the_time('Y/m/d'); ?></time>
@@ -61,7 +61,7 @@
                         </div>
                         <div class="p-sidebar-review__content">
                             <div class="p-sidebar-review__img">
-                                <?php the_post_thumbnail('blog'); ?>
+                                <?php the_post_thumbnail('sidebar-voice'); ?>
                             </div>
                         </div>
                         <div class="p-sidebar-review__age"><?php echo get_field('age'); ?>(<?php echo get_field('sex'); ?>)</div>
@@ -104,7 +104,7 @@
                                 <li class="p-sidebar-campaignCards__item">
                                     <div class="p-sidebar-campaignCard">
                                         <div class="p-sidebar-campaignCard__img">
-                                            <?php the_post_thumbnail('blog'); ?>
+                                            <?php the_post_thumbnail('sidebar-campaign'); ?>
                                         </div>
                                         <div class="p-sidebar-campaignCard__head">
                                             <p class="p-sidebar-campaignCard__title"><?php the_title(); ?></p>

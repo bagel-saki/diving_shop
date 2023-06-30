@@ -26,7 +26,7 @@
                         <a href="<?php the_permalink(); ?>" class="p-blog-card">
                           <figure class="p-blog-card__img">
                             <?php if (has_post_thumbnail()) : ?>
-                              <?php the_post_thumbnail('blog'); ?>
+                              <?php the_post_thumbnail(); ?>
                             <?php else : ?>
                               <img src="<?php echo get_template_directory_uri() ?>/assets/images/common/noimage.jpg" alt="no image">
                             <?php endif; ?>

@@ -104,7 +104,7 @@ $terms = esc_url(home_url('/terms/'));
                     <div class="p-campaign-card">
                       <div class="p-campaign-card__img">
                         <?php if (has_post_thumbnail()) : ?>
-                          <?php the_post_thumbnail(); ?>
+                          <?php the_post_thumbnail('campaign'); ?>
                         <?php else : ?>
                           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.jpg" alt="no image">
                         <?php endif; ?>
@@ -232,7 +232,7 @@ $terms = esc_url(home_url('/terms/'));
                     <a href="<?php the_permalink(); ?>" class="p-blog-card">
                       <figure class="p-blog-card__img">
                         <?php if (has_post_thumbnail()) : ?>
-                          <?php the_post_thumbnail(); ?>
+                          <?php the_post_thumbnail('blog'); ?>
                         <?php else : ?>
                           <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.jpg" alt="no image">
                         <?php endif; ?>
