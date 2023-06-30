@@ -147,7 +147,7 @@ textarea {
 	width: rem(14);
 	height: rem(14);
 	border: solid 1px $green;
-	top: rem(4);
+	top: rem(6);
 	left: rem(-1);
 	transition: 0.3s ease;
 } 
@@ -207,7 +207,7 @@ textarea {
 	margin-left: 0.1em;
 	border-left: rem(2) solid $red;
 	border-bottom: rem(2) solid $red;
-	top: rem(12);
+	top: rem(14);
 	left: 0;
   }
 
@@ -288,8 +288,9 @@ input.wpcf7-not-valid::placeholder{
 }
 
 .wpcf7-response-output{
-	color: $red;
-	display: inline-block;
+	// color: $red;
+	// display: inline-block;
+	display: none;
 }
 
 .wpcf7-not-valid-tip{
@@ -303,11 +304,12 @@ input.wpcf7-not-valid::placeholder{
 .wpcf7-response-output, 
 .wpcf7 form.payment-required 
 .wpcf7-response-output{
-	display: flex;
-	border: none;
-	justify-content: center;
-	text-align: left;
-	margin-bottom: rem(35);
+	// display: flex;
+	// border: none;
+	// justify-content: center;
+	// text-align: left;
+	// margin-bottom: rem(35);
+	display: none;
 
 }
 

@@ -77,8 +77,8 @@ $terms = esc_url(home_url('/terms/'));
             <div class="c-logo c-logo--large"></div>
           </a>
           <div class="p-footer__sns">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-facebook.png" alt="フェイスブック">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-instaglam.png" alt="インスタグラム">
+            <a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-facebook.png" alt="フェイスブック"></a>
+            <a href=""><img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/icon-instaglam.png" alt="インスタグラム"></a>
           </div>
         </div>
         <div class="p-footer__contents">
