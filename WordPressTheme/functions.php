@@ -13,7 +13,7 @@ function my_setup() {
 	add_image_size('blog', 700, 468, true);
 	add_image_size('campaign', 520, 347, true);
 	add_image_size('sidebar-art', 121, 90, true);
-	add_image_size('sidebar-voice', 121, 90, true);	
+	add_image_size('sidebar-voice', 121, 90, true);
 	add_image_size('sidebar-campaign', 294, 188, true);
 	add_theme_support( 'automatic-feed-links' ); /* RSSフィード */
 	add_theme_support( 'title-tag' ); /* タイトルタグ自動生成 */
@@ -169,6 +169,7 @@ function change_set_campaign($query)
 	if (is_admin() || !$query->is_main_query()) {
 		return;
 	}
+	
 	if ($query->is_post_type_archive('campaign') || is_tax('campaign_category') || is_search()) {
 		$query->set('posts_per_page', '4');
 		return;
