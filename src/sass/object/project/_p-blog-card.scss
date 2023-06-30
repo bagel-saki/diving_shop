@@ -24,14 +24,16 @@
 
 .p-blog-card__img{
 	overflow: hidden;
+	aspect-ratio: 301 / 201 ;
 
 }
 
 .p-blog-card__img img{
-	aspect-ratio: 301 / 201 ;
 	object-fit: cover;
-	height: auto;
+	width: 100%;
+	height: 100%;
 	transition: transform .6s ease;
+
 }
 
 .p-blog-card__body{
