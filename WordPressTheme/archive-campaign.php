@@ -43,11 +43,11 @@
                     <div class="p-lower-campaignCard__head">
                       <p class="p-lower-campaignCard__tag">
                         <?php
-                            $taxonomy_terms = get_the_terms($post->ID, 'campaign_category');
-                            if ($taxonomy_terms) {
-                                echo $taxonomy_terms[0]->name;
-                            }
-                            ?>
+                        $taxonomy_terms = get_the_terms($post->ID, 'campaign_category');
+                        if ($taxonomy_terms) {
+                          echo $taxonomy_terms[0]->name;
+                        }
+                        ?>
                       </p>
                       <h3 class="p-lower-campaignCard__title"><?php the_title(); ?></h3>
                       <span class="p-lower-campaignCard__border"></span>
@@ -100,4 +100,4 @@
       </div>
     </div>
   </div>
-<?php get_footer(); ?>
+  <?php get_footer(); ?>
