@@ -140,7 +140,8 @@
                     <h3 class="c-sidebar-title">アーカイブ</h3>
                 </div>
                 <ul class="p-sidebar-archive__lists">
-                    <li class="p-sidebar-archive__lists__item">
+                <?php wp_get_archives(); ?>
+                    <!-- <li class="p-sidebar-archive__lists__item">
                         <div class="p-sidebar-archiveList">
                             <p class="p-sidebar-archiveList__year js-archive">2023</p>
                             <div class="p-sidebar-archiveList__months js-archive-lists">
@@ -149,8 +150,8 @@
                                 <a href="" class="p-sidebar-archiveList__month">1月</a>
                             </div>
                         </div>
-                    </li>
-                    <li class="p-sidebar-archive__lists__item">
+                    </li> -->
+                    <!-- <li class="p-sidebar-archive__lists__item">
                         <div class="p-sidebar-archiveList">
                             <p class="p-sidebar-archiveList__year js-archive">2022</p>
                             <div class="p-sidebar-archiveList__months js-archive-lists">
@@ -159,7 +160,7 @@
                                 <a href="" class="p-sidebar-archiveList__month">10月</a>
                             </div>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>

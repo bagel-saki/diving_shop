@@ -27,6 +27,11 @@
             <?php endforeach; ?>
           </div>
         </div>
+
+        <?php
+        $excerpt = get_the_excerpt(); // 抜粋を取得
+        $limited_excerpt = mb_substr($excerpt, 0, 180) . '...'; // 表示する文字数を指定
+        ?>
         <div class="p-archiveVoices-section__content">
           <ul class="p-lower-voiceCards">
             <?php if (have_posts()) : ?>
@@ -51,7 +56,7 @@
                         </div>
                       </div>
                       <div class="p-lower-voiceCard__body">
-                        <p class="p-lower-voiceCard__text"><?php echo get_field('details'); ?></p>
+                        <p class="p-lower-voiceCard__text"><?php echo $limited_excerpt; ?></p>
                       </div>
                     </div>
                   </div>
