@@ -41,7 +41,7 @@
                   <div class="p-lower-campaignCard">
                     <div class="p-lower-campaignCard__img">
                       <?php if (has_post_thumbnail()) : ?>
-                        <?php the_post_thumbnail(); ?>
+                        <?php the_post_thumbnail('campaign'); ?>
                       <?php else : ?>
                         <img src="<?php echo get_template_directory_uri() ?>/assets/images/common/noimage.jpg" alt="no image">
                       <?php endif; ?>
