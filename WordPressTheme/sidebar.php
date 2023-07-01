@@ -141,26 +141,6 @@
                 </div>
                 <ul class="p-sidebar-archive__lists">
                 <?php wp_get_archives(); ?>
-                    <!-- <li class="p-sidebar-archive__lists__item">
-                        <div class="p-sidebar-archiveList">
-                            <p class="p-sidebar-archiveList__year js-archive">2023</p>
-                            <div class="p-sidebar-archiveList__months js-archive-lists">
-                                <a href="" class="p-sidebar-archiveList__month">3月</a>
-                                <a href="" class="p-sidebar-archiveList__month">2月</a>
-                                <a href="" class="p-sidebar-archiveList__month">1月</a>
-                            </div>
-                        </div>
-                    </li> -->
-                    <!-- <li class="p-sidebar-archive__lists__item">
-                        <div class="p-sidebar-archiveList">
-                            <p class="p-sidebar-archiveList__year js-archive">2022</p>
-                            <div class="p-sidebar-archiveList__months js-archive-lists">
-                                <a href="" class="p-sidebar-archiveList__month">12月</a>
-                                <a href="" class="p-sidebar-archiveList__month">11月</a>
-                                <a href="" class="p-sidebar-archiveList__month">10月</a>
-                            </div>
-                        </div>
-                    </li> -->
                 </ul>
             </div>
         </div>

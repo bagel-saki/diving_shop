@@ -98,9 +98,15 @@
 
 .p-lower-priceTable__listLeft,
 .p-lower-priceTable__listRight{
-	border: solid 1px $green;
+	border-top: solid 1px $green;
+	border-right:solid 1px $green;
 	background-clip: padding-box;
 }
+
+.p-lower-priceTable__content dl:last-child{
+	border-bottom: solid 1px $green;
+}
+
 
 .p-lower-priceTable__listLeft{
 	width: 69.5%;
