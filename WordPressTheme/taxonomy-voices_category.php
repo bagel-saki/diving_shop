@@ -67,21 +67,23 @@
         </div>
         <?php if ($wp_query->max_num_pages > 1) : ?>
           <div class="p-archiveVoices-section__pagination">
-            <div class="c-pagination" ontouchstart="">
-              <?php
-              $args = array(
-                'mid_size' => 4,
-                'prev_text' => '<span></span>',
-                'next_text' => '<span></span>',
-              );
-              if (wp_is_mobile()) {
-                $args['mid_size'] = 4;
-              } else {
-                $args['mid_size'] = 6;
-              }
-              echo paginate_links($args);
-              ?>
-            </div>
+          <div class="c-pagination" ontouchstart="">
+                <div class="nav-links">
+                  <?php
+                  $args = array(
+                    'mid_size' => 4,
+                    'prev_text' => '<span></span>',
+                    'next_text' => '<span></span>',
+                  );
+                  if (wp_is_mobile()) {
+                    $args['mid_size'] = 4;
+                  } else {
+                    $args['mid_size'] = 6;
+                  }
+                  echo paginate_links($args);
+                  ?>
+                </div>
+              </div>
           </div>
         <?php endif; ?>
       </div>
