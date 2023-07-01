@@ -27,33 +27,10 @@
                     <div class="p-lower-singleBlog">
                       <div>
                         <?php the_post_thumbnail('blog', array('alt' => the_title_attribute('echo=0'))); ?>
-                        <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog1.jpg" alt="" /> -->
                       </div>
                       <?php the_content(); ?>
-                      <!-- <p> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 </p>
-                      <div>
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/blog1.jpg" alt="" />
-                      </div>
-                      <p> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 </p>
-                      <nav>
-                        <ul>
-                          <div class="c-img-starfish c-img-starfish--green"></div>
-                          <li>リスト１</li>
-                        </ul>
-                        <ul>
-                          <div class="c-img-starfish c-img-starfish--green"></div>
-                          <li>リスト２</li>
-                        </ul>
-                        <ul>
-                          <div class="c-img-starfish c-img-starfish--green"></div>
-                          <li>リスト３</li>
-                        </ul>
-                      </nav>
-                      <p> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 </p> -->
                     </div>
-
                   </div>
-
                   <div class="p-single-section__pagination">
                     <div class="c-blog-pagination" ontouchstart="">
                       <?php the_post_navigation(array(
