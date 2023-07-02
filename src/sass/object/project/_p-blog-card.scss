@@ -13,15 +13,6 @@
 	}
 }
 
-.p-blog-card:hover{
-	opacity: 1;
-}
-
-.p-blog-card:hover .p-blog-card__img img{
-	transform: scale(1.4);
-}
-
-
 .p-blog-card__img{
 	overflow: hidden;
 	aspect-ratio: 301 / 201 ;
@@ -68,3 +59,25 @@
 	line-height: calc(24 / 16);
 }
 
+
+@media (hover: hover) {
+	/* hover指定できるPCを想定したスタイル */
+	.p-blog-card:hover{
+		opacity: 1;
+	}
+
+	.p-blog-card:hover .p-blog-card__img img{
+		transform: scale(1.4);
+	}
+
+	}
+	@media (hover: none) {
+	/* hoverが使えないタッチ端末を想定した装飾 */
+    .p-blog-card:active{
+		opacity: 1;
+	}
+
+	.p-blog-card:active .p-blog-card__img img{
+		transform: scale(1.4);
+	}
+}

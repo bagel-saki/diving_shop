@@ -14,15 +14,28 @@
     text-transform: uppercase;
 }
 
-.c-campaign-category:hover{
-    background:$green;
-    color: $white;
-    transition : all 0.3s ease 0s;
-    opacity: 1;
-}
-
 .c-campaign-category--active{
     background:$green;
     color: $white;
     transition : all 0.3s ease 0s;
+}
+
+@media (hover: hover) {
+	/* hover指定できるPCを想定したスタイル */
+	.c-campaign-category:hover{
+        background:$green;
+        color: $white;
+        transition : all 0.3s ease 0s;
+        opacity: 1;
+    }
+
+	}
+	@media (hover: none) {
+	/* hoverが使えないタッチ端末を想定した装飾 */
+    .c-campaign-category:active{
+        background:$green;
+        color: $white;
+        transition : all 0.3s ease 0s;
+        opacity: 1;
+    }
 }
