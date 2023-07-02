@@ -1,7 +1,7 @@
 <div class="l-sidebar">
     <aside class="p-sidebar">
 
-        <div class="p-sidebar__popularArticle">
+    <div class="p-sidebar__popularArticle">
             <div class="p-sidebar-popularArticle">
                 <div class="p-sidebar-popularArticle__title">
                     <h3 class="c-sidebar-title">人気記事</h3>
@@ -12,9 +12,7 @@
                         $popular_posts = new WP_Query(array(
                             'post_type' => 'post',
                             'posts_per_page' => 3,
-                'orderby' => 'rand', // ランダムに並び替え
-
-                            // 'orderby' => 'comment_count',
+                            'orderby' => 'comment_count',
                             'date_query' => array(
                                 array(
                                     'after' => '1 week ago',
@@ -142,7 +140,7 @@
                 </div>
                 <div class="p-sidebar-campaign__btn">
                     <div class="c-btn" ontouchstart="">
-                        <a href="archive-campaign.html" class="c-btn__link"> View more<span></span>
+                        <a href="<?php echo esc_url(home_url('/campaign/')) ?>" class="c-btn__link"> View more<span></span>
                         </a>
                         <div class="c-btn__overlay"></div>
                     </div>
