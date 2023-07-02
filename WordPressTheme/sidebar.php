@@ -10,10 +10,16 @@
                     <ul class="p-sidebar-articleCards">
                         <?php
                         $popular_posts = new WP_Query(array(
-                            'posts_per_page' => 3, // 表示する記事の数
-                            'orderby' => 'comment_count', // コメント数でソート
+                            'post_type' => 'post',
+                            'posts_per_page' => 3,
+                'orderby' => 'rand', // ランダムに並び替え
+
+                            // 'orderby' => 'comment_count',
                             'date_query' => array(
-                                'after' => '1 week ago' // 1週間以内の記事
+                                array(
+                                    'after' => '1 week ago',
+                                    'inclusive' => true
+                                )
                             )
                         ));
                         if ($popular_posts->have_posts()) {
@@ -25,7 +31,11 @@
                                         <a class="p-sidebar-articleCard__link" href="<?php the_permalink(); ?>">
                                             <div class="p-sidebar-articleCard__inner">
                                                 <div class="p-sidebar-articleCard__img">
-                                                    <?php the_post_thumbnail('large'); ?>
+                                                    <?php if (has_post_thumbnail()) : ?>
+                                                        <?php the_post_thumbnail('large'); ?>
+                                                    <?php else : ?>
+                                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/common/noimage.jpg" alt="no image">
+                                                    <?php endif; ?>
                                                 </div>
                                                 <div class="p-sidebar-articleCard__body">
                                                     <time datetime="<?php the_time('Y-m-d'); ?>" class="p-sidebar-articleCard__date"><?php the_time('Y/m/d'); ?></time>
@@ -39,6 +49,7 @@
                             wp_reset_postdata();
                         } ?>
                     </ul>
+
                 </div>
             </div>
         </div>
@@ -61,7 +72,11 @@
                         </div>
                         <div class="p-sidebar-review__content">
                             <div class="p-sidebar-review__img">
-                                <?php the_post_thumbnail('large'); ?>
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <?php the_post_thumbnail('large'); ?>
+                                <?php else : ?>
+                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/common/noimage.jpg" alt="no image">
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="p-sidebar-review__age"><?php echo get_field('age'); ?>(<?php echo get_field('sex'); ?>)</div>
@@ -140,7 +155,7 @@
                     <h3 class="c-sidebar-title">アーカイブ</h3>
                 </div>
                 <ul class="p-sidebar-archive__lists">
-                <?php wp_get_archives(); ?>
+                    <?php wp_get_archives(); ?>
                 </ul>
             </div>
         </div>
