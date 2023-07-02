@@ -1,7 +1,7 @@
 <div class="l-sidebar">
     <aside class="p-sidebar">
 
-    <div class="p-sidebar__popularArticle">
+        <div class="p-sidebar__popularArticle">
             <div class="p-sidebar-popularArticle">
                 <div class="p-sidebar-popularArticle__title">
                     <h3 class="c-sidebar-title">人気記事</h3>
@@ -9,45 +9,38 @@
                 <div class="p-sidebar-popularArticle__cards">
                     <ul class="p-sidebar-articleCards">
                         <?php
-                        $popular_posts = new WP_Query(array(
+                        $args = array(
                             'post_type' => 'post',
                             'posts_per_page' => 3,
-                            'orderby' => 'comment_count',
-                            'date_query' => array(
-                                array(
-                                    'after' => '1 week ago',
-                                    'inclusive' => true
-                                )
-                            )
-                        ));
-                        if ($popular_posts->have_posts()) {
-                            while ($popular_posts->have_posts()) {
-                                $popular_posts->the_post();
+                            'orderby' => 'comment_count'
+                        );
+                        $sidebar_posts = new WP_Query($args);
+                        while ($sidebar_posts->have_posts()) {
+                            $sidebar_posts->the_post();
                         ?>
-                                <li class="p-sidebar-articleCards__item">
-                                    <div class="p-sidebar-articleCard">
-                                        <a class="p-sidebar-articleCard__link" href="<?php the_permalink(); ?>">
-                                            <div class="p-sidebar-articleCard__inner">
-                                                <div class="p-sidebar-articleCard__img">
-                                                    <?php if (has_post_thumbnail()) : ?>
-                                                        <?php the_post_thumbnail('large'); ?>
-                                                    <?php else : ?>
-                                                        <img src="<?php echo get_template_directory_uri() ?>/assets/images/common/noimage.jpg" alt="no image">
-                                                    <?php endif; ?>
-                                                </div>
-                                                <div class="p-sidebar-articleCard__body">
-                                                    <time datetime="<?php the_time('Y-m-d'); ?>" class="p-sidebar-articleCard__date"><?php the_time('Y/m/d'); ?></time>
-                                                    <div class="p-sidebar-articleCard__title"><?php the_title(); ?></div>
-                                                </div>
+                            <li class="p-sidebar-articleCards__item">
+                                <div class="p-sidebar-articleCard">
+                                    <a class="p-sidebar-articleCard__link" href="<?php the_permalink(); ?>">
+                                        <div class="p-sidebar-articleCard__inner">
+                                            <div class="p-sidebar-articleCard__img">
+                                                <?php if (has_post_thumbnail()) : ?>
+                                                    <?php the_post_thumbnail('large'); ?>
+                                                <?php else : ?>
+                                                    <img src="<?php echo get_template_directory_uri() ?>/assets/images/common/noimage.jpg" alt="no image">
+                                                <?php endif; ?>
                                             </div>
-                                        </a>
-                                    </div>
-                                </li>
+                                            <div class="p-sidebar-articleCard__body">
+                                                <time datetime="<?php the_time('Y-m-d'); ?>" class="p-sidebar-articleCard__date"><?php the_time('Y/m/d'); ?></time>
+                                                <div class="p-sidebar-articleCard__title"><?php the_title(); ?></div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
                         <?php }
-                            wp_reset_postdata();
-                        } ?>
+                        wp_reset_postdata();
+                        ?>
                     </ul>
-
                 </div>
             </div>
         </div>
@@ -106,9 +99,6 @@
                             'post_type' => 'campaign',
                             'posts_per_page' => 2, // 表示する記事の数
                             'orderby' => 'comment_count', // コメント数でソート
-                            'date_query' => array(
-                                'after' => '1 week ago' // 1週間以内の記事
-                            )
                         ));
                         if ($campaign_card->have_posts()) {
                             while ($campaign_card->have_posts()) {

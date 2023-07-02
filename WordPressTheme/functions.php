@@ -164,7 +164,7 @@ function change_set_campaign($query)
 	if (is_admin() || !$query->is_main_query()) {
 		return;
 	}
-	
+
 	if ($query->is_post_type_archive('campaign') || is_tax('campaign_category') || is_search()) {
 		$query->set('posts_per_page', '4');
 		return;
