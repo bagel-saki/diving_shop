@@ -96,6 +96,10 @@
 	}
 }
 
+.p-lower-priceTable__listLeft{
+	border-left: solid 1px $green;
+}
+
 .p-lower-priceTable__listLeft,
 .p-lower-priceTable__listRight{
 	border-top: solid 1px $green;
