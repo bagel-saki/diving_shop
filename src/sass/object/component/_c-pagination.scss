@@ -74,26 +74,34 @@
 
 @media (hover: hover) {
 	/* hover指定できるPCを想定したスタイル */
-	.page-numbers:hover {
+	.page-numbers:hover,
+	.nav-previous:hover,
+	.nav-next:hover {
 		background-color: $green;
 		color: $white;
 		opacity: 1;
 		}
 	.prev.page-numbers:hover span,
-	.next.page-numbers:hover span{
+	.next.page-numbers:hover span,
+	.nav-previous:hover span,
+	.nav-next:hover span{
 		background-color: $white;
 }
 
 	}
 	@media (hover: none) {
 	/* hoverが使えないタッチ端末を想定した装飾 */
-	.page-numbers:active {
+	.page-numbers:active,
+	.nav-previous:active,
+	.nav-next:active{
 		background-color: $green;
 		color: $white;
 		opacity: 1;
 		}
 	.prev.page-numbers:active span,
-	.next.page-numbers:active span{
+	.next.page-numbers:active span,
+	.nav-previous:hover span,
+	.nav-next:hover span{
 		background-color: $white;
 	}
 }
