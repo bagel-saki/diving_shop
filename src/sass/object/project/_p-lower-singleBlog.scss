@@ -15,9 +15,13 @@
     }
 }
 
-.p-lower-singleBlog img,
+.p-lower-singleBlog h2,
+.p-lower-singleBlog h3,
+.p-lower-singleBlog h4,
 .p-lower-singleBlog p,
-.p-lower-singleBlog nav{
+.p-lower-singleBlog img,
+.p-lower-singleBlog nav,
+.p-lower-singleBlog ul {
     margin-top: rem(24);
 
     @include mq('md'){
@@ -25,9 +29,47 @@
     }
 }
 
+.p-lower-singleBlog h2 {
+    background-color: $light-green;
+    padding-left:rem(8);
+    padding-top: rem(8);
+    padding-bottom: rem(8);
+    font-size: rem(16);
+    line-height: 1.2;
+    @include mq('md'){
+        padding-left: rem(10);
+        font-size: rem(22);
+
+    }
+}
+
+.p-lower-singleBlog h3 {
+    border-left: 2px solid $green;
+    padding-left:rem(8);
+    padding-top: rem(8);
+    padding-bottom: rem(8); 
+    font-size: rem(16);
+
+    @include mq('md'){
+        font-size: rem(18);
+    }
+}
+
+.p-lower-singleBlog h4{
+    border-bottom: 1px solid $green;
+    padding-left:rem(8);
+    padding-top: rem(8);
+    padding-bottom: rem(8);
+    font-size: rem(16);
+
+    @include mq('md'){
+        font-size: rem(16);
+    }
+}
+
 .p-lower-singleBlog ul li{
     margin-top: rem(4);
-	background: url(../../assets/images/common/starfish-green.png) left rem(3) top rem(4) no-repeat;
+    background: url(../../assets/images/common/starfish-green.png) left rem(3) top rem(4) no-repeat;
     background-size: rem(18) auto;
     padding-left: rem(30);
 }
