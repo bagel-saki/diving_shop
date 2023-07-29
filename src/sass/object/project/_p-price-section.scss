@@ -54,5 +54,5 @@
 .p-price-section__fish {
     position: absolute;
     bottom: rem(60);
-    left: clamp(rem(15), 50% - rem(624),50% - rem(624));
+    left: calc(50% - min(48%,rem(624)));
 }

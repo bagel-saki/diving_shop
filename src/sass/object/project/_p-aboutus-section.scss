@@ -12,7 +12,7 @@
 		height: rem(181);
 		position: absolute;
 		bottom: rem(-90);
-		right: clamp(rem(15), 50% - rem(637),50% - rem(637));
+		right: calc(50% - min(48%,rem(640)));
 	}
 }
 

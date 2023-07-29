@@ -6,7 +6,7 @@
 
 .p-sitemap__fish{
 	position: absolute;
-    left: clamp(rem(15), 50% - rem(320),50% - rem(250));
+    left: calc(50% - min(48%,rem(320)));
     top:rem(-24);
     z-index: -1;
 }

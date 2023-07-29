@@ -18,11 +18,11 @@
 
 .p-archiveCampaign-section__fish {
     position: absolute;
-    left: clamp(rem(15), 50% - rem(320),50% - rem(250));
+    left: calc(50% - min(48%,rem(320)));
     top:rem(-24);
     z-index: -1;
     @include mq('md'){
-        left: clamp(rem(15), 50% - rem(624),50% - rem(624));
+        left: calc(50% - min(48%,rem(624)));
         top:rem(-70);
     }
 }

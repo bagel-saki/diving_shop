@@ -56,6 +56,6 @@
 	content:"";
 	position: absolute;
     top: rem(24);
-	left: clamp(15px, 50% - rem(624),50% - rem(624));	
+	left: calc(50% - min(48%,rem(624)));
 }
 
