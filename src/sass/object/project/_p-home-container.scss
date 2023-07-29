@@ -6,12 +6,12 @@
 
 .p-home-container__fish {
     position: absolute;
-	left: clamp(rem(15), 50% - rem(250),50% - rem(250));
+    left: calc(50% - min(48%,rem(320)));
     z-index:-1;
     top:rem(-24);
 
     @include mq('md'){
-        left: clamp(15px, 50% - rem(624),50% - rem(624));
+        left: calc(50% - min(48%,rem(624)));
         top:rem(-70);
     }
 }
