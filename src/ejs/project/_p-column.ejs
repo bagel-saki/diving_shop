@@ -1,0 +1,17 @@
+<div class="p-column">
+    <div class="p-column__flex l-inner">
+        <div class="p-column__fish">
+            <%- include(ejsPath + './component/_c-img-fish' ,{ style: 'reverse' }) %>
+        </div>
+        <div class="p-column__main">
+        <% if (pageData === 'blog') { %>
+            <%- include(ejsPath + './project/_p-home-section' )%>
+        <% } else { %>
+            <%- include(ejsPath + './project/_p-single-section' )%>
+        <% } %>
+    </div>
+        <div class="p-column__right">
+            <%- include(ejsPath + './project/_p-sidebar' )%>
+        </div>
+    </div>
+</div>

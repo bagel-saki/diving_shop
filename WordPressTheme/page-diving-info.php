@@ -11,7 +11,7 @@
     </div>
     <div class="l-lower-head">
       <section class="p-lower-informationContents">
-        <div class="l-inner p-lower-informationContents__inner">
+        <div class="p-lower-informationContents__inner l-inner">
           <div class="p-lower-informationContents__tab">
             <a href="" class="c-information-tab c-information-tab--whale js-information-tab is-active" id="license">
               <span class="u-desktop"></span>ライセンス<br class="u-mobile">講習</a>

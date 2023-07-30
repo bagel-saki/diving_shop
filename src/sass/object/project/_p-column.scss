@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.p-column{
+    position: relative;
+}
+
+.p-column__fish {
+    position: absolute;
+    left: calc(50% - min(48%,rem(320)));
+    z-index:-1;
+    top:rem(-24);
+
+    @include mq('md'){
+        left: calc(50% - min(48%,rem(624)));
+        top:rem(-70);
+    }
+}
+
+
+.p-column__flex{
+    display: flex;
+    flex-direction: column;
+    @include mq(md){
+        gap: rem(83);
+        flex-direction: row;
+    }
+}
+
+.p-column__main{
+    width: 100%;
+    @include mq(md){
+        width: 65.092%;
+    }
+
+}
+
+.p-column__right{
+    width: 100%;
+    padding: 0 rem(25);
+    margin-top: rem(80);
+    @include mq(md){
+        width: 27.222%;
+        padding: 0;
+        margin-left: auto;
+        margin-top: 0;
+    }
+}

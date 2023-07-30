@@ -148,7 +148,7 @@ $terms = esc_url(home_url('/terms/'));
   </div>
   <div class="l-section">
     <section class="p-aboutus-section">
-      <div class="l-inner p-aboutus-section__inner">
+      <div class="p-aboutus-section__inner l-inner">
         <div class="p-aboutus-section__title">
           <div class="c-title">
             <h2 class="c-title__en">about us</h2>
@@ -183,27 +183,25 @@ $terms = esc_url(home_url('/terms/'));
   </div>
   <div class="l-section">
     <section class="p-information-section">
-      <div class="p-information-section__inner">
-        <div class="l-inner">
-          <div class="p-information-section__title">
-            <div class="c-title">
-              <h2 class="c-title__en">information</h2>
-              <p class="c-title__ja">ダイビング情報</p>
-            </div>
+      <div class="p-information-section__inner l-inner">
+        <div class="p-information-section__title">
+          <div class="c-title">
+            <h2 class="c-title__en">information</h2>
+            <p class="c-title__ja">ダイビング情報</p>
           </div>
-          <div class="p-information-section__wrapper">
-            <div class="p-information-section__img">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/information.jpg" alt="">
-            </div>
-            <div class="p-information-section__contentBox">
-              <h3 class="p-information-section__subTitle">ダイビング講習</h3>
-              <p class="p-information-section__text"> 当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br> 正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。</p>
-              <div class="p-information-section__btn">
-                <div class="c-btn" ontouchstart="">
-                  <a href="<?php echo $diving; ?>" class="c-btn__link">View more<span></span>
-                  </a>
-                  <div class="c-btn__overlay"></div>
-                </div>
+        </div>
+        <div class="p-information-section__wrapper">
+          <div class="p-information-section__img">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/information.jpg" alt="">
+          </div>
+          <div class="p-information-section__contentBox">
+            <h3 class="p-information-section__subTitle">ダイビング講習</h3>
+            <p class="p-information-section__text"> 当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br> 正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。</p>
+            <div class="p-information-section__btn">
+              <div class="c-btn" ontouchstart="">
+                <a href="<?php echo $diving; ?>" class="c-btn__link">View more<span></span>
+                </a>
+                <div class="c-btn__overlay"></div>
               </div>
             </div>
           </div>
