@@ -122,8 +122,20 @@ $terms = esc_url(home_url('/terms/'));
                       <div class="p-campaign-card__body">
                         <p class="p-campaign-card__text">全部コミコミ(お一人様)</p>
                         <div class="p-campaign-card__price">
-                          <p class="p-campaign-card__originalPrice">¥<?php echo get_field('original_price'); ?></p>
-                          <p class="p-campaign-card__newPrice">¥<?php echo get_field('new_price'); ?></p>
+                          <?php
+                          $original_price = get_field('original_price');
+                          $new_price = get_field('new_price');
+                          ?>
+                          <?php if (!empty($original_price)) : ?>
+                            <p class="p-lower-campaignCard__originalPrice">
+                              ¥<?php echo number_format((int)str_replace(',', '', $original_price)); ?>
+                            </p>
+                          <?php endif; ?>
+                          <?php if (!empty($new_price)) : ?>
+                            <p class="p-lower-campaignCard__newPrice">
+                              ¥<?php echo number_format((int)str_replace(',', '', $new_price)); ?>
+                            </p>
+                          <?php endif; ?>
                         </div>
                       </div>
                     </div>
@@ -294,7 +306,18 @@ $terms = esc_url(home_url('/terms/'));
                       <div class="p-lower-voiceCard__head">
                         <div class="p-lower-voiceCard__info">
                           <div class="p-lower-voiceCard__meta">
-                            <p class="p-lower-voiceCard__age"><?php echo get_field('age'); ?>(<?php echo get_field('age'); ?>)</p>
+                            <p class="p-lower-voiceCard__age">
+                              <?php
+                              $age = get_field('age');
+                              $sex = get_field('sex');
+
+                              if ($age != '選択しない' && $age != '') : ?>
+                                <?php echo $age; ?>
+                              <?php endif; ?>
+                              <?php if ($sex != '選択しない' && $sex != '') : ?>
+                                (<?php echo $sex; ?>)
+                              <?php endif; ?>
+                            </p>
                             <?php
                             $taxonomy_terms = get_the_terms($post->ID, 'voices_category');
                             if ($taxonomy_terms) {
@@ -314,17 +337,7 @@ $terms = esc_url(home_url('/terms/'));
                         </div>
                       </div>
                       <div class="p-lower-voiceCard__body">
-                      <p class="p-lower-voiceCard__text">
-                          <?php
-                          $details = get_field('details');
-                          if (mb_strlen($details) > 100) {
-                            $text = mb_substr(strip_tags($details), 0, 240, 'utf-8');
-                            echo $text . '…';
-                          } else {
-                            echo strip_tags($details);
-                          }
-                          ?>
-                        </p>
+                      <p class="p-lower-voiceCard__text"> <?php echo get_field('details'); ?></p>
                       </div>
                     </div>
                   </div>

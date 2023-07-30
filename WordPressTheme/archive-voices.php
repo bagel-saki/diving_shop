@@ -42,15 +42,24 @@
                       <div class="p-lower-voiceCard__head">
                         <div class="p-lower-voiceCard__info">
                           <div class="p-lower-voiceCard__meta">
-                            <p class="p-lower-voiceCard__age"><?php echo get_field('age'); ?>(<?php echo get_field('sex'); ?>)</p>
-                            <p class="p-lower-voiceCard__tag">
+                            <p class="p-lower-voiceCard__age">
                               <?php
-                              $taxonomy_terms = get_the_terms($post->ID, 'voices_category');
-                              if ($taxonomy_terms) {
-                                echo $taxonomy_terms[0]->name;
-                              }
-                              ?>
+                              $age = get_field('age');
+                              $sex = get_field('sex');
+
+                              if ($age != '選択しない' && $age != '') : ?>
+                                <?php echo $age; ?>
+                              <?php endif; ?>
+                              <?php if ($sex != '選択しない' && $sex != '') : ?>
+                                (<?php echo $sex; ?>)
+                              <?php endif; ?>
                             </p>
+                            <?php
+                            $taxonomy_terms = get_the_terms($post->ID, 'voices_category');
+                            if ($taxonomy_terms) {
+                              echo '<p class="p-lower-voiceCard__tag">' . $taxonomy_terms[0]->name . '</p>';
+                            }
+                            ?>
                           </div>
                           <h3 class="p-lower-voiceCard__title"><?php the_title(); ?></h3>
                         </div>
@@ -63,17 +72,7 @@
                         </div>
                       </div>
                       <div class="p-lower-voiceCard__body">
-                        <p class="p-lower-voiceCard__text">
-                          <?php
-                          $details = get_field('details'); // ACFのカスタムフィールドからテキストを取得
-                          if (mb_strlen($details) > 100) {
-                            $text = mb_substr(strip_tags($details), 0, 240, 'utf-8');
-                            echo $text . '…';
-                          } else {
-                            echo strip_tags($details);
-                          }
-                          ?>
-                        </p>
+                      <p class="p-lower-voiceCard__text"> <?php echo get_field('details'); ?></p>
                       </div>
 
 
