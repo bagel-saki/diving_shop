@@ -15,7 +15,7 @@
           <div class="p-pagePrice-section__content">
             <div class="p-lower-price">
               <ul class="p-lower-price__items">
-                <li class="p-lower-price__item">
+                <li class="p-lower-price__item" id="license">
                   <div class="p-lower-priceTable">
                     <div class="p-lower-priceTable__line u-mobile">
                       <h2 class="p-lower-priceTable__title"> ライセンス講習 <span></span>
@@ -41,7 +41,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="p-lower-price__item">
+                <li class="p-lower-price__item" id="experience-diving">
                   <div class="p-lower-priceTable">
                     <div class="p-lower-priceTable__line u-mobile">
                       <h2 class="p-lower-priceTable__title"> 体験ダイビング <span></span>
@@ -71,7 +71,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="p-lower-price__item">
+                <li class="p-lower-price__item"  id="fun-diving">
                   <div class="p-lower-priceTable">
                     <div class="p-lower-priceTable__line u-mobile">
                       <h2 class="p-lower-priceTable__title"> ファンダイビング <span></span>

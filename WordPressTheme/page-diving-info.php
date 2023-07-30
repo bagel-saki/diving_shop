@@ -13,16 +13,16 @@
       <section class="p-lower-informationContents">
         <div class="l-inner p-lower-informationContents__inner">
           <div class="p-lower-informationContents__tab">
-            <a href="" class="c-information-tab c-information-tab--whale js-information-tab  is-active">
-              <span class="u-desktop"></span>ライセンス<br class="u-mobile">講習 </a>
-            <a href="" class="c-information-tab c-information-tab--shark js-information-tab ">
-              <span class="u-desktop"></span>ファン<br class="u-mobile">ダイビング </a>
-            <a href="" class="c-information-tab c-information-tab--fish js-information-tab ">
-              <span class="u-desktop"></span>体験<br class="u-mobile">ダイビング </a>
+            <a href="" class="c-information-tab c-information-tab--whale js-information-tab is-active" id="license">
+              <span class="u-desktop"></span>ライセンス<br class="u-mobile">講習</a>
+            <a href="" class="c-information-tab c-information-tab--shark js-information-tab" id="fun-diving">
+              <span class="u-desktop"></span>ファン<br class="u-mobile">ダイビング</a>
+            <a href="" class="c-information-tab c-information-tab--fish js-information-tab" id="experience-diving">
+              <span class="u-desktop"></span>体験<br class="u-mobile">ダイビング</a>
           </div>
           <ul class="p-lower-informationContents__items">
             <li class="p-lower-informationCotents__item">
-              <div class="p-information-card  is-active js-information-card">
+              <div class="p-information-card  is-active js-information-card" id="license">
                 <div class="p-information-card__box">
                   <div class="p-information-card__body">
                     <div class="p-information-card__ttlBox">
@@ -37,7 +37,7 @@
               </div>
             </li>
             <li class="p-lower-informationCotents__item">
-              <div class="p-information-card  js-information-card">
+              <div class="p-information-card  js-information-card" id="experience-diving">
                 <div class="p-information-card__box">
                   <div class="p-information-card__body">
                     <div class="p-information-card__ttlBox">
@@ -52,7 +52,7 @@
               </div>
             </li>
             <li class="p-lower-informationCotents__item">
-              <div class="p-information-card  js-information-card">
+              <div class="p-information-card  js-information-card" id="experience-diving">
                 <div class="p-information-card__box">
                   <div class="p-information-card__body">
                     <div class="p-information-card__ttlBox">
