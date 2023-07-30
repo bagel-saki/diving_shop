@@ -314,7 +314,17 @@ $terms = esc_url(home_url('/terms/'));
                         </div>
                       </div>
                       <div class="p-lower-voiceCard__body">
-                        <p class="p-lower-voiceCard__text"> <?php echo get_field('details'); ?></p>
+                      <p class="p-lower-voiceCard__text">
+                          <?php
+                          $details = get_field('details');
+                          if (mb_strlen($details) > 100) {
+                            $text = mb_substr(strip_tags($details), 0, 240, 'utf-8');
+                            echo $text . '…';
+                          } else {
+                            echo strip_tags($details);
+                          }
+                          ?>
+                        </p>
                       </div>
                     </div>
                   </div>
