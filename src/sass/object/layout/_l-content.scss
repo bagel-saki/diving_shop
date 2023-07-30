@@ -1,8 +1,0 @@
-@use "global" as *;
-
-.l-content{
-    width: 100%;
-    @include mq(md){
-        width: 65.092%;
-    }
-}

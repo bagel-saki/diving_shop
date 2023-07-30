@@ -10,13 +10,13 @@
     <?php get_template_part('breadcrumb'); ?>
   </div>
   <div class="l-lower-head">
-    <div class="p-single-container">
-      <div class="l-blog-container l-inner">
-        <div class="p-single-container__fish">
+    <div class="p-column">
+      <div class="p-column__flex l-inner">
+        <div class="p-column__fish">
           <div class="c-img-fish c-img-fish--reverse"></div>
         </div>
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <div class="l-content">
+            <div class="p-column__main">
               <div class="p-single-section">
                 <div class="p-single-section__inner">
                   <div class="p-single-section__content">
@@ -46,7 +46,9 @@
             </div>
           <?php endwhile; ?>
         <?php endif; ?>
-        <?php get_sidebar(); ?>
+        <div class="p-column__right">
+          <?php get_sidebar(); ?>
+        </div>
       </div>
     </div>
   </div>
