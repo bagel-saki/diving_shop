@@ -57,13 +57,32 @@
                     <div class="p-lower-campaignCard__body">
                       <p class="p-lower-campaignCard__text">全部コミコミ(お一人様)</p>
                       <div class="p-lower-campaignCard__price">
-                        <p class="p-lower-campaignCard__originalPrice">¥<?php echo get_field('original_price'); ?></p>
-                        <p class="p-lower-campaignCard__newPrice">¥<?php echo get_field('new_price'); ?></p>
+                        <?php
+                        $original_price = get_field('original_price');
+                        $new_price = get_field('new_price');
+                        $details = get_field('details');
+                        $beginning_date = get_field('beginning_date');
+                        $end_date = get_field('end_date');
+                        ?>
+                        <?php if (!empty($original_price)) : ?>
+                          <p class="p-lower-campaignCard__originalPrice">
+                            ¥<?php echo number_format((int)str_replace(',', '', $original_price)); ?>
+                          </p>
+                        <?php endif; ?>
+                        <?php if (!empty($new_price)) : ?>
+                          <p class="p-lower-campaignCard__newPrice">
+                            ¥<?php echo number_format((int)str_replace(',', '', $new_price)); ?>
+                          </p>
+                        <?php endif; ?>
                       </div>
-                      <p class="p-lower-campaignCard__details u-desktop"><?php echo get_field('details'); ?></p>
+                      <?php if (!empty($details)) : ?>
+                        <p class="p-lower-campaignCard__details u-desktop"><?php echo $details; ?></p>
+                      <?php endif; ?>
                     </div>
                     <div class="p-lower-campaignCard__bottom u-desktop">
-                      <p class="p-lower-campaignCard__contactDate"><?php echo get_field('beginning_date'); ?>-<?php echo get_field('end_date'); ?></p>
+                      <?php if (!empty($beginning_date) && !empty($end_date)) : ?>
+                        <p class="p-lower-campaignCard__contactDate"><?php echo $beginning_date; ?>-<?php echo $end_date; ?></p>
+                      <?php endif; ?>
                       <p class="p-lower-campaignCard__contactText">ご予約・お問い合わせはコチラ</p>
                       <div class="p-lower-campaignCard__btn">
                         <div class="c-btn" ontouchstart="">

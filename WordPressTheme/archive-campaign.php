@@ -41,37 +41,44 @@
                       <?php endif; ?>
                     </div>
                     <div class="p-lower-campaignCard__head">
-                      <p class="p-lower-campaignCard__tag">
-                        <?php
-                        $taxonomy_terms = get_the_terms($post->ID, 'campaign_category');
-                        if ($taxonomy_terms) {
-                          echo $taxonomy_terms[0]->name;
-                        }
-                        ?>
-                      </p>
+                      <?php
+                      $taxonomy_terms = get_the_terms($post->ID, 'campaign_category');
+                      if ($taxonomy_terms) {
+                        echo '<p class="p-campaign-card__tag">' . $taxonomy_terms[0]->name . '</p>';
+                      }
+                      ?>
                       <h3 class="p-lower-campaignCard__title"><?php the_title(); ?></h3>
                       <span class="p-lower-campaignCard__border"></span>
                     </div>
                     <div class="p-lower-campaignCard__body">
                       <p class="p-lower-campaignCard__text">全部コミコミ(お一人様)</p>
                       <div class="p-lower-campaignCard__price">
-                        <p class="p-lower-campaignCard__originalPrice">¥<?php echo get_field('original_price'); ?></p>
-                        <p class="p-lower-campaignCard__newPrice">¥<?php echo get_field('new_price'); ?></p>
-                      </div>
-                      <p class="p-lower-campaignCard__details u-desktop">
                         <?php
+                        $original_price = get_field('original_price');
+                        $new_price = get_field('new_price');
                         $details = get_field('details');
-                        if (mb_strlen($details) > 100) {
-                          $text = mb_substr(strip_tags($details), 0, 240, 'utf-8');
-                          echo $text . '…';
-                        } else {
-                          echo strip_tags($details);
-                        }
+                        $beginning_date = get_field('beginning_date');
+                        $end_date = get_field('end_date');
                         ?>
-                      </p>
+                        <?php if (!empty($original_price)) : ?>
+                          <p class="p-lower-campaignCard__originalPrice">
+                            ¥<?php echo number_format((int)str_replace(',', '', $original_price)); ?>
+                          </p>
+                        <?php endif; ?>
+                        <?php if (!empty($new_price)) : ?>
+                          <p class="p-lower-campaignCard__newPrice">
+                            ¥<?php echo number_format((int)str_replace(',', '', $new_price)); ?>
+                          </p>
+                        <?php endif; ?>
+                      </div>
+                      <?php if (!empty($details)) : ?>
+                        <p class="p-lower-campaignCard__details u-desktop"><?php echo $details; ?></p>
+                      <?php endif; ?>
                     </div>
                     <div class="p-lower-campaignCard__bottom u-desktop">
-                      <p class="p-lower-campaignCard__contactDate"><?php echo get_field('beginning_date'); ?>-<?php echo get_field('end_date'); ?></p>
+                      <?php if (!empty($beginning_date) && !empty($end_date)) : ?>
+                        <p class="p-lower-campaignCard__contactDate"><?php echo $beginning_date; ?>-<?php echo $end_date; ?></p>
+                      <?php endif; ?>
                       <p class="p-lower-campaignCard__contactText">ご予約・お問い合わせはコチラ</p>
                       <div class="p-lower-campaignCard__btn">
                         <div class="c-btn" ontouchstart="">
