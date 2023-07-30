@@ -28,14 +28,14 @@
           </div>
         </div>
 
-        <?php
-        $excerpt = get_the_excerpt(); // 抜粋を取得
-        $limited_excerpt = mb_substr($excerpt, 0, 180) . '...'; // 表示する文字数を指定
-        ?>
         <div class="p-archiveVoices-section__content">
           <ul class="p-lower-voiceCards">
             <?php if (have_posts()) : ?>
               <?php while (have_posts()) : the_post(); ?>
+                <?php
+                $excerpt = get_the_excerpt(); // 抜粋を取得
+                $limited_excerpt = mb_substr($excerpt, 0, 180) . '...'; // 表示する文字数を指定
+                ?>
                 <li class="p-lower-voiceCards__item">
                   <div class="p-lower-voiceCard">
                     <div class="p-lower-voiceCard__inner">
@@ -44,12 +44,12 @@
                           <div class="p-lower-voiceCard__meta">
                             <p class="p-lower-voiceCard__age"><?php echo get_field('age'); ?>(<?php echo get_field('sex'); ?>)</p>
                             <p class="p-lower-voiceCard__tag">
-                            <?php
-                            $taxonomy_terms = get_the_terms($post->ID, 'voices_category');
-                            if ($taxonomy_terms) {
+                              <?php
+                              $taxonomy_terms = get_the_terms($post->ID, 'voices_category');
+                              if ($taxonomy_terms) {
                                 echo $taxonomy_terms[0]->name;
-                            }
-                            ?>
+                              }
+                              ?>
                             </p>
                           </div>
                           <h3 class="p-lower-voiceCard__title"><?php the_title(); ?></h3>
@@ -63,8 +63,20 @@
                         </div>
                       </div>
                       <div class="p-lower-voiceCard__body">
-                        <p class="p-lower-voiceCard__text"><?php echo get_field('details'); ?></p>
+                        <p class="p-lower-voiceCard__text">
+                          <?php
+                          $details = get_field('details'); // ACFのカスタムフィールドからテキストを取得
+                          if (mb_strlen($details) > 100) {
+                            $text = mb_substr(strip_tags($details), 0, 240, 'utf-8');
+                            echo $text . '…';
+                          } else {
+                            echo strip_tags($details);
+                          }
+                          ?>
+                        </p>
                       </div>
+
+
                     </div>
                   </div>
                 </li>

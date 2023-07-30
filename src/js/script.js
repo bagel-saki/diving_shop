@@ -146,20 +146,21 @@ jQuery(function ($) {
     },
   });
 
-  //ファーストビュー
-  function runOpeningAnimation() {
-    const $loading = $(".p-loading");
-    const $splash = $(".p-loading__splash");
-    const $leftImage = $(".p-loading__leftImage");
-    const $rightImage = $(".p-loading__rightImage");
-    const $title = $(".p-loading__title");
-    // トップページでのみアニメーションを実行
-    if ($loading.length === 0) {
-      return;
-    }
-    // オープニングアニメーション開始時にスクロール禁止の処理を実行
+ // JavaScript部分 (script.js)
+// ページを読み込んだ初回のみオープニングアニメーションを表示する方法
+function runOpeningAnimation() {
+  const $loading = $(".p-loading");
+  const $splash = $(".p-loading__splash");
+  const $leftImage = $(".p-loading__leftImage");
+  const $rightImage = $(".p-loading__rightImage");
+  const $title = $(".p-loading__title");
+
+  // sessionStorageを利用して初回表示かどうかを判定
+  const isFirstVisit = sessionStorage.getItem("isFirstVisit");
+  if (!isFirstVisit) {
+    // 初回の場合はsessionStorageにフラグを設定してオープニングアニメーションを実行
+    sessionStorage.setItem("isFirstVisit", "true");
     $("html, body").css("overflow", "hidden");
-    // オープニングアニメーションの処理を実行
     $loading.delay(1000).queue(function (next) {
       $title.delay(1000).fadeIn(function () {
         $splash.delay(2000).addClass("appear");
@@ -174,15 +175,20 @@ jQuery(function ($) {
       $splash.delay(1000).fadeOut();
     });
 
-    // オープニングアニメーション終了時にスクロール許可の処理を実行
     setTimeout(function () {
       $("html, body").css("overflow", "auto");
     }, 6000);
+  } else {
+    // 初回でない場合はオープニングアニメーションの要素を非表示にする
+    $loading.css("display", "none");
+    $("html, body").css("overflow", "auto");
   }
+}
 
-  $(document).ready(function () {
-    runOpeningAnimation();
-  });
+$(document).ready(function () {
+  runOpeningAnimation();
+});
+
 
   //サイドバーアーカイブ
   $(".js-archive-lists:first").css("display", "block");

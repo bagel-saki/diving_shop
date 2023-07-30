@@ -58,7 +58,17 @@
                         <p class="p-lower-campaignCard__originalPrice">¥<?php echo get_field('original_price'); ?></p>
                         <p class="p-lower-campaignCard__newPrice">¥<?php echo get_field('new_price'); ?></p>
                       </div>
-                      <p class="p-lower-campaignCard__details u-desktop"><?php echo get_field('details'); ?></p>
+                      <p class="p-lower-campaignCard__details u-desktop">
+                        <?php
+                        $details = get_field('details');
+                        if (mb_strlen($details) > 100) {
+                          $text = mb_substr(strip_tags($details), 0, 240, 'utf-8');
+                          echo $text . '…';
+                        } else {
+                          echo strip_tags($details);
+                        }
+                        ?>
+                      </p>
                     </div>
                     <div class="p-lower-campaignCard__bottom u-desktop">
                       <p class="p-lower-campaignCard__contactDate"><?php echo get_field('beginning_date'); ?>-<?php echo get_field('end_date'); ?></p>
