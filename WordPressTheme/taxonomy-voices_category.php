@@ -14,6 +14,9 @@
       <div class="p-archiveVoices-section__inner l-inner">
         <div class="p-archiveVoices-section__category">
           <div class="p-campaign-categories">
+          <div class="p-campaign-categories__item">
+              <a href="<?php echo esc_url(get_post_type_archive_link('voices')); ?>" class="c-campaign-category js-campaign-category"> all </a>
+            </div>
             <?php
             $taxonomy_terms = get_terms('voices_category');
             if (!empty($taxonomy_terms) && !is_wp_error($taxonomy_terms)) {
