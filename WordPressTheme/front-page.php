@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: front
+*/
+?>
 <?php get_header(); ?>
 <?php
 $top = esc_url(home_url('/'));
@@ -12,6 +17,7 @@ $contact = esc_url(home_url('/contact/'));
 $privacy = esc_url(home_url('/privacy-policy/'));
 $terms = esc_url(home_url('/terms/'));
 ?>
+
 <main>
   <div class="p-top-screen">
     <div class="p-top-screen__loading">
@@ -362,7 +368,8 @@ $terms = esc_url(home_url('/terms/'));
         </section>
       </div>
     <?php endif; ?>
-
+    <?php wp_reset_postdata(); ?>
+    
     <div class="l-section">
       <section class="p-price-section">
         <div class="p-price-section__inner l-inner">
@@ -378,19 +385,23 @@ $terms = esc_url(home_url('/terms/'));
                 <div class="p-price-contents__item">
                   <div class="p-price-content">
                     <div class="p-price-content__title">ライセンス講習</div>
-                    <ul class="p-price-content__lists">
+                    <ul class="p-price-content__lists">               
+                <?php
+                    $price = SCF::get('license');
+                    var_dump(get_the_Id());
+                    foreach ($price as $fields) {
+                    ?>
                       <li class="p-price-content__list">
-                        <p class="p-price-content__text">オープンウォーターダイバーコース</p>
-                        <p class="p-price-content__price">¥50,000</p>
+                        <p class="p-price-content__text"><?php echo $fields['course1']; ?></p>
+                        <p class="p-price-content__price">
+                          ¥<?php
+                            $price = str_replace(',', '', $fields['price1']); //カンマを削除
+                            $price = intval($price); //整数値に変換
+                            echo number_format($price); //書式化して出力
+                          ?>
+                        </p>
                       </li>
-                      <li class="p-price-content__list">
-                        <p class="p-price-content__text">アドバンスドオープンウォーターコース</p>
-                        <p class="p-price-content__price">¥60,000</p>
-                      </li>
-                      <li class="p-price-content__list">
-                        <p class="p-price-content__text">レスキュー＋EFRコース</p>
-                        <p class="p-price-content__price">¥70,000</p>
-                      </li>
+                      <?php } ?>
                     </ul>
                   </div>
                 </div>
@@ -398,22 +409,20 @@ $terms = esc_url(home_url('/terms/'));
                   <div class="p-price-content">
                     <div class="p-price-content__title">体験ダイビング</div>
                     <ul class="p-price-content__lists">
+                <?php
+                    $price = SCF::get('diving');
+                    foreach ($price as $fields) {
+                    ?>
                       <li class="p-price-content__list">
-                        <p class="p-price-content__text">ビーチ体験ダイビング(半日)</p>
-                        <p class="p-price-content__price">¥7,000</p>
+                        <p class="p-price-content__text"><?php echo $fields['course2']; ?></p>
+                        <p class="p-price-content__price">
+                        ¥<?php
+                            $price = str_replace(',', '', $fields['price2']); //カンマを削除
+                            $price = intval($price); //整数値に変換
+                            echo number_format($price); //書式化して出力
+                          ?></p>
                       </li>
-                      <li class="p-price-content__list">
-                        <p class="p-price-content__text">ビーチ体験ダイビング(1日)</p>
-                        <p class="p-price-content__price">¥14,000</p>
-                      </li>
-                      <li class="p-price-content__list">
-                        <p class="p-price-content__text">ボート体験ダイビング(半日)</p>
-                        <p class="p-price-content__price">¥10,000</p>
-                      </li>
-                      <li class="p-price-content__list">
-                        <p class="p-price-content__text">ボート体験ダイビング(1日)</p>
-                        <p class="p-price-content__price">¥18,000</p>
-                      </li>
+                    <?php } ?>
                     </ul>
                   </div>
                 </div>
@@ -421,22 +430,21 @@ $terms = esc_url(home_url('/terms/'));
                   <div class="p-price-content">
                     <div class="p-price-content__title">ファンダイビング</div>
                     <ul class="p-price-content__lists">
+                    <?php
+                    $price = SCF::get('fan');
+                    foreach ($price as $fields) {
+                    ?>
                       <li class="p-price-content__list">
-                        <p class="p-price-content__text">ビーチダイビング(2ダイブ)</p>
-                        <p class="p-price-content__price">¥14,000</p>
+                        <p class="p-price-content__text"><?php echo $fields['course3']; ?></p>
+                        <p class="p-price-content__price">
+                        ¥<?php
+                            $price = str_replace(',', '', $fields['price3']); //カンマを削除
+                            $price = intval($price); //整数値に変換
+                            echo number_format($price); //書式化して出力
+                            ?>
+                        </p>
                       </li>
-                      <li class="p-price-content__list">
-                        <p class="p-price-content__text">ボートダイビング(2ダイブ)</p>
-                        <p class="p-price-content__price">¥18,000</p>
-                      </li>
-                      <li class="p-price-content__list">
-                        <p class="p-price-content__text">スペシャルダイビング(2ダイブ)</p>
-                        <p class="p-price-content__price">¥24,000</p>
-                      </li>
-                      <li class="p-price-content__list">
-                        <p class="p-price-content__text">ナイトダイビング(1ダイブ)</p>
-                        <p class="p-price-content__price">¥10,000</p>
-                      </li>
+                      <?php } ?>
                     </ul>
                   </div>
                 </div>
@@ -444,14 +452,21 @@ $terms = esc_url(home_url('/terms/'));
                   <div class="p-price-content">
                     <div class="p-price-content__title">スペシャルダイビング</div>
                     <ul class="p-price-content__lists">
+                    <?php
+                    $price = SCF::get('special');
+                    foreach ($price as $fields) {
+                    ?>
                       <li class="p-price-content__list">
-                        <p class="p-price-content__text">貸切ダイビング(2ダイブ)</p>
-                        <p class="p-price-content__price">¥24,000</p>
+                        <p class="p-price-content__text"><?php echo $fields['course4']; ?></p>
+                        <p class="p-price-content__price">
+                        ¥<?php
+                            $price = str_replace(',', '', $fields['price4']); //カンマを削除
+                            $price = intval($price); //整数値に変換
+                            echo number_format($price); //書式化して出力
+                            ?>
+                        </p>
                       </li>
-                      <li class="p-price-content__list">
-                        <p class="p-price-content__text">1日ダイビング(3ダイブ)</p>
-                        <p class="p-price-content__price">¥32,000</p>
-                      </li>
+                      <?php } ?>
                     </ul>
                   </div>
                 </div>

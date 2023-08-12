@@ -68,17 +68,49 @@ jQuery(function ($) {
     $("body").toggleClass("is-fixed");
   });
 
-  //ダイビング情報コンテンツ切り替え
-  $(".js-information-tab").on("click", function () {
-    event.preventDefault();
-    var index = $(".js-information-tab").index(this);
+// クリックされた時やURLのハッシュが変更された時にタブの動作を制御するスクリプト
 
-    $(".js-information-tab").removeClass("is-active");
-    $(this).addClass("is-active");
-
-    $(".js-information-card").removeClass("is-active");
-    $(".js-information-card").eq(index).addClass("is-active");
+$(document).ready(function() {
+  // 1. タブのクリックイベントを監視する
+  $('.js-information-tab').click(function(e) {
+      e.preventDefault(); // クリック時のデフォルトの動作（リンク先に移動する）をキャンセル
+      // クリックされたタブのIDを取得し、ハッシュにセット
+        window.location.hash = $(this).attr('id');
   });
+
+  // 2. ページの読み込みが完了したときに、ハッシュに応じてタブをアクティブにする
+  activateTabFromHash();
+
+  // 3. ハッシュが変わった（URLのアンカー部分が変更された）時に、関数を実行
+  $(window).on('hashchange', function() {
+      activateTabFromHash();
+  });
+});
+
+// ハッシュの値に応じてタブをアクティブにする関数
+function activateTabFromHash() {
+  var hash = window.location.hash; // 現在のハッシュを取得
+
+  // すべてのタブとコンテンツのアクティブ状態を初期化
+  $('.js-information-tab').removeClass('is-active');
+  $('.js-information-card').removeClass('is-active');
+
+  // ハッシュが存在する場合、該当するタブとコンテンツをアクティブにする
+  if (hash) {
+    // ハッシュの値に応じてタブをアクティブにする
+    $('#tab-' + hash.replace('#', '')).addClass('is-active');
+    $(hash).addClass('is-active');
+    // 該当のjs-information-card　にis-activeをつけるため
+    // ハッシュの値が"tab-"で始まる場合、"tab-"を除去してコンテンツのIDを生成
+    var contentId = hash.replace('#tab-', '#');
+    // 対応するコンテンツをアクティブにする
+    $(contentId).addClass('is-active');
+    } else {
+      // ハッシュが存在しない場合、1件目のタブとコンテンツをアクティブにする
+      $('.js-information-tab:first').addClass('is-active');
+      $('.js-information-card:first').addClass('is-active');
+    }
+}
 
   //アコーディオン
   $(".js-accordion-item:first-child .js-accordion-content").css(
