@@ -13,12 +13,12 @@
       <section class="p-lower-informationContents">
         <div class="p-lower-informationContents__inner l-inner">
           <div class="p-lower-informationContents__tab">
-            <a href="" class="c-information-tab c-information-tab--whale js-information-tab is-active" id="license">
+            <a href="" class="c-information-tab c-information-tab--whale js-information-tab is-active" id="tab-license">
               <span class="u-desktop"></span>ライセンス<br class="u-mobile">講習</a>
-            <a href="" class="c-information-tab c-information-tab--shark js-information-tab" id="fun-diving">
+              <a href="" class="c-information-tab c-information-tab--fish js-information-tab" id="tab-experience-diving">
+                <span class="u-desktop"></span>体験<br class="u-mobile">ダイビング</a>
+            <a href="" class="c-information-tab c-information-tab--shark js-information-tab" id="tab-fan-diving">
               <span class="u-desktop"></span>ファン<br class="u-mobile">ダイビング</a>
-            <a href="" class="c-information-tab c-information-tab--fish js-information-tab" id="experience-diving">
-              <span class="u-desktop"></span>体験<br class="u-mobile">ダイビング</a>
           </div>
           <ul class="p-lower-informationContents__items">
             <li class="p-lower-informationCotents__item">
@@ -41,27 +41,27 @@
                 <div class="p-information-card__box">
                   <div class="p-information-card__body">
                     <div class="p-information-card__ttlBox">
-                      <h3 class="p-information-card__subTitle">ファンダイビング</h3>
-                    </div>
-                    <p class="p-information-card__text"> ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！ </p>
-                  </div>
-                  <div class="p-information-card__img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/information2.jpg" alt="青い海の中を泳ぐ美しい大量の魚">
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="p-lower-informationCotents__item">
-              <div class="p-information-card  js-information-card" id="experience-diving">
-                <div class="p-information-card__box">
-                  <div class="p-information-card__body">
-                    <div class="p-information-card__ttlBox">
                       <h3 class="p-information-card__subTitle">体験ダイビング</h3>
                     </div>
                     <p class="p-information-card__text"> ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！ </p>
                   </div>
                   <div class="p-information-card__img">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/information3.jpg" alt="青い海の中を泳ぐ2匹のチョウチョウウオ">
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="p-lower-informationCotents__item">
+              <div class="p-information-card  js-information-card" id="fan-diving">
+                <div class="p-information-card__box">
+                  <div class="p-information-card__body">
+                    <div class="p-information-card__ttlBox">
+                      <h3 class="p-information-card__subTitle">ファンダイビング</h3>
+                    </div>
+                    <p class="p-information-card__text"> ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！ </p>
+                  </div>
+                  <div class="p-information-card__img">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/information2.jpg" alt="青い海の中を泳ぐ美しい大量の魚">
                   </div>
                 </div>
               </div>

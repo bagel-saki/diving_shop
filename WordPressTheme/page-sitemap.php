@@ -31,9 +31,16 @@ $terms = esc_url(home_url('/terms/'));
                   <li class="p-contents__item">
                     <a href="<?php echo $campaign; ?>" class="p-contents__title p-contents__title--black"> キャンペーン </a>
                     <div class="p-contents__lists">
-                      <a href="<?php echo $campaign; ?>" class="p-contents__list" >ライセンス取得</a>
-                      <a href="<?php echo $campaign; ?>" class="p-contents__list">貸切体験ダイビング</a>
-                      <a href="<?php echo $campaign; ?>" class="p-contents__list">ナイトダイビング</a>
+                    <?php
+                          $taxonomy_terms = get_terms('campaign_category', array(
+                            'hide_empty' => false,
+                            'include' => array(2, 4, 3), // カテゴリーIDを指定する順番
+                            'orderby' => 'include',
+                          ));
+                          foreach ($taxonomy_terms as $taxonomy_term) :
+                          ?>
+                            <a href="<?php echo esc_url(get_term_link($taxonomy_term, 'campaign_category')); ?>" class="p-contents__list"><?php echo esc_html($taxonomy_term->name); ?></a>
+                          <?php endforeach; ?>
                     </div>
                   </li>
                   <li class="p-contents__item">
@@ -44,9 +51,9 @@ $terms = esc_url(home_url('/terms/'));
                   <li class="p-contents__item">
                     <a href="<?php echo $diving; ?>" class="p-contents__title p-contents__title--black"> ダイビング情報 </a>
                     <div class="p-contents__lists">
-                      <a href="<?php echo $diving; ?>" class="p-contents__list">ライセンス講習</a>
-                      <a href="<?php echo $diving; ?>" class="p-contents__list">体験ダイビング</a>
-                      <a href="<?php echo $diving; ?>" class="p-contents__list">ファンダイビング</a>
+                      <a href="<?php echo $diving . '#tab-license'; ?>" class="p-contents__list">ライセンス講習</a>
+                      <a href="<?php echo  $diving . '#tab-experience-diving'; ?>" class="p-contents__list">体験ダイビング</a>
+                      <a href="<?php echo  $diving . '#tab-fan-diving'; ?>" class="p-contents__list">ファンダイビング</a>
                     </div>
                   </li>
                   <li class="p-contents__item">
