@@ -9,12 +9,12 @@
     <?php get_template_part('breadcrumb'); ?>
   </div>
   <div class="l-lower-head">
-    <div class="p-home-container">
-      <div class="l-blog-container l-inner">
-        <div class="p-home-container__fish">
+    <div class="p-column">
+      <div class="p-column__flex l-inner">
+        <div class="p-column__fish">
           <div class="c-img-fish c-img-fish--reverse"></div>
         </div>
-        <div class="l-content">
+        <div class="p-column__main">
           <div class="p-home-section">
             <div class="p-home-section__inner">
               <div class="p-home-section__content">
@@ -64,7 +64,9 @@
             </div>
           </div>
         </div>
-        <?php get_sidebar(); ?>
+        <div class="p-column__right">
+          <?php get_sidebar(); ?>
+        </div>
       </div>
     </div>
   </div>
