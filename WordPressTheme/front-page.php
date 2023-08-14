@@ -388,7 +388,6 @@ $terms = esc_url(home_url('/terms/'));
                     <ul class="p-price-content__lists">               
                 <?php
                     $price = SCF::get('license');
-                    var_dump(get_the_Id());
                     foreach ($price as $fields) {
                     ?>
                       <li class="p-price-content__list">
