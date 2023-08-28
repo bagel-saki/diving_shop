@@ -31,10 +31,15 @@
                     foreach ($price as $fields) {
                     ?>
                       <dl class="p-lower-priceTable__list">
-                        <dt class="p-lower-priceTable__listLeft"><?php echo $fields['course1']; ?></dt>
+                        <dt class="p-lower-priceTable__listLeft">
+                          <?php 
+                            $program = str_replace("#BR#", "<br class='u-mobile'>", $fields['course1']);
+                            echo $program; 
+                          ?>
+                        </dt>
                         <dd class="p-lower-priceTable__listRight">
                         ¥<?php
-                            $price = str_replace(',', '', $fields['price1']); //カンマを削除
+                            $price = str_replace("#BR#", "<br class='u-mobile'>", $fields['price1']); //カンマを削除
                             $price = intval($price); //整数値に変換
                             echo number_format($price); //書式化して出力
                           ?>
@@ -60,7 +65,13 @@
                     foreach ($price as $fields) {
                     ?>
                       <dl class="p-lower-priceTable__list">
-                        <dt class="p-lower-priceTable__listLeft"><?php echo $fields['course2']; ?></dt>
+
+                        <dt class="p-lower-priceTable__listLeft">
+                        <?php 
+                            $program = str_replace("#BR#", "<br class='u-mobile'>", $fields['course2']);
+                            echo $program; 
+                          ?>
+                        </dt>
                         <dd class="p-lower-priceTable__listRight">
                           ¥<?php
                             $price = str_replace(',', '', $fields['price2']); //カンマを削除
@@ -89,8 +100,12 @@
                     foreach ($price as $fields) {
                     ?>
                       <dl class="p-lower-priceTable__list">
-                        <dt class="p-lower-priceTable__listLeft"><?php echo $fields['course3']; ?></dt>
-
+                        <dt class="p-lower-priceTable__listLeft">
+                        <?php 
+                            $program = str_replace("#BR#", "<br class='u-mobile'>", $fields['course3']);
+                            echo $program; 
+                          ?>
+                        </dt>
                         <dd class="p-lower-priceTable__listRight">
                           ¥<?php
                             $price = str_replace(',', '', $fields['price3']); //カンマを削除
@@ -119,7 +134,12 @@
                     foreach ($price as $fields) {
                     ?>
                       <dl class="p-lower-priceTable__list">
-                        <dt class="p-lower-priceTable__listLeft"><?php echo $fields['course4']; ?></dt>
+                        <dt class="p-lower-priceTable__listLeft">
+                        <?php 
+                            $program = str_replace("#BR#", "<br class='u-mobile'>", $fields['course4']);
+                            echo $program; 
+                          ?>
+                        </dt>
                         <dd class="p-lower-priceTable__listRight">
                           ¥<?php
                             $price = str_replace(',', '', $fields['price4']); //カンマを削除
