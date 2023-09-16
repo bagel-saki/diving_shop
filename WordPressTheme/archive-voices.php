@@ -46,7 +46,6 @@
                               <?php
                               $age = get_field('age');
                               $sex = get_field('sex');
-
                               if ($age != '選択しない' && $age != '') : ?>
                                 <?php echo $age; ?>
                               <?php endif; ?>

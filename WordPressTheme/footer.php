@@ -73,7 +73,7 @@ $terms = esc_url(home_url('/terms/'));
           <footer class="p-footer">
             <div class="p-footer__inner l-inner">
               <div class="p-footer__head">
-                <a href="index.html" class="p-footer__logo">
+                <a href="<?php echo $top; ?>" class="p-footer__logo">
                   <div class="c-logo c-logo--large"></div>
                 </a>
                 <div class="p-footer__sns">

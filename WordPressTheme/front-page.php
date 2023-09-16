@@ -181,7 +181,8 @@ $terms = esc_url(home_url('/terms/'));
             <div class="p-aboutus__cont">
               <h2 class="p-aboutus__left"> dive&nbsp;<span>into&nbsp;<br>the&nbsp;</span>ocean </h2>
               <div class="p-aboutus__right">
-                <p class="p-aboutus__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br> ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト </p>
+                <p class="p-aboutus__text">私たちはダイビングの世界を愛し、その魅力を共有することを使命としています。私たちは豊かな海洋生態系を守り、探求心を刺激し、安全な冒険を提供しています。<br>
+                                当店は長年にわたり、プロのダイバーと経験豊富なインストラクターによって運営されています。私たちは安全を最優先し、あなたの冒険をサポートします。 </p>
                 <div class="p-aboutus__btn">
                   <div class="c-btn" ontouchstart="">
                     <a href="<?php echo $about; ?>" class="c-btn__link">View more<span></span>
